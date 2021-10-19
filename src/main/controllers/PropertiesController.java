@@ -1,7 +1,7 @@
-package controller;
+package main.controllers;
 
-import model.Properties;
-import model.Property;
+import main.models.Properties;
+import main.models.Property;
 
 import java.util.ArrayList;
 
