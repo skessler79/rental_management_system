@@ -12,5 +12,10 @@ public class PropertiesController
         return Properties.getPropertyArrayList();
     }
 
+    private static ArrayList<Property> viewPropertyByType(String type)
+    {
+        // TODO : Filter properties by type and return;
+        return Properties.getPropertyArrayList();
+    }
 
 }
