@@ -28,7 +28,7 @@ public class App extends Application implements EventHandler<ActionEvent>
 
         // Button
         button = new Button();
-        button.setText("Click me");
+        button.setText("YANG");
         button.setOnAction(this);
 
         // Image
