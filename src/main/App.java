@@ -1,4 +1,4 @@
-package view;
+package main;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 
 import java.io.FileInputStream;
 
-public class JavaFXTest extends Application implements EventHandler<ActionEvent>
+public class App extends Application implements EventHandler<ActionEvent>
 {
     Button button;
 
