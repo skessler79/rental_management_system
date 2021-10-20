@@ -43,8 +43,9 @@ public class App extends Application implements EventHandler<ActionEvent>
                 "Happy House", "69, Taman Nice, 42069, KL", "20x20 pixel",
                 "Just trust me its a good house", "CCP Corps", "Kuala Lumpur", 69420.69);
 
-//
-//
+
+        propertyController.getPropertiesData();
+
 //        // Button
 //        button = new Button();
 //        button.setText("YANG");

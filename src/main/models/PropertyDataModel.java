@@ -52,7 +52,6 @@ public class PropertyDataModel {
             JsonParser jp = new JsonParser();
             JsonElement je = jp.parse(properties.toJSONString());
             String prettyJsonString = gson.toJson(je);
-            System.out.println(prettyJsonString);
             fileWriter.write(prettyJsonString);
             //refetch data
         }
@@ -76,7 +75,6 @@ public class PropertyDataModel {
             Object obj = parser.parse(new FileReader(path));
             // A JSON array. JSONObject supports java.util.List interface.
             data = (JSONArray) obj;
-
             //way to iterate through all data
 //          Iterator<JSONObject> iterator = data.iterator();
 //          while (iterator.hasNext()) {
