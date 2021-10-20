@@ -70,5 +70,53 @@
     "state": "Kuala Lumpur",
     "ownerId": "05c34fb5-d2e8-4a76-9d2e-a9919449bd48",
     "type": "BUNGALOW"
+  },
+  {
+    "address": "69, Taman Nice, 42069, KL",
+    "size": "20x20 pixel",
+    "name": "Happy House",
+    "description": "Just trust me its a good house",
+    "project": "CCP Corps",
+    "rentalFee": 69420.69,
+    "id": "03f372ce-30e8-4d8a-a017-4231480cbb97",
+    "state": "Kuala Lumpur",
+    "ownerId": "829db9b8-2c59-4090-857e-4b028ed42831",
+    "type": "BUNGALOW"
+  },
+  {
+    "address": "69, Taman Nice, 42069, KL",
+    "size": "20x20 pixel",
+    "name": "Happy House",
+    "description": "Just trust me its a good house",
+    "project": "CCP Corps",
+    "rentalFee": 69420.69,
+    "id": "7dc0d9be-5e2a-488b-90f2-bf3acfe37749",
+    "state": "Kuala Lumpur",
+    "ownerId": "d158add2-ac3f-4e11-a33a-275317153c50",
+    "type": "BUNGALOW"
+  },
+  {
+    "address": "69, Taman Nice, 42069, KL",
+    "size": "20x20 pixel",
+    "name": "Happy House",
+    "description": "Just trust me its a good house",
+    "project": "CCP Corps",
+    "rentalFee": 69420.69,
+    "id": "0c85cf35-4199-4cfb-89f5-5be9ef3e0411",
+    "state": "Kuala Lumpur",
+    "ownerId": "323147f9-d36f-4213-b386-4d36434b41a4",
+    "type": "BUNGALOW"
+  },
+  {
+    "address": "69, Taman Nice, 42069, KL",
+    "size": "20x20 pixel",
+    "name": "Happy House",
+    "description": "Just trust me its a good house",
+    "project": "CCP Corps",
+    "rentalFee": 69420.69,
+    "id": "d6d15bcb-deae-4167-8773-aef4ffa8e300",
+    "state": "Kuala Lumpur",
+    "ownerId": "06c4b5d8-e65a-4d3b-ac83-9a88d4e86d7a",
+    "type": "BUNGALOW"
   }
 ]

@@ -26,5 +26,10 @@ public class PropertyController implements Initializable {
         propertyData.inputPropertyData(ownerId, type, name, address, size, description, project, state, rentalFee);
     }
 
+    public void getPropertiesData(){
+        //TODO: change to return instead
+        System.out.println(propertyData.getPropertiesData());
+    }
+
 
 }
