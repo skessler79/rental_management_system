@@ -10,5 +10,24 @@
     "state": "Kuala Lumpur",
     "ownerId": "938dcb51-bd49-4bbf-b235-55965b370b09",
     "type": "BUNGALOW"
+  },
+  {
+    "name": "Happy house",
+    "project": "Project CCP",
+    "id": "604bbc70-f1af-470a-bc5e-7591444f4751",
+    "ownerId": "12345",
+    "type": "BUNGALOW"
+  },
+  {
+    "agentId": "",
+    "address": "",
+    "size": "",
+    "name": "Happy house",
+    "description": "",
+    "project": "Project CCP",
+    "id": "da8ce804-343d-4aae-8ce4-8dd64786de3a",
+    "state": "",
+    "ownerId": "12345",
+    "type": "BUNGALOW"
   }
 ]

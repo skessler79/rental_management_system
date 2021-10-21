@@ -5,6 +5,8 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import main.classes.Property;
+import main.classes.PropertyBuilder;
 import main.controllers.PropertyController;
 import org.json.simple.parser.JSONParser;
 
@@ -29,9 +31,11 @@ public class App extends Application implements EventHandler<ActionEvent>
     {
         stage.setTitle("Title of The Window");
         PropertyController propertyController = new PropertyController();
-        propertyController.setData(UUID.randomUUID().toString(), Type.PropertyType.BUNGALOW.toString(),
-                "Happy House", "69, Taman Nice, 42069, KL", "20x20 pixel",
-                "Just trust me its a good house", "CCP Corps", "Kuala Lumpur", 69420.69);
+        Property property = new PropertyBuilder("12345", Type.PropertyType.BUNGALOW.toString(), "Happy house", "Project CCP").buildProperty();
+        propertyController.setData(property);
+        //        propertyController.setData(UUID.randomUUID().toString(), Type.PropertyType.BUNGALOW.toString(),
+//                "Happy House", "69, Taman Nice, 42069, KL", "20x20 pixel",
+//                "Just trust me its a good house", "CCP Corps", "Kuala Lumpur", 69420.69);
 
 
 //        propertyController.getPropertiesData();

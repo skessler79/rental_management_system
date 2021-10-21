@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
+import main.classes.Property;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -16,7 +17,7 @@ import java.io.IOException;
 import java.util.UUID;
 
 public class PropertyDataModel {
-    private final String path = "src/main/data/propertyData.json";
+    private final String path = "resources/data/propertyData.json";
     private JSONArray data;
     private JSONArray properties;
     private JSONObject property;
@@ -32,19 +33,20 @@ public class PropertyDataModel {
         return data;
     }
 
-    public void inputPropertyData(String ownerId, String type, String name, String address, String size, String description,  String project, String state, double rentalFee){
+    public void inputPropertyData(Property propertyObj){
         JSONArray properties = data;
         property = new JSONObject();
-        property.put("ownerId", ownerId);
-        property.put("id", UUID.randomUUID().toString());
-        property.put("name", name);
-        property.put("type", type);
-        property.put("address", address);
-        property.put("state", state);
-        property.put("size", size);;
-        property.put("description", description);
-        property.put("project", project);
-        property.put("rentalFee", rentalFee);
+        property.put("ownerId", propertyObj.getOwnerId());
+        property.put("agentId", propertyObj.getAgentId());
+        property.put("id", propertyObj.getPropertyId());
+        property.put("name", propertyObj.getName());
+        property.put("type", propertyObj.getType());
+        property.put("address", propertyObj.getAddress());
+        property.put("state", propertyObj.getState());
+        property.put("size", propertyObj.getSize());
+        property.put("description", propertyObj.getDescription());
+        property.put("project", propertyObj.getProject());
+        property.put("rentalFee", propertyObj.getRentalFee());
         properties.add(property);
         try{
             fileWriter = new FileWriter(path);
@@ -89,9 +91,8 @@ public class PropertyDataModel {
 
 
         } catch (Exception e) {
+            // if error then assign data to empty array
             data = new JSONArray();
         }
     }
-
-
 }

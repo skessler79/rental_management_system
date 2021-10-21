@@ -1,6 +1,7 @@
 package main.controllers;
 
 import javafx.fxml.Initializable;
+import main.classes.Property;
 import main.models.PropertyDataModel;
 import org.json.simple.JSONArray;
 
@@ -21,8 +22,8 @@ public class PropertyController implements Initializable {
         return data;
     }
 
-    public void setData(String ownerId, String type, String name, String address, String size, String description,  String project, String state, double rentalFee){
-        propertyData.inputPropertyData(ownerId, type, name, address, size, description, project, state, rentalFee);
+    public void setData(Property property){
+        propertyData.inputPropertyData(property);
     }
 
     public void getPropertiesData(){
