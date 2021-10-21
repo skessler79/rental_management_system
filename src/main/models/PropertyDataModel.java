@@ -77,6 +77,7 @@ public class PropertyDataModel {
             Object obj = parser.parse(fileReader);
             // A JSON array. JSONObject supports java.util.List interface.
             data = (JSONArray) obj;
+            System.out.println("Fuck");
             //way to iterate through all data
 //          Iterator<JSONObject> iterator = data.iterator();
 //          while (iterator.hasNext()) {
@@ -89,6 +90,7 @@ public class PropertyDataModel {
 
 
         } catch (Exception e) {
+            System.out.println("Shit");
             data = new JSONArray();
         }
     }
