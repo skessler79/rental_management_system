@@ -3,7 +3,6 @@ package main.controllers;
 import javafx.fxml.Initializable;
 import main.models.PropertyDataModel;
 import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
 
 import java.net.URL;
 import java.util.ResourceBundle;

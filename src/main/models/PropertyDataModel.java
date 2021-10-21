@@ -4,25 +4,25 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
-import main.Type;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
-import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.UUID;
 
 public class PropertyDataModel {
-    private JSONArray data;
-    private FileWriter fileWriter;
-    private final JSONParser parser = new JSONParser();
     private final String path = "src/main/data/propertyData.json";
+    private JSONArray data;
+    private JSONArray properties;
+    private JSONObject property;
+    private FileWriter fileWriter;
+    private FileReader fileReader;
+    private final JSONParser parser = new JSONParser();
 
     public PropertyDataModel() {
         loadData();
@@ -34,7 +34,7 @@ public class PropertyDataModel {
 
     public void inputPropertyData(String ownerId, String type, String name, String address, String size, String description,  String project, String state, double rentalFee){
         JSONArray properties = data;
-        JSONObject property = new JSONObject();
+        property = new JSONObject();
         property.put("ownerId", ownerId);
         property.put("id", UUID.randomUUID().toString());
         property.put("name", name);
@@ -72,7 +72,9 @@ public class PropertyDataModel {
 
     private void loadData(){
         try {
-            Object obj = parser.parse(new FileReader(path));
+            fileReader = new FileReader(path);
+
+            Object obj = parser.parse(fileReader);
             // A JSON array. JSONObject supports java.util.List interface.
             data = (JSONArray) obj;
             //way to iterate through all data
@@ -87,7 +89,7 @@ public class PropertyDataModel {
 
 
         } catch (Exception e) {
-            e.printStackTrace();
+            data = new JSONArray();
         }
     }
 
