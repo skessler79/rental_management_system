@@ -3,22 +3,12 @@ package main;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import main.controllers.PropertyController;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.JSONValue;
 import org.json.simple.parser.JSONParser;
 
 import java.io.*;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
 import java.util.UUID;
 
 public class App extends Application implements EventHandler<ActionEvent>
@@ -44,7 +34,7 @@ public class App extends Application implements EventHandler<ActionEvent>
                 "Just trust me its a good house", "CCP Corps", "Kuala Lumpur", 69420.69);
 
 
-        propertyController.getPropertiesData();
+//        propertyController.getPropertiesData();
 
 //        // Button
 //        button = new Button();

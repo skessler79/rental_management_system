@@ -25,10 +25,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-engine:1.7.1" level="project" />
     <orderEntry type="module-library">
       <library>
-        <CLASSES>
-          <root url="file://$USER_HOME$/json-simple-1.1.1" />
-          <root url="jar://$USER_HOME$/Downloads/jfoenix-9.0.10.jar!/" />
-        </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
@@ -39,6 +35,25 @@
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/dependencies/Dependency/jfoenix/jfoenix-9.0.10.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/dependencies/Dependency/json-simple/json-simple-1.1.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="javafx" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/dependencies/Dependency/Gson/gson-2.2.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
