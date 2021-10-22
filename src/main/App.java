@@ -1,5 +1,6 @@
 package main;
 
+import com.google.gson.Gson;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -13,6 +14,8 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import main.classes.Admin;
+import main.classes.User;
 import main.controllers.LoginController;
 import main.controllers.PropertyController;
 import org.json.simple.parser.JSONParser;
@@ -45,6 +48,13 @@ public class App extends Application
         scene.setFill(Color.TRANSPARENT);
         window.setScene(scene);
         window.show();
+        Gson gson = new Gson();
+//        User admin = new Admin(
+//                UUID.randomUUID().toString(),
+//                Type.UserType.ADMIN,
+//
+//
+//        );
     }
 
     public void startApp() throws Exception

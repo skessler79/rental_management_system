@@ -1,12 +1,14 @@
 package main.classes;
 
+import main.enums.PropertyType;
+
 import java.util.Date;
 
 public class Property {
     private String propertyId;
     private String ownerId;
     private String agentId;
-    private String type;
+    private PropertyType propertyType;
     private String name;
     private String address;
     private String size;
@@ -17,11 +19,11 @@ public class Property {
     private double rentalFee;
     private boolean active;
 
-    public Property(String propertyId, String ownerId, String agentId, String type, String name, String address, String size, String description, String project, String state, double rentalFee, Date createdAt, boolean active) {
+    public Property(String propertyId, String ownerId, String agentId, PropertyType propertyType, String name, String address, String size, String description, String project, String state, double rentalFee, Date createdAt, boolean active) {
         this.propertyId = propertyId;
         this.ownerId = ownerId;
         this.agentId = agentId;
-        this.type = type;
+        this.propertyType = propertyType;
         this.name = name;
         this.address = address;
         this.size = size;
@@ -49,8 +51,8 @@ public class Property {
         return agentId;
     }
 
-    public String getType() {
-        return type;
+    public PropertyType getType() {
+        return propertyType;
     }
 
     public String getName() {
@@ -93,8 +95,8 @@ public class Property {
         this.agentId = agentId;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setType(PropertyType propertyType) {
+        this.propertyType = propertyType;
     }
 
     public void setName(String name) {
@@ -131,7 +133,7 @@ public class Property {
                 "propertyId='" + propertyId + '\'' +
                 ", ownerId='" + ownerId + '\'' +
                 ", agentId='" + agentId + '\'' +
-                ", type='" + type + '\'' +
+                ", type='" + propertyType + '\'' +
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +
                 ", size='" + size + '\'' +

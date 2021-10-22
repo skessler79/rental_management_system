@@ -1,5 +1,7 @@
 package main.classes;
 
+import main.enums.PropertyType;
+
 import java.util.Date;
 import java.util.UUID;
 
@@ -9,7 +11,7 @@ public class PropertyBuilder {
     private Date createdAt = new Date();
     private String ownerId = null;
     private String agentId = null;
-    private String type = null;
+    private PropertyType propertyType = null;
     private String name = null;
     private String address = null;
     private String size = null;
@@ -19,9 +21,9 @@ public class PropertyBuilder {
     private double rentalFee = Double.NaN;
     private boolean active = false;
 
-    public PropertyBuilder(String ownerId, String type, String name, String project){
+    public PropertyBuilder(String ownerId, PropertyType propertyType, String name, String project){
         this.ownerId = ownerId;
-        this.type = type;
+        this.propertyType = propertyType;
         this.name = name;
         this.project = project;
     }
@@ -31,7 +33,7 @@ public class PropertyBuilder {
                 propertyId,
                 ownerId,
                 agentId,
-                type,
+                propertyType,
                 name,
                 address,
                 size,
