@@ -6,20 +6,19 @@ import main.models.PropertyDataModel;
 import org.json.simple.JSONArray;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class PropertyController implements Initializable {
-    private JSONArray data;
     private PropertyDataModel propertyData = new PropertyDataModel();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        data = propertyData.getPropertiesData();
 
     }
 
-    public JSONArray getProperties(){
-        return data;
+    public ArrayList<Property> getProperties(){
+        return propertyData.getPropertiesData();
     }
 
     public void setData(Property property){

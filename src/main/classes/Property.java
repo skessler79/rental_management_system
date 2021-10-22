@@ -1,9 +1,11 @@
 package main.classes;
 
+import java.util.Date;
+
 public class Property {
     private String propertyId;
     private String ownerId;
-    private String agentId = null;
+    private String agentId;
     private String type;
     private String name;
     private String address;
@@ -11,9 +13,11 @@ public class Property {
     private String description;
     private String project;
     private String state;
+    private Date createdAt;
     private double rentalFee;
+    private boolean active;
 
-    public Property(String propertyId, String ownerId, String agentId, String type, String name, String address, String size, String description, String project, String state, double rentalFee) {
+    public Property(String propertyId, String ownerId, String agentId, String type, String name, String address, String size, String description, String project, String state, double rentalFee, Date createdAt, boolean active) {
         this.propertyId = propertyId;
         this.ownerId = ownerId;
         this.agentId = agentId;
@@ -25,6 +29,12 @@ public class Property {
         this.project = project;
         this.state = state;
         this.rentalFee = rentalFee;
+        this.createdAt = createdAt;
+        this.active = active;
+    }
+
+    public Date getCreatedAt() {
+        return createdAt;
     }
 
     public String getPropertyId() {
@@ -113,5 +123,22 @@ public class Property {
 
     public void setRentalFee(double rentalFee) {
         this.rentalFee = rentalFee;
+    }
+
+    @Override
+    public String toString() {
+        return "Property{" +
+                "propertyId='" + propertyId + '\'' +
+                ", ownerId='" + ownerId + '\'' +
+                ", agentId='" + agentId + '\'' +
+                ", type='" + type + '\'' +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", size='" + size + '\'' +
+                ", description='" + description + '\'' +
+                ", project='" + project + '\'' +
+                ", state='" + state + '\'' +
+                ", rentalFee=" + rentalFee +
+                '}';
     }
 }

@@ -25,6 +25,7 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-engine:1.7.1" level="project" />
     <orderEntry type="module-library">
       <library>
+        <CLASSES />
         <JAVADOC />
         <SOURCES />
       </library>
@@ -54,6 +55,15 @@
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/dependencies/Dependency/Gson/gson-2.2.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/dependencies/Dependency/fontawesomefx/fontawesomefx-8.9.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

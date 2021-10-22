@@ -1,20 +1,23 @@
 package main.classes;
 
+import java.util.Date;
 import java.util.UUID;
 
 // This class is used for builder design pattern (reference to https://stackoverflow.com/questions/222214/managing-constructors-with-many-parameters-in-java/222295#222295)
 public class PropertyBuilder {
     private String propertyId = UUID.randomUUID().toString();
-    private String ownerId = "";
-    private String agentId = "";
-    private String type = "";
-    private String name = "";
-    private String address = "";
-    private String size = "";
-    private String description = "";
-    private String project = "";
-    private String state = "";
+    private Date createdAt = new Date();
+    private String ownerId = null;
+    private String agentId = null;
+    private String type = null;
+    private String name = null;
+    private String address = null;
+    private String size = null;
+    private String description = null;
+    private String project = null;
+    private String state = null;
     private double rentalFee = Double.NaN;
+    private boolean active = false;
 
     public PropertyBuilder(String ownerId, String type, String name, String project){
         this.ownerId = ownerId;
@@ -24,7 +27,21 @@ public class PropertyBuilder {
     }
 
     public Property buildProperty(){
-        return new Property (propertyId, ownerId, agentId, type, name, address, size, description, project, state, rentalFee);
+        return new Property (
+                propertyId,
+                ownerId,
+                agentId,
+                type,
+                name,
+                address,
+                size,
+                description,
+                project,
+                state,
+                rentalFee,
+                createdAt,
+                active
+                );
     }
 
     public PropertyBuilder agentId(String agentId){
@@ -54,6 +71,10 @@ public class PropertyBuilder {
 
     public PropertyBuilder rentalFee(double rentalFee){
         this.rentalFee = rentalFee;
+        return this;
+    }
+    public PropertyBuilder active(boolean active){
+        this.active = active;
         return this;
     }
 
