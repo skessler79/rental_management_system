@@ -27,8 +27,6 @@ public class PropertyDataModel {
     private ArrayList<Property> data;
     private ArrayList<Property> properties;
     private JsonReader reader;
-//    private JSONArray properties;
-//    private JSONObject property;
     private FileWriter fileWriter;
     private FileReader fileReader;
     private final JSONParser parser = new JSONParser();
@@ -64,25 +62,22 @@ public class PropertyDataModel {
         }
     }
 
-    private void loadData(){
-        try {
-            fileReader = new FileReader(path);
-            Gson gson = new Gson();
-            reader = new JsonReader(fileReader);
-            data = gson.fromJson(reader, PROPERTY_LIST_TYPE);
+        private void loadData(){
+            try {
+                fileReader = new FileReader(path);
+                Gson gson = new Gson();
+                reader = new JsonReader(fileReader);
+                data = gson.fromJson(reader, PROPERTY_LIST_TYPE);
+                if (data == null)
+                    data = new ArrayList<Property>();
+            } catch (Exception e) {
 
-        } catch (NullPointerException e) {
-
-            // if file empty then assign data to empty array
-            data = new ArrayList<Property>();
-        } catch (Exception e) {
-
-            e.printStackTrace();
+                e.printStackTrace();
+            }
         }
-    }
 
-    public ArrayList<Property> getPropertyByName(String name){
-        ArrayList<Property> match = new ArrayList<Property>();
+        public ArrayList<Property> getPropertyByName(String name){
+            ArrayList<Property> match = new ArrayList<Property>();
         for(Property property : data) {
             if (property.getName() != null && property.getName().contains(name)){
                 match.add(property);
