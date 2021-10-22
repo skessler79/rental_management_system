@@ -1,5 +1,7 @@
 package main.models;
 
+import javafx.event.ActionEvent;
+
 public class LoginModel
 {
     public LoginModel()
@@ -8,4 +10,11 @@ public class LoginModel
     }
 
     // TODO : Return user object
+    public void login(String username, String password)
+    {
+        // TODO : Check Credentials
+
+
+        // Return user object if credentials are found
+    }
 }
