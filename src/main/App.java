@@ -3,27 +3,27 @@ package main;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import main.classes.Property;
-import main.classes.PropertyBuilder;
+import javafx.stage.StageStyle;
+import main.controllers.LoginController;
 import main.controllers.PropertyController;
 import org.json.simple.parser.JSONParser;
 
 import java.io.*;
 import java.util.UUID;
 
-public class App extends Application implements EventHandler<ActionEvent>
+public class App extends Application
 {
-    Button button;
-
-    FileWriter file;
-    File fileList;
-    JSONParser parser = new JSONParser();
+    Stage window;
+    Parent root;
 
     public static void main(String[] args)
     {
@@ -33,42 +33,35 @@ public class App extends Application implements EventHandler<ActionEvent>
     @Override
     public void start(Stage stage) throws Exception
     {
-        stage.setTitle("Title of The Window");
-        PropertyController propertyController = new PropertyController();
-        Property property = new PropertyBuilder("12345", Type.PropertyType.BUNGALOW.toString(), "Happy house", "Project CCP").buildProperty();
-        propertyController.setData(property);
-        //        propertyController.setData(UUID.randomUUID().toString(), Type.PropertyType.BUNGALOW.toString(),
-//                "Happy House", "69, Taman Nice, 42069, KL", "20x20 pixel",
-//                "Just trust me its a good house", "CCP Corps", "Kuala Lumpur", 69420.69);
+        window = stage;
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("views/LoginView.fxml"));
+        window.initStyle(StageStyle.TRANSPARENT);
 
+        root = loader.load();
+        LoginController controller = loader.getController();
+        controller.setMain(this);
 
-
-        propertyController.getPropertiesData();
-//
-//        // Button
-//        button = new Button();
-//        button.setText("YANG");
-//        button.setOnAction(this);
-//
-//        // Image
-//        Image image = new Image(new FileInputStream("resources/e_hackerman.jpeg"));
-//        ImageView imageView = new ImageView(image);
-//
-//        VBox layout = new VBox();
-//        layout.getChildren().addAll(button, imageView);
-//
-//        Scene scene = new Scene(layout);
-//        stage.setScene(scene);
-//        stage.show();
+        Scene scene = new Scene(root);
+        scene.setFill(Color.TRANSPARENT);
+        window.setScene(scene);
+        window.show();
     }
 
-    @Override
-    public void handle(ActionEvent actionEvent)
+    public void startApp() throws Exception
     {
-        if(actionEvent.getSource() == button)
-        {
-            System.out.println("Prepare to be probed by E!");
-        }
+        // TODO : Next Scene
+        root = FXMLLoader.load(getClass().getResource("views/HomeView.fxml"));
+        window.hide();
+        Stage mainStage = new Stage();
+        window = mainStage;
+        window.setScene(new Scene(root, 420, 420));
+        window.show();
+        window.toFront();
+    }
+
+    public void closeApp()
+    {
+        window.close();
     }
 }
 
