@@ -41,7 +41,7 @@
                      <graphic>
                         <ImageView fitHeight="51.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../resources/icons/next_icon.png" />
+                              <Image url="icons/next_icon.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -50,7 +50,7 @@
                      <graphic>
                         <ImageView fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../resources/icons/close_icon.png" />
+                              <Image url="icons/close_icon.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -75,7 +75,7 @@
                      <graphic>
                         <ImageView fitHeight="51.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../resources/icons/next_icon.png" />
+                              <Image url="icons/next_icon.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -89,7 +89,7 @@
                      <graphic>
                         <ImageView fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../resources/icons/close_icon.png" />
+                              <Image url="icons/close_icon.png" />
                            </image>
                         </ImageView>
                      </graphic></JFXButton>
@@ -111,7 +111,7 @@
             </Label>
             <ImageView fitHeight="122.0" fitWidth="121.0" layoutX="171.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../resources/icons/home_icon.png" />
+                  <Image url="icons/home_icon.png" />
                </image>
             </ImageView>
          </children></AnchorPane>
