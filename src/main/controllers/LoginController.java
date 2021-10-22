@@ -39,8 +39,10 @@ public class LoginController implements Initializable
         System.out.println(username);
         System.out.println(password);
 
-        // TODO : Check Credentials
+        // TODO : Use loginModel to return a user object (currently returns void)
+        loginModel.login(username, password);
 
+        // TODO : If returned user is not null, then move to Home screen.
         try
         {
             main.startApp();
