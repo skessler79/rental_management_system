@@ -15,6 +15,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import main.controllers.LoginController;
 import main.controllers.PropertyController;
+import main.controllers.TenantNavbarController;
 import org.json.simple.parser.JSONParser;
 
 import java.io.*;
@@ -50,13 +51,21 @@ public class App extends Application
     public void startApp() throws Exception
     {
         // TODO : Next Scene
-        root = FXMLLoader.load(getClass().getResource("views/HomeView.fxml"));
+
+        // Tenant Scene
         window.hide();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("views/TenantNavbarView.fxml"));
         Stage mainStage = new Stage();
         window = mainStage;
-        window.setScene(new Scene(root, 420, 420));
+        window.initStyle(StageStyle.UNDECORATED);
+
+        root = loader.load();
+        TenantNavbarController controller = loader.getController();
+        controller.setMain(this);
+
+        Scene scene = new Scene(root, 800, 500);
+        window.setScene(scene);
         window.show();
-        window.toFront();
     }
 
     public void closeApp()
