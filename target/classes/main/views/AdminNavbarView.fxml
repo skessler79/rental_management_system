@@ -10,11 +10,11 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controllers.AdminNavbarController">
+<AnchorPane prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controllers.AdminNavbarController">
    <children>
       <AnchorPane prefHeight="46.0" prefWidth="200.0" style="-fx-background-color: #002d40;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <JFXButton fx:id="btn_exit" contentDisplay="GRAPHIC_ONLY" layoutX="756.0" layoutY="3.0" prefHeight="40.0" prefWidth="32.0">
+            <JFXButton fx:id="btn_exit" contentDisplay="GRAPHIC_ONLY" layoutX="1156.0" layoutY="3.0" prefHeight="40.0" prefWidth="32.0">
                <graphic>
                   <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -39,9 +39,9 @@
                </cursor>
             </JFXButton>
          </children></AnchorPane>
-      <AnchorPane fx:id="contentPane" prefHeight="454.0" prefWidth="750.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-      <AnchorPane fx:id="pane1" layoutX="50.0" layoutY="46.0" prefHeight="454.0" prefWidth="750.0" style="-fx-background-color: #000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="46.0" />
-      <AnchorPane fx:id="pane2" prefHeight="200.0" prefWidth="178.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="40.0">
+      <AnchorPane fx:id="contentPane" prefHeight="704.0" prefWidth="1150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <AnchorPane fx:id="pane1" layoutX="50.0" layoutY="46.0" prefHeight="704.0" prefWidth="1150.0" style="-fx-background-color: #000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="46.0" />
+      <AnchorPane fx:id="pane2" prefHeight="450.0" prefWidth="178.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="40.0">
          <children>
             <VBox layoutY="-254.0" prefHeight="454.0" prefWidth="178.0" spacing="7.0" style="-fx-background-color: White;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-254.0">
                <children>
@@ -116,7 +116,7 @@
             </VBox>
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="454.0" prefWidth="44.0" style="-fx-background-color: White;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+      <AnchorPane prefHeight="704.0" prefWidth="44.0" style="-fx-background-color: White;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
          <children>
             <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="44.0" spacing="5.0" AnchorPane.topAnchor="10.0">
                <children>
