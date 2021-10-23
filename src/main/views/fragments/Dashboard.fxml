@@ -4,6 +4,7 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -11,11 +12,12 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="681.0" prefWidth="1150.0" style="-fx-background-color: #DDDDDD;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="681.0" prefWidth="1150.0" style="-fx-background-color: #DDDDDD;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controllers.fragments.DashboardController">
    <children>
       <ImageView fitHeight="166.0" fitWidth="1150.0" layoutX="154.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
@@ -29,7 +31,7 @@
       </Label>
       <AnchorPane layoutX="74.0" layoutY="80.0" prefHeight="234.0" prefWidth="603.0" style="-fx-background-color: White; -fx-border-radius: 100; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 30, 0, 0, 0);" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="100.0">
          <children>
-            <BorderPane layoutX="225.0" layoutY="53.0" prefHeight="200.0" prefWidth="200.0" style="-fx-effect: 15px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <BorderPane layoutX="225.0" layoutY="53.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <left>
                   <VBox alignment="BASELINE_CENTER" prefHeight="344.0" prefWidth="180.0" style="-fx-border-style: solid; -fx-border-color: #EEEEEE;" BorderPane.alignment="CENTER">
                      <children>
@@ -37,8 +39,11 @@
                            <image>
                               <Image url="@../../../../resources/images/profile_circle.png" />
                            </image>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
                         </ImageView>
-                        <Label fx:id="txt_username" alignment="BASELINE_CENTER" text="User Type">
+                        <Label fx:id="txt_usertype" alignment="BASELINE_CENTER" text="Tenant">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
@@ -98,28 +103,175 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <Label text="Username">
+                              <Label alignment="BOTTOM_LEFT" text="Username" textFill="#686868">
                                  <font>
-                                    <Font size="16.0" />
+                                    <Font size="14.0" />
                                  </font>
-                              </Label>
-                              <Label text="Email" GridPane.columnIndex="1">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Label>
-                              <JFXTextField editable="false" text="AqelBoss" GridPane.rowIndex="1">
                                  <GridPane.margin>
-                                    <Insets right="30.0" />
+                                    <Insets bottom="-10.0" left="53.0" />
                                  </GridPane.margin>
+                              </Label>
+                              <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../resources/icons/profile/profile_name.png" />
+                                       </image>
+                                    </ImageView>
+                                    <JFXTextField fx:id="txt_username" editable="false" prefHeight="34.0" prefWidth="300.0" text="xX_Aq3L_da_Pu$$ySLAyer_Xx">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </JFXTextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../resources/icons/profile/profile_email.png" />
+                                       </image>
+                                    </ImageView>
+                                    <JFXTextField fx:id="txt_email" editable="false" prefHeight="34.0" prefWidth="300.0" text="bukkake_lover@malay.com">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </JFXTextField>
+                                 </children>
+                              </HBox>
+                              <Label alignment="BOTTOM_LEFT" text="Email" textFill="#686868" GridPane.columnIndex="1">
                                  <font>
-                                    <Font size="16.0" />
+                                    <Font size="14.0" />
                                  </font>
-                              </JFXTextField>
+                                 <GridPane.margin>
+                                    <Insets bottom="-10.0" left="53.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label alignment="BOTTOM_LEFT" text="First Name" textFill="#686868" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets bottom="-10.0" left="53.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label alignment="BOTTOM_LEFT" text="Last Name" textFill="#686868" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets bottom="-10.0" left="53.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                 <children>
+                                    <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../resources/icons/profile/profile_name1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <JFXTextField fx:id="txt_firstname" editable="false" prefHeight="34.0" prefWidth="300.0" text="Aqel">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </JFXTextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <children>
+                                    <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../resources/icons/profile/profile_name1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <JFXTextField fx:id="txt_lastname" editable="false" prefHeight="34.0" prefWidth="300.0" text="Bin">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </JFXTextField>
+                                 </children>
+                              </HBox>
+                              <Label alignment="BOTTOM_LEFT" text="Address" textFill="#686868" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="-10.0" left="53.0" />
+                                 </padding>
+                              </Label>
+                              <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="7">
+                                 <children>
+                                    <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../resources/icons/profile/profile_address.png" />
+                                       </image>
+                                    </ImageView>
+                                    <JFXTextField fx:id="txt_address" editable="false" prefHeight="34.0" prefWidth="684.0" text="Your mom">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </JFXTextField>
+                                 </children>
+                              </HBox>
                            </children>
                         </GridPane>
+                        <HBox layoutX="30.0" layoutY="342.0" prefHeight="71.0" prefWidth="738.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #1A33D5;" text="Update" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #DDDDDD;" text="Cancel">
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="10.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </HBox>
                      </children>
                   </AnchorPane>
                </center>
