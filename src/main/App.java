@@ -11,7 +11,13 @@ import javafx.stage.StageStyle;
 import main.classes.users.Admin;
 import main.classes.users.User;
 import main.controllers.LoginController;
+
+import main.controllers.PropertyController;
+import main.controllers.TenantNavbarController;
+import org.json.simple.parser.JSONParser;
+
 import main.enums.UserType;
+
 
 import java.util.UUID;
 
@@ -19,6 +25,8 @@ public class App extends Application
 {
     Stage window;
     Parent root;
+
+    double x, y = 0;
 
     public static void main(String[] args)
     {
@@ -36,6 +44,7 @@ public class App extends Application
         LoginController controller = loader.getController();
         controller.setMain(this);
 
+        setDraggable();
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);
         window.setScene(scene);
@@ -60,13 +69,37 @@ public class App extends Application
     public void startApp() throws Exception
     {
         // TODO : Next Scene
-        root = FXMLLoader.load(getClass().getResource("views/HomeView.fxml"));
+
+        // Tenant Scene
         window.hide();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("views/TenantNavbarView.fxml"));
         Stage mainStage = new Stage();
         window = mainStage;
-        window.setScene(new Scene(root, 420, 420));
+        window.initStyle(StageStyle.UNDECORATED);
+
+        root = loader.load();
+        TenantNavbarController controller = loader.getController();
+        controller.setMain(this);
+
+        setDraggable();
+        Scene scene = new Scene(root, 800, 500);
+        window.setScene(scene);
         window.show();
-        window.toFront();
+    }
+
+    private void setDraggable()
+    {
+        root.setOnMousePressed(mouseEvent ->
+        {
+            x = mouseEvent.getSceneX();
+            y = mouseEvent.getSceneY();
+        });
+
+        root.setOnMouseDragged(mouseEvent ->
+        {
+            window.setX(mouseEvent.getScreenX() - x);
+            window.setY(mouseEvent.getScreenY() - y);
+        });
     }
 
     public void closeApp()
