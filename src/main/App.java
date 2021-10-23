@@ -1,24 +1,24 @@
 package main;
 
+import com.google.gson.Gson;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import main.classes.users.Admin;
+import main.classes.users.User;
 import main.controllers.LoginController;
+
 import main.controllers.PropertyController;
 import main.controllers.TenantNavbarController;
 import org.json.simple.parser.JSONParser;
 
-import java.io.*;
+import main.enums.UserType;
+
+
 import java.util.UUID;
 
 public class App extends Application
@@ -49,6 +49,21 @@ public class App extends Application
         scene.setFill(Color.TRANSPARENT);
         window.setScene(scene);
         window.show();
+        Gson gson = new Gson();
+        User admin = new Admin(
+                UUID.randomUUID().toString(),
+                "Winson",
+                "Loo",
+                "weixiong0404",
+                "abc@abc.com",
+                "abc123",
+                "69, Taman Nice, 69420 Nice City",
+                "abc"
+        );
+        String gsonTest = gson.toJson(admin);
+
+        User user = gson.fromJson(gsonTest, User.class);
+        System.out.println(admin instanceof User);
     }
 
     public void startApp() throws Exception
