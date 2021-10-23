@@ -17,6 +17,7 @@ import org.json.simple.parser.JSONParser;
 import main.enums.UserType;
 
 
+import java.io.IOException;
 import java.util.UUID;
 
 public class App extends Application
@@ -47,6 +48,8 @@ public class App extends Application
         scene.setFill(Color.TRANSPARENT);
         window.setScene(scene);
         window.show();
+
+
         Gson gson = new Gson();
         User admin = new Admin(
                 UUID.randomUUID().toString(),
@@ -97,6 +100,25 @@ public class App extends Application
 
         setDraggable();
         Scene scene = new Scene(root, 1200, 750);
+        window.setScene(scene);
+        window.show();
+    }
+
+    public void loginScreen() throws IOException
+    {
+        window.hide();
+        Stage stage = new Stage();
+        window = stage;
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("views/LoginView.fxml"));
+        window.initStyle(StageStyle.TRANSPARENT);
+
+        root = loader.load();
+        LoginController controller = loader.getController();
+        controller.setMain(this);
+
+        setDraggable();
+        Scene scene = new Scene(root);
+        scene.setFill(Color.TRANSPARENT);
         window.setScene(scene);
         window.show();
     }
