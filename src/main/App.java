@@ -26,6 +26,8 @@ public class App extends Application
     Stage window;
     Parent root;
 
+    double x, y = 0;
+
     public static void main(String[] args)
     {
         launch(args);
@@ -42,6 +44,7 @@ public class App extends Application
         LoginController controller = loader.getController();
         controller.setMain(this);
 
+        setDraggable();
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);
         window.setScene(scene);
@@ -63,9 +66,25 @@ public class App extends Application
         TenantNavbarController controller = loader.getController();
         controller.setMain(this);
 
+        setDraggable();
         Scene scene = new Scene(root, 800, 500);
         window.setScene(scene);
         window.show();
+    }
+
+    private void setDraggable()
+    {
+        root.setOnMousePressed(mouseEvent ->
+        {
+            x = mouseEvent.getSceneX();
+            y = mouseEvent.getSceneY();
+        });
+
+        root.setOnMouseDragged(mouseEvent ->
+        {
+            window.setX(mouseEvent.getScreenX() - x);
+            window.setY(mouseEvent.getScreenY() - y);
+        });
     }
 
     public void closeApp()

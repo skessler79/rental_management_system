@@ -9,6 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
+
 <AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controllers.TenantNavbarController">
    <children>
       <AnchorPane prefHeight="46.0" prefWidth="200.0" style="-fx-background-color: #002d40;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
@@ -21,6 +22,9 @@
                      </image>
                   </ImageView>
                </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </JFXButton>
             <JFXButton fx:id="btn_hamburger" contentDisplay="GRAPHIC_ONLY" layoutY="3.0" prefHeight="40.0" prefWidth="32.0">
                <graphic>
@@ -30,6 +34,9 @@
                      </image>
                   </ImageView>
                </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </JFXButton>
          </children></AnchorPane>
       <AnchorPane fx:id="contentPane" prefHeight="454.0" prefWidth="750.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
@@ -42,31 +49,49 @@
                      <font>
                         <Font size="16.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </JFXButton>
                   <JFXButton alignment="BASELINE_LEFT" onAction="#handleOpenProperties" prefHeight="38.0" prefWidth="179.0" text="Properties">
                      <font>
                         <Font size="16.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </JFXButton>
                   <JFXButton alignment="BASELINE_LEFT" onAction="#handleOpenProjects" prefHeight="38.0" prefWidth="179.0" text="Projects">
                      <font>
                         <Font size="16.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </JFXButton>
                   <JFXButton alignment="BASELINE_LEFT" onAction="#handleOpenSearch" prefHeight="38.0" prefWidth="179.0" text="Search">
                      <font>
                         <Font size="16.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </JFXButton>
                   <JFXButton alignment="BASELINE_LEFT" onAction="#handleOpenSettings" prefHeight="38.0" prefWidth="179.0" text="Settings">
                      <font>
                         <Font size="16.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </JFXButton>
                   <JFXButton alignment="BASELINE_LEFT" onAction="#handleOpenLogout" prefHeight="38.0" prefWidth="179.0" text="Logout">
                      <font>
                         <Font size="16.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </JFXButton>
                </children>
                <padding>
@@ -99,6 +124,9 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </JFXButton>
                   <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="272.0" onAction="#handleOpenProjects">
                      <graphic>
@@ -108,6 +136,9 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </JFXButton>
                   <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="272.0" onAction="#handleOpenSearch">
                      <graphic>
@@ -117,6 +148,9 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </JFXButton>
                   <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="272.0" onAction="#handleOpenSettings">
                      <graphic>
@@ -126,6 +160,9 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </JFXButton>
                   <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="272.0" onAction="#handleOpenLogout">
                      <graphic>
@@ -135,6 +172,9 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </JFXButton>
                </children>
             </VBox>
