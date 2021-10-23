@@ -63,7 +63,7 @@ public class UserDataModel {
     }
 
     //fetch user from pending list and approve them based on their role
-    public void approveUser((User currentUser, User pendingUser) throws IllegalArgumentException, IllegalAccessException{
+    public void approveUser(User currentUser, User pendingUser) throws IllegalArgumentException, IllegalAccessException{
         if (currentUser.getUserType() != UserType.ADMIN)
             throw new IllegalAccessException("Only admin can call this method");
         pendingData = loadData(UserType.PENDING);
