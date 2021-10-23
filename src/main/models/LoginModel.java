@@ -1,6 +1,7 @@
 package main.models;
 
 import javafx.event.ActionEvent;
+import main.classes.users.User;
 
 public class LoginModel
 {
@@ -10,11 +11,16 @@ public class LoginModel
     }
 
     // TODO : Return user object
-    public void login(String username, String password)
+    public User login(String username, String password) throws IllegalArgumentException
     {
-        // TODO : Check Credentials
+        UserDataModel userDataModel = new UserDataModel();
+        User user;
+        try {
+            user = userDataModel.loginUser(username, password);
+        }catch (IllegalArgumentException e){
+            throw new IllegalArgumentException("Login credential invalid");
+        }
 
-
-        // Return user object if credentials are found
+        return user;
     }
 }

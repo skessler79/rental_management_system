@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
 import main.App;
+import main.classes.users.User;
 import main.models.LoginModel;
 
 import java.net.URL;
@@ -35,12 +36,18 @@ public class LoginController implements Initializable
     {
         String username = txt_username_signin.getText();
         String password = pwd_signin.getText();
+        User user;
 
         System.out.println(username);
         System.out.println(password);
 
         // TODO : Use loginModel to return a user object (currently returns void)
-        loginModel.login(username, password);
+        try{
+            user = loginModel.login(username, password);
+        } catch (IllegalArgumentException e){
+            //TODO: handle error with proper error ui
+            System.out.println("Oops ur credentials are incorrect");
+        }
 
         // TODO : If returned user is not null, then move to Home screen.
         try
