@@ -24,6 +24,8 @@ public class App extends Application
     Stage window;
     Parent root;
 
+    TestCases test = new TestCases();
+
     double x, y = 0;
 
     public static void main(String[] args)
@@ -34,34 +36,21 @@ public class App extends Application
     @Override
     public void start(Stage stage) throws Exception
     {
-        window = stage;
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("views/LoginView.fxml"));
-        window.initStyle(StageStyle.TRANSPARENT);
+//        window = stage;
+//        FXMLLoader loader = new FXMLLoader(getClass().getResource("views/LoginView.fxml"));
+//        window.initStyle(StageStyle.TRANSPARENT);
+//
+//        root = loader.load();
+//        LoginController controller = loader.getController();
+//        controller.setMain(this);
+//
+//        setDraggable();
+//        Scene scene = new Scene(root);
+//        scene.setFill(Color.TRANSPARENT);
+//        window.setScene(scene);
+//        window.show();
 
-        root = loader.load();
-        LoginController controller = loader.getController();
-        controller.setMain(this);
-
-        setDraggable();
-        Scene scene = new Scene(root);
-        scene.setFill(Color.TRANSPARENT);
-        window.setScene(scene);
-        window.show();
-        Gson gson = new Gson();
-        User admin = new Admin(
-                UUID.randomUUID().toString(),
-                "Winson",
-                "Loo",
-                "weixiong0404",
-                "abc@abc.com",
-                "abc123",
-                "69, Taman Nice, 69420 Nice City",
-                "abc"
-        );
-        String gsonTest = gson.toJson(admin);
-
-        User user = gson.fromJson(gsonTest, User.class);
-        System.out.println(admin instanceof User);
+        test.registerOwner();
     }
 
     public void startApp() throws Exception

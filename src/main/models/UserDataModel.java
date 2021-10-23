@@ -35,7 +35,7 @@ public class UserDataModel {
 
     //used for deserialization of User
     RuntimeTypeAdapterFactory<User> adapter = RuntimeTypeAdapterFactory.of(User.class, "userType")
-            .registerSubtype(Admin.class)
+            .registerSubtype(Admin.class, UserType.ADMIN.name())
             .registerSubtype(User.class, UserType.USER.name())
             .registerSubtype(Owner.class, UserType.OWNER.name())
             .registerSubtype(Agent.class, UserType.AGENT.name())
@@ -136,11 +136,13 @@ public class UserDataModel {
     //load from json file based on provided UserType
     private ArrayList<User> loadData(UserType loadDataType){
         try {
-            fileReader = new FileReader(getPath(loadDataType));
+            String path = getPath(loadDataType);
+            fileReader = new FileReader(path);
             gson = new GsonBuilder().registerTypeAdapterFactory(adapter).create();
             reader = new JsonReader(fileReader);
             data = gson.fromJson(reader, USER_LIST_TYPE);
             fileReader.close();
+            reader.close();
 
 
         } catch (IOException e) {
