@@ -62,7 +62,9 @@ public class UserDataModel {
         return null;
     }
 
-    public void approveUser(User pendingUser) throws IllegalArgumentException{
+    public void approveUser((User currentUser, User pendingUser) throws IllegalArgumentException, IllegalAccessError{
+        if (currentUser.getUserType() != UserType.ADMIN)
+            throw new IllegalAccessError("Only admin can call this method");
         pendingData = loadData(UserType.PENDING);
 
         //delete user from pending list
