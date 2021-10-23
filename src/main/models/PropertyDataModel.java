@@ -4,6 +4,9 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
+import com.google.gson.reflect.TypeToken;
+import com.google.gson.stream.JsonReader;
+import main.classes.Property;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -13,13 +16,17 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.reflect.Array;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.UUID;
 
 public class PropertyDataModel {
-    private final String path = "src/main/data/propertyData.json";
-    private JSONArray data;
-    private JSONArray properties;
-    private JSONObject property;
+    private final String path = "resources/data/propertyData.json";
+    private final Type PROPERTY_LIST_TYPE = new TypeToken<ArrayList<Property>>(){}.getType();
+    private ArrayList<Property> data;
+    private ArrayList<Property> properties;
+    private JsonReader reader;
     private FileWriter fileWriter;
     private FileReader fileReader;
     private final JSONParser parser = new JSONParser();
@@ -28,32 +35,17 @@ public class PropertyDataModel {
         loadData();
     }
 
-    public JSONArray getPropertiesData(){
+    public ArrayList<Property> getPropertiesData(){
         return data;
     }
 
-    public void inputPropertyData(String ownerId, String type, String name, String address, String size, String description,  String project, String state, double rentalFee){
-        JSONArray properties = data;
-        property = new JSONObject();
-        property.put("ownerId", ownerId);
-        property.put("id", UUID.randomUUID().toString());
-        property.put("name", name);
-        property.put("type", type);
-        property.put("address", address);
-        property.put("state", state);
-        property.put("size", size);;
-        property.put("description", description);
-        property.put("project", project);
-        property.put("rentalFee", rentalFee);
-        properties.add(property);
+    public void inputPropertyData(Property propertyObj){
         try{
+            Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().serializeSpecialFloatingPointValues().create();
             fileWriter = new FileWriter(path);
-            Gson gson = new GsonBuilder().setPrettyPrinting().create();
-            JsonParser jp = new JsonParser();
-            JsonElement je = jp.parse(properties.toJSONString());
-            String prettyJsonString = gson.toJson(je);
-            fileWriter.write(prettyJsonString);
-            //refetch data
+            properties = data;
+            properties.add(propertyObj);
+            gson.toJson(properties, fileWriter);
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -70,30 +62,36 @@ public class PropertyDataModel {
         }
     }
 
-    private void loadData(){
-        try {
-            fileReader = new FileReader(path);
+        private void loadData(){
+            try {
+                fileReader = new FileReader(path);
+                Gson gson = new Gson();
+                reader = new JsonReader(fileReader);
+                data = gson.fromJson(reader, PROPERTY_LIST_TYPE);
+                if (data == null)
+                    data = new ArrayList<Property>();
+            } catch (Exception e) {
 
-            Object obj = parser.parse(fileReader);
-            // A JSON array. JSONObject supports java.util.List interface.
-            data = (JSONArray) obj;
-            System.out.println("Fuck");
-            //way to iterate through all data
-//          Iterator<JSONObject> iterator = data.iterator();
-//          while (iterator.hasNext()) {
-//              // get each property
-//              JSONObject jsonObject = (JSONObject) iterator.next();
-//
-//              // display via key
-//              System.out.println(jsonObject.get("owner_name"));
-//          }
-
-
-        } catch (Exception e) {
-            System.out.println("Shit");
-            data = new JSONArray();
+                e.printStackTrace();
+            }
         }
+
+        public ArrayList<Property> getPropertyByName(String name){
+            ArrayList<Property> match = new ArrayList<Property>();
+        for(Property property : data) {
+            if (property.getName() != null && property.getName().contains(name)){
+                match.add(property);
+            }
+        }
+        return match;
     }
 
-
+    public Property getPropertyById(String id){
+        for(Property property : data) {
+            if (property.getPropertyId() != null && property.getPropertyId().equals(id)){
+                return property;
+            }
+        }
+        return null;
+    }
 }
