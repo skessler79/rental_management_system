@@ -9,12 +9,21 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.Cursor?>
 <AnchorPane prefHeight="426.0" prefWidth="980.0" style="-fx-background-color: 0, 100, 0;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controllers.LoginController">
    <children>
       <AnchorPane layoutY="35.0" prefHeight="350.0" style="-fx-background-color: #fff; -fx-border-radius: 0.5em;">
          <children>
-            <JFXButton fx:id="btn_signin" layoutY="110.0" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="129.0" text="Sign In" />
-            <JFXButton fx:id="btn_signup" layoutY="160.0" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="129.0" text="Register" />
+            <JFXButton fx:id="btn_signin" layoutY="110.0" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="129.0" text="Sign In" >
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btn_signup" layoutY="160.0" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="129.0" text="Register" >
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
             <AnchorPane fx:id="pn_signup" layoutX="599.0" prefHeight="426.0" prefWidth="381.0" style="-fx-background-color: #FFF;">
                <children>
                   <JFXTextField fx:id="txt_username_signup" layoutX="55.0" layoutY="85.0" prefHeight="50.0" prefWidth="272.0" promptText="Username">
@@ -79,6 +88,9 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </JFXButton>
                   <Label layoutX="156.0" layoutY="48.0" text="Sign In" textFill="#1a33d5">
                      <font>
@@ -92,7 +104,11 @@
                               <Image url="icons/close_icon.png" />
                            </image>
                         </ImageView>
-                     </graphic></JFXButton>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
                </children>
             </AnchorPane>
          </children>
