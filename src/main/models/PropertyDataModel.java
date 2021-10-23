@@ -24,27 +24,49 @@ import java.util.UUID;
 public class PropertyDataModel {
     private final String path = "resources/data/propertyData.json";
     private final Type PROPERTY_LIST_TYPE = new TypeToken<ArrayList<Property>>(){}.getType();
-    private ArrayList<Property> data;
-    private ArrayList<Property> properties;
     private JsonReader reader;
     private FileWriter fileWriter;
     private FileReader fileReader;
     private final JSONParser parser = new JSONParser();
+    private Gson gson;
 
-    public PropertyDataModel() {
-        loadData();
-    }
+    private ArrayList<Property> propertyData;
 
     public ArrayList<Property> getPropertiesData(){
-        return data;
+        return loadData();
     }
 
-    public void inputPropertyData(Property propertyObj){
+    public void registerProperty(Property property){
+        propertyData = loadData();
+        propertyData.add(property);
+        inputData(propertyData);
+    }
+
+    public ArrayList<Property> getPropertyByName(String name){
+        ArrayList<Property> match = new ArrayList<Property>();
+        propertyData = loadData();
+        for(Property property : propertyData) {
+            if (property.getName() != null && property.getName().contains(name)){
+                match.add(property);
+            }
+        }
+        return match;
+    }
+
+    public Property getPropertyById(String id){
+        propertyData = loadData();
+        for(Property property : propertyData) {
+            if (property.getPropertyId() != null && property.getPropertyId().equals(id)){
+                return property;
+            }
+        }
+        return null;
+    }
+
+    private void inputData(ArrayList<Property> properties){
         try{
-            Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().serializeSpecialFloatingPointValues().create();
+            gson = new GsonBuilder().setPrettyPrinting().serializeNulls().serializeSpecialFloatingPointValues().create();
             fileWriter = new FileWriter(path);
-            properties = data;
-            properties.add(propertyObj);
             gson.toJson(properties, fileWriter);
         }
         catch (Exception e) {
@@ -55,43 +77,24 @@ public class PropertyDataModel {
             try {
                 fileWriter.flush();
                 fileWriter.close();
-                loadData();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
     }
 
-        private void loadData(){
-            try {
-                fileReader = new FileReader(path);
-                Gson gson = new Gson();
-                reader = new JsonReader(fileReader);
-                data = gson.fromJson(reader, PROPERTY_LIST_TYPE);
-                if (data == null)
-                    data = new ArrayList<Property>();
-            } catch (Exception e) {
+    private ArrayList<Property> loadData(){
+        try {
+            fileReader = new FileReader(path);
+            gson = new Gson();
+            reader = new JsonReader(fileReader);
+            propertyData = gson.fromJson(reader, PROPERTY_LIST_TYPE);
+            if (propertyData == null)
+                propertyData = new ArrayList<Property>();
+        } catch (Exception e) {
 
-                e.printStackTrace();
-            }
+            e.printStackTrace();
         }
-
-        public ArrayList<Property> getPropertyByName(String name){
-            ArrayList<Property> match = new ArrayList<Property>();
-        for(Property property : data) {
-            if (property.getName() != null && property.getName().contains(name)){
-                match.add(property);
-            }
-        }
-        return match;
-    }
-
-    public Property getPropertyById(String id){
-        for(Property property : data) {
-            if (property.getPropertyId() != null && property.getPropertyId().equals(id)){
-                return property;
-            }
-        }
-        return null;
+        return propertyData;
     }
 }
