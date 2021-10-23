@@ -12,7 +12,6 @@ import org.json.simple.parser.JSONParser;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
@@ -43,6 +42,7 @@ public class UserDataModel {
             .registerSubtype(Regular.class, UserType.REGULAR.name())
             .registerSubtype(Pending.class, UserType.PENDING.name());
 
+    //private method to get path
     private String getPath(UserType loadDataType){
         switch (loadDataType){
             case USER:
@@ -62,9 +62,10 @@ public class UserDataModel {
         return null;
     }
 
-    public void approveUser((User currentUser, User pendingUser) throws IllegalArgumentException, IllegalAccessError{
+    //fetch user from pending list and approve them based on their role
+    public void approveUser((User currentUser, User pendingUser) throws IllegalArgumentException, IllegalAccessException{
         if (currentUser.getUserType() != UserType.ADMIN)
-            throw new IllegalAccessError("Only admin can call this method");
+            throw new IllegalAccessException("Only admin can call this method");
         pendingData = loadData(UserType.PENDING);
 
         //delete user from pending list
@@ -93,7 +94,7 @@ public class UserDataModel {
 
     }
 
-    // perform login
+    // perform login with provided username and password
     public User loginUser(String username, String password) throws IllegalArgumentException{
         userData = loadData(UserType.USER);
         boolean userExist = false;
