@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
 import main.App;
+import main.views.ConfirmBoxView;
 
 import java.io.IOException;
 import java.net.URL;
@@ -63,7 +64,15 @@ public class TenantNavbarController implements Initializable
         });
 
         pane1.setOnMouseClicked(mouseEvent -> closeSidebar());
-        btn_exit.setOnAction(actionEvent -> main.closeApp());
+        btn_exit.setOnAction(actionEvent ->
+        {
+            boolean result = ConfirmBoxView.display("Exit", "Are you sure you want to exit?");
+
+            if(result)
+            {
+                main.closeApp();
+            }
+        });
     }
 
     public void setMain(App app)
@@ -143,8 +152,7 @@ public class TenantNavbarController implements Initializable
     @FXML
     void handleOpenLogout(ActionEvent event) throws IOException
     {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../views/fragments/Logout.fxml"));
-        contentPane.getChildren().setAll(anchorPane);
+        main.loginScreen();
     }
 
 }
