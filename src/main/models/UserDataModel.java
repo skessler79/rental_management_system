@@ -4,13 +4,15 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
-import main.classes.users.User;
+import main.classes.RuntimeTypeAdapterFactory;
+import main.classes.users.*;
 import main.enums.UserType;
 import org.json.simple.parser.JSONParser;
 
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
@@ -21,13 +23,25 @@ public class UserDataModel {
     private FileReader fileReader;
     private ArrayList<User> data;
     private final JSONParser parser = new JSONParser();
+    private Gson gson;
+
+    private ArrayList<User> userData;
+    private ArrayList<User> pendingData;
+    private ArrayList<User> adminData;
+    private ArrayList<User> ownerData;
+    private ArrayList<User> agentData;
+    private ArrayList<User> regularData;
 
     private final Type USER_LIST_TYPE = new TypeToken<ArrayList<User>>(){}.getType();
-//    private final Type ADMIN_LIST_TYPE = new TypeToken<ArrayList<User>>(){}.getType();
-//    private final Type REGULAR_LIST_TYPE = new TypeToken<ArrayList<User>>(){}.getType();
-//    private final Type OWNER_LIST_TYPE = new TypeToken<ArrayList<User>>(){}.getType();
-//    private final Type AGENT_LIST_TYPE = new TypeToken<ArrayList<User>>(){}.getType();
-//    private final Type PENDING_LIST_TYPE = new TypeToken<ArrayList<User>>(){}.getType();
+
+    //used for deserialization of User
+    RuntimeTypeAdapterFactory<User> adapter = RuntimeTypeAdapterFactory.of(User.class, "userType")
+            .registerSubtype(Admin.class)
+            .registerSubtype(User.class, UserType.USER.name())
+            .registerSubtype(Owner.class, UserType.OWNER.name())
+            .registerSubtype(Agent.class, UserType.AGENT.name())
+            .registerSubtype(Regular.class, UserType.REGULAR.name())
+            .registerSubtype(Pending.class, UserType.PENDING.name());
 
     private String getPath(UserType loadDataType){
         switch (loadDataType){
@@ -48,9 +62,23 @@ public class UserDataModel {
         return null;
     }
 
+    public void approveUser(User pendingUser) throws IllegalArgumentException{
+        pendingData = loadData(UserType.PENDING);
+
+        //delete user from pending list
+        if(!pendingData.removeIf(user -> user.getId().equals(pendingUser.getId())))
+            throw new IllegalArgumentException("Invalid User");
+        inputData(UserType.PENDING, pendingData);
+
+        ArrayList<User> tempData = loadData(pendingUser.getUserType());
+
+        tempData.add(pendingUser);
+        inputData(pendingUser.getUserType(), tempData);
+    }
+
     //check if username is unique and add them to pending user
     public void registerUser(User registerUser) throws IllegalArgumentException{
-        ArrayList<User> userData = loadData(UserType.USER);
+        userData = loadData(UserType.USER);
         for(User user:userData){
             if (registerUser.getUsername().equals(user.getUsername())){
                 throw new IllegalArgumentException("Username already exists!");
@@ -65,7 +93,7 @@ public class UserDataModel {
 
     // perform login
     public User loginUser(String username, String password) throws IllegalArgumentException{
-        ArrayList<User> userData = loadData(UserType.USER);
+        userData = loadData(UserType.USER);
         boolean userExist = false;
         User loginUser = new User();
         for (User user:userData){
@@ -93,11 +121,11 @@ public class UserDataModel {
     //takes in UserType and arraylist of objects and store them as json file accordingly
     private void inputData(UserType loadDataType, ArrayList<User> inputData) {
         try {
-            Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().serializeSpecialFloatingPointValues().create();
+            gson = new GsonBuilder().setPrettyPrinting().serializeNulls().serializeSpecialFloatingPointValues().create();
             fileWriter = new FileWriter(getPath(loadDataType));
             gson.toJson(inputData, fileWriter);
             fileWriter.close();
-        } catch (Exception e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -106,13 +134,13 @@ public class UserDataModel {
     private ArrayList<User> loadData(UserType loadDataType){
         try {
             fileReader = new FileReader(getPath(loadDataType));
-            Gson gson = new Gson();
+            gson = new GsonBuilder().registerTypeAdapterFactory(adapter).create();
             reader = new JsonReader(fileReader);
             data = gson.fromJson(reader, USER_LIST_TYPE);
             fileReader.close();
 
 
-        } catch (Exception e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
         if (data == null){

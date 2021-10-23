@@ -43,7 +43,6 @@ public class App extends Application
         Gson gson = new Gson();
         User admin = new Admin(
                 UUID.randomUUID().toString(),
-                UserType.ADMIN,
                 "Winson",
                 "Loo",
                 "weixiong0404",
