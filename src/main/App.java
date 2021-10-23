@@ -96,7 +96,7 @@ public class App extends Application
         window.initStyle(StageStyle.UNDECORATED);
 
         setDraggable();
-        Scene scene = new Scene(root, 800, 500);
+        Scene scene = new Scene(root, 1200, 750);
         window.setScene(scene);
         window.show();
     }
