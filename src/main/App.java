@@ -12,6 +12,7 @@ import main.classes.users.Admin;
 import main.classes.users.User;
 import main.controllers.LoginController;
 
+import main.controllers.OwnerNavbarController;
 import main.controllers.PropertyController;
 import main.controllers.TenantNavbarController;
 import org.json.simple.parser.JSONParser;
@@ -70,16 +71,27 @@ public class App extends Application
     {
         // TODO : Next Scene
 
-        // Tenant Scene
+        // Closing login stage due to different StageStyle
         window.hide();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("views/TenantNavbarView.fxml"));
+
+        // TODO : Load the right scene based on user type
+        // Tenant Scene
+//        FXMLLoader loader = new FXMLLoader(getClass().getResource("views/TenantNavbarView.fxml"));
+//        root = loader.load();
+//        TenantNavbarController controller = loader.getController();
+//        controller.setMain(this);
+
+        // Owner Scene
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("views/OwnerNavbarView.fxml"));
+        root = loader.load();
+        OwnerNavbarController controller = loader.getController();
+        controller.setMain(this);
+
+
+        // Setting a new stage
         Stage mainStage = new Stage();
         window = mainStage;
         window.initStyle(StageStyle.UNDECORATED);
-
-        root = loader.load();
-        TenantNavbarController controller = loader.getController();
-        controller.setMain(this);
 
         setDraggable();
         Scene scene = new Scene(root, 800, 500);
