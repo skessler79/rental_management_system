@@ -31,7 +31,7 @@ public class TenantNavbarController implements Initializable
         AnchorPane anchorPane = null;
         try
         {
-            anchorPane = FXMLLoader.load(getClass().getResource("../views/tenant/Dashboard.fxml"));
+            anchorPane = FXMLLoader.load(getClass().getResource("../views/fragments/Dashboard.fxml"));
         } catch (IOException e)
         {
             e.printStackTrace();
@@ -108,42 +108,42 @@ public class TenantNavbarController implements Initializable
     @FXML
     void handleOpenDashboard(ActionEvent event) throws IOException
     {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../views/tenant/Dashboard.fxml"));
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../views/fragments/Dashboard.fxml"));
         contentPane.getChildren().setAll(anchorPane);
     }
 
     @FXML
     void handleOpenProperties(ActionEvent event) throws IOException
     {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../views/tenant/Properties.fxml"));
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../views/fragments/Properties.fxml"));
         contentPane.getChildren().setAll(anchorPane);
     }
 
     @FXML
     void handleOpenProjects(ActionEvent event) throws IOException
     {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../views/tenant/Projects.fxml"));
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../views/fragments/Projects.fxml"));
         contentPane.getChildren().setAll(anchorPane);
     }
 
     @FXML
     void handleOpenSearch(ActionEvent event) throws IOException
     {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../views/tenant/Search.fxml"));
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../views/fragments/Search.fxml"));
         contentPane.getChildren().setAll(anchorPane);
     }
 
     @FXML
     void handleOpenSettings(ActionEvent event) throws IOException
     {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../views/tenant/Settings.fxml"));
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../views/fragments/Settings.fxml"));
         contentPane.getChildren().setAll(anchorPane);
     }
 
     @FXML
     void handleOpenLogout(ActionEvent event) throws IOException
     {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../views/tenant/Logout.fxml"));
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../views/fragments/Logout.fxml"));
         contentPane.getChildren().setAll(anchorPane);
     }
 

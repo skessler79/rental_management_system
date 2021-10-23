@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class OwnerNavbarController implements Initializable
+public class AdminNavbarController implements Initializable
 {
     @FXML
     private JFXButton btn_exit, btn_hamburger;
@@ -134,9 +134,16 @@ public class OwnerNavbarController implements Initializable
     }
 
     @FXML
-    void handleOpenOwnerManage(ActionEvent event) throws IOException
+    void handleOpenAdminManage(ActionEvent event) throws IOException
     {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../views/fragments/OwnerManage.fxml"));
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../views/fragments/AdminManage.fxml"));
+        contentPane.getChildren().setAll(anchorPane);
+    }
+
+    @FXML
+    void handleOpenAdminReport(ActionEvent event) throws IOException
+    {
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../views/fragments/AdminReport.fxml"));
         contentPane.getChildren().setAll(anchorPane);
     }
 

@@ -10,11 +10,8 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import main.classes.users.Admin;
 import main.classes.users.User;
-import main.controllers.LoginController;
+import main.controllers.*;
 
-import main.controllers.OwnerNavbarController;
-import main.controllers.PropertyController;
-import main.controllers.TenantNavbarController;
 import org.json.simple.parser.JSONParser;
 
 import main.enums.UserType;
@@ -82,11 +79,16 @@ public class App extends Application
 //        controller.setMain(this);
 
         // Owner Scene
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("views/OwnerNavbarView.fxml"));
-        root = loader.load();
-        OwnerNavbarController controller = loader.getController();
-        controller.setMain(this);
+//        FXMLLoader loader = new FXMLLoader(getClass().getResource("views/OwnerNavbarView.fxml"));
+//        root = loader.load();
+//        OwnerNavbarController controller = loader.getController();
+//        controller.setMain(this);
 
+        // Admin Scene
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("views/AdminNavbarView.fxml"));
+        root = loader.load();
+        AdminNavbarController controller = loader.getController();
+        controller.setMain(this);
 
         // Setting a new stage
         Stage mainStage = new Stage();
