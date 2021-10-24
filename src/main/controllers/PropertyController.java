@@ -22,7 +22,7 @@ public class PropertyController implements Initializable {
     }
 
     public void setData(Property property){
-        propertyData.inputPropertyData(property);
+        propertyData.registerProperty(property);
     }
 
     public void getPropertiesData(){

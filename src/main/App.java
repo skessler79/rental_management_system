@@ -48,29 +48,12 @@ public class App extends Application
         scene.setFill(Color.TRANSPARENT);
         window.setScene(scene);
         window.show();
-
-
-        Gson gson = new Gson();
-        User admin = new Admin(
-                UUID.randomUUID().toString(),
-                "Winson",
-                "Loo",
-                "weixiong0404",
-                "abc@abc.com",
-                "abc123",
-                "69, Taman Nice, 69420 Nice City",
-                "abc"
-        );
-        String gsonTest = gson.toJson(admin);
-
-        User user = gson.fromJson(gsonTest, User.class);
-        System.out.println(admin instanceof User);
     }
 
-    public void startApp() throws Exception
+    public void startApp(User user) throws Exception
     {
         // TODO : Next Scene
-
+        System.out.println("Looged in as: " + user);
         // Closing login stage due to different StageStyle
         window.hide();
 

@@ -12,6 +12,7 @@ import org.json.simple.parser.JSONParser;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
@@ -35,97 +36,49 @@ public class UserDataModel {
 
     //used for deserialization of User
     RuntimeTypeAdapterFactory<User> adapter = RuntimeTypeAdapterFactory.of(User.class, "userType")
-            .registerSubtype(Admin.class)
-            .registerSubtype(User.class, UserType.USER.name())
+            .registerSubtype(Admin.class, UserType.ADMIN.name())
             .registerSubtype(Owner.class, UserType.OWNER.name())
             .registerSubtype(Agent.class, UserType.AGENT.name())
             .registerSubtype(Regular.class, UserType.REGULAR.name())
             .registerSubtype(Pending.class, UserType.PENDING.name());
 
-    //private method to get path
-    private String getPath(UserType loadDataType){
-        switch (loadDataType){
-            case USER:
-                return "resources/data/userData.json";
+    //get TypeToken
+    @SuppressWarnings("DuplicateBranchesInSwitch")
+    private Type getTypeToken(UserType userType){
+        switch (userType){
             case ADMIN:
-                return "resources/data/adminData.json";
+                return new TypeToken<ArrayList<Admin>>(){}.getType();
             case OWNER:
-                return "resources/data/ownerData.json";
+                return new TypeToken<ArrayList<Owner>>(){}.getType();
             case AGENT:
-                return "resources/data/agentData.json";
+                return new TypeToken<ArrayList<Agent>>(){}.getType();
             case REGULAR:
-                return "resources/data/regularData.json";
-            case PENDING:
-                return "resources/data/pendingRegisterData.json";
-        }
-
-        return null;
-    }
-
-    //fetch user from pending list and approve them based on their role
-    public void approveUser(User currentUser, User pendingUser) throws IllegalArgumentException, IllegalAccessException{
-        if (currentUser.getUserType() != UserType.ADMIN)
-            throw new IllegalAccessException("Only admin can call this method");
-        pendingData = loadData(UserType.PENDING);
-
-        //delete user from pending list
-        if(!pendingData.removeIf(user -> user.getId().equals(pendingUser.getId())))
-            throw new IllegalArgumentException("Invalid User");
-        inputData(UserType.PENDING, pendingData);
-
-        ArrayList<User> tempData = loadData(pendingUser.getUserType());
-
-        tempData.add(pendingUser);
-        inputData(pendingUser.getUserType(), tempData);
-    }
-
-    //check if username is unique and add them to pending user
-    public void registerUser(User registerUser) throws IllegalArgumentException{
-        userData = loadData(UserType.USER);
-        for(User user:userData){
-            if (registerUser.getUsername().equals(user.getUsername())){
-                throw new IllegalArgumentException("Username already exists!");
-            }
-        }
-
-        ArrayList<User> pendingUserData = loadData(UserType.PENDING);
-        pendingUserData.add(registerUser);
-        inputData(UserType.PENDING, pendingUserData);
-
-    }
-
-    // perform login with provided username and password
-    public User loginUser(String username, String password) throws IllegalArgumentException{
-        userData = loadData(UserType.USER);
-        boolean userExist = false;
-        User loginUser = new User();
-        for (User user:userData){
-            if (user.getUsername().equals(username) && user.getPassword().equals(password)){
-                loginUser = user;
-                userExist = true;
-            }
-        }
-
-        if (!userExist){
-            throw new IllegalArgumentException("Credentials are incorrect");
-        }
-
-        data = loadData(loginUser.getUserType());
-        for (User user:data){
-            if (user.getId().equals(loginUser.getId())){
-                System.out.println(user + "has logged in successfully");
-                return user;
-            }
+                return new TypeToken<ArrayList<Regular>>(){}.getType();
         }
         return null;
     }
 
+    //private method to get path
+    private String getPath(UserType loadDataType , boolean isPending){
+        switch (loadDataType){
+            case ADMIN:
+                return isPending?"resources/data/pendingAdminData.json":"resources/data/adminData.json";
+            case OWNER:
+                return isPending?"resources/data/pendingOwnerData.json":"resources/data/ownerData.json";
+            case AGENT:
+                return isPending?"resources/data/pendingAgentData.json":"resources/data/agentData.json";
+            case REGULAR:
+                return isPending?"resources/data/pendingRegularData.json":"resources/data/regularData.json";
+        }
+
+        return null;
+    }
 
     //takes in UserType and arraylist of objects and store them as json file accordingly
-    private void inputData(UserType loadDataType, ArrayList<User> inputData) {
+    private void inputData(UserType loadDataType, ArrayList<User> inputData, boolean isPending) {
         try {
-            gson = new GsonBuilder().setPrettyPrinting().serializeNulls().serializeSpecialFloatingPointValues().create();
-            fileWriter = new FileWriter(getPath(loadDataType));
+            gson = new GsonBuilder().setPrettyPrinting().serializeNulls().registerTypeAdapterFactory(adapter).serializeSpecialFloatingPointValues().create();
+            fileWriter = new FileWriter(getPath(loadDataType, isPending));
             gson.toJson(inputData, fileWriter);
             fileWriter.close();
         } catch (IOException e) {
@@ -134,12 +87,12 @@ public class UserDataModel {
     }
 
     //load from json file based on provided UserType
-    private ArrayList<User> loadData(UserType loadDataType){
+    private ArrayList<User> loadData(UserType loadDataType, boolean isPending){
         try {
-            fileReader = new FileReader(getPath(loadDataType));
-            gson = new GsonBuilder().registerTypeAdapterFactory(adapter).create();
+            fileReader = new FileReader(getPath(loadDataType, isPending));
             reader = new JsonReader(fileReader);
-            data = gson.fromJson(reader, USER_LIST_TYPE);
+            gson = new GsonBuilder().registerTypeAdapterFactory(adapter).create();
+            data = gson.fromJson(reader, getTypeToken(loadDataType));
             fileReader.close();
 
 
@@ -147,9 +100,92 @@ public class UserDataModel {
             e.printStackTrace();
         }
         if (data == null){
-            return new ArrayList<User>();
+            return new ArrayList<>();
         }
 
         return data;
+    }
+
+
+    //fetch user from pending list and approve them based on their role
+    public void approveUser(User currentUser, User pendingUser) throws IllegalArgumentException, IllegalAccessException{
+        if (currentUser.getUserType() != UserType.ADMIN)
+            throw new IllegalAccessException("Only admin can call this method");
+        pendingData = loadData(pendingUser.getUserType(), true);
+
+        //delete user from pending list
+        if(!pendingData.removeIf(user -> user.getId().equals(pendingUser.getId())))
+            throw new IllegalArgumentException("Invalid User");
+        inputData(pendingUser.getUserType(), pendingData, true);
+
+        ArrayList<User> tempData = loadData(pendingUser.getUserType(), false );
+
+        tempData.add(pendingUser);
+        inputData(pendingUser.getUserType() , tempData, false);
+    }
+
+
+    //check if username is unique and add them to pending user
+    public void registerUser(User registerUser) throws IllegalArgumentException{
+        userData = getUserData();
+        // check if there are the same usernames
+        for(User user:userData){
+            if (registerUser.getUsername().equals(user.getUsername())){
+                throw new IllegalArgumentException("Username already exists!");
+            }
+        }
+
+        ArrayList<User> pendingUserData = loadData(registerUser.getUserType(), true);
+        pendingUserData.add(registerUser);
+        inputData(registerUser.getUserType(), pendingUserData, true);
+
+    }
+
+
+    // perform login with provided username and password
+    public User loginUser(String username, String password) throws IllegalArgumentException{
+        userData = getUserData();
+        boolean userExist = false;
+        for (User user:userData){
+            if (user.getUsername().equals(username) && user.getPassword().equals(password)){
+                return user;
+            }
+        }
+
+        if (!userExist){
+            throw new IllegalArgumentException("Credentials are incorrect");
+        }
+
+        return null;
+    }
+
+    //public method to get user data by userType
+    public ArrayList<User> getUserDataByType(UserType userType){
+        return loadData(userType, false);
+    }
+
+    //public method to get pending user data by type
+    public ArrayList<User> getPendingUserDataByType(UserType userType){
+        return loadData(userType, true);
+    }
+
+    //public method to get user data
+    public ArrayList<User> getUserData(){
+        ArrayList<User> output = new ArrayList<>();
+        output.addAll(loadData(UserType.ADMIN, false));
+        output.addAll(loadData(UserType.OWNER, false));
+        output.addAll(loadData(UserType.AGENT, false));
+        output.addAll(loadData(UserType.REGULAR, false));
+        return output;
+    }
+
+    //public method to get all pending user data
+    public ArrayList<User> getPendingUserData(){
+        ArrayList<User> output = new ArrayList<>();
+        output.addAll(loadData(UserType.ADMIN, true));
+        output.addAll(loadData(UserType.OWNER, true));
+        output.addAll(loadData(UserType.AGENT, true));
+        output.addAll(loadData(UserType.REGULAR, true));
+        return output;
     }
 }

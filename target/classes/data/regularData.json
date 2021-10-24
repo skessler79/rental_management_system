@@ -1,0 +1,24 @@
+[
+  {
+    "regularDetails": "regular1",
+    "id": "4139415d-7929-4e8a-998b-51e0fe1e11a0",
+    "userType": "REGULAR",
+    "firstName": "Winson1",
+    "lastName": "Loo1",
+    "username": "regular1",
+    "email": "abc1@abc.com",
+    "password": "abc123",
+    "address": "69, Taman Nice, 69420"
+  },
+  {
+    "regularDetails": "regular2",
+    "id": "b3029e4e-39ac-4777-a72d-28791c490575",
+    "userType": "REGULAR",
+    "firstName": "Winson4",
+    "lastName": "Loo4",
+    "username": "regular2",
+    "email": "abc4@abc.com",
+    "password": "abc123",
+    "address": "69, Taman Nice, 69420"
+  }
+]

@@ -37,12 +37,11 @@ public class LoginController implements Initializable
     {
         String username = txt_username_signin.getText();
         String password = pwd_signin.getText();
-        User user;
+        User user = null;
 
         System.out.println(username);
         System.out.println(password);
 
-        // TODO : Use loginModel to return a user object (currently returns void)
         try{
             user = loginModel.login(username, password);
         } catch (IllegalArgumentException e){
@@ -50,10 +49,9 @@ public class LoginController implements Initializable
             System.out.println("Oops ur credentials are incorrect");
         }
 
-        // TODO : If returned user is not null, then move to Home screen.
         try
         {
-            main.startApp();
+            main.startApp(user );
         }
         catch(Exception e)
         {
