@@ -17,14 +17,13 @@ import org.json.simple.parser.JSONParser;
 import main.enums.UserType;
 
 
+import java.io.IOException;
 import java.util.UUID;
 
 public class App extends Application
 {
     Stage window;
     Parent root;
-
-    TestCases test = new TestCases();
 
     double x, y = 0;
 
@@ -49,15 +48,12 @@ public class App extends Application
         scene.setFill(Color.TRANSPARENT);
         window.setScene(scene);
         window.show();
-
-//        test.startTest();
     }
 
-    public void startApp(User currentUser) throws Exception
+    public void startApp(User user) throws Exception
     {
         // TODO : Next Scene
-
-        System.out.println(currentUser);
+        System.out.println("Looged in as: " + user);
         // Closing login stage due to different StageStyle
         window.hide();
 
@@ -87,6 +83,25 @@ public class App extends Application
 
         setDraggable();
         Scene scene = new Scene(root, 1200, 750);
+        window.setScene(scene);
+        window.show();
+    }
+
+    public void loginScreen() throws IOException
+    {
+        window.hide();
+        Stage stage = new Stage();
+        window = stage;
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("views/LoginView.fxml"));
+        window.initStyle(StageStyle.TRANSPARENT);
+
+        root = loader.load();
+        LoginController controller = loader.getController();
+        controller.setMain(this);
+
+        setDraggable();
+        Scene scene = new Scene(root);
+        scene.setFill(Color.TRANSPARENT);
         window.setScene(scene);
         window.show();
     }

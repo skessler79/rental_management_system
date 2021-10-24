@@ -7,9 +7,19 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 import main.App;
+import main.views.ConfirmBoxView;
 
 import java.io.IOException;
 import java.net.URL;
@@ -63,7 +73,15 @@ public class AdminNavbarController implements Initializable
         });
 
         pane1.setOnMouseClicked(mouseEvent -> closeSidebar());
-        btn_exit.setOnAction(actionEvent -> main.closeApp());
+        btn_exit.setOnAction(actionEvent ->
+        {
+            boolean result = ConfirmBoxView.display("Exit", "Are you sure you want to exit?");
+
+            if(result)
+            {
+                main.closeApp();
+            }
+        });
     }
 
     public void setMain(App app)
@@ -157,8 +175,14 @@ public class AdminNavbarController implements Initializable
     @FXML
     void handleOpenLogout(ActionEvent event) throws IOException
     {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("../views/fragments/Logout.fxml"));
-        contentPane.getChildren().setAll(anchorPane);
+        boolean result = ConfirmBoxView.display("Logout", "Are you sure you want to logout?");
+
+        if(result)
+        {
+            main.loginScreen();
+        }
     }
 
 }
+
+

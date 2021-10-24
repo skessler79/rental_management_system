@@ -10,6 +10,7 @@ import javafx.scene.layout.AnchorPane;
 import main.App;
 import main.classes.users.User;
 import main.models.LoginModel;
+import main.views.ConfirmBoxView;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -74,8 +75,12 @@ public class LoginController implements Initializable
     @FXML
     public void handleCloseAction(ActionEvent actionEvent)
     {
-        actionEvent.consume();
-        main.closeApp();
+        boolean result = ConfirmBoxView.display("Exit", "Are you sure you want to exit?");
+
+        if(result)
+        {
+            main.closeApp();
+        }
     }
 
     @Override
