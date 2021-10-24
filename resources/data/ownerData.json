@@ -1,0 +1,13 @@
+[
+  {
+    "ownerDetails": "owner1",
+    "id": "3ec2cd60-d5af-4875-b069-2b2c6388da31",
+    "userType": "OWNER",
+    "firstName": "Winson1",
+    "lastName": "Loo1",
+    "username": "owner1",
+    "email": "abc1@abc.com",
+    "password": "abc123",
+    "address": "69, Taman Nice, 69420"
+  }
+]

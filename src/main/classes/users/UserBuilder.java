@@ -73,4 +73,9 @@ public class UserBuilder {
         this.agentDetails = agentDetails;
         return this;
     }
+
+    public UserBuilder regularDetails (String regularDetails){
+        this.regularDetails = regularDetails;
+        return this;
+    }
 }

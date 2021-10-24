@@ -4,15 +4,13 @@ import main.enums.UserType;
 
 public class User {
     private String id;
-    private UserType userType;
+    protected UserType userType;
     private String firstName;
     private String lastName;
     private String username;
     private String email;
     private String password;
     private String address;
-
-    public User(){}
 
     public User(String id, UserType userType, String firstName, String lastName, String username, String email, String password, String address) {
         this.id = id;

@@ -50,7 +50,7 @@ public class App extends Application
 //        window.setScene(scene);
 //        window.show();
 
-        test.registerOwner();
+        test.startTest();
     }
 
     public void startApp() throws Exception

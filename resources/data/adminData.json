@@ -1,0 +1,24 @@
+[
+  {
+    "adminDetails": "admin0101 details",
+    "id": "a66c4e96-3370-47e3-a757-d7d9417208db",
+    "userType": "ADMIN",
+    "firstName": "admin1",
+    "lastName": "adminlast1",
+    "username": "admin0101",
+    "email": "abc1@abc.com",
+    "password": "abc123",
+    "address": null
+  },
+  {
+    "adminDetails": "admin1",
+    "id": "3a1754fd-ab9d-4ed8-902e-a258180a31ea",
+    "userType": "ADMIN",
+    "firstName": "Winson2",
+    "lastName": "Loo2",
+    "username": "admin1",
+    "email": "abc2@abc.com",
+    "password": "abc123",
+    "address": "69, Taman Nice, 69420"
+  }
+]
