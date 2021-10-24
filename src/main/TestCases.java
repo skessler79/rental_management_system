@@ -17,7 +17,7 @@ public class TestCases {
     private ArrayList<User> pendingUsers;
 
     public void startTest(){
-        registerUsers();
+//        registerUsers();
         loginUser();
         approveUsers();
     }
@@ -41,6 +41,7 @@ public class TestCases {
 
     private void loginUser(){
         currentUser = userDataModel.loginUser("admin0101", "abc123");
+        System.out.println(currentUser);
     }
 
     private void approveUsers(){
