@@ -10,6 +10,7 @@ import javafx.scene.layout.AnchorPane;
 import main.App;
 import main.classes.users.User;
 import main.models.LoginModel;
+import main.views.AlertBoxView;
 import main.views.ConfirmBoxView;
 
 import java.net.URL;
@@ -49,13 +50,20 @@ public class LoginController implements Initializable
             System.out.println("Oops ur credentials are incorrect");
         }
 
-        try
+        if(user == null)
         {
-            main.startApp(user );
+            AlertBoxView.display("Login Error", "Your login credentials are incorrect!");
         }
-        catch(Exception e)
+        else
         {
-            e.printStackTrace();
+            try
+            {
+                main.startApp(user);
+            }
+            catch(Exception e)
+            {
+                e.printStackTrace();
+            }
         }
     }
 

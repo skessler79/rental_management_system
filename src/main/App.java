@@ -58,23 +58,29 @@ public class App extends Application
         window.hide();
 
         // TODO : Load the right scene based on user type
-        // Tenant Scene
-//        FXMLLoader loader = new FXMLLoader(getClass().getResource("views/TenantNavbarView.fxml"));
-//        root = loader.load();
-//        TenantNavbarController controller = loader.getController();
-//        controller.setMain(this);
+        FXMLLoader loader;
+        UserNavbarController controller;
 
-        // Owner Scene
-//        FXMLLoader loader = new FXMLLoader(getClass().getResource("views/OwnerNavbarView.fxml"));
-//        root = loader.load();
-//        OwnerNavbarController controller = loader.getController();
-//        controller.setMain(this);
+        switch(user.getUserType())
+        {
+            case ADMIN:
+                loader = new FXMLLoader(getClass().getResource("views/AdminNavbarView.fxml"));
+                break;
+            case REGULAR:
+                loader = new FXMLLoader(getClass().getResource("views/TenantNavbarView.fxml"));
+                break;
+            case OWNER:
+            case AGENT:
+                loader = new FXMLLoader(getClass().getResource("views/OwnerNavbarView.fxml"));
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + user.getUserType());
+        }
 
-        // Admin Scene
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("views/AdminNavbarView.fxml"));
         root = loader.load();
-        AdminNavbarController controller = loader.getController();
+        controller = loader.getController();
         controller.setMain(this);
+        controller.setUser(user);
 
         // Setting a new stage
         Stage mainStage = new Stage();
