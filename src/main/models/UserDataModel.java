@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 import main.classes.RuntimeTypeAdapterFactory;
+import main.classes.properties.Property;
 import main.classes.users.*;
 import main.enums.UserType;
 import org.json.simple.parser.JSONParser;
@@ -106,6 +107,24 @@ public class UserDataModel {
         return data;
     }
 
+    //edit user based on given user object
+    public void editProperty(User targetUser) throws IllegalArgumentException{
+        userData = loadData(targetUser.getUserType(), false);
+        boolean exist = false;
+        for (User user:new ArrayList<>(userData)){
+            if (user.getId().equals(targetUser.getId())){
+                userData.remove(user);
+                exist = true;
+            }
+        }
+
+        if (!exist){
+            throw new IllegalArgumentException("property do not exist!");
+        }
+
+        userData.add(targetUser);
+        inputData(targetUser.getUserType(), userData, false);
+    }
 
     //fetch user from pending list and approve them based on their role
     public void approveUser(User currentUser, User pendingUser) throws IllegalArgumentException, IllegalAccessException{
@@ -123,7 +142,6 @@ public class UserDataModel {
         tempData.add(pendingUser);
         inputData(pendingUser.getUserType() , tempData, false);
     }
-
 
     //check if username is unique and add them to pending user
     public void registerUser(User registerUser) throws IllegalArgumentException{
@@ -162,6 +180,17 @@ public class UserDataModel {
     //public method to get user data by userType
     public ArrayList<User> getUserDataByType(UserType userType){
         return loadData(userType, false);
+    }
+
+    //public method to get user data
+    public User getUserById(String id){
+        userData = getUserData();
+        for (User user:userData){
+            if (user.getId().equals(id)){
+                return user;
+            }
+        }
+        return null;
     }
 
     //public method to get pending user data by type

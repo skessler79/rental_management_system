@@ -1,7 +1,11 @@
 [
   {
     "ownerDetails": "owner1",
-    "id": "4aa17f84-3aad-41a2-a113-d3b8a0f45de0",
+    "propertyList": [
+      "fd3bff5c-b309-4259-b43e-7e1bc60cffa2",
+      "7a542ec4-b642-407e-8769-c23aa2cca64e"
+    ],
+    "id": "b5b3b6a4-a9a4-444b-8aae-0ee9da9a5f9c",
     "userType": "OWNER",
     "firstName": "Winson1",
     "lastName": "Loo1",

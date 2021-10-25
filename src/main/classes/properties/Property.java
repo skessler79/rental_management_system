@@ -1,5 +1,6 @@
 package main.classes.properties;
 
+import main.classes.Address;
 import main.classes.users.Regular;
 import main.enums.FacilityType;
 import main.enums.PropertyType;
@@ -13,7 +14,7 @@ public class Property implements Comparable<Property>{
     private String agentId;
     private PropertyType propertyType;
     private String name;
-    private String address;
+    private Address address;
     private String size;
     private String description;
     private String project;
@@ -26,7 +27,7 @@ public class Property implements Comparable<Property>{
     private String roomInfo;
     private int bathRoomCount;
 
-    public Property(String propertyId, String ownerId, String agentId, PropertyType propertyType, String name, String address, String size, String description, String project, double rentalFee, double rentalRate, Date createdAt, ArrayList<FacilityType> facilityTypes, boolean isActive, ArrayList<Regular> tenant, String roomInfo, int bathRoomCount) {
+    public Property(String propertyId, String ownerId, String agentId, PropertyType propertyType, String name, Address address, String size, String description, String project, double rentalFee, double rentalRate, Date createdAt, ArrayList<FacilityType> facilityTypes, boolean isActive, ArrayList<Regular> tenant, String roomInfo, int bathRoomCount) {
         this.propertyId = propertyId;
         this.ownerId = ownerId;
         this.agentId = agentId;
@@ -44,6 +45,10 @@ public class Property implements Comparable<Property>{
         this.tenant = tenant;
         this.roomInfo = roomInfo;
         this.bathRoomCount = bathRoomCount;
+    }
+
+    public void addTenant(Regular regular){
+        this.tenant.add(regular);
     }
 
     public String getPropertyId() {
@@ -66,7 +71,7 @@ public class Property implements Comparable<Property>{
         return name;
     }
 
-    public String getAddress() {
+    public Address getAddress() {
         return address;
     }
 
@@ -80,10 +85,6 @@ public class Property implements Comparable<Property>{
 
     public String getProject() {
         return project;
-    }
-
-    public String getState() {
-        return state;
     }
 
     public double getRentalFee() {
@@ -118,6 +119,74 @@ public class Property implements Comparable<Property>{
         return bathRoomCount;
     }
 
+    public void setPropertyId(String propertyId) {
+        this.propertyId = propertyId;
+    }
+
+    public void setOwnerId(String ownerId) {
+        this.ownerId = ownerId;
+    }
+
+    public void setAgentId(String agentId) {
+        this.agentId = agentId;
+    }
+
+    public void setPropertyType(PropertyType propertyType) {
+        this.propertyType = propertyType;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setProject(String project) {
+        this.project = project;
+    }
+
+    public void setRentalFee(double rentalFee) {
+        this.rentalFee = rentalFee;
+    }
+
+    public void setRentalRate(double rentalRate) {
+        this.rentalRate = rentalRate;
+    }
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public void setFacilityTypes(ArrayList<FacilityType> facilityTypes) {
+        this.facilityTypes = facilityTypes;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
+    }
+
+    public void setTenant(ArrayList<Regular> tenant) {
+        this.tenant = tenant;
+    }
+
+    public void setRoomInfo(String roomInfo) {
+        this.roomInfo = roomInfo;
+    }
+
+    public void setBathRoomCount(int bathRoomCount) {
+        this.bathRoomCount = bathRoomCount;
+    }
+
     @Override
     public String toString() {
         return "Property{" +
@@ -130,7 +199,6 @@ public class Property implements Comparable<Property>{
                 ", size='" + size + '\'' +
                 ", description='" + description + '\'' +
                 ", project='" + project + '\'' +
-                ", state='" + state + '\'' +
                 ", rentalFee=" + rentalFee +
                 ", rentalRate=" + rentalRate +
                 ", createdAt=" + createdAt +

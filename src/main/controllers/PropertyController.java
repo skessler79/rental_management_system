@@ -20,9 +20,9 @@ public class PropertyController implements Initializable {
         return propertyData.getPropertiesData();
     }
 
-    public void setData(Property property){
-        propertyData.registerProperty(property);
-    }
+//    public void setData(Property property){
+//        propertyData.registerProperty(property);
+//    }
 
     public void getPropertiesData(){
         //TODO: change to return instead

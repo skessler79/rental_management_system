@@ -1,9 +1,13 @@
 package main;
 
+import main.classes.Address;
+import main.classes.properties.Property;
+import main.classes.properties.PropertyBuilder;
 import main.classes.users.Owner;
 import main.classes.users.User;
 import main.classes.users.UserBuilder;
 import main.controllers.UserController;
+import main.enums.PropertyType;
 import main.enums.UserType;
 import main.models.PropertyDataModel;
 import main.models.UserDataModel;
@@ -15,11 +19,14 @@ public class TestCases {
     private UserDataModel userDataModel = new UserDataModel();
     private User currentUser;
     private ArrayList<User> pendingUsers;
+    private ArrayList<User> userData;
 
     public void startTest(){
 //        registerUsers();
-        loginUser();
-        approveUsers();
+//        loginUser();
+//        approveUsers();
+        registerProperties();
+        getPropertiesByOwner();
     }
     private void registerUsers(){
         User owner1 = new UserBuilder("Winson1", "Loo1", "owner1", "abc1@abc.com", "abc123", "69, Taman Nice, 69420").ownerDetails("owner1").buildUser(UserType.OWNER);
@@ -53,5 +60,31 @@ public class TestCases {
         } catch (Exception e){
             e.printStackTrace();
         }
+    }
+
+    private void registerProperties(){
+        User ownerUser = userDataModel.loginUser("owner1", "abc123");
+        Property property1 = new PropertyBuilder(ownerUser, PropertyType.CONDO, "Happy house", "Taman 69")
+                .address(new Address("69, Lorong Six Nine", "Taman 69", "Cyberjaya", "Selangor", 14000, "Malaysia"))
+                .isActive(true)
+                .description("A nice house with a cheap rental beside the greatest uni MMU")
+                .roomInfo("1 master room and 2 bed room with 1 kitchen and 1 living room")
+                .buildProperty();
+
+        Property property2 = new PropertyBuilder(ownerUser, PropertyType.BUNGALOW, "Sad house", "Taman 420")
+                .address(new Address("420, Lorong Weed", "Taman 420", "Cyberjaya", "Selangor", 14000, "Malaysia"))
+                .isActive(true)
+                .description("A bad house with a cheap rental beside the greatest uni MMU")
+                .roomInfo("1 master room and 2 bed room with 1 kitchen and 1 living room")
+                .buildProperty();
+
+        propertyDataModel.addProperty((Owner) ownerUser, property1);
+        propertyDataModel.addProperty((Owner) ownerUser, property2);
+
+    }
+
+    private void getPropertiesByOwner(){
+        User ownerUser = userDataModel.loginUser("owner1", "abc123");
+        System.out.println(propertyDataModel.getPropertyByOwner(ownerUser));
     }
 }
