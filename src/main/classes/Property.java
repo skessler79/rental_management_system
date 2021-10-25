@@ -1,7 +1,9 @@
 package main.classes;
 
+import main.classes.users.Regular;
 import main.enums.PropertyType;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Property {
@@ -15,9 +17,13 @@ public class Property {
     private String description;
     private String project;
     private String state;
-    private Date createdAt;
     private double rentalFee;
-    private boolean active;
+    private double rentalRate;
+    private Date createdAt;
+    private boolean isActive;
+    private ArrayList<Regular> tenant;
+    private String roomInfo;
+    private int bathRoomCount;
 
     public Property(String propertyId, String ownerId, String agentId, PropertyType propertyType, String name, String address, String size, String description, String project, String state, double rentalFee, Date createdAt, boolean active) {
         this.propertyId = propertyId;
@@ -32,7 +38,6 @@ public class Property {
         this.state = state;
         this.rentalFee = rentalFee;
         this.createdAt = createdAt;
-        this.active = active;
     }
 
     public Date getCreatedAt() {

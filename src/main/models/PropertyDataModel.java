@@ -18,6 +18,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.Array;
 import java.lang.reflect.Type;
+import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.UUID;
 
@@ -65,7 +66,7 @@ public class PropertyDataModel {
 
     private void inputData(ArrayList<Property> properties){
         try{
-            gson = new GsonBuilder().setPrettyPrinting().serializeNulls().serializeSpecialFloatingPointValues().create();
+            gson = new GsonBuilder().setPrettyPrinting().serializeNulls().setDateFormat(DateFormat.FULL, DateFormat.FULL).serializeSpecialFloatingPointValues().create();
             fileWriter = new FileWriter(path);
             gson.toJson(properties, fileWriter);
         }
