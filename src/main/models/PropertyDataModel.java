@@ -2,25 +2,17 @@ package main.models;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
-import main.classes.Property;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
+import main.classes.properties.Property;
 import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.lang.reflect.Type;
 import java.text.DateFormat;
 import java.util.ArrayList;
-import java.util.UUID;
 
 public class PropertyDataModel {
     private final String path = "resources/data/propertyData.json";

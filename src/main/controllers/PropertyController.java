@@ -1,9 +1,8 @@
 package main.controllers;
 
 import javafx.fxml.Initializable;
-import main.classes.Property;
+import main.classes.properties.Property;
 import main.models.PropertyDataModel;
-import org.json.simple.JSONArray;
 
 import java.net.URL;
 import java.util.ArrayList;

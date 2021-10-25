@@ -1,14 +1,16 @@
-package main.classes;
+package main.classes.properties;
 
+import main.classes.users.Regular;
+import main.enums.FacilityType;
 import main.enums.PropertyType;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.UUID;
 
 // This class is used for builder design pattern (reference to https://stackoverflow.com/questions/222214/managing-constructors-with-many-parameters-in-java/222295#222295)
 public class PropertyBuilder {
     private String propertyId = UUID.randomUUID().toString();
-    private Date createdAt = new Date();
     private String ownerId = null;
     private String agentId = null;
     private PropertyType propertyType = null;
@@ -17,9 +19,15 @@ public class PropertyBuilder {
     private String size = null;
     private String description = null;
     private String project = null;
-    private String state = null;
-    private double rentalFee = Double.NaN;
+    private double rentalFee = Double.parseDouble(null);
+    private double rentalRate = Double.parseDouble(null);
     private boolean active = false;
+    private Date createdAt = new Date();
+    private ArrayList<FacilityType> facilityTypes = new ArrayList<>();
+    private boolean isActive = false;
+    private ArrayList<Regular> tenant = new ArrayList<>();
+    private String roomInfo = null;
+    private int bathRoomCount = Integer.parseInt(null);
 
     public PropertyBuilder(String ownerId, PropertyType propertyType, String name, String project){
         this.ownerId = ownerId;

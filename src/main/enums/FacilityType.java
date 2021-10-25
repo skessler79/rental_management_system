@@ -5,5 +5,6 @@ public enum FacilityType {
     WIFI,
     TV,
     FRIDGE,
-    AIRCON,
+    AIRCOND,
+    WATER_HEATER
 }

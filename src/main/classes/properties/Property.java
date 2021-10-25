@@ -1,4 +1,4 @@
-package main.classes;
+package main.classes.properties;
 
 import main.classes.users.Regular;
 import main.enums.FacilityType;
@@ -17,7 +17,6 @@ public class Property implements Comparable<Property>{
     private String size;
     private String description;
     private String project;
-    private String state;
     private double rentalFee;
     private double rentalRate;
     private Date createdAt;
@@ -27,7 +26,7 @@ public class Property implements Comparable<Property>{
     private String roomInfo;
     private int bathRoomCount;
 
-    public Property(String propertyId, String ownerId, String agentId, PropertyType propertyType, String name, String address, String size, String description, String project, String state, double rentalFee, double rentalRate, Date createdAt, ArrayList<FacilityType> facilityTypes, boolean isActive, ArrayList<Regular> tenant, String roomInfo, int bathRoomCount) {
+    public Property(String propertyId, String ownerId, String agentId, PropertyType propertyType, String name, String address, String size, String description, String project, double rentalFee, double rentalRate, Date createdAt, ArrayList<FacilityType> facilityTypes, boolean isActive, ArrayList<Regular> tenant, String roomInfo, int bathRoomCount) {
         this.propertyId = propertyId;
         this.ownerId = ownerId;
         this.agentId = agentId;
@@ -37,7 +36,6 @@ public class Property implements Comparable<Property>{
         this.size = size;
         this.description = description;
         this.project = project;
-        this.state = state;
         this.rentalFee = rentalFee;
         this.rentalRate = rentalRate;
         this.createdAt = createdAt;
