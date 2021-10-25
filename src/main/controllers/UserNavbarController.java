@@ -152,42 +152,42 @@ public class UserNavbarController implements Initializable
     /// UI sidebar buttons
 
     @FXML
-    void handleOpenDashboard(ActionEvent event) throws IOException
+    private void handleOpenDashboard(ActionEvent event) throws IOException
     {
         loader = new FXMLLoader(getClass().getResource("../views/fragments/Dashboard.fxml"));
         setNewFragment();
     }
 
     @FXML
-    void handleOpenProperties(ActionEvent event) throws IOException
+    private void handleOpenProperties(ActionEvent event) throws IOException
     {
         loader = new FXMLLoader(getClass().getResource("../views/fragments/Properties.fxml"));
         setNewFragment();
     }
 
     @FXML
-    void handleOpenProjects(ActionEvent event) throws IOException
+    private void handleOpenProjects(ActionEvent event) throws IOException
     {
         loader = new FXMLLoader(getClass().getResource("../views/fragments/Projects.fxml"));
         setNewFragment();
     }
 
     @FXML
-    void handleOpenSearch(ActionEvent event) throws IOException
+    private void handleOpenSearch(ActionEvent event) throws IOException
     {
         loader = new FXMLLoader(getClass().getResource("../views/fragments/Search.fxml"));
         setNewFragment();
     }
 
     @FXML
-    void handleOpenSettings(ActionEvent event) throws IOException
+    private void handleOpenSettings(ActionEvent event) throws IOException
     {
         loader = new FXMLLoader(getClass().getResource("../views/fragments/Settings.fxml"));
         setNewFragment();
     }
 
     @FXML
-    void handleOpenLogout(ActionEvent event) throws IOException
+    private void handleOpenLogout(ActionEvent event) throws IOException
     {
         boolean result = ConfirmBoxView.display("Logout", "Are you sure you want to logout?");
 
@@ -197,7 +197,7 @@ public class UserNavbarController implements Initializable
         }
     }
 
-    void setNewFragment() throws IOException
+    protected void setNewFragment() throws IOException
     {
         fragmentPane = loader.load();
         fragmentController = loader.getController();
