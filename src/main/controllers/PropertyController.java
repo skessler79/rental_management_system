@@ -1,9 +1,8 @@
 package main.controllers;
 
 import javafx.fxml.Initializable;
-import main.classes.Property;
+import main.classes.properties.Property;
 import main.models.PropertyDataModel;
-import org.json.simple.JSONArray;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -21,9 +20,9 @@ public class PropertyController implements Initializable {
         return propertyData.getPropertiesData();
     }
 
-    public void setData(Property property){
-        propertyData.registerProperty(property);
-    }
+//    public void setData(Property property){
+//        propertyData.registerProperty(property);
+//    }
 
     public void getPropertiesData(){
         //TODO: change to return instead

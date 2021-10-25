@@ -26,15 +26,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-engine:1.7.1" level="project" />
     <orderEntry type="module-library">
       <library>
-        <CLASSES />
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="library" name="gson-2.2.2" level="project" />
-    <orderEntry type="library" name="lib1" level="project" />
-    <orderEntry type="module-library">
-      <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/dependencies/Dependency/jfoenix/jfoenix-9.0.10.jar!/" />
         </CLASSES>
