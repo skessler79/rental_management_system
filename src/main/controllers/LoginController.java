@@ -96,6 +96,7 @@ public class LoginController implements Initializable
     {
         loginModel = new LoginModel();
         System.out.println("Initialize");
+        btn_submit_signin.setDefaultButton(true);
     }
 
     public void setMain(App app)
