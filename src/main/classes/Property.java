@@ -1,12 +1,13 @@
 package main.classes;
 
 import main.classes.users.Regular;
+import main.enums.FacilityType;
 import main.enums.PropertyType;
 
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Property {
+public class Property implements Comparable<Property>{
     private String propertyId;
     private String ownerId;
     private String agentId;
@@ -20,12 +21,13 @@ public class Property {
     private double rentalFee;
     private double rentalRate;
     private Date createdAt;
+    private ArrayList<FacilityType> facilityTypes;
     private boolean isActive;
     private ArrayList<Regular> tenant;
     private String roomInfo;
     private int bathRoomCount;
 
-    public Property(String propertyId, String ownerId, String agentId, PropertyType propertyType, String name, String address, String size, String description, String project, String state, double rentalFee, Date createdAt, boolean active) {
+    public Property(String propertyId, String ownerId, String agentId, PropertyType propertyType, String name, String address, String size, String description, String project, String state, double rentalFee, double rentalRate, Date createdAt, ArrayList<FacilityType> facilityTypes, boolean isActive, ArrayList<Regular> tenant, String roomInfo, int bathRoomCount) {
         this.propertyId = propertyId;
         this.ownerId = ownerId;
         this.agentId = agentId;
@@ -37,11 +39,13 @@ public class Property {
         this.project = project;
         this.state = state;
         this.rentalFee = rentalFee;
+        this.rentalRate = rentalRate;
         this.createdAt = createdAt;
-    }
-
-    public Date getCreatedAt() {
-        return createdAt;
+        this.facilityTypes = facilityTypes;
+        this.isActive = isActive;
+        this.tenant = tenant;
+        this.roomInfo = roomInfo;
+        this.bathRoomCount = bathRoomCount;
     }
 
     public String getPropertyId() {
@@ -56,7 +60,7 @@ public class Property {
         return agentId;
     }
 
-    public PropertyType getType() {
+    public PropertyType getPropertyType() {
         return propertyType;
     }
 
@@ -88,48 +92,32 @@ public class Property {
         return rentalFee;
     }
 
-    public void setPropertyId(String propertyId) {
-        this.propertyId = propertyId;
+    public double getRentalRate() {
+        return rentalRate;
     }
 
-    public void setOwnerId(String ownerId) {
-        this.ownerId = ownerId;
+    public Date getCreatedAt() {
+        return createdAt;
     }
 
-    public void setAgentId(String agentId) {
-        this.agentId = agentId;
+    public ArrayList<FacilityType> getFacilityTypes() {
+        return facilityTypes;
     }
 
-    public void setType(PropertyType propertyType) {
-        this.propertyType = propertyType;
+    public boolean isActive() {
+        return isActive;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public ArrayList<Regular> getTenant() {
+        return tenant;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public String getRoomInfo() {
+        return roomInfo;
     }
 
-    public void setSize(String size) {
-        this.size = size;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public void setProject(String project) {
-        this.project = project;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
-    public void setRentalFee(double rentalFee) {
-        this.rentalFee = rentalFee;
+    public int getBathRoomCount() {
+        return bathRoomCount;
     }
 
     @Override
@@ -138,7 +126,7 @@ public class Property {
                 "propertyId='" + propertyId + '\'' +
                 ", ownerId='" + ownerId + '\'' +
                 ", agentId='" + agentId + '\'' +
-                ", type='" + propertyType + '\'' +
+                ", propertyType=" + propertyType +
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +
                 ", size='" + size + '\'' +
@@ -146,6 +134,18 @@ public class Property {
                 ", project='" + project + '\'' +
                 ", state='" + state + '\'' +
                 ", rentalFee=" + rentalFee +
+                ", rentalRate=" + rentalRate +
+                ", createdAt=" + createdAt +
+                ", facilityTypes=" + facilityTypes +
+                ", isActive=" + isActive +
+                ", tenant=" + tenant +
+                ", roomInfo='" + roomInfo + '\'' +
+                ", bathRoomCount=" + bathRoomCount +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Property property) {
+        return (int) (this.rentalFee - property.getRentalFee());
     }
 }
