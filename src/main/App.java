@@ -48,12 +48,14 @@ public class App extends Application
         scene.setFill(Color.TRANSPARENT);
         window.setScene(scene);
         window.show();
+
+//        new TestCases().startTest();
     }
 
     public void startApp(User user) throws Exception
     {
         // TODO : Next Scene
-        System.out.println("Looged in as: " + user);
+        System.out.println("Log in as: " + user);
         // Closing login stage due to different StageStyle
         window.hide();
 

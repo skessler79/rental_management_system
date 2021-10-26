@@ -1,7 +1,9 @@
 package main.classes.users;
 
+import main.classes.properties.Property;
 import main.enums.UserType;
 
+import java.util.ArrayList;
 import java.util.InvalidPropertiesFormatException;
 import java.util.UUID;
 
@@ -17,6 +19,8 @@ public class UserBuilder {
     private String ownerDetails = null;
     private String agentDetails = null;
     private String regularDetails = null;
+    // owner
+    private ArrayList<String> propertyList = new ArrayList<>();
 
     public UserBuilder(String firstName, String lastName, String username, String email, String password, String address) {
         this.firstName = firstName;
@@ -38,7 +42,7 @@ public class UserBuilder {
                 if (ownerDetails == null){
                     return null;
                 }
-                return new Owner(id,firstName,lastName,username,email,password,address, ownerDetails);
+                return new Owner(id,firstName,lastName,username,email,password,address, ownerDetails, propertyList);
             case AGENT:
                 if (agentDetails == null){
                     return null;

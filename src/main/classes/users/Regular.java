@@ -4,6 +4,7 @@ import main.enums.UserType;
 
 public class Regular extends User{
     private String regularDetails;
+    //TODO: make regular to store tenant infos
     public Regular(String id, String firstName, String lastName, String username, String email, String password, String address, String regularDetails) {
         super(id, UserType.REGULAR, firstName, lastName, username, email, password, address);
         this.regularDetails = regularDetails;
