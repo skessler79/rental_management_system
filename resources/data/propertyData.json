@@ -1,6 +1,6 @@
 [
   {
-    "propertyId": "fd3bff5c-b309-4259-b43e-7e1bc60cffa2",
+    "propertyId": "3ec92323-7767-4967-b885-2b0e4d87be98",
     "ownerId": "b5b3b6a4-a9a4-444b-8aae-0ee9da9a5f9c",
     "agentId": null,
     "propertyType": "CONDO",
@@ -18,15 +18,29 @@
     "project": "Taman 69",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-26T00:44:05.469+0800",
+    "createdAt": "2021-10-27T19:35:05.387+0800",
     "facilityTypes": [],
     "isActive": true,
     "tenant": [],
     "roomInfo": "1 master room and 2 bed room with 1 kitchen and 1 living room",
-    "bathRoomCount": -1
+    "bathRoomCount": -1,
+    "comment": [
+      {
+        "commentId": "18d85d96-e3fb-4d79-9039-7dfb64d7fd5a",
+        "posterId": "a66c4e96-3370-47e3-a757-d7d9417208db",
+        "details": "This unit is shit af man dont rent it",
+        "createdAt": "2021-10-27T19:35:05.601+0800"
+      },
+      {
+        "commentId": "e9b7e364-1446-4338-ae51-371e6bad1e66",
+        "posterId": "a66c4e96-3370-47e3-a757-d7d9417208db",
+        "details": "This unit is good someone hacked my account, dont trust above comment",
+        "createdAt": "2021-10-27T19:35:05.620+0800"
+      }
+    ]
   },
   {
-    "propertyId": "7a542ec4-b642-407e-8769-c23aa2cca64e",
+    "propertyId": "720b40e2-476e-4f14-902c-6c242e15e13e",
     "ownerId": "b5b3b6a4-a9a4-444b-8aae-0ee9da9a5f9c",
     "agentId": null,
     "propertyType": "BUNGALOW",
@@ -44,11 +58,12 @@
     "project": "Taman 420",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-26T00:44:05.470+0800",
+    "createdAt": "2021-10-27T19:35:05.388+0800",
     "facilityTypes": [],
     "isActive": true,
     "tenant": [],
     "roomInfo": "1 master room and 2 bed room with 1 kitchen and 1 living room",
-    "bathRoomCount": -1
+    "bathRoomCount": -1,
+    "comment": []
   }
 ]
