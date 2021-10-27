@@ -4,7 +4,9 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
+import main.classes.Comment;
 import main.classes.properties.Property;
+import main.classes.users.Admin;
 import main.classes.users.Owner;
 import main.classes.users.User;
 import main.enums.UserType;
@@ -16,6 +18,8 @@ import java.io.IOException;
 import java.lang.reflect.Type;
 import java.text.DateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.UUID;
 
 public class PropertyDataModel {
     private final String path = "resources/data/propertyData.json";
@@ -34,6 +38,21 @@ public class PropertyDataModel {
     }
 
     //register property with input of current user object and property object
+    public void addComment(User currentUser, Property targetProperty, String comment) throws IllegalAccessException{
+        if (currentUser.getUserType() != UserType.ADMIN){
+            throw new IllegalAccessException("Only admin can add comments!");
+        }
+        propertyData = loadData();
+        for (Property property:propertyData){
+            if (property.getPropertyId().equals(targetProperty.getPropertyId())){
+                property.addComment(new Comment(UUID.randomUUID().toString(), currentUser.getId(), comment, new Date()));
+                break;
+            }
+        }
+        inputData(propertyData);
+    }
+
+    //register property with input of current user object and property object
     public void addProperty(Owner currentUser, Property property){
         propertyData = loadData();
         propertyData.add(property);
@@ -49,6 +68,7 @@ public class PropertyDataModel {
             if (property.getPropertyId().equals(targetProperty.getPropertyId())){
                 propertyData.remove(property);
                 exist = true;
+                break;
             }
         }
 
@@ -67,6 +87,7 @@ public class PropertyDataModel {
             if (property.getPropertyId().equals(targetProperty.getPropertyId())){
                 propertyData.remove(property);
                 exist = true;
+                break;
             }
         }
         if (!exist){
