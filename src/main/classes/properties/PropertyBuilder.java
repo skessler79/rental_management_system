@@ -1,6 +1,7 @@
 package main.classes.properties;
 
 import main.classes.Address;
+import main.classes.Comment;
 import main.classes.users.Owner;
 import main.classes.users.Regular;
 import main.classes.users.User;
@@ -22,6 +23,7 @@ public class PropertyBuilder {
     private String project = null;
     private Date createdAt = new Date();
     private ArrayList<Regular> tenant = new ArrayList<>();
+    private ArrayList<Comment> comment = new ArrayList<>();
 
     //optional fields
     private String agentId = null;
@@ -60,7 +62,8 @@ public class PropertyBuilder {
                 isActive,
                 tenant,
                 roomInfo,
-                bathRoomCount);
+                bathRoomCount,
+                comment);
     }
 
     public PropertyBuilder agentId(String agentId){
