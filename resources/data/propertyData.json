@@ -37,8 +37,15 @@
     "tenant": [],
     "roomInfo": "1 master room and 2 bed room with 1 kitchen and 1 living room",
     "bathRoomCount": -1,
-    "comment": [],
-    "commentCount": 0
+    "comment": [
+      {
+        "commentId": "b29fb004-6a9b-40dd-8c91-3ad2bdf2c37d",
+        "posterId": "a66c4e96-3370-47e3-a757-d7d9417208db",
+        "details": "asdf",
+        "createdAt": "2021-10-29T03:10:43.583+0800"
+      }
+    ],
+    "commentCount": 1
   },
   {
     "propertyId": "048b91b6-5d69-485b-abc5-264b2f708497",
