@@ -48,7 +48,7 @@ public class App extends Application
         scene.setFill(Color.TRANSPARENT);
         window.setScene(scene);
         window.show();
-//
+
 //        new TestCases().startTest();
     }
 

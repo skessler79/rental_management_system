@@ -1,6 +1,6 @@
 [
   {
-    "propertyId": "3ec92323-7767-4967-b885-2b0e4d87be98",
+    "propertyId": "6db6c8b6-2b87-49a7-8d62-f795d24a72bc",
     "ownerId": "b5b3b6a4-a9a4-444b-8aae-0ee9da9a5f9c",
     "agentId": null,
     "propertyType": "CONDO",
@@ -18,41 +18,35 @@
     "project": "Taman 69",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-27T19:35:05.387+0800",
-    "facilityTypes": [],
+    "createdAt": "2021-10-28T17:40:02.254+0800",
+    "facilityTypes": [
+      "AIRCOND",
+      "SWIMMING_POOL",
+      "FRIDGE",
+      "WIFI"
+    ],
     "isActive": true,
     "tenant": [],
     "roomInfo": "1 master room and 2 bed room with 1 kitchen and 1 living room",
     "bathRoomCount": -1,
     "comment": [
       {
-        "commentId": "18d85d96-e3fb-4d79-9039-7dfb64d7fd5a",
+        "commentId": "b2d85fa5-ff38-4595-95de-74709f73b494",
         "posterId": "a66c4e96-3370-47e3-a757-d7d9417208db",
         "details": "This unit is shit af man dont rent it",
-        "createdAt": "2021-10-27T19:35:05.601+0800"
+        "createdAt": "2021-10-28T17:40:02.410+0800"
       },
       {
-        "commentId": "e9b7e364-1446-4338-ae51-371e6bad1e66",
+        "commentId": "85bf7c65-8616-4d4e-ab8a-369a8829e566",
         "posterId": "a66c4e96-3370-47e3-a757-d7d9417208db",
         "details": "This unit is good someone hacked my account, dont trust above comment",
-        "createdAt": "2021-10-27T19:35:05.620+0800"
-      },
-      {
-        "commentId": "71174071-997b-4adf-915b-52fd55ee8300",
-        "posterId": "a66c4e96-3370-47e3-a757-d7d9417208db",
-        "details": "This unit is shit af man dont rent it",
-        "createdAt": "2021-10-28T16:41:20.177+0800"
-      },
-      {
-        "commentId": "f5daa2f8-5724-44bf-8aab-8027e6340a02",
-        "posterId": "a66c4e96-3370-47e3-a757-d7d9417208db",
-        "details": "This unit is good someone hacked my account, dont trust above comment",
-        "createdAt": "2021-10-28T16:41:20.199+0800"
+        "createdAt": "2021-10-28T17:40:02.441+0800"
       }
-    ]
+    ],
+    "commentCount": 2
   },
   {
-    "propertyId": "720b40e2-476e-4f14-902c-6c242e15e13e",
+    "propertyId": "0a43e2b1-09c2-4874-b6c4-be58d81b1883",
     "ownerId": "b5b3b6a4-a9a4-444b-8aae-0ee9da9a5f9c",
     "agentId": null,
     "propertyType": "BUNGALOW",
@@ -70,66 +64,17 @@
     "project": "Taman 420",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-27T19:35:05.388+0800",
-    "facilityTypes": [],
+    "createdAt": "2021-10-28T17:40:02.256+0800",
+    "facilityTypes": [
+      "AIRCOND",
+      "TV",
+      "WATER_HEATER"
+    ],
     "isActive": true,
     "tenant": [],
     "roomInfo": "1 master room and 2 bed room with 1 kitchen and 1 living room",
     "bathRoomCount": -1,
-    "comment": []
-  },
-  {
-    "propertyId": "3410dc3a-8482-4c4b-8f8b-3283f465473e",
-    "ownerId": "b5b3b6a4-a9a4-444b-8aae-0ee9da9a5f9c",
-    "agentId": null,
-    "propertyType": "CONDO",
-    "name": "Happy house",
-    "address": {
-      "roadName": "69, Lorong Six Nine",
-      "project": "Taman 69",
-      "state": "Selangor",
-      "country": "Malaysia",
-      "city": "Cyberjaya",
-      "postcode": 14000
-    },
-    "size": null,
-    "description": "A nice house with a cheap rental beside the greatest uni MMU",
-    "project": "Taman 69",
-    "rentalFee": -1.0,
-    "rentalRate": -1.0,
-    "createdAt": "2021-10-28T16:41:19.947+0800",
-    "facilityTypes": [],
-    "isActive": true,
-    "tenant": [],
-    "roomInfo": "1 master room and 2 bed room with 1 kitchen and 1 living room",
-    "bathRoomCount": -1,
-    "comment": []
-  },
-  {
-    "propertyId": "6648435b-e60b-41e9-a075-39177cdc82c3",
-    "ownerId": "b5b3b6a4-a9a4-444b-8aae-0ee9da9a5f9c",
-    "agentId": null,
-    "propertyType": "BUNGALOW",
-    "name": "Sad house",
-    "address": {
-      "roadName": "420, Lorong Weed",
-      "project": "Taman 420",
-      "state": "Selangor",
-      "country": "Malaysia",
-      "city": "Cyberjaya",
-      "postcode": 14000
-    },
-    "size": null,
-    "description": "A bad house with a cheap rental beside the greatest uni MMU",
-    "project": "Taman 420",
-    "rentalFee": -1.0,
-    "rentalRate": -1.0,
-    "createdAt": "2021-10-28T16:41:19.948+0800",
-    "facilityTypes": [],
-    "isActive": true,
-    "tenant": [],
-    "roomInfo": "1 master room and 2 bed room with 1 kitchen and 1 living room",
-    "bathRoomCount": -1,
-    "comment": []
+    "comment": [],
+    "commentCount": 0
   }
 ]

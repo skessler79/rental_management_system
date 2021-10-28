@@ -15,6 +15,7 @@ import org.json.simple.parser.JSONParser;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.lang.reflect.Type;
 import java.text.DateFormat;
 import java.util.ArrayList;
@@ -46,6 +47,34 @@ public class PropertyDataModel {
         for (Property property:propertyData){
             if (property.getPropertyId().equals(targetProperty.getPropertyId())){
                 property.addComment(new Comment(UUID.randomUUID().toString(), currentUser.getId(), comment, new Date()));
+                property.setCommentCount(property.getCommentCount()+1);
+                break;
+            }
+        }
+        inputData(propertyData);
+    }
+
+    //get property based on active or not
+    public ArrayList<Property> getPropertyByActive(boolean active){
+        propertyData = loadData();
+        ArrayList<Property> output = new ArrayList<>();
+        for(Property property:propertyData){
+            if (property.getIsActive() == active){
+                output.add(property);
+            }
+        }
+        return output;
+    }
+
+    public void setPropertyActive (User currentUser, Property targetProperty, boolean active) throws IllegalAccessException {
+        if (currentUser.getUserType() != UserType.OWNER && currentUser.getUserType() != UserType.AGENT && currentUser.getUserType() != UserType.ADMIN)
+            throw new IllegalAccessException("Unauthorized access!");
+        propertyData = loadData();
+        for (Property property:propertyData){
+            if (property.getPropertyId().equals(targetProperty.getPropertyId())){
+                propertyData.remove(property);
+                targetProperty.setActive(active);
+                propertyData.add(targetProperty);
                 break;
             }
         }
