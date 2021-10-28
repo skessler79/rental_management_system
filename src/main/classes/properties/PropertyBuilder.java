@@ -2,6 +2,7 @@ package main.classes.properties;
 
 import main.classes.Address;
 import main.classes.Comment;
+import main.classes.users.Agent;
 import main.classes.users.Owner;
 import main.classes.users.Regular;
 import main.classes.users.User;
@@ -17,7 +18,7 @@ public class PropertyBuilder {
 
     //required fields
     private String propertyId = UUID.randomUUID().toString();
-    private String ownerId = null;
+    private User owner = null;
     private PropertyType propertyType = null;
     private String name = null;
     private String project = null;
@@ -27,7 +28,7 @@ public class PropertyBuilder {
     private int commentCount = 0;
 
     //optional fields
-    private String agentId = null;
+    private User agent = null;
     private Address address = null;
     private String size = null;
     private String description = null;
@@ -39,7 +40,7 @@ public class PropertyBuilder {
     private int bathRoomCount = -1;
 
     public PropertyBuilder(User owner, PropertyType propertyType, String name, String project){
-        this.ownerId = owner.getId();
+        this.owner = owner;
         this.propertyType = propertyType;
         this.name = name;
         this.project = project;
@@ -48,8 +49,8 @@ public class PropertyBuilder {
     public Property buildProperty(){
         return new Property(
                 propertyId,
-                ownerId,
-                agentId,
+                owner,
+                agent,
                 propertyType,
                 name,
                 address,
@@ -68,8 +69,8 @@ public class PropertyBuilder {
                 commentCount);
     }
 
-    public PropertyBuilder agentId(String agentId){
-        this.agentId = agentId;
+    public PropertyBuilder agent(User agent){
+        this.agent = agent;
         return this;
     }
 
