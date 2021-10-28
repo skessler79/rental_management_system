@@ -7,8 +7,9 @@ import main.classes.users.User;
 
 // TODO : use model
 public class FragmentController
-{@FXML
-private Label txt_usertype;
+{
+    @FXML
+    private Label txt_usertype;
 
     @FXML
     private JFXTextField txt_username;
@@ -60,11 +61,21 @@ private Label txt_usertype;
 
     public void setDetails(User user)
     {
-        this.txt_usertype.setText(user.getUserType().toString());
-        this.txt_username.setText(user.getUsername());
-        this.txt_email.setText(user.getEmail());
-        this.txt_firstname.setText(user.getFirstName());
-        this.txt_lastname.setText(user.getLastName());
-        this.txt_address.setText(user.getAddress());
+        // TODO : Handle setDetails for fragments without all the fields...
+        System.out.println(user.toString());
+        try
+        {
+            this.txt_usertype.setText(user.getUserType().toString());
+        }
+        catch(Exception e)
+        {
+            System.out.println(e.toString());
+        }
+
+//        this.txt_username.setText(user.getUsername());
+//        this.txt_email.setText(user.getEmail());
+//        this.txt_firstname.setText(user.getFirstName());
+//        this.txt_lastname.setText(user.getLastName());
+//        this.txt_address.setText(user.getAddress());
     }
 }

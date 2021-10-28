@@ -9,6 +9,7 @@ import main.classes.properties.Property;
 import main.classes.users.Admin;
 import main.classes.users.Owner;
 import main.classes.users.User;
+import main.enums.FacilityType;
 import main.enums.UserType;
 import org.json.simple.parser.JSONParser;
 
@@ -39,6 +40,21 @@ public class PropertyDataModel {
     }
 
     //register property with input of current user object and property object
+    public ArrayList<Property> getPropertyByFacilityType(ArrayList<FacilityType> facilityTypes) {
+        ArrayList<Property> output = new ArrayList<>();
+        propertyData = loadData();
+        for (Property property:propertyData){
+            //remove different element
+            facilityTypes.retainAll(property.getFacilityTypes());
+            if (facilityTypes.size() != 0)
+                output.add(property);
+        }
+
+        return output;
+
+    }
+
+    //register property with input of current user object and property object
     public void addComment(User currentUser, Property targetProperty, String comment) throws IllegalAccessException{
         if (currentUser.getUserType() != UserType.ADMIN){
             throw new IllegalAccessException("Only admin can add comments!");
@@ -66,14 +82,19 @@ public class PropertyDataModel {
         return output;
     }
 
-    public void setPropertyActive (Property targetProperty, boolean active){
+    public void setPropertyActive (User currentUser, Property targetProperty, boolean active) throws IllegalAccessException {
+        if (currentUser.getUserType() != UserType.OWNER && currentUser.getUserType() != UserType.AGENT && currentUser.getUserType() != UserType.ADMIN)
+            throw new IllegalAccessException("Unauthorized access!");
         propertyData = loadData();
         for (Property property:propertyData){
             if (property.getPropertyId().equals(targetProperty.getPropertyId())){
-                property.setActive(active);
+                propertyData.remove(property);
+                targetProperty.setActive(active);
+                propertyData.add(targetProperty);
                 break;
             }
         }
+        inputData(propertyData);
     }
 
     //register property with input of current user object and property object
@@ -147,7 +168,7 @@ public class PropertyDataModel {
         propertyData = loadData();
         ArrayList<Property> output = new ArrayList<>();
         for(Property property : propertyData) {
-            if (property.getOwnerId() != null && property.getOwnerId().equals(id)){
+            if (property.getOwner().getId() != null && property.getOwner().getId().equals(id)){
                 output.add(property);
             }
         }
