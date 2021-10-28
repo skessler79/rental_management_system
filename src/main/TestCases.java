@@ -25,12 +25,12 @@ public class TestCases {
     private ArrayList<Property> propertyData;
 
     public void startTest(){
-        registerUsers();
-        loginUser();
-        approveUsers();
-        registerProperties();
-        getPropertiesByOwner();
-        addComments();
+//        registerUsers();
+//        loginUser();
+//        approveUsers();
+//        registerProperties();
+//        getPropertiesByOwner();
+//        addComments();
 //        changeStatus();
 //        searchByFacility();
     }
