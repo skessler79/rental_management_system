@@ -9,15 +9,19 @@ import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.beans.value.ObservableValue;
+import javafx.beans.value.ObservableValueBase;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
 import javafx.util.Callback;
 import main.classes.Comment;
 import main.classes.properties.Property;
@@ -62,6 +66,8 @@ public class AdminReportController implements Initializable {
 
     @FXML
     private ChoiceBox<PropertyType> ar_choiceBox;
+    // List of enums from PropertyType
+    ObservableList<PropertyType> ar_choiceBox_list = FXCollections.observableArrayList(PropertyType.values());
 
     @FXML
     private JFXTextField ar_textField;
@@ -88,13 +94,15 @@ public class AdminReportController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        ar_choiceBox.setItems(ar_choiceBox_list);
+        ar_choiceBox.setValue(PropertyType.CONDO);
         getTable();
 
 // view properties according to propertType (choice box), owner (textfield), active/inactive (radio button)
 // display enum values of propertyTypes and facilityTypes
 
         ar_btn_del.setOnAction(e -> deleteButtonClicked());
-        ar_btn_facilities.setOnAction(e -> );
+        ar_btn_show.setOnAction(e -> filter());
     }
 
     // Deletes the selected property in the table
@@ -110,6 +118,39 @@ public class AdminReportController implements Initializable {
         propertyDataModel.deleteProperty(propertyId);
         getTable();
     }
+
+    // Pops up new window that displays properties according to user's criteria
+    public void filter() {
+
+
+        TableView <Property> tableView = new TableView();
+//        TableColumn<Property, String> col_propertyID = new TableColumn<>();
+        TableColumn <Property, PropertyType> col_propertyType = new TableColumn<>("PropertyType");
+        col_propertyType.setCellValueFactory(c -> {
+            ObservableValue<PropertyType> propertYType = new
+            // Fxcollection shit google
+            return ar_choiceBox.getValue();
+        });
+        tableView.getColumns().add(col_propertyType);
+
+        System.out.println(ar_choiceBox.getValue());
+
+        Stage stage = new Stage();
+        stage.setTitle("Filtered Properties");
+
+        HBox hBox = new HBox();
+        hBox.getChildren().add(tableView);
+        Scene scene = new Scene(hBox, 250,250);
+        stage.setScene(scene);
+        stage.show();
+//        TableColumn<Property, String> col_ownerName = new TableColumn<>();
+//        TableColumn<Property, Boolean> col_isActive = new TableColumn<>();
+//        TableColumn<Property, Integer> col_comments = new TableColumn<>();
+//        TableColumn<Property, ArrayList<FacilityType>> col_facilityTypes = new TableColumn<>();
+
+
+    }
+
 
     // Returns the whole table
     public void getTable() {
