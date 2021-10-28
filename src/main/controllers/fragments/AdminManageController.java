@@ -149,9 +149,9 @@ public class AdminManageController extends FragmentController implements Initial
             usernamelist.add(user.getUsername());
         }
 
-        for(User user: userlist) {
-            emaillist.add(user.getEmail());
-        }
+//        for(User user: userlist) {
+//            emaillist.add(user.getEmail());
+//        }
 
         ObservableList<String> UserList= FXCollections.observableArrayList(usernamelist);
         listview_total_user.getItems().addAll(UserList);
