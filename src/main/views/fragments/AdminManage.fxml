@@ -1,15 +1,254 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="681.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controllers.fragments.AdminManageController">
    <children>
-      <Label layoutX="32.0" layoutY="159.0" text="Admin Manage">
-         <font>
-            <Font size="96.0" />
-         </font>
-      </Label>
+      <AnchorPane layoutX="39.0" layoutY="20.0" prefHeight="649.0" prefWidth="1063.0" style="-fx-background-color: transparent;">
+         <children>
+            <StackPane layoutX="103.0" layoutY="43.0" prefHeight="152.0" prefWidth="340.0" style="-fx-background-color: #D3D3D3;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="165.0" layoutY="74.0" prefHeight="50.0" prefWidth="149.0" text="Pending Users">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="pending_users_count" layoutX="205.0" layoutY="-4.0" text="XX">
+                           <font>
+                              <Font size="64.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="btn_pendingUsers" layoutX="105.0" layoutY="112.0" style="-fx-opacity: 0;" text="Button" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </StackPane>
+            <StackPane layoutX="139.0" layoutY="11.0" prefHeight="94.0" prefWidth="111.0" style="-fx-background-color: BLUE;">
+               <children>
+                  <ImageView fitHeight="102.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../resources/icons/admin_manage/pending-users.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </StackPane>
+            <StackPane layoutX="594.0" layoutY="42.0" prefHeight="152.0" prefWidth="340.0" style="-fx-background-color: #D3D3D3;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="183.0" layoutY="84.0" text="Total Users">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="total_users_count" layoutX="208.0" layoutY="5.0" text="XX">
+                           <font>
+                              <Font size="64.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="btn_totalUsers" contentDisplay="GRAPHIC_ONLY" layoutX="110.0" layoutY="104.0" style="-fx-opacity: 0;" text="Button" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </StackPane>
+            <StackPane layoutX="630.0" layoutY="10.0" prefHeight="94.0" prefWidth="111.0" style="-fx-background-color: blue;">
+               <children>
+                  <ImageView fitHeight="102.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../resources/icons/admin_manage/users.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </StackPane>
+            <AnchorPane fx:id="btm_anchorpane1" layoutX="10.0" layoutY="233.0" prefHeight="405.0" prefWidth="1047.0" style="-fx-background-color: white;">
+               <children>
+                  <AnchorPane layoutX="11.0" layoutY="11.0" prefHeight="305.0" prefWidth="561.0" style="-fx-border-color: black;">
+                     <children>
+                        <JFXListView fx:id="listview_pending_user" layoutX="2.0" layoutY="2.0" prefHeight="375.0" prefWidth="557.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="594.0" layoutY="12.0" prefHeight="267.0" prefWidth="440.0" style="-fx-border-color: black;">
+                     <children>
+                        <BorderPane layoutX="1.0" prefHeight="269.0" prefWidth="437.0">
+                           <bottom>
+                              <HBox alignment="CENTER" depthTest="DISABLE" prefHeight="56.0" prefWidth="437.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <JFXButton fx:id="btn_reject" alignment="CENTER" prefHeight="32.0" prefWidth="188.0" style="-fx-background-color: #C7493A;" text="Reject">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton fx:id="btn_accept" prefHeight="32.0" prefWidth="181.0" style="-fx-background-color: #14A76C;" text="Accept">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </HBox>
+                           </bottom>
+                           <top>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="281.0" text="Pending User's Information" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </top>
+                           <center>
+                              <GridPane BorderPane.alignment="CENTER">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="211.0" minWidth="10.0" prefWidth="109.33331298828125" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="330.33331298828125" minWidth="10.0" prefWidth="327.66668701171875" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Pane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="16.0" layoutY="20.0" text="Username :">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <children>
+                                          <Label alignment="CENTER" layoutX="21.0" layoutY="20.0" text="Email :">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <TextField fx:id="txt_usernameAM1" disable="true" prefHeight="33.0" prefWidth="215.0" promptText="Username" GridPane.columnIndex="1" />
+                                    <TextField fx:id="txt_emailAM1" disable="true" promptText="Email" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
+                           </center>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="btm_anchorpane" layoutX="10.0" layoutY="233.0" prefHeight="405.0" prefWidth="1047.0" style="-fx-background-color: white;">
+               <children>
+                  <AnchorPane layoutX="11.0" layoutY="11.0" prefHeight="305.0" prefWidth="561.0" style="-fx-border-color: black;">
+                     <children>
+                        <JFXListView fx:id="listview_total_user" layoutX="2.0" layoutY="2.0" prefHeight="375.0" prefWidth="557.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="594.0" layoutY="12.0" prefHeight="267.0" prefWidth="440.0" style="-fx-border-color: black;">
+                     <children>
+                        <BorderPane layoutX="1.0" prefHeight="269.0" prefWidth="437.0">
+                           <bottom>
+                              <HBox alignment="CENTER" depthTest="DISABLE" prefHeight="56.0" prefWidth="437.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <JFXButton fx:id="btn_remove" alignment="CENTER" prefHeight="32.0" prefWidth="188.0" style="-fx-background-color: #C7493A;" text="Remove">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></JFXButton>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </HBox>
+                           </bottom>
+                           <top>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="281.0" text="Total User's Information" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </top>
+                           <center>
+                              <GridPane BorderPane.alignment="CENTER">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="211.0" minWidth="10.0" prefWidth="109.33331298828125" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="330.33331298828125" minWidth="10.0" prefWidth="327.66668701171875" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Pane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="16.0" layoutY="20.0" text="Username :">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <children>
+                                          <Label alignment="CENTER" layoutX="21.0" layoutY="20.0" text="Email :">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <TextField fx:id="txt_usernameAM" disable="true" prefHeight="33.0" prefWidth="215.0" promptText="Username" GridPane.columnIndex="1" />
+                                    <TextField fx:id="txt_emailAM" disable="true" promptText="Email" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
+                           </center>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
