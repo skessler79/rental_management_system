@@ -1,6 +1,9 @@
 package main.controllers.fragments;
 
 import com.google.gson.JsonParser;
+import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXRadioButton;
+import com.jfoenix.controls.JFXTextField;
 import javafx.beans.binding.BooleanExpression;
 import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.beans.property.SimpleStringProperty;
@@ -10,6 +13,8 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -55,6 +60,33 @@ public class AdminReportController implements Initializable {
     @FXML
     private TableColumn<Property, ArrayList<FacilityType>> ar_col_facilityTypes;
 
+    @FXML
+    private ChoiceBox<?> ar_choiceBox;
+
+    @FXML
+    private JFXTextField ar_textField;
+
+    @FXML
+    private JFXRadioButton ar_radio_active;
+
+    @FXML
+    private JFXRadioButton ar_radio_inactive;
+
+    @FXML
+    private JFXButton ar_btn_facilities;
+
+    @FXML
+    private JFXButton ar_btn_project;
+
+    @FXML
+    private JFXButton ar_btn_add;
+
+    @FXML
+    private JFXButton ar_btn_del;
+
+    @FXML
+    private JFXButton ar_btn_show;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         PropertyDataModel propertyData = new PropertyDataModel();
@@ -63,7 +95,6 @@ public class AdminReportController implements Initializable {
         ar_table.getColumns().clear();
         ar_col_propertyID.setCellValueFactory(new PropertyValueFactory<Property, String>("propertyId"));
         ar_col_propertyType.setCellValueFactory(new PropertyValueFactory<Property, PropertyType>("propertyType"));
-        //ar_col_ownerName.setCellValueFactory(new PropertyValueFactory<Owner, String>("username"));
         ar_col_isActive.setCellValueFactory(new PropertyValueFactory<Property, Boolean>("isActive"));
         ar_col_facilityTypes.setCellValueFactory(new PropertyValueFactory<Property, ArrayList<FacilityType>>("facilityTypes"));
         ar_col_comments.setCellValueFactory(new PropertyValueFactory<Property, Integer>("commentCount"));
@@ -72,6 +103,11 @@ public class AdminReportController implements Initializable {
             StringProperty var = new SimpleStringProperty((String) c.getValue().getOwner().getUsername());
             return var;
         });
+
+        for (Property property:properties) {
+            ar_table.getItems().add(property);
+        }
+        ar_table.getColumns().addAll(ar_col_propertyID, ar_col_propertyType, ar_col_ownerName, ar_col_isActive, ar_col_facilityTypes, ar_col_comments);
 
 //        TableColumn<RelationManager, String> firstNameColumn = new TableColumn<>("First Name");
 //        firstNameColumn.setCellValueFactory(new Callback<CellDataFeatures<RelationManager,String>, ObservableValue<String>>() {
@@ -82,18 +118,18 @@ public class AdminReportController implements Initializable {
 //            }
 //        });
 
-        for (Property property:properties) {
-//            System.out.println("Test:"+ property);
-            ar_table.getItems().add(property);
-        }
 // add/delete properties, sort properties according to propertType (choice box), owner (textfield), active/inactive (radio button)
 // display enum values of propertyTypes and facilityTypes
 
-        ar_table.getColumns().addAll(ar_col_propertyID, ar_col_propertyType, ar_col_ownerName, ar_col_isActive, ar_col_facilityTypes, ar_col_comments);
+        ar_btn_del.setOnAction(e -> deleteButtonClicked());
     }
 
-//    public String deleteButtonClicked() {
-//
-//        return propertyID;
-//    }
+    public void deleteButtonClicked() {
+        ObservableList<Property> propertySelected, allProperty;
+        allProperty = ar_table.getItems();
+        propertySelected = ar_table.getSelectionModel().getSelectedItems();
+        propertySelected.forEach(allProperty::remove);
+
+        delete_method(propertySelected);
+    }
 }
