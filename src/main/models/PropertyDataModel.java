@@ -43,7 +43,6 @@ public class PropertyDataModel {
     public ArrayList<Property> getPropertyByFacilityType(ArrayList<FacilityType> targetFacilityTypes) {
         ArrayList<Property> output = new ArrayList<>();
         propertyData = getPropertyByActive(true);
-        System.out.println(targetFacilityTypes);
         if (targetFacilityTypes.size() == 0){
             return propertyData;
         }
@@ -51,14 +50,11 @@ public class PropertyDataModel {
         for (Property property:propertyData){
             //remove different element
             containFlag = 0;
-            ArrayList<FacilityType> propertyFacilities = property.getFacilityTypes();
 
-            for (FacilityType propertyFacility:propertyFacilities){
-                for (FacilityType facility: targetFacilityTypes){
-                        if (facility == propertyFacility) {
-                            containFlag += 1;
-                        }
-                    }
+            for (FacilityType facility:targetFacilityTypes){
+                if (property.getFacilityTypes().contains(facility)) {
+                    containFlag += 1;
+                }
             }
             if (containFlag == targetFacilityTypes.size())
                 output.add(property);
