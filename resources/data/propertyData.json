@@ -19,7 +19,7 @@
     "rentalFee": -1.0,
     "rentalRate": -1.0,
     "createdAt": "2021-10-27T19:35:05.387+0800",
-    "facilityTypes": [],
+    "facilityTypes": ["SWIMMING_POOL", "WIFI"],
     "isActive": true,
     "tenant": [],
     "roomInfo": "1 master room and 2 bed room with 1 kitchen and 1 living room",

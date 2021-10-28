@@ -112,7 +112,8 @@ public class Property implements Comparable<Property>{
         return facilityTypes;
     }
 
-    public boolean isActive() {
+    public boolean getIsActive() {
+
         return isActive;
     }
 

@@ -35,21 +35,21 @@ public class App extends Application
     @Override
     public void start(Stage stage) throws Exception
     {
-//        window = stage;
-//        FXMLLoader loader = new FXMLLoader(getClass().getResource("views/LoginView.fxml"));
-//        window.initStyle(StageStyle.TRANSPARENT);
-//
-//        root = loader.load();
-//        LoginController controller = loader.getController();
-//        controller.setMain(this);
-//
-//        setDraggable();
-//        Scene scene = new Scene(root);
-//        scene.setFill(Color.TRANSPARENT);
-//        window.setScene(scene);
-//        window.show();
+        window = stage;
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("views/LoginView.fxml"));
+        window.initStyle(StageStyle.TRANSPARENT);
 
-        new TestCases().startTest();
+        root = loader.load();
+        LoginController controller = loader.getController();
+        controller.setMain(this);
+
+        setDraggable();
+        Scene scene = new Scene(root);
+        scene.setFill(Color.TRANSPARENT);
+        window.setScene(scene);
+        window.show();
+
+//        new TestCases().startTest();
     }
 
     public void startApp(User user) throws Exception

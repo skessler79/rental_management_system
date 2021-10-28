@@ -1,15 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="681.0" prefWidth="1150.0" style="-fx-background-color: #DDDDDD;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controllers.fragments.AdminReportController">
    <children>
-      <Label layoutX="63.0" layoutY="159.0" text="Admin Report">
+      <ImageView fitHeight="166.0" fitWidth="1150.0" layoutX="154.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../../../../resources/images/fragment_topback.png" />
+         </image>
+      </ImageView>
+      <Label text="Admin Report" textFill="WHITE" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="50.0">
          <font>
-            <Font size="96.0" />
+            <Font name="System Bold" size="26.0" />
          </font>
       </Label>
+      <AnchorPane layoutX="74.0" layoutY="80.0" prefHeight="234.0" prefWidth="603.0" style="-fx-background-color: White; -fx-background-radius: 0; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 30, 0, 0, 0);" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <TableView fx:id="ar_table" layoutY="35.0" prefHeight="377.0" prefWidth="1010.0" style="-fx-background-color: #B4EAFF;" AnchorPane.bottomAnchor="119.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0">
+              <columns>
+                <TableColumn fx:id="ar_col_propertyID" prefWidth="142.4000244140625" style="-fx-text-background-color: #000000;" text="propertyId" />
+                <TableColumn fx:id="ar_col_propertyType" prefWidth="155.20001220703125" text="propertyType" />
+                  <TableColumn fx:id="ar_col_ownerId" prefWidth="142.39996337890625" text="ownerID" />
+                  <TableColumn fx:id="ar_col_isActive" minWidth="0.0" prefWidth="161.5999755859375" text="isActive" />
+                  <TableColumn fx:id="ar_col_comments" prefWidth="144.0" text="comments" />
+                  <TableColumn fx:id="ar_col_facilityTypes" prefWidth="262.0" text="facilityTypes" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
