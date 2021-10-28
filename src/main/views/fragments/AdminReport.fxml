@@ -85,7 +85,6 @@
                 <RowConstraints maxHeight="49.60001220703124" minHeight="0.0" prefHeight="49.60001220703124" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <JFXButton fx:id="ar_btn_add" text="Add" />
                   <JFXButton fx:id="ar_btn_del" text="Delete" GridPane.rowIndex="1" />
                   <JFXButton fx:id="ar_btn_facilities" text="Facilities" GridPane.columnIndex="1" />
                   <JFXButton fx:id="ar_btn_project" text="Projects" GridPane.columnIndex="1" GridPane.rowIndex="1" />

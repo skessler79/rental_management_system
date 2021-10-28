@@ -61,7 +61,7 @@ public class AdminReportController implements Initializable {
     private TableColumn<Property, ArrayList<FacilityType>> ar_col_facilityTypes;
 
     @FXML
-    private ChoiceBox<?> ar_choiceBox;
+    private ChoiceBox<PropertyType> ar_choiceBox;
 
     @FXML
     private JFXTextField ar_textField;
@@ -79,18 +79,43 @@ public class AdminReportController implements Initializable {
     private JFXButton ar_btn_project;
 
     @FXML
-    private JFXButton ar_btn_add;
-
-    @FXML
     private JFXButton ar_btn_del;
 
     @FXML
     private JFXButton ar_btn_show;
 
+    private PropertyDataModel propertyDataModel;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        PropertyDataModel propertyData = new PropertyDataModel();
-        ObservableList<Property> properties = FXCollections.observableArrayList(propertyData.getPropertiesData());
+        getTable();
+
+// view properties according to propertType (choice box), owner (textfield), active/inactive (radio button)
+// display enum values of propertyTypes and facilityTypes
+
+        ar_btn_del.setOnAction(e -> deleteButtonClicked());
+        ar_btn_facilities.setOnAction(e -> );
+    }
+
+    // Deletes the selected property in the table
+    public void deleteButtonClicked() {
+        ObservableList<Property> propertySelected, allProperty;
+        allProperty = ar_table.getItems();
+        propertySelected = ar_table.getSelectionModel().getSelectedItems();
+        String propertyId = propertySelected.get(0).getPropertyId();
+
+        propertySelected.forEach(allProperty::remove);
+
+        System.out.println(propertyId);
+        propertyDataModel.deleteProperty(propertyId);
+        getTable();
+    }
+
+    // Returns the whole table
+    public void getTable() {
+        ar_table.getItems().clear();
+        propertyDataModel = new PropertyDataModel();
+        ObservableList<Property> properties = FXCollections.observableArrayList(propertyDataModel.getPropertiesData());
 
         ar_table.getColumns().clear();
         ar_col_propertyID.setCellValueFactory(new PropertyValueFactory<Property, String>("propertyId"));
@@ -108,28 +133,5 @@ public class AdminReportController implements Initializable {
             ar_table.getItems().add(property);
         }
         ar_table.getColumns().addAll(ar_col_propertyID, ar_col_propertyType, ar_col_ownerName, ar_col_isActive, ar_col_facilityTypes, ar_col_comments);
-
-//        TableColumn<RelationManager, String> firstNameColumn = new TableColumn<>("First Name");
-//        firstNameColumn.setCellValueFactory(new Callback<CellDataFeatures<RelationManager,String>, ObservableValue<String>>() {
-//            @Override
-//            public ObservableValue<String> call(CellDataFeatures<RelationManager, String> data) {
-//                return data.getValue() // the RelationManager
-//                        .getPatient().firstNameProperty();
-//            }
-//        });
-
-// add/delete properties, sort properties according to propertType (choice box), owner (textfield), active/inactive (radio button)
-// display enum values of propertyTypes and facilityTypes
-
-        ar_btn_del.setOnAction(e -> deleteButtonClicked());
-    }
-
-    public void deleteButtonClicked() {
-        ObservableList<Property> propertySelected, allProperty;
-        allProperty = ar_table.getItems();
-        propertySelected = ar_table.getSelectionModel().getSelectedItems();
-        propertySelected.forEach(allProperty::remove);
-
-        delete_method(propertySelected);
     }
 }
