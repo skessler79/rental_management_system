@@ -22,6 +22,7 @@ public class TestCases {
     private User currentUser;
     private ArrayList<User> pendingUsers;
     private ArrayList<User> userData;
+    private ArrayList<Property> propertyData;
 
     public void startTest(){
 //        registerUsers();
@@ -30,7 +31,8 @@ public class TestCases {
 //        registerProperties();
 //        getPropertiesByOwner();
 //        addComments();
-        changeStatus();
+//        changeStatus();
+        searchByFacility();
     }
     private void registerUsers(){
         User owner1 = new UserBuilder("Winson1", "Loo1", "owner1", "abc1@abc.com", "abc123", "69, Taman Nice, 69420").ownerDetails("owner1").buildUser(UserType.OWNER);
@@ -114,5 +116,10 @@ public class TestCases {
             e.printStackTrace();
         }
 
+    }
+
+    private void searchByFacility(){
+        propertyData = propertyDataModel.getPropertyByFacilityType(new ArrayList<>(Arrays.asList(FacilityType.WATER_HEATER)));
+        System.out.println(propertyData);
     }
 }

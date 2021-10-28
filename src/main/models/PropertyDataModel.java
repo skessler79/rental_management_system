@@ -9,6 +9,7 @@ import main.classes.properties.Property;
 import main.classes.users.Admin;
 import main.classes.users.Owner;
 import main.classes.users.User;
+import main.enums.FacilityType;
 import main.enums.UserType;
 import org.json.simple.parser.JSONParser;
 
@@ -36,6 +37,21 @@ public class PropertyDataModel {
 
     public ArrayList<Property> getPropertiesData(){
         return loadData();
+    }
+
+    //register property with input of current user object and property object
+    public ArrayList<Property> getPropertyByFacilityType(ArrayList<FacilityType> facilityTypes) {
+        ArrayList<Property> output = new ArrayList<>();
+        propertyData = loadData();
+        for (Property property:propertyData){
+            //remove different element
+            facilityTypes.retainAll(property.getFacilityTypes());
+            if (facilityTypes.size() != 0)
+                output.add(property);
+        }
+
+        return output;
+
     }
 
     //register property with input of current user object and property object
