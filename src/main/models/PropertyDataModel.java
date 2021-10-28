@@ -168,7 +168,7 @@ public class PropertyDataModel {
         propertyData = loadData();
         ArrayList<Property> output = new ArrayList<>();
         for(Property property : propertyData) {
-            if (property.getOwnerId() != null && property.getOwnerId().equals(id)){
+            if (property.getOwner().getId() != null && property.getOwner().getId().equals(id)){
                 output.add(property);
             }
         }
