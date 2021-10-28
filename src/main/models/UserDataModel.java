@@ -107,6 +107,41 @@ public class UserDataModel {
         return data;
     }
 
+    //allow admin to create user directly
+    public void adminCreateUser(User currentUser, User registerUser) throws IllegalAccessException, IllegalArgumentException{
+        if (currentUser.getUserType() != UserType.ADMIN)
+            throw new IllegalAccessException("Only admin can call this!");
+        userData = getUserData();
+        // check if there are the same usernames
+        for(User user:userData){
+            if (registerUser.getUsername().equals(user.getUsername())){
+                throw new IllegalArgumentException("Username already exists!");
+            }
+        }
+
+        ArrayList<User> userTypeData = loadData(registerUser.getUserType(), false);
+        userTypeData.add(registerUser);
+        inputData(registerUser.getUserType(), userTypeData, false);
+    }
+
+    //allow admin to delete user directly
+    public void deleteUser(User currentUser, User targetUser) throws IllegalAccessException{
+        if (currentUser.getUserType() != UserType.ADMIN)
+            throw new IllegalAccessException("Only admin can call this!");
+
+        userData = loadData(targetUser.getUserType(),false);
+        userData.removeIf(user -> user.getId().equals(targetUser.getId()));
+        inputData(targetUser.getUserType(),userData,false);
+    }
+
+    public void rejectUser(User currentUser, User targetUser) throws IllegalAccessException{
+        if (currentUser.getUserType() != UserType.ADMIN)
+            throw new IllegalAccessException("Only admin can call this!");
+        pendingData = loadData(targetUser.getUserType(), true);
+        pendingData.removeIf(user -> user.getId().equals(targetUser.getId()));
+        inputData(targetUser.getUserType(),userData,false);
+    }
+
     //edit user based on given user object
     public void editProperty(User targetUser) throws IllegalArgumentException{
         userData = loadData(targetUser.getUserType(), false);
