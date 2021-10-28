@@ -83,11 +83,36 @@ public class TestCases {
                 .isActive(true)
                 .description("A bad house with a cheap rental beside the greatest uni MMU")
                 .roomInfo("1 master room and 2 bed room with 1 kitchen and 1 living room")
-                .facilityTypes(new ArrayList<>(Arrays.asList(FacilityType.AIRCOND, FacilityType.TV, FacilityType.WATER_HEATER)))
+                .facilityTypes(new ArrayList<>(Arrays.asList(FacilityType.AIRCOND)))
+                .buildProperty();
+
+        Property property3 = new PropertyBuilder(ownerUser, PropertyType.BUNGALOW, "Average house", "Taman 789")
+                .address(new Address("420, Lorong Weed", "Taman 420", "Cyberjaya", "Selangor", 14000, "Malaysia"))
+                .isActive(true)
+                .description("A bad house with a cheap rental beside the greatest uni MMU")
+                .roomInfo("1 master room and 2 bed room with 1 kitchen and 1 living room")
+                .facilityTypes(new ArrayList<>(Arrays.asList(FacilityType.AIRCOND, FacilityType.SWIMMING_POOL, FacilityType.WIFI)))
+                .buildProperty();
+        Property property4 = new PropertyBuilder(ownerUser, PropertyType.BUNGALOW, "Haunted house", "Taman 456")
+                .address(new Address("420, Lorong Weed", "Taman 420", "Cyberjaya", "Selangor", 14000, "Malaysia"))
+                .isActive(true)
+                .description("A bad house with a cheap rental beside the greatest uni MMU")
+                .roomInfo("1 master room and 2 bed room with 1 kitchen and 1 living room")
+                .facilityTypes(new ArrayList<>(Arrays.asList(FacilityType.SWIMMING_POOL, FacilityType.TV, FacilityType.AIRCOND)))
+                .buildProperty();
+        Property property5 = new PropertyBuilder(ownerUser, PropertyType.BUNGALOW, "Temple", "Taman 123")
+                .address(new Address("420, Lorong Weed", "Taman 420", "Cyberjaya", "Selangor", 14000, "Malaysia"))
+                .isActive(true)
+                .description("A bad house with a cheap rental beside the greatest uni MMU")
+                .roomInfo("1 master room and 2 bed room with 1 kitchen and 1 living room")
+                .facilityTypes(new ArrayList<>(Arrays.asList(FacilityType.AIRCOND, FacilityType.TV, FacilityType.WATER_HEATER, FacilityType.FRIDGE, FacilityType.SWIMMING_POOL)))
                 .buildProperty();
 
         propertyDataModel.addProperty((Owner) ownerUser, property1);
         propertyDataModel.addProperty((Owner) ownerUser, property2);
+        propertyDataModel.addProperty((Owner) ownerUser, property3);
+        propertyDataModel.addProperty((Owner) ownerUser, property4);
+        propertyDataModel.addProperty((Owner) ownerUser, property5);
 
     }
 
@@ -119,7 +144,7 @@ public class TestCases {
     }
 
     private void searchByFacility(){
-        propertyData = propertyDataModel.getPropertyByFacilityType(new ArrayList<>(Arrays.asList(FacilityType.WATER_HEATER)));
+        propertyData = propertyDataModel.getPropertyByFacilityType(new ArrayList<>(Arrays.asList(FacilityType.WATER_HEATER, FacilityType.TV, FacilityType.FRIDGE, FacilityType.SWIMMING_POOL, FacilityType.WIFI)));
         System.out.println(propertyData);
     }
 }

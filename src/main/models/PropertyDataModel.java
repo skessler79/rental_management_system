@@ -40,13 +40,26 @@ public class PropertyDataModel {
     }
 
     //register property with input of current user object and property object
-    public ArrayList<Property> getPropertyByFacilityType(ArrayList<FacilityType> facilityTypes) {
+    public ArrayList<Property> getPropertyByFacilityType(ArrayList<FacilityType> targetFacilityTypes) {
         ArrayList<Property> output = new ArrayList<>();
-        propertyData = loadData();
+        propertyData = getPropertyByActive(true);
+        System.out.println(targetFacilityTypes);
+        if (targetFacilityTypes.size() == 0){
+            return propertyData;
+        }
+        int containFlag;
         for (Property property:propertyData){
             //remove different element
-            facilityTypes.retainAll(property.getFacilityTypes());
-            if (facilityTypes.size() != 0)
+            containFlag = 0;
+            for (FacilityType propertyFacility:property.getFacilityTypes()){
+                for (FacilityType facility: targetFacilityTypes){
+                        if (facility == propertyFacility) {
+                            containFlag += 1;
+                        }
+                    }
+
+            }
+            if (containFlag == targetFacilityTypes.size())
                 output.add(property);
         }
 
