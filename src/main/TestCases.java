@@ -7,12 +7,14 @@ import main.classes.users.Owner;
 import main.classes.users.User;
 import main.classes.users.UserBuilder;
 import main.controllers.UserController;
+import main.enums.FacilityType;
 import main.enums.PropertyType;
 import main.enums.UserType;
 import main.models.PropertyDataModel;
 import main.models.UserDataModel;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class TestCases {
     private PropertyDataModel propertyDataModel = new PropertyDataModel();
@@ -70,6 +72,7 @@ public class TestCases {
                 .isActive(true)
                 .description("A nice house with a cheap rental beside the greatest uni MMU")
                 .roomInfo("1 master room and 2 bed room with 1 kitchen and 1 living room")
+                .facilityTypes(new ArrayList<>(Arrays.asList(FacilityType.AIRCOND, FacilityType.SWIMMING_POOL, FacilityType.FRIDGE, FacilityType.WIFI)))
                 .buildProperty();
 
         Property property2 = new PropertyBuilder(ownerUser, PropertyType.BUNGALOW, "Sad house", "Taman 420")
@@ -77,6 +80,7 @@ public class TestCases {
                 .isActive(true)
                 .description("A bad house with a cheap rental beside the greatest uni MMU")
                 .roomInfo("1 master room and 2 bed room with 1 kitchen and 1 living room")
+                .facilityTypes(new ArrayList<>(Arrays.asList(FacilityType.AIRCOND, FacilityType.TV, FacilityType.WATER_HEATER)))
                 .buildProperty();
 
         propertyDataModel.addProperty((Owner) ownerUser, property1);

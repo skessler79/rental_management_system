@@ -28,8 +28,9 @@ public class Property implements Comparable<Property>{
     private String roomInfo;
     private int bathRoomCount;
     private ArrayList<Comment> comment;
+    private int commentCount;
 
-    public Property(String propertyId, String ownerId, String agentId, PropertyType propertyType, String name, Address address, String size, String description, String project, double rentalFee, double rentalRate, Date createdAt, ArrayList<FacilityType> facilityTypes, boolean isActive, ArrayList<Regular> tenant, String roomInfo, int bathRoomCount, ArrayList<Comment> comment) {
+    public Property(String propertyId, String ownerId, String agentId, PropertyType propertyType, String name, Address address, String size, String description, String project, double rentalFee, double rentalRate, Date createdAt, ArrayList<FacilityType> facilityTypes, boolean isActive, ArrayList<Regular> tenant, String roomInfo, int bathRoomCount, ArrayList<Comment> comment, int commentCount) {
         this.propertyId = propertyId;
         this.ownerId = ownerId;
         this.agentId = agentId;
@@ -47,6 +48,19 @@ public class Property implements Comparable<Property>{
         this.tenant = tenant;
         this.roomInfo = roomInfo;
         this.bathRoomCount = bathRoomCount;
+        this.comment = comment;
+        this.commentCount = commentCount;
+    }
+
+    public int getCommentCount() {
+        return commentCount;
+    }
+
+    public void setCommentCount(int commentCount) {
+        this.commentCount = commentCount;
+    }
+
+    public void setComment(ArrayList<Comment> comment) {
         this.comment = comment;
     }
 
@@ -96,7 +110,7 @@ public class Property implements Comparable<Property>{
         return project;
     }
 
-    public double getRentalFee() {
+    public Double getRentalFee() {
         return rentalFee;
     }
 
@@ -113,7 +127,6 @@ public class Property implements Comparable<Property>{
     }
 
     public boolean getIsActive() {
-
         return isActive;
     }
 
@@ -125,7 +138,7 @@ public class Property implements Comparable<Property>{
         return roomInfo;
     }
 
-    public int getBathRoomCount() {
+    public Integer getBathRoomCount() {
         return bathRoomCount;
     }
 

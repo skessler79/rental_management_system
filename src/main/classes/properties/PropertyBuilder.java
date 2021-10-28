@@ -24,6 +24,7 @@ public class PropertyBuilder {
     private Date createdAt = new Date();
     private ArrayList<Regular> tenant = new ArrayList<>();
     private ArrayList<Comment> comment = new ArrayList<>();
+    private int commentCount = 0;
 
     //optional fields
     private String agentId = null;
@@ -63,7 +64,8 @@ public class PropertyBuilder {
                 tenant,
                 roomInfo,
                 bathRoomCount,
-                comment);
+                comment,
+                commentCount);
     }
 
     public PropertyBuilder agentId(String agentId){
