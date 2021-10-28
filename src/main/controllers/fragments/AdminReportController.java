@@ -94,7 +94,7 @@ public class AdminReportController implements Initializable {
 // display enum values of propertyTypes and facilityTypes
 
         ar_btn_del.setOnAction(e -> deleteButtonClicked());
-        ar_btn_facilities.setOnAction(e -> );
+        //ar_btn_facilities.setOnAction(e -> );
     }
 
     // Deletes the selected property in the table

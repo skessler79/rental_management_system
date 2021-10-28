@@ -110,12 +110,12 @@ public class AdminManageController extends FragmentController implements Initial
             pendingusernamelist.add(user.getUsername());
         }
 
-        for(User user: pendinguserlist) {
-            pendingemailist.add(user.getEmail());
-        }
+//        for(User user: pendinguserlist) {
+//            pendingemailist.add(user.getEmail());
+//        }
 
-        ObservableList<String> PendingUserList= FXCollections.observableArrayList(pendingusernamelist);
-        listview_pending_user.getItems().addAll(PendingUserList);
+        ObservableList<String> pendinguserlist_observer = FXCollections.observableArrayList(pendingusernamelist);
+        listview_pending_user.getItems().addAll(pendingusernamelist);
 
         listview_pending_user.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
             @Override
@@ -149,12 +149,13 @@ public class AdminManageController extends FragmentController implements Initial
             usernamelist.add(user.getUsername());
         }
 
-//        for(User user: userlist) {
-//            emaillist.add(user.getEmail());
-//        }
+        for(User user: userlist) {
+            emaillist.add(user.getEmail());
+        }
 
-        ObservableList<String> UserList= FXCollections.observableArrayList(usernamelist);
-        listview_total_user.getItems().addAll(UserList);
+        ObservableList<String> usernamelist_observer, emaillist_observer;
+                //FXCollections.observableArrayList(usernamelist);
+        listview_total_user.getItems().addAll(usernamelist);
 
         listview_total_user.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
             @Override
