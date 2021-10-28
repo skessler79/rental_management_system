@@ -147,7 +147,7 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <JFXTextField fx:id="txtAddComment" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="20">
+            <JFXTextField fx:id="txtAddComment" promptText="Enter New Comment..." visible="false" GridPane.columnIndex="2" GridPane.rowIndex="20">
                <GridPane.margin>
                   <Insets top="10.0" />
                </GridPane.margin>

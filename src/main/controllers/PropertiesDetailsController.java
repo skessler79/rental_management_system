@@ -181,6 +181,7 @@ public class PropertiesDetailsController implements Initializable
 
     private void setComments(Property property)
     {
+        property = CurrentSession.propertyDataModel.getPropertyById(property.getPropertyId());
         ArrayList<Comment> comments = property.getComment();
         ObservableList<Comment> commentsObservable = FXCollections.observableArrayList(comments);
         listComments.setItems(commentsObservable);
