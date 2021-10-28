@@ -68,10 +68,10 @@ public class AdminReportController implements Initializable {
         ar_col_facilityTypes.setCellValueFactory(new PropertyValueFactory<Property, ArrayList<FacilityType>>("facilityTypes"));
         ar_col_comments.setCellValueFactory(new PropertyValueFactory<Property, Integer>("commentCount"));
 
-//        ar_col_ownerName.setCellValueFactory(c -> {
-//            StringProperty var = new SimpleStringProperty((String) properties.get(0).getPropertyId());
-//            return var;
-//        });
+        ar_col_ownerName.setCellValueFactory(c -> {
+            StringProperty var = new SimpleStringProperty((String) c.getValue().getOwner().getUsername());
+            return var;
+        });
 
 //        TableColumn<RelationManager, String> firstNameColumn = new TableColumn<>("First Name");
 //        firstNameColumn.setCellValueFactory(new Callback<CellDataFeatures<RelationManager,String>, ObservableValue<String>>() {
@@ -82,19 +82,18 @@ public class AdminReportController implements Initializable {
 //            }
 //        });
 
-
         for (Property property:properties) {
 //            System.out.println("Test:"+ property);
             ar_table.getItems().add(property);
         }
-// change ownerid to ownername, add/delete properties, sort properties according to propertType (choice box), owner (textfield), active/inactive (radio button)
+// add/delete properties, sort properties according to propertType (choice box), owner (textfield), active/inactive (radio button)
 // display enum values of propertyTypes and facilityTypes
 
-        // Comment
         ar_table.getColumns().addAll(ar_col_propertyID, ar_col_propertyType, ar_col_ownerName, ar_col_isActive, ar_col_facilityTypes, ar_col_comments);
     }
 
-    public void deleteButtonClicked() {
-
-    }
+//    public String deleteButtonClicked() {
+//
+//        return propertyID;
+//    }
 }

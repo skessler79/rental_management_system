@@ -31,7 +31,7 @@
               <columns>
                 <TableColumn fx:id="ar_col_propertyID" prefWidth="240.0" style="-fx-text-background-color: #000000;" text="propertyId" />
                 <TableColumn fx:id="ar_col_propertyType" prefWidth="110.0" text="propertyType" />
-                  <TableColumn fx:id="ar_col_ownerId" prefWidth="240.0" text="ownerID" />
+                  <TableColumn fx:id="ar_col_ownerName" prefWidth="240.0" text="ownerName" />
                   <TableColumn fx:id="ar_col_isActive" minWidth="0.0" prefWidth="85.0" text="isActive" />
                   <TableColumn fx:id="ar_col_facilityTypes" prefWidth="250.0" text="facilityTypes" />
                   <TableColumn fx:id="ar_col_comments" prefWidth="100.0" text="comments" />
