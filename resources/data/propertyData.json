@@ -36,6 +36,18 @@
         "posterId": "a66c4e96-3370-47e3-a757-d7d9417208db",
         "details": "This unit is good someone hacked my account, dont trust above comment",
         "createdAt": "2021-10-27T19:35:05.620+0800"
+      },
+      {
+        "commentId": "71174071-997b-4adf-915b-52fd55ee8300",
+        "posterId": "a66c4e96-3370-47e3-a757-d7d9417208db",
+        "details": "This unit is shit af man dont rent it",
+        "createdAt": "2021-10-28T16:41:20.177+0800"
+      },
+      {
+        "commentId": "f5daa2f8-5724-44bf-8aab-8027e6340a02",
+        "posterId": "a66c4e96-3370-47e3-a757-d7d9417208db",
+        "details": "This unit is good someone hacked my account, dont trust above comment",
+        "createdAt": "2021-10-28T16:41:20.199+0800"
       }
     ]
   },
@@ -59,6 +71,60 @@
     "rentalFee": -1.0,
     "rentalRate": -1.0,
     "createdAt": "2021-10-27T19:35:05.388+0800",
+    "facilityTypes": [],
+    "isActive": true,
+    "tenant": [],
+    "roomInfo": "1 master room and 2 bed room with 1 kitchen and 1 living room",
+    "bathRoomCount": -1,
+    "comment": []
+  },
+  {
+    "propertyId": "3410dc3a-8482-4c4b-8f8b-3283f465473e",
+    "ownerId": "b5b3b6a4-a9a4-444b-8aae-0ee9da9a5f9c",
+    "agentId": null,
+    "propertyType": "CONDO",
+    "name": "Happy house",
+    "address": {
+      "roadName": "69, Lorong Six Nine",
+      "project": "Taman 69",
+      "state": "Selangor",
+      "country": "Malaysia",
+      "city": "Cyberjaya",
+      "postcode": 14000
+    },
+    "size": null,
+    "description": "A nice house with a cheap rental beside the greatest uni MMU",
+    "project": "Taman 69",
+    "rentalFee": -1.0,
+    "rentalRate": -1.0,
+    "createdAt": "2021-10-28T16:41:19.947+0800",
+    "facilityTypes": [],
+    "isActive": true,
+    "tenant": [],
+    "roomInfo": "1 master room and 2 bed room with 1 kitchen and 1 living room",
+    "bathRoomCount": -1,
+    "comment": []
+  },
+  {
+    "propertyId": "6648435b-e60b-41e9-a075-39177cdc82c3",
+    "ownerId": "b5b3b6a4-a9a4-444b-8aae-0ee9da9a5f9c",
+    "agentId": null,
+    "propertyType": "BUNGALOW",
+    "name": "Sad house",
+    "address": {
+      "roadName": "420, Lorong Weed",
+      "project": "Taman 420",
+      "state": "Selangor",
+      "country": "Malaysia",
+      "city": "Cyberjaya",
+      "postcode": 14000
+    },
+    "size": null,
+    "description": "A bad house with a cheap rental beside the greatest uni MMU",
+    "project": "Taman 420",
+    "rentalFee": -1.0,
+    "rentalRate": -1.0,
+    "createdAt": "2021-10-28T16:41:19.948+0800",
     "facilityTypes": [],
     "isActive": true,
     "tenant": [],
