@@ -25,7 +25,7 @@ public class PropertyListItemController {
     private Label txtDescription;
 
     @FXML
-    private Label txtIsActive;
+    private Label txtPrice;
 
     @FXML
     private Button btnDetails;
@@ -51,16 +51,8 @@ public class PropertyListItemController {
         txtPropertyType.setText(propertyType);
         txtDescription.setText(property.getDescription());
 
-        if(property.isActive())
-        {
-            txtIsActive.setText("Active");
-        }
-        else
-        {
-            txtIsActive.setText("Inactive");
-        }
-
-
+        String rentalFee = String.format("RM %.2f", property.getRentalFee());
+        txtPrice.setText(rentalFee);
     }
 }
 

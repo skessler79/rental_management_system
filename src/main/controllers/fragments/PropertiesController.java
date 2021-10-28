@@ -29,13 +29,11 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+// TODO : Search by Facilities
 public class PropertiesController extends FragmentController implements Initializable
 {
     @FXML
     ComboBox combo_state;
-
-//    @FXML
-//    JFXListView list_properties;
 
     @FXML
     AnchorPane anchorPropertyList;
@@ -64,6 +62,7 @@ public class PropertiesController extends FragmentController implements Initiali
         combo_state.setValue("Any");
 
         ObservableList<Property> data = FXCollections.observableArrayList();
+        // TODO : get active properties only
         data.addAll(propertyDataModel.getPropertiesData());
 
         final ListView<Property> listView = new ListView<>(data);
@@ -100,9 +99,7 @@ public class PropertiesController extends FragmentController implements Initiali
             {
                 e.printStackTrace();
             }
-
             propertyListItemController = loader.getController();
-
         }
 
         @Override
