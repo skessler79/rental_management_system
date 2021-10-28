@@ -1,15 +1,15 @@
 package main.controllers.fragments;
 
+import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXListView;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListCell;
-import javafx.scene.control.ListView;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -18,6 +18,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.util.Callback;
 import main.classes.properties.Property;
+import main.enums.FacilityType;
 import main.enums.PropertyType;
 import main.models.PropertyDataModel;
 
@@ -36,16 +37,27 @@ public class PropertiesController extends FragmentController implements Initiali
     ComboBox combo_state;
 
     @FXML
+    JFXCheckBox checkPool, checkWifi, checkTv, checkFridge, checkAircond;
+
+    @FXML
+    Button btnSearch;
+
+    @FXML
     AnchorPane anchorPropertyList;
 
     private PropertyListItemController propertyListItemController;
     private PropertyDataModel propertyDataModel;
     private FXMLLoader loader;
+    private ArrayList<FacilityType> facilityTypes;
+    private ListView<Property> listView;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
         propertyDataModel = new PropertyDataModel();
+        facilityTypes = new ArrayList<>();
+
+        btnSearch.setOnAction(actionEvent -> handleFacilities());
 
         // Properly capitalize PropertyType enum and changes underscore to space
         List<String> propertyTypeList = Stream.of(PropertyType.values()).map(PropertyType::name).collect(Collectors.toList());
@@ -56,16 +68,21 @@ public class PropertiesController extends FragmentController implements Initiali
             propertyTypeList.set(i, str);
         }
 
+        // Setting house type selection
         combo_state.getItems().add("Any");
         combo_state.getItems().addAll(propertyTypeList);
-
         combo_state.setValue("Any");
 
+        // Get list of all active properties
         ObservableList<Property> data = FXCollections.observableArrayList();
-        // TODO : get active properties only
-        data.addAll(propertyDataModel.getPropertiesData());
+        data.addAll(propertyDataModel.getPropertyByActive(true));
+        displayList(data);
+    }
 
-        final ListView<Property> listView = new ListView<>(data);
+    private void displayList(ObservableList<Property> data)
+    {
+        // Create dynamic ListView of fragments
+        listView = new ListView<>(data);
         listView.setMinWidth(690);
 
         listView.setCellFactory(new Callback<ListView<Property>, ListCell<Property>>()
@@ -78,6 +95,42 @@ public class PropertiesController extends FragmentController implements Initiali
         });
 
         anchorPropertyList.getChildren().add(listView);
+    }
+
+    private void handleFacilities()
+    {
+        facilityTypes.clear();
+
+        if(checkPool.isSelected())
+        {
+            facilityTypes.add(FacilityType.SWIMMING_POOL);
+        }
+
+        if(checkWifi.isSelected())
+        {
+            facilityTypes.add(FacilityType.WIFI);
+        }
+
+        if(checkTv.isSelected())
+        {
+            facilityTypes.add(FacilityType.TV);
+        }
+
+        if(checkFridge.isSelected())
+        {
+            facilityTypes.add(FacilityType.FRIDGE);
+        }
+
+        if(checkAircond.isSelected())
+        {
+            facilityTypes.add(FacilityType.AIRCOND);
+        }
+
+        System.out.println(facilityTypes.toString());
+
+        ObservableList<Property> data = FXCollections.observableArrayList();
+        data.addAll(propertyDataModel.getPropertyByFacilityType(facilityTypes));
+        displayList(data);
     }
 
     private class PropertyCell extends ListCell<Property>

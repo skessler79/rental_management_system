@@ -119,27 +119,27 @@
                                           <Font name="System Bold" size="13.0" />
                                        </font>
                                     </Label>
-                                    <JFXCheckBox text="Swimming Pool">
+                                    <JFXCheckBox fx:id="checkPool" text="Swimming Pool">
                                        <VBox.margin>
                                           <Insets left="10.0" top="5.0" />
                                        </VBox.margin>
                                     </JFXCheckBox>
-                                    <JFXCheckBox text="Wi-Fi">
+                                    <JFXCheckBox fx:id="checkWifi" text="Wi-Fi">
                                        <VBox.margin>
                                           <Insets left="10.0" top="5.0" />
                                        </VBox.margin>
                                     </JFXCheckBox>
-                                    <JFXCheckBox text="TV">
+                                    <JFXCheckBox fx:id="checkTv" text="TV">
                                        <VBox.margin>
                                           <Insets left="10.0" top="5.0" />
                                        </VBox.margin>
                                     </JFXCheckBox>
-                                    <JFXCheckBox text="Fridge">
+                                    <JFXCheckBox fx:id="checkFridge" text="Fridge">
                                        <VBox.margin>
                                           <Insets left="10.0" top="5.0" />
                                        </VBox.margin>
                                     </JFXCheckBox>
-                                    <JFXCheckBox text="Aircond">
+                                    <JFXCheckBox fx:id="checkAircond" text="Air Conditioner">
                                        <VBox.margin>
                                           <Insets left="10.0" top="5.0" />
                                        </VBox.margin>
@@ -149,7 +149,7 @@
                                     <Insets bottom="10.0" />
                                  </padding>
                               </VBox>
-                              <Button contentDisplay="CENTER" minHeight="40.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="210.0" style="-fx-background-color: #0071C2;" text="Search" textFill="WHITE">
+                              <Button fx:id="btnSearch" contentDisplay="CENTER" minHeight="40.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="210.0" style="-fx-background-color: #0071C2;" text="Search" textFill="WHITE">
                                  <VBox.margin>
                                     <Insets bottom="10.0" left="10.0" />
                                  </VBox.margin>
