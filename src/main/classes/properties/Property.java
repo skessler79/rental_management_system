@@ -2,7 +2,10 @@ package main.classes.properties;
 
 import main.classes.Address;
 import main.classes.Comment;
+import main.classes.users.Agent;
+import main.classes.users.Owner;
 import main.classes.users.Regular;
+import main.classes.users.User;
 import main.enums.FacilityType;
 import main.enums.PropertyType;
 
@@ -11,8 +14,8 @@ import java.util.Date;
 
 public class Property implements Comparable<Property>{
     private String propertyId;
-    private String ownerId;
-    private String agentId;
+    private User owner;
+    private User agent;
     private PropertyType propertyType;
     private String name;
     private Address address;
@@ -28,11 +31,12 @@ public class Property implements Comparable<Property>{
     private String roomInfo;
     private int bathRoomCount;
     private ArrayList<Comment> comment;
+    private int commentCount;
 
-    public Property(String propertyId, String ownerId, String agentId, PropertyType propertyType, String name, Address address, String size, String description, String project, double rentalFee, double rentalRate, Date createdAt, ArrayList<FacilityType> facilityTypes, boolean isActive, ArrayList<Regular> tenant, String roomInfo, int bathRoomCount, ArrayList<Comment> comment) {
+    public Property(String propertyId, User owner, User agent, PropertyType propertyType, String name, Address address, String size, String description, String project, double rentalFee, double rentalRate, Date createdAt, ArrayList<FacilityType> facilityTypes, boolean isActive, ArrayList<Regular> tenant, String roomInfo, int bathRoomCount, ArrayList<Comment> comment, int commentCount) {
         this.propertyId = propertyId;
-        this.ownerId = ownerId;
-        this.agentId = agentId;
+        this.owner = owner;
+        this.agent = agent;
         this.propertyType = propertyType;
         this.name = name;
         this.address = address;
@@ -47,6 +51,19 @@ public class Property implements Comparable<Property>{
         this.tenant = tenant;
         this.roomInfo = roomInfo;
         this.bathRoomCount = bathRoomCount;
+        this.comment = comment;
+        this.commentCount = commentCount;
+    }
+
+    public int getCommentCount() {
+        return commentCount;
+    }
+
+    public void setCommentCount(int commentCount) {
+        this.commentCount = commentCount;
+    }
+
+    public void setComment(ArrayList<Comment> comment) {
         this.comment = comment;
     }
 
@@ -64,12 +81,12 @@ public class Property implements Comparable<Property>{
         return propertyId;
     }
 
-    public String getOwnerId() {
-        return ownerId;
+    public User getOwner() {
+        return owner;
     }
 
-    public String getAgentId() {
-        return agentId;
+    public User getAgent() {
+        return agent;
     }
 
     public PropertyType getPropertyType() {
@@ -96,7 +113,7 @@ public class Property implements Comparable<Property>{
         return project;
     }
 
-    public double getRentalFee() {
+    public Double getRentalFee() {
         return rentalFee;
     }
 
@@ -112,7 +129,7 @@ public class Property implements Comparable<Property>{
         return facilityTypes;
     }
 
-    public boolean isActive() {
+    public boolean getIsActive() {
         return isActive;
     }
 
@@ -124,7 +141,7 @@ public class Property implements Comparable<Property>{
         return roomInfo;
     }
 
-    public int getBathRoomCount() {
+    public Integer getBathRoomCount() {
         return bathRoomCount;
     }
 
@@ -132,12 +149,12 @@ public class Property implements Comparable<Property>{
         this.propertyId = propertyId;
     }
 
-    public void setOwnerId(String ownerId) {
-        this.ownerId = ownerId;
+    public void setOwnerId(Owner owner) {
+        this.owner = owner;
     }
 
-    public void setAgentId(String agentId) {
-        this.agentId = agentId;
+    public void setAgentId(Agent agent) {
+        this.agent = agent;
     }
 
     public void setPropertyType(PropertyType propertyType) {
@@ -200,8 +217,8 @@ public class Property implements Comparable<Property>{
     public String toString() {
         return "Property{" +
                 "propertyId='" + propertyId + '\'' +
-                ", ownerId='" + ownerId + '\'' +
-                ", agentId='" + agentId + '\'' +
+                ", owner='" + owner + '\'' +
+                ", agent='" + agent + '\'' +
                 ", propertyType=" + propertyType +
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +

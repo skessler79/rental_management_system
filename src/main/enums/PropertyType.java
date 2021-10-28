@@ -1,5 +1,6 @@
 package main.enums;
 
+// Different constant values for PropertyType objects
 public enum PropertyType {
     CONDO,
     TOWNHOUSE,
