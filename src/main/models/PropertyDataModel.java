@@ -64,6 +64,18 @@ public class PropertyDataModel {
 
     }
 
+    public void deleteProperty(Property propertyId){
+        propertyData = loadData();
+        for (Property property:propertyData){
+            if (property.getPropertyId().equals(propertyId)){
+                propertyData.remove(property);
+                break;
+            }
+        }
+
+        inputData(propertyData);
+    }
+
     //register property with input of current user object and property object
     public void addComment(User currentUser, Property targetProperty, String comment) throws IllegalAccessException{
         if (currentUser.getUserType() != UserType.ADMIN){
