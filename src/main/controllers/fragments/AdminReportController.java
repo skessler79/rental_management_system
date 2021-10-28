@@ -78,6 +78,7 @@ public class AdminReportController implements Initializable {
         }
 
 
+        // Comment
         ar_table.getColumns().addAll(ar_col_propertyID, ar_col_propertyType, ar_col_ownerId, ar_col_isActive, ar_col_facilityTypes, ar_col_comments);
     }
 }
