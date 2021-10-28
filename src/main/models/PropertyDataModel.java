@@ -2,23 +2,23 @@ package main.models;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
-import main.classes.Property;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
+import main.classes.Comment;
+import main.classes.properties.Property;
+import main.classes.users.Admin;
+import main.classes.users.Owner;
+import main.classes.users.User;
+import main.enums.UserType;
 import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.lang.reflect.Type;
+import java.text.DateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.UUID;
 
 public class PropertyDataModel {
@@ -29,6 +29,7 @@ public class PropertyDataModel {
     private FileReader fileReader;
     private final JSONParser parser = new JSONParser();
     private Gson gson;
+    private UserDataModel userDataModel = new UserDataModel();
 
     private ArrayList<Property> propertyData;
 
@@ -36,14 +37,68 @@ public class PropertyDataModel {
         return loadData();
     }
 
-    public void registerProperty(Property property){
+    //register property with input of current user object and property object
+    public void addComment(User currentUser, Property targetProperty, String comment) throws IllegalAccessException{
+        if (currentUser.getUserType() != UserType.ADMIN){
+            throw new IllegalAccessException("Only admin can add comments!");
+        }
+        propertyData = loadData();
+        for (Property property:propertyData){
+            if (property.getPropertyId().equals(targetProperty.getPropertyId())){
+                property.addComment(new Comment(UUID.randomUUID().toString(), currentUser.getId(), comment, new Date()));
+                break;
+            }
+        }
+        inputData(propertyData);
+    }
+
+    //register property with input of current user object and property object
+    public void addProperty(Owner currentUser, Property property){
         propertyData = loadData();
         propertyData.add(property);
+        currentUser.addPropertyList(property);
+        inputData(propertyData);
+        userDataModel.editProperty(currentUser);
+    }
+
+    public void editProperty(Property targetProperty) throws IllegalArgumentException{
+        propertyData = loadData();
+        boolean exist = false;
+        for (Property property:propertyData){
+            if (property.getPropertyId().equals(targetProperty.getPropertyId())){
+                propertyData.remove(property);
+                exist = true;
+                break;
+            }
+        }
+
+        if (!exist){
+            throw new IllegalArgumentException("property do not exist!");
+        }
+
+        propertyData.add(targetProperty);
+        inputData(propertyData);
+    }
+
+    public void removeProperty(Property targetProperty) throws IllegalArgumentException{
+        propertyData = loadData();
+        boolean exist = false;
+        for (Property property:propertyData){
+            if (property.getPropertyId().equals(targetProperty.getPropertyId())){
+                propertyData.remove(property);
+                exist = true;
+                break;
+            }
+        }
+        if (!exist){
+            throw new IllegalArgumentException("property do not exist!");
+        }
+
         inputData(propertyData);
     }
 
     public ArrayList<Property> getPropertyByName(String name){
-        ArrayList<Property> match = new ArrayList<Property>();
+        ArrayList<Property> match = new ArrayList<>();
         propertyData = loadData();
         for(Property property : propertyData) {
             if (property.getName() != null && property.getName().contains(name)){
@@ -63,9 +118,21 @@ public class PropertyDataModel {
         return null;
     }
 
+    public ArrayList<Property> getPropertyByOwner(User user){
+        String id = user.getId();
+        propertyData = loadData();
+        ArrayList<Property> output = new ArrayList<>();
+        for(Property property : propertyData) {
+            if (property.getOwnerId() != null && property.getOwnerId().equals(id)){
+                output.add(property);
+            }
+        }
+        return output;
+    }
+
     private void inputData(ArrayList<Property> properties){
         try{
-            gson = new GsonBuilder().setPrettyPrinting().serializeNulls().serializeSpecialFloatingPointValues().create();
+            gson = new GsonBuilder().setPrettyPrinting().serializeNulls().setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ").serializeSpecialFloatingPointValues().create();
             fileWriter = new FileWriter(path);
             gson.toJson(properties, fileWriter);
         }
@@ -84,17 +151,22 @@ public class PropertyDataModel {
     }
 
     private ArrayList<Property> loadData(){
+
         try {
             fileReader = new FileReader(path);
-            gson = new Gson();
             reader = new JsonReader(fileReader);
-            propertyData = gson.fromJson(reader, PROPERTY_LIST_TYPE);
-            if (propertyData == null)
-                propertyData = new ArrayList<Property>();
-        } catch (Exception e) {
+            gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ").create();
+            propertyData = gson.fromJson(reader,PROPERTY_LIST_TYPE);
+            fileReader.close();
 
+
+        } catch (IOException e) {
             e.printStackTrace();
         }
+        if (propertyData == null){
+            return new ArrayList<>();
+        }
+
         return propertyData;
     }
 }
