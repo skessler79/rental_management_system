@@ -25,17 +25,18 @@ public class TestCases {
     private ArrayList<Property> propertyData;
 
     public void startTest(){
-//        registerUsers();
-//        loginUser();
-//        approveUsers();
-//        registerProperties();
-//        getPropertiesByOwner();
-//        addComments();
+        registerUsers();
+        loginUser();
+        approveUsers();
+        registerProperties();
+        getPropertiesByOwner();
+        addComments();
 //        changeStatus();
-        searchByFacility();
+//        searchByFacility();
     }
     private void registerUsers(){
         User owner1 = new UserBuilder("Winson1", "Loo1", "owner1", "abc1@abc.com", "abc123", "69, Taman Nice, 69420").ownerDetails("owner1").buildUser(UserType.OWNER);
+        User owner2 = new UserBuilder("Winson2", "Loo2", "owner2", "abc2@abc.com", "abc123", "69, Taman Bad, 69420").ownerDetails("owner2").buildUser(UserType.OWNER);
         User regular1 = new UserBuilder("Winson1", "Loo1", "regular1", "abc1@abc.com", "abc123", "69, Taman Nice, 69420").regularDetails("regular1").buildUser(UserType.REGULAR);
         User admin1 = new UserBuilder("Winson2", "Loo2", "admin1", "abc2@abc.com", "abc123", "69, Taman Nice, 69420").adminDetails("admin1").buildUser(UserType.ADMIN);
         User agent1 = new UserBuilder("Winson3", "Loo3", "agent1", "abc3@abc.com", "abc123", "69, Taman Nice, 69420").agentDetails("agent1").buildUser(UserType.AGENT);
@@ -46,6 +47,7 @@ public class TestCases {
             userDataModel.registerUser(admin1);
             userDataModel.registerUser(agent1);
             userDataModel.registerUser(regular2);
+            userDataModel.registerUser(owner2);
         }catch (IllegalArgumentException e){
             System.out.println("Username already exists");
             e.printStackTrace();
@@ -69,8 +71,10 @@ public class TestCases {
     }
 
     private void registerProperties(){
-        User ownerUser = userDataModel.loginUser("owner1", "abc123");
-        Property property1 = new PropertyBuilder(ownerUser, PropertyType.CONDO, "Happy house", "Taman 69")
+        User ownerUser1 = userDataModel.loginUser("owner1", "abc123");
+        User ownerUser2 = userDataModel.loginUser("owner2", "abc123");
+
+        Property property1 = new PropertyBuilder(ownerUser1, PropertyType.CONDO, "Happy house", "Taman 69")
                 .address(new Address("69, Lorong Six Nine", "Taman 69", "Cyberjaya", "Selangor", 14000, "Malaysia"))
                 .isActive(true)
                 .description("A nice house with a cheap rental beside the greatest uni MMU")
@@ -78,17 +82,50 @@ public class TestCases {
                 .facilityTypes(new ArrayList<>(Arrays.asList(FacilityType.AIRCOND, FacilityType.SWIMMING_POOL, FacilityType.FRIDGE, FacilityType.WIFI)))
                 .buildProperty();
 
-        Property property2 = new PropertyBuilder(ownerUser, PropertyType.BUNGALOW, "Sad house", "Taman 420")
+        Property property2 = new PropertyBuilder(ownerUser1, PropertyType.BUNGALOW, "Sad house", "Taman 420")
                 .address(new Address("420, Lorong Weed", "Taman 420", "Cyberjaya", "Selangor", 14000, "Malaysia"))
                 .isActive(true)
                 .description("A bad house with a cheap rental beside the greatest uni MMU")
                 .roomInfo("1 master room and 2 bed room with 1 kitchen and 1 living room")
-                .facilityTypes(new ArrayList<>(Arrays.asList(FacilityType.AIRCOND, FacilityType.TV, FacilityType.WATER_HEATER)))
+                .facilityTypes(new ArrayList<>(Arrays.asList(FacilityType.AIRCOND)))
                 .buildProperty();
 
-        propertyDataModel.addProperty((Owner) ownerUser, property1);
-        propertyDataModel.addProperty((Owner) ownerUser, property2);
+        Property property3 = new PropertyBuilder(ownerUser1, PropertyType.BUNGALOW, "Average house", "Taman 789")
+                .address(new Address("420, Lorong Weed", "Taman 420", "Cyberjaya", "Selangor", 14000, "Malaysia"))
+                .isActive(true)
+                .description("A bad house with a cheap rental beside the greatest uni MMU")
+                .roomInfo("1 master room and 2 bed room with 1 kitchen and 1 living room")
+                .facilityTypes(new ArrayList<>(Arrays.asList(FacilityType.AIRCOND, FacilityType.SWIMMING_POOL, FacilityType.WIFI)))
+                .buildProperty();
+        Property property4 = new PropertyBuilder(ownerUser1, PropertyType.BUNGALOW, "Haunted house", "Taman 456")
+                .address(new Address("420, Lorong Weed", "Taman 420", "Cyberjaya", "Selangor", 14000, "Malaysia"))
+                .isActive(true)
+                .description("A bad house with a cheap rental beside the greatest uni MMU")
+                .roomInfo("1 master room and 2 bed room with 1 kitchen and 1 living room")
+                .facilityTypes(new ArrayList<>(Arrays.asList(FacilityType.SWIMMING_POOL, FacilityType.TV, FacilityType.AIRCOND)))
+                .buildProperty();
 
+        Property property5 = new PropertyBuilder(ownerUser2, PropertyType.BUNGALOW, "Temple", "Taman 123")
+                .address(new Address("420, Lorong Weed", "Taman 420", "Cyberjaya", "Selangor", 14000, "Malaysia"))
+                .isActive(true)
+                .description("A bad house with a cheap rental beside the greatest uni MMU")
+                .roomInfo("1 master room and 2 bed room with 1 kitchen and 1 living room")
+                .facilityTypes(new ArrayList<>(Arrays.asList(FacilityType.AIRCOND, FacilityType.TV, FacilityType.WATER_HEATER, FacilityType.FRIDGE, FacilityType.SWIMMING_POOL)))
+                .buildProperty();
+
+        Property property6 = new PropertyBuilder(ownerUser2, PropertyType.DOUBLE_STORY, "Temple", "Taman 123")
+                .address(new Address("666, lorong DN", "Taman Malay", "Cyberjaya", "Selangor", 14000, "Malaysia"))
+                .isActive(false)
+                .roomInfo("6 bathrooms, no bed")
+                .facilityTypes(new ArrayList<>(Arrays.asList(FacilityType.AIRCOND, FacilityType.TV, FacilityType.WATER_HEATER, FacilityType.SWIMMING_POOL)))
+                .buildProperty();
+
+        propertyDataModel.addProperty((Owner) ownerUser1, property1);
+        propertyDataModel.addProperty((Owner) ownerUser1, property2);
+        propertyDataModel.addProperty((Owner) ownerUser1, property3);
+        propertyDataModel.addProperty((Owner) ownerUser1, property4);
+        propertyDataModel.addProperty((Owner) ownerUser2, property5);
+        propertyDataModel.addProperty((Owner) ownerUser2, property6);
     }
 
     private void getPropertiesByOwner(){
