@@ -2,14 +2,22 @@ package main.controllers;
 
 import com.jfoenix.controls.JFXListView;
 import com.jfoenix.controls.JFXTextField;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TableView;
 import javafx.stage.Stage;
+import main.classes.Comment;
+import main.classes.CurrentSession;
 import main.classes.properties.Property;
 import main.classes.users.Regular;
 import main.enums.FacilityType;
+import main.enums.UserType;
+import main.models.PropertyDataModel;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -58,7 +66,7 @@ public class PropertiesDetailsController implements Initializable
     private Label labelTimeCreated;
 
     @FXML
-    private JFXListView<?> listComments;
+    private JFXListView listComments;
 
     @FXML
     private Label labelComments;
@@ -70,11 +78,21 @@ public class PropertiesDetailsController implements Initializable
     private JFXTextField txtAddComment;
 
     @FXML
-    private Button btnAddComment, btnConfirm;
+    private Button btnAddComment, btnDeleteComment, btnConfirm;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
+        // Let admin see and add comments
+        if(CurrentSession.currentUser.getUserType() == UserType.ADMIN)
+        {
+            listComments.setVisible(true);
+            labelComments.setVisible(true);
+            labelColon.setVisible(true);
+            txtAddComment.setVisible(true);
+            btnAddComment.setVisible(true);
+            btnDeleteComment.setVisible(true);
+        }
     }
 
     public void setDetails(Property property, Stage window)
@@ -119,7 +137,7 @@ public class PropertiesDetailsController implements Initializable
         // Setting labels
         labelId.setText(property.getPropertyId());
         labelName.setText(property.getName());
-        labelOwner.setText(property.getOwnerId());
+        labelOwner.setText(property.getOwner().getId());
         labelTenant.setText(tenantStr);
         labelStatus.setText(statusStr);
         labelAddress.setText(property.getAddress().toString());
@@ -130,6 +148,42 @@ public class PropertiesDetailsController implements Initializable
         labelFacilities.setText(facilityStr);
         labelDescription.setText(property.getDescription());
         labelTimeCreated.setText(String.valueOf(property.getCreatedAt()));
+
+        // Setting comments
+        setComments(property);
+
+        btnAddComment.setOnAction(actionEvent ->
+        {
+            PropertyDataModel propertyDataModel = new PropertyDataModel();
+            try
+            {
+                propertyDataModel.addComment(CurrentSession.currentUser, property, txtAddComment.getText());
+                setComments(property);
+            } catch (IllegalAccessException e)
+            {
+                e.printStackTrace();
+            }
+
+            txtAddComment.clear();
+        });
+
+//        btnDeleteComment.setOnAction(actionEvent ->
+//        {
+//            ObservableList<Comment> selectedComments;
+//            selectedComments = listComments.getSelectionModel().getSelectedItems();
+//
+//            for(Comment comment : selectedComments)
+//            {
+//                CurrentSession.
+//            }
+//        });
+    }
+
+    private void setComments(Property property)
+    {
+        ArrayList<Comment> comments = property.getComment();
+        ObservableList<Comment> commentsObservable = FXCollections.observableArrayList(comments);
+        listComments.setItems(commentsObservable);
     }
 
 }

@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
+import main.classes.CurrentSession;
 import main.classes.RuntimeTypeAdapterFactory;
 import main.classes.properties.Property;
 import main.classes.users.*;
@@ -166,6 +167,7 @@ public class UserDataModel {
         boolean userExist = false;
         for (User user:userData){
             if (user.getUsername().equals(username) && user.getPassword().equals(password)){
+                CurrentSession.currentUser = user;
                 return user;
             }
         }
