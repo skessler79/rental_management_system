@@ -64,7 +64,7 @@ public class PropertyDataModel {
 
     }
 
-    public void deleteProperty(Property propertyId){
+    public void deleteProperty(String propertyId){
         propertyData = loadData();
         for (Property property:propertyData){
             if (property.getPropertyId().equals(propertyId)){
