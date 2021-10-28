@@ -66,14 +66,19 @@ public class PropertyDataModel {
         return output;
     }
 
-    public void setPropertyActive (Property targetProperty, boolean active){
+    public void setPropertyActive (User currentUser, Property targetProperty, boolean active) throws IllegalAccessException {
+        if (currentUser.getUserType() != UserType.OWNER && currentUser.getUserType() != UserType.AGENT && currentUser.getUserType() != UserType.ADMIN)
+            throw new IllegalAccessException("Unauthorized access!");
         propertyData = loadData();
         for (Property property:propertyData){
             if (property.getPropertyId().equals(targetProperty.getPropertyId())){
-                property.setActive(active);
+                propertyData.remove(property);
+                targetProperty.setActive(active);
+                propertyData.add(targetProperty);
                 break;
             }
         }
+        inputData(propertyData);
     }
 
     //register property with input of current user object and property object
