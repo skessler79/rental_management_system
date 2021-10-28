@@ -93,6 +93,7 @@ public class TestCases {
                 .roomInfo("1 master room and 2 bed room with 1 kitchen and 1 living room")
                 .facilityTypes(new ArrayList<>(Arrays.asList(FacilityType.AIRCOND, FacilityType.SWIMMING_POOL, FacilityType.WIFI)))
                 .buildProperty();
+
         Property property4 = new PropertyBuilder(ownerUser, PropertyType.BUNGALOW, "Haunted house", "Taman 456")
                 .address(new Address("420, Lorong Weed", "Taman 420", "Cyberjaya", "Selangor", 14000, "Malaysia"))
                 .isActive(true)
@@ -100,6 +101,7 @@ public class TestCases {
                 .roomInfo("1 master room and 2 bed room with 1 kitchen and 1 living room")
                 .facilityTypes(new ArrayList<>(Arrays.asList(FacilityType.SWIMMING_POOL, FacilityType.TV, FacilityType.AIRCOND)))
                 .buildProperty();
+
         Property property5 = new PropertyBuilder(ownerUser, PropertyType.BUNGALOW, "Temple", "Taman 123")
                 .address(new Address("420, Lorong Weed", "Taman 420", "Cyberjaya", "Selangor", 14000, "Malaysia"))
                 .isActive(true)
@@ -144,7 +146,7 @@ public class TestCases {
     }
 
     private void searchByFacility(){
-        propertyData = propertyDataModel.getPropertyByFacilityType(new ArrayList<>(Arrays.asList(FacilityType.WATER_HEATER, FacilityType.TV, FacilityType.FRIDGE, FacilityType.SWIMMING_POOL, FacilityType.WIFI)));
+        propertyData = propertyDataModel.getPropertyByFacilityType(new ArrayList<>(Arrays.asList(FacilityType.WATER_HEATER, FacilityType.TV, FacilityType.FRIDGE, FacilityType.SWIMMING_POOL, FacilityType.AIRCOND)));
         System.out.println(propertyData);
     }
 }

@@ -51,13 +51,14 @@ public class PropertyDataModel {
         for (Property property:propertyData){
             //remove different element
             containFlag = 0;
-            for (FacilityType propertyFacility:property.getFacilityTypes()){
+            ArrayList<FacilityType> propertyFacilities = property.getFacilityTypes();
+
+            for (FacilityType propertyFacility:propertyFacilities){
                 for (FacilityType facility: targetFacilityTypes){
                         if (facility == propertyFacility) {
                             containFlag += 1;
                         }
                     }
-
             }
             if (containFlag == targetFacilityTypes.size())
                 output.add(property);
