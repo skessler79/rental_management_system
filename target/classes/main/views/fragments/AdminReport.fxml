@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="681.0" prefWidth="1150.0" style="-fx-background-color: #DDDDDD;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controllers.fragments.AdminReportController">
@@ -22,16 +27,33 @@
       </Label>
       <AnchorPane layoutX="74.0" layoutY="80.0" prefHeight="234.0" prefWidth="603.0" style="-fx-background-color: White; -fx-background-radius: 0; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 30, 0, 0, 0);" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="100.0">
          <children>
-            <TableView fx:id="ar_table" layoutY="35.0" prefHeight="377.0" prefWidth="1010.0" style="-fx-background-color: #B4EAFF;" AnchorPane.bottomAnchor="119.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0">
+            <TableView fx:id="ar_table" prefHeight="429.0" prefWidth="1010.0" AnchorPane.bottomAnchor="102.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <columns>
-                <TableColumn fx:id="ar_col_propertyID" prefWidth="142.4000244140625" style="-fx-text-background-color: #000000;" text="propertyId" />
-                <TableColumn fx:id="ar_col_propertyType" prefWidth="155.20001220703125" text="propertyType" />
-                  <TableColumn fx:id="ar_col_ownerId" prefWidth="142.39996337890625" text="ownerID" />
-                  <TableColumn fx:id="ar_col_isActive" minWidth="0.0" prefWidth="161.5999755859375" text="isActive" />
-                  <TableColumn fx:id="ar_col_comments" prefWidth="144.0" text="comments" />
-                  <TableColumn fx:id="ar_col_facilityTypes" prefWidth="262.0" text="facilityTypes" />
+                <TableColumn fx:id="ar_col_propertyID" prefWidth="240.0" style="-fx-text-background-color: #000000;" text="propertyId" />
+                <TableColumn fx:id="ar_col_propertyType" prefWidth="110.0" text="propertyType" />
+                  <TableColumn fx:id="ar_col_ownerName" prefWidth="240.0" text="ownerName" />
+                  <TableColumn fx:id="ar_col_isActive" minWidth="0.0" prefWidth="85.0" text="isActive" />
+                  <TableColumn fx:id="ar_col_facilityTypes" prefWidth="250.0" text="facilityTypes" />
+                  <TableColumn fx:id="ar_col_comments" prefWidth="100.0" text="comments" />
               </columns>
             </TableView>
+            <GridPane layoutY="429.0" prefHeight="104.0" prefWidth="646.0" style="-fx-background-color: blue;">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="497.79998779296875" minWidth="10.0" prefWidth="235.20000305175782" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="775.4000244140625" minWidth="10.0" prefWidth="309.1999969482422" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Label" />
+                  <ChoiceBox prefWidth="150.0" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+            <Button layoutX="785.0" layoutY="448.0" mnemonicParsing="false" text="facilities" />
+            <Button layoutX="785.0" layoutY="481.0" mnemonicParsing="false" text="Projects" />
          </children>
       </AnchorPane>
    </children>

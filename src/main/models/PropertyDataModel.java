@@ -40,18 +40,40 @@ public class PropertyDataModel {
     }
 
     //register property with input of current user object and property object
-    public ArrayList<Property> getPropertyByFacilityType(ArrayList<FacilityType> facilityTypes) {
+    public ArrayList<Property> getPropertyByFacilityType(ArrayList<FacilityType> targetFacilityTypes) {
         ArrayList<Property> output = new ArrayList<>();
-        propertyData = loadData();
+        propertyData = getPropertyByActive(true);
+        if (targetFacilityTypes.size() == 0){
+            return propertyData;
+        }
+        int containFlag;
         for (Property property:propertyData){
             //remove different element
-            facilityTypes.retainAll(property.getFacilityTypes());
-            if (facilityTypes.size() != 0)
+            containFlag = 0;
+
+            for (FacilityType facility:targetFacilityTypes){
+                if (property.getFacilityTypes().contains(facility)) {
+                    containFlag += 1;
+                }
+            }
+            if (containFlag == targetFacilityTypes.size())
                 output.add(property);
         }
 
         return output;
 
+    }
+
+    public void deleteProperty(Property propertyId){
+        propertyData = loadData();
+        for (Property property:propertyData){
+            if (property.getPropertyId().equals(propertyId)){
+                propertyData.remove(property);
+                break;
+            }
+        }
+
+        inputData(propertyData);
     }
 
     //register property with input of current user object and property object
@@ -168,7 +190,7 @@ public class PropertyDataModel {
         propertyData = loadData();
         ArrayList<Property> output = new ArrayList<>();
         for(Property property : propertyData) {
-            if (property.getOwnerId() != null && property.getOwnerId().equals(id)){
+            if (property.getOwner().getId() != null && property.getOwner().getId().equals(id)){
                 output.add(property);
             }
         }
