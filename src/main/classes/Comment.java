@@ -1,5 +1,7 @@
 package main.classes;
 
+import main.models.UserDataModel;
+
 import java.util.Date;
 
 public class Comment {
@@ -45,5 +47,13 @@ public class Comment {
 
     public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
+    }
+
+    @Override
+    public String toString()
+    {
+        String posterName = CurrentSession.userDataModel.getUserById(getPosterId()).getUsername();
+
+        return "(" + posterName + ") : " + getDetails();
     }
 }

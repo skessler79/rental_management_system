@@ -37,7 +37,7 @@ public class PropertiesController extends FragmentController implements Initiali
     ComboBox combo_state;
 
     @FXML
-    JFXCheckBox checkPool, checkWifi, checkTv, checkFridge, checkAircond;
+    JFXCheckBox checkPool, checkWifi, checkTv, checkFridge, checkAircond, checkHeater;
 
     @FXML
     Button btnSearch;
@@ -126,7 +126,10 @@ public class PropertiesController extends FragmentController implements Initiali
             facilityTypes.add(FacilityType.AIRCOND);
         }
 
-        System.out.println(facilityTypes.toString());
+        if(checkHeater.isSelected())
+        {
+            facilityTypes.add(FacilityType.WATER_HEATER);
+        }
 
         ObservableList<Property> data = FXCollections.observableArrayList();
         data.addAll(propertyDataModel.getPropertyByFacilityType(facilityTypes));
