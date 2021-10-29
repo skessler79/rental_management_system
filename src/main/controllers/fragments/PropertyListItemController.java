@@ -1,17 +1,30 @@
 package main.controllers.fragments;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import main.classes.properties.Property;
+import main.controllers.PropertiesDetailsController;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class PropertyListItemController {
-
+public class PropertyListItemController implements Initializable
+{
     @FXML
     private ImageView imageProperty;
 
@@ -30,8 +43,45 @@ public class PropertyListItemController {
     @FXML
     private Button btnDetails;
 
+    private FXMLLoader loader;
+    private AnchorPane anchorPropertyDetails;
+    private PropertiesDetailsController propertiesDetailsController;
+    Stage window;
+    Property property;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle)
+    {
+        btnDetails.setOnAction(actionEvent ->
+        {
+            window = new Stage();
+
+            // Block user actions on previous window
+            window.initModality(Modality.APPLICATION_MODAL);
+            window.setTitle("Property details");
+
+            loader = new FXMLLoader(getClass().getResource("../../views/PropertiesDetails.fxml"));
+            try
+            {
+                anchorPropertyDetails = loader.load();
+            } catch (IOException e)
+            {
+                e.printStackTrace();
+            }
+            propertiesDetailsController = loader.getController();
+
+            propertiesDetailsController.setDetails(property, window);
+
+            Scene scene = new Scene(anchorPropertyDetails);
+            window.setScene(scene);
+            window.showAndWait();
+        });
+    }
+
     public void setDetails(Property property)
     {
+        this.property = property;
+
         FileInputStream input = null;
         try
         {
@@ -53,6 +103,7 @@ public class PropertyListItemController {
 
         String rentalFee = String.format("RM %.2f", property.getRentalFee());
         txtPrice.setText(rentalFee);
+
     }
 }
 
