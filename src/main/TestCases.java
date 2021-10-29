@@ -25,14 +25,14 @@ public class TestCases {
     private ArrayList<Property> propertyData;
 
     public void startTest(){
-//        registerUsers();
-//        loginUser();
-//        approveUsers();
-//        registerProperties();
-//        getPropertiesByOwner();
-//        addComments();
-//        changeStatus();
-//        searchByFacility();
+        registerUsers();
+        loginUser();
+        approveUsers();
+        registerProperties();
+        getPropertiesByOwner();
+        addComments();
+        changeStatus();
+        searchByFacility();
     }
     private void registerUsers(){
         User owner1 = new UserBuilder("Winson1", "Loo1", "owner1", "abc1@abc.com", "abc123", "69, Taman Nice, 69420").ownerDetails("owner1").buildUser(UserType.OWNER);

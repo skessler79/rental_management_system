@@ -178,5 +178,143 @@
     "bathRoomCount": -1,
     "comment": [],
     "commentCount": 0
+  },
+  {
+    "propertyId": "91fd94e9-6e9b-45fc-99c5-c6820fd50570",
+    "owner": {
+      "id": "23c398ac-4c70-49ed-ae5b-5ae35b8647ff",
+      "userType": "OWNER",
+      "firstName": "Winson1",
+      "lastName": "Loo1",
+      "username": "owner1",
+      "email": "abc1@abc.com",
+      "password": "abc123",
+      "address": "69, Taman Nice, 69420"
+    },
+    "agent": null,
+    "propertyType": "BUNGALOW",
+    "name": "Tent",
+    "address": {
+      "roadName": "Road",
+      "project": "Side",
+      "state": "Selangor",
+      "country": "Malaysia",
+      "city": "Cyberjaya",
+      "postcode": 69420
+    },
+    "size": null,
+    "description": "Literally a tent.",
+    "project": "Side",
+    "rentalFee": 4.2,
+    "rentalRate": -1.0,
+    "createdAt": "2021-10-29T19:33:05.148+0800",
+    "facilityTypes": [
+      "SWIMMING_POOL",
+      "WIFI",
+      "TV",
+      "FRIDGE",
+      "AIRCOND",
+      "WATER_HEATER"
+    ],
+    "isActive": true,
+    "tenant": [],
+    "roomInfo": "1 spacious room.",
+    "bathRoomCount": -1,
+    "comment": [],
+    "commentCount": 0
+  },
+  {
+    "propertyId": "00ae53c2-f592-4039-b464-11f426fc8787",
+    "owner": {
+      "id": "23c398ac-4c70-49ed-ae5b-5ae35b8647ff",
+      "userType": "OWNER",
+      "firstName": "Winson1",
+      "lastName": "Loo1",
+      "username": "owner1",
+      "email": "abc1@abc.com",
+      "password": "abc123",
+      "address": "69, Taman Nice, 69420"
+    },
+    "agent": null,
+    "propertyType": "BUNGALOW",
+    "name": "Garbage bin",
+    "address": {
+      "roadName": "Road",
+      "project": "Garbage",
+      "state": "Selangor",
+      "country": "Malaysia",
+      "city": "Cyberjaya",
+      "postcode": 69420
+    },
+    "size": null,
+    "description": "Experience the grand luxury of the dumpster! Now comes with free food and restaurant WiFi! Also free TV across the street.",
+    "project": "Garbage",
+    "rentalFee": 69.0,
+    "rentalRate": -1.0,
+    "createdAt": "2021-10-29T19:39:10.812+0800",
+    "facilityTypes": [
+      "WIFI",
+      "TV"
+    ],
+    "isActive": true,
+    "tenant": [],
+    "roomInfo": "1",
+    "bathRoomCount": 1,
+    "comment": [],
+    "commentCount": 0
+  },
+  {
+    "propertyId": "fae1bed2-a293-4938-8185-53c717d2dd99",
+    "owner": {
+      "ownerDetails": "owner1",
+      "propertyList": [
+        "727c9cbf-012d-43b3-a94f-be2daebba991",
+        "e57eb34b-efb6-4699-be47-2f0f97cdb2fe",
+        "f2732edb-d133-41d6-9d55-2cb7d42f9e8a",
+        "048b91b6-5d69-485b-abc5-264b2f708497",
+        "91fd94e9-6e9b-45fc-99c5-c6820fd50570",
+        "00ae53c2-f592-4039-b464-11f426fc8787",
+        "fae1bed2-a293-4938-8185-53c717d2dd99"
+      ],
+      "id": "23c398ac-4c70-49ed-ae5b-5ae35b8647ff",
+      "userType": "OWNER",
+      "firstName": "Winson1",
+      "lastName": "Loo1",
+      "username": "owner1",
+      "email": "abc1@abc.com",
+      "password": "abc123",
+      "address": "69, Taman Nice, 69420"
+    },
+    "agent": null,
+    "propertyType": "SINGLE_STORY",
+    "name": "afsdafsd",
+    "address": {
+      "roadName": "afsd",
+      "project": "adsf",
+      "state": "afsd",
+      "country": "dfa",
+      "city": "afds",
+      "postcode": 5432
+    },
+    "size": null,
+    "description": "adfs",
+    "project": "adsf",
+    "rentalFee": 12312.0,
+    "rentalRate": -1.0,
+    "createdAt": "2021-10-29T19:43:41.243+0800",
+    "facilityTypes": [
+      "SWIMMING_POOL",
+      "WIFI",
+      "TV",
+      "FRIDGE",
+      "AIRCOND",
+      "WATER_HEATER"
+    ],
+    "isActive": false,
+    "tenant": [],
+    "roomInfo": "fasd",
+    "bathRoomCount": 2,
+    "comment": [],
+    "commentCount": 0
   }
 ]
