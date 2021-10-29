@@ -43,9 +43,15 @@
         "posterId": "a66c4e96-3370-47e3-a757-d7d9417208db",
         "details": "asdf",
         "createdAt": "2021-10-29T03:10:43.583+0800"
+      },
+      {
+        "commentId": "6e24a5eb-6007-4b50-9acd-a6773281af68",
+        "posterId": "a66c4e96-3370-47e3-a757-d7d9417208db",
+        "details": "abc123",
+        "createdAt": "2021-10-29T03:21:20.676+0800"
       }
     ],
-    "commentCount": 1
+    "commentCount": 2
   },
   {
     "propertyId": "048b91b6-5d69-485b-abc5-264b2f708497",
