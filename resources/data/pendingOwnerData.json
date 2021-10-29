@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "ownerDetails": "owner1",
+    "propertyList": [],
+    "id": "673184b1-0972-4e5b-83df-c3d392d899d9",
+    "userType": "OWNER",
+    "firstName": "Winson1",
+    "lastName": "Loo1",
+    "username": "owner1",
+    "email": "abc1@abc.com",
+    "password": "abc123",
+    "address": "69, Taman Nice, 69420"
+  },
+  {
+    "ownerDetails": "owner2",
+    "propertyList": [],
+    "id": "29135b4e-f461-4fd3-91ca-88de078d9964",
+    "userType": "OWNER",
+    "firstName": "Winson2",
+    "lastName": "Loo2",
+    "username": "owner2",
+    "email": "abc2@abc.com",
+    "password": "abc123",
+    "address": "69, Taman Bad, 69420"
+  }
+]

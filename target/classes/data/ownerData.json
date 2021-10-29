@@ -1,32 +1,24 @@
 [
   {
-    "ownerDetails": "owner1",
-    "propertyList": [
-      "727c9cbf-012d-43b3-a94f-be2daebba991",
-      "e57eb34b-efb6-4699-be47-2f0f97cdb2fe",
-      "f2732edb-d133-41d6-9d55-2cb7d42f9e8a",
-      "048b91b6-5d69-485b-abc5-264b2f708497"
-    ],
-    "id": "23c398ac-4c70-49ed-ae5b-5ae35b8647ff",
+    "ownerDetails": "owner3",
+    "propertyList": [],
+    "id": "afd749f0-dc0a-4b4a-ae21-167430de00b5",
     "userType": "OWNER",
-    "firstName": "Winson1",
+    "firstName": "Winson3",
     "lastName": "Loo1",
-    "username": "owner1",
+    "username": "owner3",
     "email": "abc1@abc.com",
     "password": "abc123",
     "address": "69, Taman Nice, 69420"
   },
   {
-    "ownerDetails": "owner2",
-    "propertyList": [
-      "570cdf42-92d6-4ba4-9616-9e9fe5330195",
-      "64b6ab4d-5197-42c0-85d3-63141271b950"
-    ],
-    "id": "dc74cd46-b5e6-46d3-ac93-0d86ae85d15e",
+    "ownerDetails": "owner4",
+    "propertyList": [],
+    "id": "52a57192-0e4c-443a-81a2-4b437804445e",
     "userType": "OWNER",
-    "firstName": "Winson2",
+    "firstName": "Winson4",
     "lastName": "Loo2",
-    "username": "owner2",
+    "username": "owner4",
     "email": "abc2@abc.com",
     "password": "abc123",
     "address": "69, Taman Bad, 69420"
