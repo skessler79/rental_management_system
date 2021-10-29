@@ -53,19 +53,14 @@ public class AdminReportController implements Initializable {
 
     @FXML
     private TableColumn<Property, String> ar_col_propertyID;
-
     @FXML
     private TableColumn<Property, PropertyType> ar_col_propertyType;
-
     @FXML
     private TableColumn<Property, String> ar_col_ownerName;
-
     @FXML
     private TableColumn<Property, Boolean> ar_col_isActive;
-
     @FXML
     private TableColumn<Property, Integer> ar_col_comments;
-
     @FXML
     private TableColumn<Property, ArrayList<FacilityType>> ar_col_facilityTypes;
 
@@ -73,24 +68,22 @@ public class AdminReportController implements Initializable {
     private ChoiceBox<PropertyType> ar_choiceBox_property;
     // List of enums from PropertyType
     ObservableList<PropertyType> ar_choiceBox_list = FXCollections.observableArrayList(PropertyType.values());
-
     @FXML
     private ChoiceBox<Boolean> ar_choiceBox_activity;
 
     @FXML
-    private JFXTextField ar_textField;
-
-    @FXML
     private JFXButton ar_btn_facilities;
-
     @FXML
     private JFXButton ar_btn_project;
-
     @FXML
     private JFXButton ar_btn_del;
+    @FXML
+    private JFXButton ar_btn_filter;
+    @FXML
+    private JFXButton ar_btn_clear;
 
     @FXML
-    private JFXButton ar_btn_show;
+    private JFXTextField ar_textField;
 
     private PropertyDataModel propertyDataModel;
 
@@ -110,22 +103,36 @@ public class AdminReportController implements Initializable {
             if (ans) {
                 deleteButtonClicked();
             }
-
         });
 
         // Button for filtering by propertyType, owner username, active/inactive
-        ar_btn_show.setOnAction(e -> {
-//            if (ar_textField.getText().trim().isEmpty()) // <-- empty textfield
-//                some_method(ar_choiceBox.getValue(), null, activity)
-//            if (ar_choiceBox_property.getSelectionModel().isEmpty()) // <-- empty choiceBox
-//                some_method(null, ar_textField.getText().trim(), activity);
-//            if(ar_choiceBox_activity.getSelectionModel().isEmpty())
-//                some_method(ar_choiceBox.getValue(), ar_textField.getText().trim(), null);
-//
-//            if (ar_textField.getText().trim().isEmpty())
-//                getTable(some_method(ar_choiceBox_property.getValue(), null, ar_choiceBox_activity.getValue()));
-//            else
-//                getTable(some_method(ar_choiceBox_property.getValue(), ar_textField.getText().trim(), ar_choiceBox_activity.getValue()));
+        ar_btn_filter.setOnAction(e -> {
+            ArrayList<Property> list;
+            if (ar_textField.getText().trim().isEmpty()) {
+                list = CurrentSession.propertyDataModel.filterProperty(ar_choiceBox_property.getValue(), null, ar_choiceBox_activity.getValue());
+                getTable(list);
+            }
+            else {
+                list = CurrentSession.propertyDataModel.filterProperty(ar_choiceBox_property.getValue(), CurrentSession.userDataModel.getUserByUsername(ar_textField.getText().trim()), ar_choiceBox_activity.getValue());
+                getTable(list);
+            }
+        });
+
+        // Clears the filters
+        ar_btn_clear.setOnAction(e -> {
+            getTable(CurrentSession.propertyDataModel.getPropertiesData());
+            ar_textField.clear();
+            ar_choiceBox_activity.valueProperty().set(null);
+            ar_choiceBox_property.valueProperty().set(null);
+        });
+
+        // Shows a list of Facilities in a new window
+        ar_btn_facilities.setOnAction(e -> {
+
+        });
+
+        ar_btn_project.setOnAction(e -> {
+
         });
     }
 
@@ -142,11 +149,6 @@ public class AdminReportController implements Initializable {
         propertyDataModel.deleteProperty(propertyId);
         getTable(CurrentSession.propertyDataModel.getPropertiesData());
     }
-
-    // Filters the table according to propertyType, owner username and/or activity
-//    public void filter(PropertyType propertyType) {
-//        getTable(CurrentSession.propertyDataModel.getPropertyByType(propertyType));
-//    }
 
     // Returns the whole table
     public void getTable(ArrayList<Property> propertiesList) {
