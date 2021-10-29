@@ -2,13 +2,13 @@
   {
     "ownerDetails": "owner3",
     "propertyList": [
-      "468546a2-446e-496c-97da-b9bd83d80041",
-      "c6a3ac76-e0ac-4c02-8f9c-1757aa3d9339",
-      "79c11b65-81a5-4ba1-9496-81e1e2381ecc",
-      "c0f85bc5-3520-425d-b5d6-958cc1f33a38",
-      "b264b67a-6341-4df0-8218-03fb39d62f43"
+      "b4e7d4c2-e4ec-4c69-9c5f-2ff28b82e5f5",
+      "f5d1b635-d8a2-41df-8599-b39231c7dfa1",
+      "a147174f-4fd4-4a25-9208-4cc0a9478c0c",
+      "e0c42c54-a9ba-444d-8006-7d02718284b4",
+      "5b18fe21-aed4-42e2-953e-285d712d054c"
     ],
-    "id": "a290c555-be4b-40e7-aefa-89900da5487e",
+    "id": "eed41b0f-80c0-445c-9f45-d66777a0dacf",
     "userType": "OWNER",
     "firstName": "Cardi",
     "lastName": "C",
@@ -20,10 +20,10 @@
   {
     "ownerDetails": "owner4",
     "propertyList": [
-      "1537a081-f700-458b-9f19-149aa6ab6240",
-      "c055fd20-9bf1-4ca0-b9d6-565b12ba1a21"
+      "d957fdc6-db42-4851-91e5-24ebd7724f6e",
+      "d71c7eef-1304-47b2-abad-911121e37991"
     ],
-    "id": "283645a0-a2b6-4952-a823-3bd10b474564",
+    "id": "24ef4b24-9f14-48ec-976d-7241e33af1b0",
     "userType": "OWNER",
     "firstName": "Cola",
     "lastName": "Sprite",

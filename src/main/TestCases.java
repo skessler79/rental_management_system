@@ -33,20 +33,9 @@ public class TestCases extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         populateData();
-        testFilterProperties();
+//        testFilterProperties();
     }
 
-
-    private void startTest(){
-//        registerUsers();
-//        loginUser();
-//        approveUsers();
-//        registerProperties();
-//        getPropertiesByOwner();
-//        addComments();
-//        changeStatus();
-//        searchByFacility();
-    }
 
     private void populateData() throws IOException, IllegalAccessException {
         emptyJsonFiles();
@@ -197,9 +186,9 @@ public class TestCases extends Application {
     }
 
     private void testFilterProperties(){
-        propertyData = propertyDataModel.filterProperty(PropertyType.BUNGALOW, userDataModel.getUserByUsername("owner3"), null);
+        propertyData = propertyDataModel.filterProperty(null, null, null, new ArrayList<>(Arrays.asList(FacilityType.WIFI, FacilityType.FRIDGE)), null);
         for(Property property:propertyData){
-            System.out.println(property.getName());
+            System.out.println(property.getFacilityTypes());
         }
     }
 
