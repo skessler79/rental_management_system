@@ -65,6 +65,38 @@ public class PropertyDataModel {
 
     }
 
+    public ArrayList<Property> filterProperty(PropertyType propertyType, User owner, Boolean isActive){
+        ArrayList<Property> output = new ArrayList<>();
+        if (isActive == null)
+            propertyData = loadData();
+        else
+            propertyData = getPropertyByActive(isActive);
+
+        for (Property property:propertyData){
+            int addCounter = 0;
+            //check propertType conditions
+            if (propertyType == null)
+                addCounter += 1;
+            else if(property.getPropertyType() == propertyType)
+                addCounter += 1;
+            else
+                continue;
+
+            //check owner conditions
+            if (owner == null)
+                addCounter+=1;
+            else if(owner.getId().equals(property.getOwner().getId()))
+                addCounter+=1;
+            else
+                continue;
+
+            //if both condition met
+            if (addCounter == 2)
+                output.add(property);
+        }
+        return output;
+    }
+
     public void deleteProperty(String propertyId){
         propertyData = loadData();
         for (Property property:propertyData){

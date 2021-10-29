@@ -33,7 +33,9 @@ public class TestCases extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         populateData();
+        testFilterProperties();
     }
+
 
     private void startTest(){
 //        registerUsers();
@@ -112,7 +114,6 @@ public class TestCases extends Application {
         propertyData = new TestProperties().getTestProperties();
         for (Property property:propertyData){
             propertyDataModel.addProperty((Owner) property.getOwner(), property);
-
         }
     }
 
@@ -164,6 +165,13 @@ public class TestCases extends Application {
     private void searchByFacility(){
         propertyData = propertyDataModel.getPropertyByFacilityType(new ArrayList<>(Arrays.asList(FacilityType.WATER_HEATER)));
         System.out.println(propertyData);
+    }
+
+    private void testFilterProperties(){
+        propertyData = propertyDataModel.filterProperty(PropertyType.BUNGALOW, null, null);
+        for(Property property:propertyData){
+            System.out.println(property.getName());
+        }
     }
 
 }
