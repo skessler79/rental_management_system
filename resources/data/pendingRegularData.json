@@ -1,7 +1,7 @@
 [
   {
     "regularDetails": "regular1",
-    "id": "d4bf6543-c550-44b6-98fc-449278dbc5e3",
+    "id": "f5e8cc94-fe17-4879-8258-47fac202cf94",
     "userType": "REGULAR",
     "firstName": "Abu",
     "lastName": "Lim",
@@ -9,5 +9,16 @@
     "email": "abu@abc.com",
     "password": "abc123",
     "address": "No. 11 Jln Puah Jaya Taman Setapak Indah Jaya"
+  },
+  {
+    "regularDetails": "regular2",
+    "id": "aa8acc38-7d07-45f4-a435-82680c853c7a",
+    "userType": "REGULAR",
+    "firstName": "Michael",
+    "lastName": "Nickson",
+    "username": "michael4321",
+    "email": "bilebile@abc.com",
+    "password": "abc123",
+    "address": "2 Jln Siu Nam, Johor Bahru"
   }
 ]

@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "adminDetails": "admin1",
+    "id": "1cded137-f620-4428-b658-83b973fc4611",
+    "userType": "ADMIN",
+    "firstName": "Aqel",
+    "lastName": "Kumar",
+    "username": "aqel0101",
+    "email": "abc2@abc.com",
+    "password": "abc123",
+    "address": "Jalan Permas 10, Bandar Baru Permas Jaya"
+  }
+]

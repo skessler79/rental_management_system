@@ -15,6 +15,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import main.classes.properties.Property;
+import main.controllers.EditPropertyController;
 import main.controllers.PropertiesDetailsController;
 
 import java.io.FileInputStream;
@@ -46,8 +47,10 @@ public class PropertyListItemController implements Initializable
     private FXMLLoader loader;
     private AnchorPane anchorPropertyDetails;
     private PropertiesDetailsController propertiesDetailsController;
-    Stage window;
-    Property property;
+    private EditPropertyController editPropertyController;
+    private Stage window;
+    private Property property;
+    private boolean editableDetails = false;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
@@ -60,21 +63,43 @@ public class PropertyListItemController implements Initializable
             window.initModality(Modality.APPLICATION_MODAL);
             window.setTitle("Property details");
 
-            loader = new FXMLLoader(getClass().getResource("../../views/PropertiesDetails.fxml"));
-            try
+            if(editableDetails)
             {
-                anchorPropertyDetails = loader.load();
-            } catch (IOException e)
-            {
-                e.printStackTrace();
+                loader = new FXMLLoader(getClass().getResource("../../views/EditProperty.fxml"));
+                try
+                {
+                    anchorPropertyDetails = loader.load();
+                } catch (IOException e)
+                {
+                    e.printStackTrace();
+                }
+                editPropertyController = loader.getController();
+
+                editPropertyController.setWindow(window);
+                editPropertyController.setDetails(property);
+
+                Scene scene = new Scene(anchorPropertyDetails);
+                window.setScene(scene);
+                window.showAndWait();
             }
-            propertiesDetailsController = loader.getController();
+            else
+            {
+                loader = new FXMLLoader(getClass().getResource("../../views/PropertiesDetails.fxml"));
+                try
+                {
+                    anchorPropertyDetails = loader.load();
+                } catch (IOException e)
+                {
+                    e.printStackTrace();
+                }
+                propertiesDetailsController = loader.getController();
 
-            propertiesDetailsController.setDetails(property, window);
+                propertiesDetailsController.setDetails(property, window);
 
-            Scene scene = new Scene(anchorPropertyDetails);
-            window.setScene(scene);
-            window.showAndWait();
+                Scene scene = new Scene(anchorPropertyDetails);
+                window.setScene(scene);
+                window.showAndWait();
+            }
         });
     }
 
@@ -103,7 +128,11 @@ public class PropertyListItemController implements Initializable
 
         String rentalFee = String.format("RM %.2f", property.getRentalFee());
         txtPrice.setText(rentalFee);
+    }
 
+    public void setEditableDetails(boolean editableDetails)
+    {
+        this.editableDetails = editableDetails;
     }
 }
 
