@@ -1,10 +1,10 @@
 [
   {
     "adminDetails": "admin2",
-    "id": "4d992f58-b1be-453d-9658-2040fbbe9c64",
+    "id": "85ba9e44-577e-4993-96f4-3e6f43d33f4c",
     "userType": "ADMIN",
-    "firstName": "WinsonAdmin2",
-    "lastName": "Loo2",
+    "firstName": "Admin0101",
+    "lastName": "Loo",
     "username": "admin0101",
     "email": "admin0101@abc.com",
     "password": "abc123",
@@ -12,7 +12,7 @@
   },
   {
     "adminDetails": "admin2",
-    "id": "091be62c-5ff6-4105-994c-ee9f32f92344",
+    "id": "cc3b023d-ac54-4efe-aa01-a33aaa8984c7",
     "userType": "ADMIN",
     "firstName": "WinsonAdmin2",
     "lastName": "Loo2",

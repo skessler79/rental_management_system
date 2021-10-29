@@ -50,6 +50,7 @@ public class TestCases extends Application {
         emptyJsonFiles();
         registerPendingUsers();
         registerActualUsers();
+        registerProperties();
     }
 
     private void emptyJsonFiles() throws IOException {
