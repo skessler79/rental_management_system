@@ -31,6 +31,7 @@ import main.enums.FacilityType;
 import main.enums.PropertyType;
 import main.models.LoginModel;
 import main.models.PropertyDataModel;
+import main.views.ConfirmBoxView;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -69,18 +70,15 @@ public class AdminReportController implements Initializable {
     private TableColumn<Property, ArrayList<FacilityType>> ar_col_facilityTypes;
 
     @FXML
-    private ChoiceBox<PropertyType> ar_choiceBox;
+    private ChoiceBox<PropertyType> ar_choiceBox_property;
     // List of enums from PropertyType
     ObservableList<PropertyType> ar_choiceBox_list = FXCollections.observableArrayList(PropertyType.values());
 
     @FXML
+    private ChoiceBox<Boolean> ar_choiceBox_activity;
+
+    @FXML
     private JFXTextField ar_textField;
-
-    @FXML
-    private JFXRadioButton ar_radio_active;
-
-    @FXML
-    private JFXRadioButton ar_radio_inactive;
 
     @FXML
     private JFXButton ar_btn_facilities;
@@ -100,14 +98,35 @@ public class AdminReportController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        ar_choiceBox.setItems(ar_choiceBox_list);
-        ar_choiceBox.setValue(PropertyType.CONDO);
+        ar_choiceBox_property.setItems(ar_choiceBox_list);
+        ar_choiceBox_activity.getItems().addAll(Boolean.TRUE, Boolean.FALSE);
         getTable(CurrentSession.propertyDataModel.getPropertiesData());
 
-// view properties according to propertType (choice box), owner (textfield), active/inactive (radio button)
 // display enum values of propertyTypes and facilityTypes
-        ar_btn_del.setOnAction(e -> deleteButtonClicked());
-        ar_btn_show.setOnAction(e -> filter());
+
+        // Button for deleting a property
+        ar_btn_del.setOnAction(e -> {
+            Boolean ans = ConfirmBoxView.display("Delete Property", "Are you sure you want to delete this property?");
+            if (ans) {
+                deleteButtonClicked();
+            }
+
+        });
+
+        // Button for filtering by propertyType, owner username, active/inactive
+        ar_btn_show.setOnAction(e -> {
+//            if (ar_textField.getText().trim().isEmpty()) // <-- empty textfield
+//                some_method(ar_choiceBox.getValue(), null, activity)
+//            if (ar_choiceBox_property.getSelectionModel().isEmpty()) // <-- empty choiceBox
+//                some_method(null, ar_textField.getText().trim(), activity);
+//            if(ar_choiceBox_activity.getSelectionModel().isEmpty())
+//                some_method(ar_choiceBox.getValue(), ar_textField.getText().trim(), null);
+//
+//            if (ar_textField.getText().trim().isEmpty())
+//                getTable(some_method(ar_choiceBox_property.getValue(), null, ar_choiceBox_activity.getValue()));
+//            else
+//                getTable(some_method(ar_choiceBox_property.getValue(), ar_textField.getText().trim(), ar_choiceBox_activity.getValue()));
+        });
     }
 
     // Deletes the selected property in the table
@@ -124,21 +143,16 @@ public class AdminReportController implements Initializable {
         getTable(CurrentSession.propertyDataModel.getPropertiesData());
     }
 
-    // Pops up new window that displays properties according to user's criteria
-    public void filter() {
-//        getTable(CurrentSession.propertyDataModel.getPropertiesData());
-
-       // getTable(CurrentSession.propertyDataModel.getPropertyByOwner());
-
-    }
-
+    // Filters the table according to propertyType, owner username and/or activity
+//    public void filter(PropertyType propertyType) {
+//        getTable(CurrentSession.propertyDataModel.getPropertyByType(propertyType));
+//    }
 
     // Returns the whole table
     public void getTable(ArrayList<Property> propertiesList) {
         ar_table.getItems().clear();
         propertyDataModel = new PropertyDataModel();
         properties = FXCollections.observableArrayList(propertiesList);
-       // properties = FXCollections.observableArrayList(propertyDataModel.getPropertiesData());
 
         ar_table.getColumns().clear();
         ar_col_propertyID.setCellValueFactory(new PropertyValueFactory<Property, String>("propertyId"));

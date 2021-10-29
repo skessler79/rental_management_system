@@ -1,8 +1,13 @@
 [
   {
     "ownerDetails": "owner3",
-    "propertyList": [],
-    "id": "afd749f0-dc0a-4b4a-ae21-167430de00b5",
+    "propertyList": [
+      "fa7ce13e-6808-424f-9d2c-cf0d4ba07341",
+      "091bb392-4535-4891-b660-f860b8d0cda6",
+      "342f0b07-9253-461e-8246-428f259d3c67",
+      "90c51248-3ebe-4b67-bc98-6159d6015264"
+    ],
+    "id": "9e004e3d-f15c-4911-99a3-cac546d63888",
     "userType": "OWNER",
     "firstName": "Winson3",
     "lastName": "Loo1",
@@ -13,8 +18,11 @@
   },
   {
     "ownerDetails": "owner4",
-    "propertyList": [],
-    "id": "52a57192-0e4c-443a-81a2-4b437804445e",
+    "propertyList": [
+      "f22ef525-6f44-4b7a-9cc6-e9e9d79fdb18",
+      "2e725c9b-8c69-4684-9e4e-cc4bd9bc52ac"
+    ],
+    "id": "0791bb26-9460-48f7-97f9-30c534b6efeb",
     "userType": "OWNER",
     "firstName": "Winson4",
     "lastName": "Loo2",

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXRadioButton?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -32,18 +32,19 @@
          <children>
             <TableView fx:id="ar_table" prefHeight="429.0" prefWidth="1010.0" AnchorPane.bottomAnchor="102.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <columns>
-                <TableColumn fx:id="ar_col_propertyID" prefWidth="240.0" style="-fx-text-background-color: #000000;" text="propertyId" />
-                <TableColumn fx:id="ar_col_propertyType" prefWidth="110.0" text="propertyType" />
-                  <TableColumn fx:id="ar_col_ownerName" prefWidth="240.0" text="ownerName" />
-                  <TableColumn fx:id="ar_col_isActive" minWidth="0.0" prefWidth="85.0" text="isActive" />
-                  <TableColumn fx:id="ar_col_facilityTypes" prefWidth="250.0" text="facilityTypes" />
-                  <TableColumn fx:id="ar_col_comments" prefWidth="100.0" text="comments" />
+                <TableColumn fx:id="ar_col_propertyID" prefWidth="240.0" style="-fx-text-background-color: #000000;" text="Property Id" />
+                <TableColumn fx:id="ar_col_propertyType" prefWidth="110.0" text="Property Type" />
+                  <TableColumn fx:id="ar_col_ownerName" prefWidth="240.0" text="Owner Username" />
+                  <TableColumn fx:id="ar_col_isActive" minWidth="0.0" prefWidth="85.0" text="Is Active" />
+                  <TableColumn fx:id="ar_col_facilityTypes" prefWidth="250.0" text="Facility Types" />
+                  <TableColumn fx:id="ar_col_comments" prefWidth="100.0" text="Comments" />
               </columns>
             </TableView>
-            <GridPane layoutY="429.0" prefHeight="104.0" prefWidth="461.0" style="-fx-background-color: #04A7FF;">
+            <GridPane layoutY="429.0" prefHeight="104.0" prefWidth="570.0" style="-fx-background-color: #b0c5f6;">
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="497.79998779296875" minWidth="10.0" prefWidth="195.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="775.4000244140625" minWidth="10.0" prefWidth="372.6" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="497.79998779296875" minWidth="10.0" prefWidth="149.19996337890626" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="775.4000244140625" minWidth="10.0" prefWidth="322.0000366210937" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="775.4000244140625" minWidth="10.0" prefWidth="101.80001220703122" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -51,28 +52,55 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label text="Property Type">
+                  <Label prefHeight="26.0" prefWidth="145.0" style="-fx-text-fill: black;" text="Property Type      :">
                      <font>
-                        <Font size="18.0" />
-                     </font></Label>
-                  <ChoiceBox fx:id="ar_choiceBox" prefHeight="34.0" prefWidth="320.0" GridPane.columnIndex="1" />
-                  <Label text="Owner Name" GridPane.rowIndex="1">
-                     <font>
-                        <Font size="18.0" />
+                        <Font size="14.0" />
                      </font>
-                  </Label>
-                  <Label text="Activity" GridPane.rowIndex="2">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin></Label>
+                  <ChoiceBox fx:id="ar_choiceBox_property" prefHeight="34.0" prefWidth="320.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets bottom="2.0" top="2.0" />
+                     </GridPane.margin></ChoiceBox>
+                  <Label prefHeight="27.0" prefWidth="165.0" style="-fx-text-fill: black;" text="Owner Username :" GridPane.rowIndex="1">
                      <font>
-                        <Font size="18.0" />
+                        <Font name="System Bold" size="14.0" />
                      </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
                   </Label>
-                  <JFXTextField fx:id="ar_textField" prefHeight="36.0" prefWidth="320.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <Label prefHeight="26.0" prefWidth="145.0" style="-fx-text-fill: black;" text="Active                    :" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <JFXTextField fx:id="ar_textField" alignment="CENTER" focusColor="#ffffff00" prefHeight="34.0" prefWidth="274.0" style="-fx-background-color: white;" unFocusColor="#ffffff00" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="1.5" top="2.0" />
+                     </GridPane.margin></JFXTextField>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <children>
-                        <JFXRadioButton fx:id="ar_radio_active" text="Active" />
-                        <JFXRadioButton fx:id="ar_radio_inactive" text="Inactive" />
+                        <ChoiceBox fx:id="ar_choiceBox_activity" prefHeight="34.0" prefWidth="320.0">
+                           <HBox.margin>
+                              <Insets bottom="2.0" top="2.0" />
+                           </HBox.margin></ChoiceBox>
                      </children>
                   </HBox>
+                  <JFXButton fx:id="ar_btn_show" alignment="CENTER" prefHeight="26.0" prefWidth="79.0" style="-fx-background-color: #0071C2; -fx-text-fill: white;" text="Filter" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
                </children>
             </GridPane>
             <GridPane layoutX="568.0" layoutY="429.0" prefHeight="104.0" prefWidth="442.0" style="-fx-background-color: red;">
@@ -90,7 +118,6 @@
                   <JFXButton fx:id="ar_btn_project" text="Projects" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                </children>
             </GridPane>
-            <JFXButton fx:id="ar_btn_show" layoutX="479.0" layoutY="469.0" text="Show" />
          </children>
       </AnchorPane>
    </children>
