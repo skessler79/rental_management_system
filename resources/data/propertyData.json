@@ -1,8 +1,89 @@
 [
   {
-    "propertyId": "b0a71cad-c000-4820-b50b-0f3a25a0c637",
+    "propertyId": "9e0c8480-919d-4c8f-a4bd-3392b84d9963",
     "owner": {
-      "id": "cb16e5f9-a0c9-446d-b8ba-56fdb1b67e08",
+      "id": "fc008e4f-3f26-40f4-b16d-1ebbf10cdb32",
+      "userType": "OWNER",
+      "firstName": "Cardi",
+      "lastName": "C",
+      "username": "owner3",
+      "email": "cardi@abc.com",
+      "password": "abc123",
+      "address": "8 Jln Hulu Batu 7 Hulu Ampang"
+    },
+    "agent": null,
+    "propertyType": "CONDO",
+    "name": "Happy house",
+    "address": {
+      "roadName": "69, Lorong Six Nine",
+      "project": "Taman 69",
+      "state": "Selangor",
+      "country": "Malaysia",
+      "city": "Cyberjaya",
+      "postcode": 14000
+    },
+    "size": null,
+    "description": "A nice house with a cheap rental beside the greatest uni MMU",
+    "project": "Taman 69",
+    "rentalFee": -1.0,
+    "rentalRate": -1.0,
+    "createdAt": "2021-10-30T00:04:23.841+0800",
+    "facilityTypes": [
+      "AIRCOND",
+      "SWIMMING_POOL",
+      "FRIDGE",
+      "WIFI"
+    ],
+    "isActive": true,
+    "tenant": [],
+    "roomInfo": "1 master room and 2 bed room with 1 kitchen and 1 living room",
+    "bathRoomCount": -1,
+    "comment": [],
+    "commentCount": 0
+  },
+  {
+    "propertyId": "bbd5472d-d7ce-40e2-87f1-a1594caecd38",
+    "owner": {
+      "id": "fc008e4f-3f26-40f4-b16d-1ebbf10cdb32",
+      "userType": "OWNER",
+      "firstName": "Cardi",
+      "lastName": "C",
+      "username": "owner3",
+      "email": "cardi@abc.com",
+      "password": "abc123",
+      "address": "8 Jln Hulu Batu 7 Hulu Ampang"
+    },
+    "agent": null,
+    "propertyType": "BUNGALOW",
+    "name": "Sad house",
+    "address": {
+      "roadName": "420, Lorong Weed",
+      "project": "Taman 420",
+      "state": "Selangor",
+      "country": "Malaysia",
+      "city": "Cyberjaya",
+      "postcode": 14000
+    },
+    "size": null,
+    "description": "A bad house with a cheap rental beside the greatest uni MMU",
+    "project": "Taman 420",
+    "rentalFee": -1.0,
+    "rentalRate": -1.0,
+    "createdAt": "2021-10-30T00:04:23.842+0800",
+    "facilityTypes": [
+      "AIRCOND"
+    ],
+    "isActive": true,
+    "tenant": [],
+    "roomInfo": "1 master room and 2 bed room with 1 kitchen and 1 living room",
+    "bathRoomCount": -1,
+    "comment": [],
+    "commentCount": 0
+  },
+  {
+    "propertyId": "42c20dc3-5e87-4450-9c22-023271dc315b",
+    "owner": {
+      "id": "fc008e4f-3f26-40f4-b16d-1ebbf10cdb32",
       "userType": "OWNER",
       "firstName": "Cardi",
       "lastName": "C",
@@ -27,7 +108,7 @@
     "project": "Taman 789",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T20:30:07.002+0800",
+    "createdAt": "2021-10-30T00:04:23.842+0800",
     "facilityTypes": [
       "AIRCOND",
       "SWIMMING_POOL",
@@ -41,9 +122,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "179c31e0-6272-4582-98c1-bbc306da6b8e",
+    "propertyId": "24facb3b-7b35-41a5-a4ae-219e6e4b1132",
     "owner": {
-      "id": "cb16e5f9-a0c9-446d-b8ba-56fdb1b67e08",
+      "id": "fc008e4f-3f26-40f4-b16d-1ebbf10cdb32",
       "userType": "OWNER",
       "firstName": "Cardi",
       "lastName": "C",
@@ -68,7 +149,7 @@
     "project": "Taman 789",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T20:30:07.002+0800",
+    "createdAt": "2021-10-30T00:04:23.842+0800",
     "facilityTypes": [
       "AIRCOND",
       "SWIMMING_POOL",
@@ -82,9 +163,50 @@
     "commentCount": 0
   },
   {
-    "propertyId": "5d6e13fa-2ebe-4a67-a679-20859def4b79",
+    "propertyId": "879f1cae-28fa-4456-9d7a-c773611c5ef1",
     "owner": {
-      "id": "10b685a0-2f17-4c2d-ae4e-d5269371dc9c",
+      "id": "fc008e4f-3f26-40f4-b16d-1ebbf10cdb32",
+      "userType": "OWNER",
+      "firstName": "Cardi",
+      "lastName": "C",
+      "username": "owner3",
+      "email": "cardi@abc.com",
+      "password": "abc123",
+      "address": "8 Jln Hulu Batu 7 Hulu Ampang"
+    },
+    "agent": null,
+    "propertyType": "BUNGALOW",
+    "name": "Haunted house",
+    "address": {
+      "roadName": "420, Lorong Weed",
+      "project": "Taman 420",
+      "state": "Selangor",
+      "country": "Malaysia",
+      "city": "Cyberjaya",
+      "postcode": 14000
+    },
+    "size": null,
+    "description": "A bad house with a cheap rental beside the greatest uni MMU",
+    "project": "Taman 456",
+    "rentalFee": -1.0,
+    "rentalRate": -1.0,
+    "createdAt": "2021-10-30T00:04:23.842+0800",
+    "facilityTypes": [
+      "SWIMMING_POOL",
+      "TV",
+      "AIRCOND"
+    ],
+    "isActive": true,
+    "tenant": [],
+    "roomInfo": "1 master room and 2 bed room with 1 kitchen and 1 living room",
+    "bathRoomCount": -1,
+    "comment": [],
+    "commentCount": 0
+  },
+  {
+    "propertyId": "8239c989-f149-4c75-9e81-267bef148491",
+    "owner": {
+      "id": "9ea92c06-d21c-4bb0-8514-d782cf873d3c",
       "userType": "OWNER",
       "firstName": "Cola",
       "lastName": "Sprite",
@@ -109,7 +231,7 @@
     "project": "Taman 123",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T20:30:07.002+0800",
+    "createdAt": "2021-10-30T00:04:23.842+0800",
     "facilityTypes": [
       "AIRCOND",
       "TV",
@@ -125,9 +247,14 @@
     "commentCount": 0
   },
   {
-    "propertyId": "1002cd58-7331-4f73-b9d4-65b5f977c4d9",
+    "propertyId": "33b26fa5-843b-457b-9c89-fdd4a67374c5",
     "owner": {
-      "id": "10b685a0-2f17-4c2d-ae4e-d5269371dc9c",
+      "ownerDetails": "owner4",
+      "propertyList": [
+        "8239c989-f149-4c75-9e81-267bef148491",
+        "33b26fa5-843b-457b-9c89-fdd4a67374c5"
+      ],
+      "id": "9ea92c06-d21c-4bb0-8514-d782cf873d3c",
       "userType": "OWNER",
       "firstName": "Cola",
       "lastName": "Sprite",
@@ -152,7 +279,7 @@
     "project": "Taman 123",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T20:30:07.002+0800",
+    "createdAt": "2021-10-30T00:04:23.842+0800",
     "facilityTypes": [
       "AIRCOND",
       "TV",
@@ -162,128 +289,6 @@
     "isActive": false,
     "tenant": [],
     "roomInfo": "6 bathrooms, no bed",
-    "bathRoomCount": -1,
-    "comment": [],
-    "commentCount": 0
-  },
-  {
-    "propertyId": "c8498515-1c62-42d2-a48d-9eb8e2120c06",
-    "owner": {
-      "id": "cb16e5f9-a0c9-446d-b8ba-56fdb1b67e08",
-      "userType": "OWNER",
-      "firstName": "Cardi",
-      "lastName": "C",
-      "username": "owner3",
-      "email": "cardi@abc.com",
-      "password": "abc123",
-      "address": "8 Jln Hulu Batu 7 Hulu Ampang"
-    },
-    "agent": null,
-    "propertyType": "CONDO",
-    "name": "Happy house",
-    "address": {
-      "roadName": "69, Lorong Six Nine",
-      "project": "Taman 69",
-      "state": "Selangor",
-      "country": "Malaysia",
-      "city": "Cyberjaya",
-      "postcode": 14000
-    },
-    "size": null,
-    "description": "A nice house with a cheap rental beside the greatest uni MMU",
-    "project": "Taman 69",
-    "rentalFee": 420.0,
-    "rentalRate": -1.0,
-    "createdAt": "2021-10-29T20:30:07.001+0800",
-    "facilityTypes": [
-      "SWIMMING_POOL",
-      "WIFI",
-      "FRIDGE",
-      "AIRCOND"
-    ],
-    "isActive": true,
-    "tenant": [],
-    "roomInfo": "1 master room and 2 bed room with 1 kitchen and 1 living room",
-    "bathRoomCount": 5,
-    "comment": [],
-    "commentCount": 0
-  },
-  {
-    "propertyId": "b330fdc1-4176-45e3-ab1f-432641797f99",
-    "owner": {
-      "id": "cb16e5f9-a0c9-446d-b8ba-56fdb1b67e08",
-      "userType": "OWNER",
-      "firstName": "Cardi",
-      "lastName": "C",
-      "username": "owner3",
-      "email": "cardi@abc.com",
-      "password": "abc123",
-      "address": "8 Jln Hulu Batu 7 Hulu Ampang"
-    },
-    "agent": null,
-    "propertyType": "BUNGALOW",
-    "name": "Haunted house",
-    "address": {
-      "roadName": "420, Lorong Weed",
-      "project": "Taman 420",
-      "state": "Selangor",
-      "country": "Malaysia",
-      "city": "Cyberjaya",
-      "postcode": 14000
-    },
-    "size": null,
-    "description": "A bad house with a cheap rental beside the greatest uni MMU",
-    "project": "Taman 420",
-    "rentalFee": 3.0,
-    "rentalRate": -1.0,
-    "createdAt": "2021-10-29T20:30:07.002+0800",
-    "facilityTypes": [
-      "SWIMMING_POOL",
-      "TV",
-      "AIRCOND"
-    ],
-    "isActive": true,
-    "tenant": [],
-    "roomInfo": "1 master room and 2 bed room with 1 kitchen and 1 living room",
-    "bathRoomCount": -1,
-    "comment": [],
-    "commentCount": 0
-  },
-  {
-    "propertyId": "0e54a03d-720e-443e-8f87-33c4dcbbc619",
-    "owner": {
-      "id": "cb16e5f9-a0c9-446d-b8ba-56fdb1b67e08",
-      "userType": "OWNER",
-      "firstName": "Cardi",
-      "lastName": "C",
-      "username": "owner3",
-      "email": "cardi@abc.com",
-      "password": "abc123",
-      "address": "8 Jln Hulu Batu 7 Hulu Ampang"
-    },
-    "agent": null,
-    "propertyType": "BUNGALOW",
-    "name": "Sad house",
-    "address": {
-      "roadName": "420, Lorong Weed",
-      "project": "Taman 420",
-      "state": "Selangor",
-      "country": "Malaysia",
-      "city": "Cyberjaya",
-      "postcode": 14000
-    },
-    "size": null,
-    "description": "A bad house with a cheap rental beside the greatest uni MMU",
-    "project": "Taman 420",
-    "rentalFee": 20.0,
-    "rentalRate": -1.0,
-    "createdAt": "2021-10-29T20:30:07.002+0800",
-    "facilityTypes": [
-      "AIRCOND"
-    ],
-    "isActive": true,
-    "tenant": [],
-    "roomInfo": "1 master room and 2 bed room with 1 kitchen and 1 living room",
     "bathRoomCount": -1,
     "comment": [],
     "commentCount": 0
