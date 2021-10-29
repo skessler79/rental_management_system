@@ -1,12 +1,93 @@
 [
   {
-    "propertyId": "f2732edb-d133-41d6-9d55-2cb7d42f9e8a",
+    "propertyId": "fa7ce13e-6808-424f-9d2c-cf0d4ba07341",
     "owner": {
-      "id": "23c398ac-4c70-49ed-ae5b-5ae35b8647ff",
+      "id": "9e004e3d-f15c-4911-99a3-cac546d63888",
       "userType": "OWNER",
-      "firstName": "Winson1",
+      "firstName": "Winson3",
       "lastName": "Loo1",
-      "username": "owner1",
+      "username": "owner3",
+      "email": "abc1@abc.com",
+      "password": "abc123",
+      "address": "69, Taman Nice, 69420"
+    },
+    "agent": null,
+    "propertyType": "CONDO",
+    "name": "Happy house",
+    "address": {
+      "roadName": "69, Lorong Six Nine",
+      "project": "Taman 69",
+      "state": "Selangor",
+      "country": "Malaysia",
+      "city": "Cyberjaya",
+      "postcode": 14000
+    },
+    "size": null,
+    "description": "A nice house with a cheap rental beside the greatest uni MMU",
+    "project": "Taman 69",
+    "rentalFee": -1.0,
+    "rentalRate": -1.0,
+    "createdAt": "2021-10-29T15:52:56.483+0800",
+    "facilityTypes": [
+      "AIRCOND",
+      "SWIMMING_POOL",
+      "FRIDGE",
+      "WIFI"
+    ],
+    "isActive": true,
+    "tenant": [],
+    "roomInfo": "1 master room and 2 bed room with 1 kitchen and 1 living room",
+    "bathRoomCount": -1,
+    "comment": [],
+    "commentCount": 0
+  },
+  {
+    "propertyId": "091bb392-4535-4891-b660-f860b8d0cda6",
+    "owner": {
+      "id": "9e004e3d-f15c-4911-99a3-cac546d63888",
+      "userType": "OWNER",
+      "firstName": "Winson3",
+      "lastName": "Loo1",
+      "username": "owner3",
+      "email": "abc1@abc.com",
+      "password": "abc123",
+      "address": "69, Taman Nice, 69420"
+    },
+    "agent": null,
+    "propertyType": "BUNGALOW",
+    "name": "Sad house",
+    "address": {
+      "roadName": "420, Lorong Weed",
+      "project": "Taman 420",
+      "state": "Selangor",
+      "country": "Malaysia",
+      "city": "Cyberjaya",
+      "postcode": 14000
+    },
+    "size": null,
+    "description": "A bad house with a cheap rental beside the greatest uni MMU",
+    "project": "Taman 420",
+    "rentalFee": -1.0,
+    "rentalRate": -1.0,
+    "createdAt": "2021-10-29T15:52:56.488+0800",
+    "facilityTypes": [
+      "AIRCOND"
+    ],
+    "isActive": true,
+    "tenant": [],
+    "roomInfo": "1 master room and 2 bed room with 1 kitchen and 1 living room",
+    "bathRoomCount": -1,
+    "comment": [],
+    "commentCount": 0
+  },
+  {
+    "propertyId": "342f0b07-9253-461e-8246-428f259d3c67",
+    "owner": {
+      "id": "9e004e3d-f15c-4911-99a3-cac546d63888",
+      "userType": "OWNER",
+      "firstName": "Winson3",
+      "lastName": "Loo1",
+      "username": "owner3",
       "email": "abc1@abc.com",
       "password": "abc123",
       "address": "69, Taman Nice, 69420"
@@ -27,7 +108,7 @@
     "project": "Taman 789",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T00:38:24.930+0800",
+    "createdAt": "2021-10-29T15:52:56.488+0800",
     "facilityTypes": [
       "AIRCOND",
       "SWIMMING_POOL",
@@ -37,24 +118,17 @@
     "tenant": [],
     "roomInfo": "1 master room and 2 bed room with 1 kitchen and 1 living room",
     "bathRoomCount": -1,
-    "comment": [
-      {
-        "commentId": "b29fb004-6a9b-40dd-8c91-3ad2bdf2c37d",
-        "posterId": "a66c4e96-3370-47e3-a757-d7d9417208db",
-        "details": "asdf",
-        "createdAt": "2021-10-29T03:10:43.583+0800"
-      }
-    ],
-    "commentCount": 1
+    "comment": [],
+    "commentCount": 0
   },
   {
-    "propertyId": "048b91b6-5d69-485b-abc5-264b2f708497",
+    "propertyId": "90c51248-3ebe-4b67-bc98-6159d6015264",
     "owner": {
-      "id": "23c398ac-4c70-49ed-ae5b-5ae35b8647ff",
+      "id": "9e004e3d-f15c-4911-99a3-cac546d63888",
       "userType": "OWNER",
-      "firstName": "Winson1",
+      "firstName": "Winson3",
       "lastName": "Loo1",
-      "username": "owner1",
+      "username": "owner3",
       "email": "abc1@abc.com",
       "password": "abc123",
       "address": "69, Taman Nice, 69420"
@@ -75,7 +149,7 @@
     "project": "Taman 456",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T00:38:24.930+0800",
+    "createdAt": "2021-10-29T15:52:56.492+0800",
     "facilityTypes": [
       "SWIMMING_POOL",
       "TV",
@@ -89,13 +163,13 @@
     "commentCount": 0
   },
   {
-    "propertyId": "570cdf42-92d6-4ba4-9616-9e9fe5330195",
+    "propertyId": "f22ef525-6f44-4b7a-9cc6-e9e9d79fdb18",
     "owner": {
-      "id": "dc74cd46-b5e6-46d3-ac93-0d86ae85d15e",
+      "id": "0791bb26-9460-48f7-97f9-30c534b6efeb",
       "userType": "OWNER",
-      "firstName": "Winson2",
+      "firstName": "Winson4",
       "lastName": "Loo2",
-      "username": "owner2",
+      "username": "owner4",
       "email": "abc2@abc.com",
       "password": "abc123",
       "address": "69, Taman Bad, 69420"
@@ -116,7 +190,7 @@
     "project": "Taman 123",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T00:38:24.930+0800",
+    "createdAt": "2021-10-29T15:52:56.492+0800",
     "facilityTypes": [
       "AIRCOND",
       "TV",
@@ -127,6 +201,53 @@
     "isActive": true,
     "tenant": [],
     "roomInfo": "1 master room and 2 bed room with 1 kitchen and 1 living room",
+    "bathRoomCount": -1,
+    "comment": [],
+    "commentCount": 0
+  },
+  {
+    "propertyId": "2e725c9b-8c69-4684-9e4e-cc4bd9bc52ac",
+    "owner": {
+      "ownerDetails": "owner4",
+      "propertyList": [
+        "f22ef525-6f44-4b7a-9cc6-e9e9d79fdb18",
+        "2e725c9b-8c69-4684-9e4e-cc4bd9bc52ac"
+      ],
+      "id": "0791bb26-9460-48f7-97f9-30c534b6efeb",
+      "userType": "OWNER",
+      "firstName": "Winson4",
+      "lastName": "Loo2",
+      "username": "owner4",
+      "email": "abc2@abc.com",
+      "password": "abc123",
+      "address": "69, Taman Bad, 69420"
+    },
+    "agent": null,
+    "propertyType": "DOUBLE_STORY",
+    "name": "Temple",
+    "address": {
+      "roadName": "666, lorong DN",
+      "project": "Taman Malay",
+      "state": "Selangor",
+      "country": "Malaysia",
+      "city": "Cyberjaya",
+      "postcode": 14000
+    },
+    "size": null,
+    "description": null,
+    "project": "Taman 123",
+    "rentalFee": -1.0,
+    "rentalRate": -1.0,
+    "createdAt": "2021-10-29T15:52:56.492+0800",
+    "facilityTypes": [
+      "AIRCOND",
+      "TV",
+      "WATER_HEATER",
+      "SWIMMING_POOL"
+    ],
+    "isActive": false,
+    "tenant": [],
+    "roomInfo": "6 bathrooms, no bed",
     "bathRoomCount": -1,
     "comment": [],
     "commentCount": 0

@@ -10,6 +10,7 @@ import main.classes.users.Admin;
 import main.classes.users.Owner;
 import main.classes.users.User;
 import main.enums.FacilityType;
+import main.enums.PropertyType;
 import main.enums.UserType;
 import org.json.simple.parser.JSONParser;
 
@@ -98,6 +99,18 @@ public class PropertyDataModel {
         ArrayList<Property> output = new ArrayList<>();
         for(Property property:propertyData){
             if (property.getIsActive() == active){
+                output.add(property);
+            }
+        }
+        return output;
+    }
+
+    //get property based on property type
+    public ArrayList<Property> getPropertyByType(PropertyType propertyType){
+        propertyData = loadData();
+        ArrayList<Property> output = new ArrayList<>();
+        for(Property property:propertyData){
+            if (property.getPropertyType() == propertyType){
                 output.add(property);
             }
         }

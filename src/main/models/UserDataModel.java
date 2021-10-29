@@ -126,10 +126,11 @@ public class UserDataModel {
     }
 
     //allow admin to delete user directly
-    public void deleteUser(User currentUser, User targetUser) throws IllegalAccessException{
+    public void deleteUser(User currentUser, User targetUser) throws IllegalAccessException, IllegalArgumentException{
         if (currentUser.getUserType() != UserType.ADMIN)
             throw new IllegalAccessException("Only admin can call this!");
-
+        if (currentUser.getId().equals(targetUser.getId()))
+            throw new IllegalArgumentException("You cannot delete yourself!");
         userData = loadData(targetUser.getUserType(),false);
         userData.removeIf(user -> user.getId().equals(targetUser.getId()));
         inputData(targetUser.getUserType(),userData,false);
