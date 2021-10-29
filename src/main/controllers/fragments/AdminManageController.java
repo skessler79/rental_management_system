@@ -93,6 +93,10 @@ public class AdminManageController extends FragmentController implements Initial
 
         btn_totalUsers.setOnAction(actionEvent -> btm_anchorpane.toFront());
 
+        btn_reject.setOnAction(actionEvent -> {
+            rejectPendingUser();
+        });
+
         setPendingUserNum ();
         setTotalUserNum();
 
@@ -193,4 +197,15 @@ public class AdminManageController extends FragmentController implements Initial
         total_users_count.setText(stringTUcout);
     }
 
+    public void rejectPendingUser() {
+
+    }
+
+    public void acceptPendingUser() {
+
+    }
+
+    public void removeUser() {
+
+    }
 }
