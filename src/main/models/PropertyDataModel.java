@@ -10,6 +10,7 @@ import main.classes.users.Admin;
 import main.classes.users.Owner;
 import main.classes.users.User;
 import main.enums.FacilityType;
+import main.enums.PropertyType;
 import main.enums.UserType;
 import org.json.simple.parser.JSONParser;
 
@@ -64,6 +65,38 @@ public class PropertyDataModel {
 
     }
 
+    public ArrayList<Property> filterProperty(PropertyType propertyType, User owner, Boolean isActive){
+        ArrayList<Property> output = new ArrayList<>();
+        if (isActive == null)
+            propertyData = loadData();
+        else
+            propertyData = getPropertyByActive(isActive);
+
+        for (Property property:propertyData){
+            int addCounter = 0;
+            //check propertType conditions
+            if (propertyType == null)
+                addCounter += 1;
+            else if(property.getPropertyType() == propertyType)
+                addCounter += 1;
+            else
+                continue;
+
+            //check owner conditions
+            if (owner == null)
+                addCounter+=1;
+            else if(owner.getId().equals(property.getOwner().getId()))
+                addCounter+=1;
+            else
+                continue;
+
+            //if both condition met
+            if (addCounter == 2)
+                output.add(property);
+        }
+        return output;
+    }
+
     public void deleteProperty(String propertyId){
         propertyData = loadData();
         for (Property property:propertyData){
@@ -98,6 +131,18 @@ public class PropertyDataModel {
         ArrayList<Property> output = new ArrayList<>();
         for(Property property:propertyData){
             if (property.getIsActive() == active){
+                output.add(property);
+            }
+        }
+        return output;
+    }
+
+    //get property based on property type
+    public ArrayList<Property> getPropertyByType(PropertyType propertyType){
+        propertyData = loadData();
+        ArrayList<Property> output = new ArrayList<>();
+        for(Property property:propertyData){
+            if (property.getPropertyType() == propertyType){
                 output.add(property);
             }
         }
