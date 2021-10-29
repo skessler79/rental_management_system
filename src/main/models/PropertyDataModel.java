@@ -78,7 +78,21 @@ public class PropertyDataModel {
 
     }
 
-    public ArrayList<Property> filterProperty(PropertyType propertyType, User owner, Boolean isActive, FacilityType facilityType, String project){
+    //private method to provide filterProperty a more cleaner implementation
+    private boolean checkFilter(Property property, ArrayList<FacilityType> facilityTypes){
+        int containFlag = 0;
+        for (FacilityType facility:facilityTypes){
+            if (property.getFacilityTypes().contains(facility)) {
+                containFlag += 1;
+            }
+        }
+        if (containFlag == facilityTypes.size())
+            return true;
+        return false;
+    }
+
+    //public method for admin report to filter all the property by requirements
+    public ArrayList<Property> filterProperty(PropertyType propertyType, User owner, Boolean isActive, ArrayList<FacilityType> facilityTypes, String project){
         ArrayList<Property> output = new ArrayList<>();
         if (isActive == null)
             propertyData = loadData();
@@ -104,9 +118,9 @@ public class PropertyDataModel {
                 continue;
 
             //check facilityType conditions
-            if (facilityType == null)
+            if (facilityTypes == null)
                 addCounter+=1;
-            else if(property.getFacilityTypes().contains(facilityType))
+            else if(checkFilter(property, facilityTypes))
                 addCounter+=1;
             else
                 continue;
