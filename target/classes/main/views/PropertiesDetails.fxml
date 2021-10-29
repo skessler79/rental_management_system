@@ -169,6 +169,11 @@
                   <Insets top="20.0" />
                </GridPane.margin>
             </Button>
+            <Button fx:id="btnChangeStatus" mnemonicParsing="false" style="-fx-background-color: #0071C2;" text="Change Status" textFill="WHITE" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="100.0" />
+               </GridPane.margin>
+            </Button>
          </children>
       </GridPane>
       <Button fx:id="btnConfirm" layoutX="220.0" layoutY="715.0" mnemonicParsing="false" style="-fx-background-color: #0071C2;" text="Confirm" textFill="#fffbfb" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0">
