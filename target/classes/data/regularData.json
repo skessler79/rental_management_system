@@ -1,7 +1,7 @@
 [
   {
     "regularDetails": "regular3",
-    "id": "360e82d8-8371-4961-8114-d0512fd4ae44",
+    "id": "3e16fc1a-ea2a-4214-a37c-23447991b39a",
     "userType": "REGULAR",
     "firstName": "Pepsi",
     "lastName": "Milo",
@@ -12,7 +12,7 @@
   },
   {
     "regularDetails": "regular4",
-    "id": "21edaae2-80ea-448f-a33c-4e56d9b99310",
+    "id": "6657ca7f-3e01-4cb5-8162-64a2e87f4cf5",
     "userType": "REGULAR",
     "firstName": "Elon",
     "lastName": "Must",
@@ -20,5 +20,38 @@
     "email": "abcg4@abc.com",
     "password": "abc123",
     "address": "11, Taman Very Ok, 14000 Pulau Pinang"
+  },
+  {
+    "regularDetails": "regular5",
+    "id": "bdfc3ee1-ed4d-4bc3-ac54-0ccf9af028e9",
+    "userType": "REGULAR",
+    "firstName": "Adam",
+    "lastName": "Tan",
+    "username": "adam0101",
+    "email": "adam@abc.com",
+    "password": "abc123",
+    "address": "11 Jalan Juru, Bukit Mertajam,"
+  },
+  {
+    "regularDetails": "regular6",
+    "id": "5824e786-ef16-4ca9-a1c0-31c5fd43ed75",
+    "userType": "REGULAR",
+    "firstName": "Mark",
+    "lastName": "Kepen",
+    "username": "markkepen",
+    "email": "mark123@abc.com",
+    "password": "abc123",
+    "address": "55, Taman Very Very Ok, 14000 Pulau Pinang"
+  },
+  {
+    "regularDetails": "regular6",
+    "id": "a3ba39c4-0a00-461b-bc77-0b60921cd868",
+    "userType": "REGULAR",
+    "firstName": "Peter",
+    "lastName": "Spark",
+    "username": "peterspark0101",
+    "email": "ironspider@abc.com",
+    "password": "abc123",
+    "address": "22, Taman Very Very Very Ok, 14000 Pulau Pinang"
   }
 ]

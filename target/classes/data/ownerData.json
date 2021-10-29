@@ -2,13 +2,17 @@
   {
     "ownerDetails": "owner3",
     "propertyList": [
-      "b4e7d4c2-e4ec-4c69-9c5f-2ff28b82e5f5",
-      "f5d1b635-d8a2-41df-8599-b39231c7dfa1",
-      "a147174f-4fd4-4a25-9208-4cc0a9478c0c",
-      "e0c42c54-a9ba-444d-8006-7d02718284b4",
-      "5b18fe21-aed4-42e2-953e-285d712d054c"
+      "f33c56db-e60a-40d6-9978-79f25db2870f",
+      "cd0ca3de-bbae-451b-b6b5-3e31bbf25e4b",
+      "665c0270-b1b6-449a-92ee-a5147d9227ca",
+      "e2803445-35c6-4ada-9d32-4e483c8f5868",
+      "b02f4482-238b-4e1b-904e-72c97d3afb3f",
+      "d89496eb-f7ee-4ff1-b46c-754418843f53",
+      "921bc4ce-0408-49c1-bd36-b681332609b5",
+      "fa26a076-4f69-4e30-92b4-110a93ea4fda",
+      "05bb4178-b806-48a5-82e0-909e1514b070"
     ],
-    "id": "eed41b0f-80c0-445c-9f45-d66777a0dacf",
+    "id": "4dfe4830-2924-43e5-af66-e7014717f474",
     "userType": "OWNER",
     "firstName": "Cardi",
     "lastName": "C",
@@ -20,10 +24,13 @@
   {
     "ownerDetails": "owner4",
     "propertyList": [
-      "d957fdc6-db42-4851-91e5-24ebd7724f6e",
-      "d71c7eef-1304-47b2-abad-911121e37991"
+      "4e344a06-dffa-4d4e-a26d-5e4e523a43db",
+      "76024bb6-9c54-419b-b671-2cb0a2e2121a",
+      "8f7b6c80-7f49-46e9-aa17-3a3926a89e2a",
+      "e1058ebb-7871-4369-8a7d-5d97c004e320",
+      "190d018e-4585-45ea-bdb9-87c6f3a82df4"
     ],
-    "id": "24ef4b24-9f14-48ec-976d-7241e33af1b0",
+    "id": "d660cb3e-a212-49dc-9ce8-65cc2d57cf8b",
     "userType": "OWNER",
     "firstName": "Cola",
     "lastName": "Sprite",
@@ -31,5 +38,41 @@
     "email": "cola@abc.com",
     "password": "abc123",
     "address": "36 Tingkat 3 Persiaran 65C Off Jalan Pahang Barat"
+  },
+  {
+    "ownerDetails": "owner3",
+    "propertyList": [
+      "e5f0204b-2b97-481c-917e-3fa35c1bebfb",
+      "3cbcf0a3-1930-4885-a2e0-ce64d538410a",
+      "7edde601-665b-40da-b8e4-5e8b2fade6e1",
+      "ba13a42f-42e6-49d3-807f-aca9e34f3559"
+    ],
+    "id": "f108efcb-d852-4184-ab58-2cfec8ff6fb1",
+    "userType": "OWNER",
+    "firstName": "Selwyn",
+    "lastName": "Ping",
+    "username": "owner5",
+    "email": "selwyn@abc.com",
+    "password": "abc123",
+    "address": "9 Jln Hulu Batu 10 Hulu Ampang"
+  },
+  {
+    "ownerDetails": "owner4",
+    "propertyList": [
+      "3f3b8d98-ddab-41f2-8a78-cbf18fbcbd74",
+      "a15cddae-8601-46a5-a993-b600c35cd2df",
+      "da79ed71-e70e-49e6-8a4e-2377d4851e13",
+      "71e9bf11-b4bc-45c7-997b-4eb639e77e68",
+      "c6ff314d-582c-453d-b49c-809d84fbdc34",
+      "77e5616b-a077-44c7-bc16-61574e328ba1"
+    ],
+    "id": "9375fc2c-5f52-41dd-b4d7-716f21ddfa6e",
+    "userType": "OWNER",
+    "firstName": "Nafis",
+    "lastName": "Affendi",
+    "username": "owner6",
+    "email": "affendi@abc.com",
+    "password": "abc123",
+    "address": "37 Tingkat 4 Persiaran 65C Off Jalan Pahang Barat"
   }
 ]

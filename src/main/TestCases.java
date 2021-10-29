@@ -112,12 +112,27 @@ public class TestCases extends Application {
                 new UserBuilder("Cola", "Sprite", "owner4", "cola@abc.com", "abc123", "36 Tingkat 3 Persiaran 65C Off Jalan Pahang Barat")
                         .ownerDetails("owner4")
                         .buildUser(UserType.OWNER),
+                new UserBuilder("Selwyn", "Ping", "owner5", "selwyn@abc.com", "abc123", "9 Jln Hulu Batu 10 Hulu Ampang").
+                        ownerDetails("owner3")
+                        .buildUser(UserType.OWNER),
+                new UserBuilder("Nafis", "Affendi", "owner6", "affendi@abc.com", "abc123", "37 Tingkat 4 Persiaran 65C Off Jalan Pahang Barat")
+                        .ownerDetails("owner4")
+                        .buildUser(UserType.OWNER),
                 //regular user
                 new UserBuilder("Pepsi", "Milo", "milo1234", "pepsi@abc.com", "abc123", "Jalan Pjs 11/20, Bandar Sunway,")
                         .regularDetails("regular3")
                         .buildUser(UserType.REGULAR),
                 new UserBuilder("Elon", "Must", "mustelon", "abcg4@abc.com", "abc123", "11, Taman Very Ok, 14000 Pulau Pinang")
                         .regularDetails("regular4")
+                        .buildUser(UserType.REGULAR),
+                new UserBuilder("Adam", "Tan", "adam0101", "adam@abc.com", "abc123", "11 Jalan Juru, Bukit Mertajam,")
+                        .regularDetails("regular5")
+                        .buildUser(UserType.REGULAR),
+                new UserBuilder("Mark", "Kepen", "markkepen", "mark123@abc.com", "abc123", "55, Taman Very Very Ok, 14000 Pulau Pinang")
+                        .regularDetails("regular6")
+                        .buildUser(UserType.REGULAR),
+                new UserBuilder("Peter", "Spark", "peterspark0101", "ironspider@abc.com", "abc123", "22, Taman Very Very Very Ok, 14000 Pulau Pinang")
+                        .regularDetails("regular6")
                         .buildUser(UserType.REGULAR),
                 //agent
                 new UserBuilder("Jamie", "Bonds", "agent007", "agent007@abc.com", "abc123", "19-01, Jln Padi Emas 3/1, Bahru")
@@ -126,7 +141,7 @@ public class TestCases extends Application {
                 new UserBuilder("Keanu", "River", "river123", "dog4life@abc.com", "abc123", "19-01, Jln Padi Silver 4/5")
                         .agentDetails("agent3")
                         .buildUser(UserType.AGENT),
-                new UserBuilder("Jeff", "Buffet", "agent007", "agent007@abc.com", "abc123", "19-01, Jln Padi Emas 3/1, Bahru")
+                new UserBuilder("Jeff", "Buffet", "warrenbezos", "agent007@abc.com", "abc123", "19-01, Jln Padi Emas 3/1, Bahru")
                         .agentDetails("agent3")
                         .buildUser(UserType.AGENT)
 
