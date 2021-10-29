@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "agentDetails": "agent1",
+    "id": "a8dbc4ae-ef60-4844-8ee7-c39957eba0ad",
+    "userType": "AGENT",
+    "firstName": "Winson3",
+    "lastName": "Loo3",
+    "username": "agent1",
+    "email": "abc3@abc.com",
+    "password": "abc123",
+    "address": "69, Taman Nice, 69420"
+  }
+]

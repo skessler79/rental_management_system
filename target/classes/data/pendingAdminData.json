@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "adminDetails": "admin1",
+    "id": "a3352a91-14fc-4495-831c-9889686d8d9e",
+    "userType": "ADMIN",
+    "firstName": "Winson2",
+    "lastName": "Loo2",
+    "username": "admin1",
+    "email": "abc2@abc.com",
+    "password": "abc123",
+    "address": "69, Taman Nice, 69420"
+  }
+]

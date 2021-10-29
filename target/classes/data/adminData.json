@@ -1,24 +1,24 @@
 [
   {
-    "adminDetails": "admin0101 details",
-    "id": "a66c4e96-3370-47e3-a757-d7d9417208db",
+    "adminDetails": "admin2",
+    "id": "4d992f58-b1be-453d-9658-2040fbbe9c64",
     "userType": "ADMIN",
-    "firstName": "admin1",
-    "lastName": "adminlast1",
+    "firstName": "WinsonAdmin2",
+    "lastName": "Loo2",
     "username": "admin0101",
-    "email": "abc1@abc.com",
+    "email": "admin0101@abc.com",
     "password": "abc123",
-    "address": null
+    "address": "69, Taman Good, 69420"
   },
   {
-    "adminDetails": "admin1",
-    "id": "bae5b743-dfa6-4a2a-b2ff-560bcde43829",
+    "adminDetails": "admin2",
+    "id": "091be62c-5ff6-4105-994c-ee9f32f92344",
     "userType": "ADMIN",
-    "firstName": "Winson2",
+    "firstName": "WinsonAdmin2",
     "lastName": "Loo2",
-    "username": "admin1",
-    "email": "abc2@abc.com",
+    "username": "admin2",
+    "email": "abce2@abc.com",
     "password": "abc123",
-    "address": "69, Taman Nice, 69420"
+    "address": "69, Taman Good, 69420"
   }
 ]

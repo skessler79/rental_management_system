@@ -1,24 +1,24 @@
 [
   {
-    "regularDetails": "regular1",
-    "id": "4468ab89-14f6-4636-b1f3-045c6d9869f7",
+    "regularDetails": "regular3",
+    "id": "7eb4c0b1-a778-4708-b5b5-b2992569fd4b",
     "userType": "REGULAR",
-    "firstName": "Winson1",
+    "firstName": "Winson3",
     "lastName": "Loo1",
-    "username": "regular1",
-    "email": "abc1@abc.com",
+    "username": "regular3",
+    "email": "abcd1@abc.com",
     "password": "abc123",
-    "address": "69, Taman Nice, 69420"
+    "address": "69, Taman Ok, 69420"
   },
   {
-    "regularDetails": "regular2",
-    "id": "cfc0dd54-8a1a-4b22-9ad3-292e4253c7f9",
+    "regularDetails": "regular4",
+    "id": "9a7a5484-4644-43a7-b88f-7b4a57d16cbc",
     "userType": "REGULAR",
-    "firstName": "Winson4",
+    "firstName": "WinsonRegular4",
     "lastName": "Loo4",
-    "username": "regular2",
-    "email": "abc4@abc.com",
+    "username": "regular4",
+    "email": "abcg4@abc.com",
     "password": "abc123",
-    "address": "69, Taman Nice, 69420"
+    "address": "69, Taman Very Ok, 69420"
   }
 ]

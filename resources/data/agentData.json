@@ -1,13 +1,13 @@
 [
   {
-    "agentDetails": "agent1",
-    "id": "185c03df-d655-46ee-a776-9d59029f41a8",
+    "agentDetails": "agent3",
+    "id": "abb4623a-71e2-4b06-ba40-fb43183c4523",
     "userType": "AGENT",
-    "firstName": "Winson3",
+    "firstName": "WinsonAgent07",
     "lastName": "Loo3",
-    "username": "agent1",
-    "email": "abc3@abc.com",
+    "username": "agent3",
+    "email": "abcf3@abc.com",
     "password": "abc123",
-    "address": "69, Taman Nice, 69420"
+    "address": "69, Taman Excellent, 69420"
   }
 ]
