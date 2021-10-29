@@ -17,7 +17,9 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.util.Callback;
+import main.classes.CurrentSession;
 import main.classes.properties.Property;
+import main.controllers.cells.PropertyCell;
 import main.enums.FacilityType;
 import main.enums.PropertyType;
 import main.models.PropertyDataModel;
@@ -45,16 +47,12 @@ public class PropertiesController extends FragmentController implements Initiali
     @FXML
     AnchorPane anchorPropertyList;
 
-    private PropertyListItemController propertyListItemController;
-    private PropertyDataModel propertyDataModel;
-    private FXMLLoader loader;
     private ArrayList<FacilityType> facilityTypes;
     private ListView<Property> listView;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-        propertyDataModel = new PropertyDataModel();
         facilityTypes = new ArrayList<>();
 
         btnSearch.setOnAction(actionEvent -> handleFacilities());
@@ -75,7 +73,7 @@ public class PropertiesController extends FragmentController implements Initiali
 
         // Get list of all active properties
         ObservableList<Property> data = FXCollections.observableArrayList();
-        data.addAll(propertyDataModel.getPropertyByActive(true));
+        data.addAll(CurrentSession.propertyDataModel.getPropertyByActive(true));
         displayList(data);
     }
 
@@ -132,41 +130,7 @@ public class PropertiesController extends FragmentController implements Initiali
         }
 
         ObservableList<Property> data = FXCollections.observableArrayList();
-        data.addAll(propertyDataModel.getPropertyByFacilityType(facilityTypes));
+        data.addAll(CurrentSession.propertyDataModel.getPropertyByFacilityType(facilityTypes));
         displayList(data);
-    }
-
-    private class PropertyCell extends ListCell<Property>
-    {
-        private HBox content;
-        private Text name;
-        private Text price;
-
-        private AnchorPane propertyListItem;
-
-        public PropertyCell()
-        {
-            super();
-            loader = new FXMLLoader(getClass().getResource("../../views/fragments/PropertiesListItem.fxml"));
-            try
-            {
-                propertyListItem = loader.load();
-            } catch (IOException e)
-            {
-                e.printStackTrace();
-            }
-            propertyListItemController = loader.getController();
-        }
-
-        @Override
-        protected void updateItem(Property item, boolean empty) {
-            super.updateItem(item, empty);
-            if (item != null && !empty) {
-                propertyListItemController.setDetails(item);
-                setGraphic(propertyListItem);
-            } else {
-                setGraphic(null);
-            }
-        }
     }
 }
