@@ -34,10 +34,10 @@
               <columns>
                 <TableColumn fx:id="ar_col_propertyID" prefWidth="174.40000915527344" style="-fx-text-background-color: #000000;" text="Property Id" />
                 <TableColumn fx:id="ar_col_propertyType" prefWidth="113.5999755859375" text="Property Type" />
-                  <TableColumn fx:id="ar_col_project" prefWidth="159.20001220703125" text="Property Project" />
+                  <TableColumn fx:id="ar_col_project" prefWidth="150.0" text="Property Project" />
                   <TableColumn fx:id="ar_col_ownerName" prefWidth="128.79998779296875" text="Owner Username" />
-                  <TableColumn fx:id="ar_col_isActive" minWidth="0.0" prefWidth="98.4000244140625" text="Is Active" />
-                  <TableColumn fx:id="ar_col_facilityTypes" prefWidth="227.99993896484375" text="Facility Types" />
+                  <TableColumn fx:id="ar_col_isActive" minWidth="0.0" prefWidth="93.5999755859375" text="Is Active" />
+                  <TableColumn fx:id="ar_col_facilityTypes" prefWidth="242.0" text="Facility Types" />
                   <TableColumn fx:id="ar_col_comments" prefWidth="106.4000244140625" text="Comments" />
               </columns>
             </TableView>
@@ -142,8 +142,14 @@
                         <Insets left="5.0" />
                      </GridPane.margin>
                   </Label>
-                  <JFXTextField fx:id="ar_textField_project" alignment="CENTER" focusColor="#ffffff00" prefHeight="34.0" prefWidth="307.0" style="-fx-background-color: white;" unFocusColor="#ffffff00" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                  <ChoiceBox fx:id="ar_choiceBox_facility" prefHeight="34.0" prefWidth="320.0" GridPane.columnIndex="3" />
+                  <JFXTextField fx:id="ar_textField_project" alignment="CENTER" focusColor="#ffffff00" prefHeight="34.0" prefWidth="307.0" style="-fx-background-color: white;" unFocusColor="#ffffff00" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="1.5" top="2.0" />
+                     </GridPane.margin></JFXTextField>
+                  <ChoiceBox fx:id="ar_choiceBox_facility" prefHeight="34.0" prefWidth="320.0" GridPane.columnIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="2.0" top="2.0" />
+                     </GridPane.margin></ChoiceBox>
                </children>
             </GridPane>
          </children>

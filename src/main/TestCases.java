@@ -190,6 +190,6 @@ public class TestCases extends Application {
 //        for(Property property:propertyData){
 //            System.out.println(property.getName());
 //        }
-//    }
+    }
 
 }

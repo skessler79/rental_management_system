@@ -1,45 +1,23 @@
 package main.controllers.fragments;
 
 import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXRadioButton;
 import com.jfoenix.controls.JFXTextField;
-import javafx.beans.binding.BooleanExpression;
-import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.beans.value.ObservableValueBase;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
-import javafx.util.Callback;
-import main.classes.Comment;
 import main.classes.CurrentSession;
 import main.classes.properties.Property;
-import main.classes.users.Owner;
 import main.enums.FacilityType;
 import main.enums.PropertyType;
-import main.models.LoginModel;
 import main.models.PropertyDataModel;
 import main.views.ConfirmBoxView;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.net.URL;
-import java.text.ParseException;
 import java.util.*;
-import java.util.stream.Stream;
 
 public class AdminReportController implements Initializable {
 
@@ -64,11 +42,12 @@ public class AdminReportController implements Initializable {
     @FXML
     private ChoiceBox<PropertyType> ar_choiceBox_property;
     // List of enums from PropertyType
-    ObservableList<PropertyType> ar_choiceBox_list = FXCollections.observableArrayList(PropertyType.values());
+    ObservableList<PropertyType> ar_choiceBox_propertyList = FXCollections.observableArrayList(PropertyType.values());
     @FXML
     private ChoiceBox<Boolean> ar_choiceBox_activity;
     @FXML
-    private ChoiceBox<String> ar_choiceBox_facility;
+    private ChoiceBox<FacilityType> ar_choiceBox_facility;
+    ObservableList<FacilityType> ar_choiceBox_facilityList = FXCollections.observableArrayList(FacilityType.values());
 
 //    @FXML
 //    private JFXButton ar_btn_facilities;
@@ -92,7 +71,8 @@ public class AdminReportController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        ar_choiceBox_property.setItems(ar_choiceBox_list);
+        ar_choiceBox_property.setItems(ar_choiceBox_propertyList);
+        ar_choiceBox_facility.setItems(ar_choiceBox_facilityList);
         ar_choiceBox_activity.getItems().addAll(Boolean.TRUE, Boolean.FALSE);
         getTable(CurrentSession.propertyDataModel.getPropertiesData());
 
@@ -107,12 +87,43 @@ public class AdminReportController implements Initializable {
         // Button for filtering by propertyType, owner username, active/inactive
         ar_btn_filter.setOnAction(e -> {
             ArrayList<Property> list;
+
             if (ar_textField_user.getText().trim().isEmpty()) {
-                list = CurrentSession.propertyDataModel.filterProperty(ar_choiceBox_property.getValue(), null, ar_choiceBox_activity.getValue());
+                if(ar_textField_project.getText().trim().isEmpty()) {
+                    list = CurrentSession.propertyDataModel.filterProperty(
+                            ar_choiceBox_property.getValue(),
+                            null,
+                            ar_choiceBox_activity.getValue(),
+                            CurrentSession.propertyDataModel.getPropertyByFacilityType(ar_choiceBox_facility.getValue()),
+                            null);
+                }
+                else {
+                    list = CurrentSession.propertyDataModel.filterProperty(
+                            ar_choiceBox_property.getValue(),
+                            null,
+                            ar_choiceBox_activity.getValue(),
+                            CurrentSession.propertyDataModel.getPropertyByFacilityType(ar_choiceBox_facility.getValue()),
+                            ar_textField_project.getText().trim());
+                }
                 getTable(list);
             }
             else {
-                list = CurrentSession.propertyDataModel.filterProperty(ar_choiceBox_property.getValue(), CurrentSession.userDataModel.getUserByUsername(ar_textField_user.getText().trim()), ar_choiceBox_activity.getValue());
+                if(ar_textField_project.getText().trim().isEmpty()) {
+                    list = CurrentSession.propertyDataModel.filterProperty(
+                            ar_choiceBox_property.getValue(),
+                            CurrentSession.userDataModel.getUserByUsername(ar_textField_user.getText().trim()),
+                            ar_choiceBox_activity.getValue(),
+                            CurrentSession.propertyDataModel.getPropertyByFacilityType(ar_choiceBox_facility.getValue()),
+                            null);
+                }
+                else {
+                    list = CurrentSession.propertyDataModel.filterProperty(
+                            ar_choiceBox_property.getValue(),
+                            CurrentSession.userDataModel.getUserByUsername(ar_textField_user.getText().trim()),
+                            ar_choiceBox_activity.getValue(),
+                            CurrentSession.propertyDataModel.getPropertyByFacilityType(ar_choiceBox_facility.getValue()),
+                            ar_textField_project.getText().trim());
+                }
                 getTable(list);
             }
         });
@@ -121,47 +132,20 @@ public class AdminReportController implements Initializable {
         ar_btn_clear.setOnAction(e -> {
             getTable(CurrentSession.propertyDataModel.getPropertiesData());
             ar_textField_user.clear();
+            ar_textField_project.clear();
             ar_choiceBox_activity.valueProperty().set(null);
             ar_choiceBox_property.valueProperty().set(null);
+            ar_choiceBox_facility.valueProperty().set(null);
         });
 
-
-
-        // For displaying facilityTypes and Projects into a new window
-//        Stage stage = new Stage();
-//        stage.setWidth(250);
-//
-//        ListView listView = new ListView();
-//
-//        // Shows a list of Facilities in a new window
-//        ar_btn_facilities.setOnAction(e -> {
-//            List<FacilityType> list = Arrays.asList(FacilityType.values());
-//
-//            for (FacilityType facilityType: list) {
-//                listView.getItems().add(facilityType);
-//            }
-//
-//            VBox vBox = new VBox();
-//            vBox.getChildren().add(listView);
-//            final Scene scene = new Scene(vBox);
-//            stage.setTitle("Facilities");
-//            stage.setScene(scene);
-//            stage.show();
-//        });
-//
-//        ar_btn_project.setOnAction(e -> {
-//
-//        });
     }
 
     // Deletes the selected property in the table
     public void deleteButtonClicked() {
-        ObservableList<Property> propertySelected, allProperty;
-        allProperty = ar_table.getItems();
+        ObservableList<Property> propertySelected;
         propertySelected = ar_table.getSelectionModel().getSelectedItems();
         String propertyId = propertySelected.get(0).getPropertyId();
-
-        propertySelected.forEach(allProperty::remove);
+        ar_table.getItems().remove(propertySelected);
 
         System.out.println(propertyId);
         propertyDataModel.deleteProperty(propertyId);

@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "regularDetails": "regular1",
+    "id": "7468efb2-6977-4749-bb4c-7bf5d83780b1",
+    "userType": "REGULAR",
+    "firstName": "Abu",
+    "lastName": "Lim",
+    "username": "abu0202",
+    "email": "abu@abc.com",
+    "password": "abc123",
+    "address": "No. 11 Jln Puah Jaya Taman Setapak Indah Jaya"
+  },
+  {
+    "regularDetails": "regular2",
+    "id": "eab85bba-1611-47e4-8c1c-a1d428d1f1df",
+    "userType": "REGULAR",
+    "firstName": "Michael",
+    "lastName": "Nickson",
+    "username": "michael4321",
+    "email": "bilebile@abc.com",
+    "password": "abc123",
+    "address": "2 Jln Siu Nam, Johor Bahru"
+  }
+]
