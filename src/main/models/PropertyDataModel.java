@@ -40,6 +40,19 @@ public class PropertyDataModel {
         return loadData();
     }
 
+    //get property based on projects
+    public ArrayList<Property> getPropertyByProject(String project){
+        ArrayList<Property> output = new ArrayList<>();
+        propertyData = loadData();
+        for (Property property:propertyData){
+            if (property.getProject().toLowerCase().contains(project.toLowerCase())){
+                output.add(property);
+            }
+        }
+
+        return  output;
+    }
+
     //register property with input of current user object and property object
     public ArrayList<Property> getPropertyByFacilityType(ArrayList<FacilityType> targetFacilityTypes) {
         ArrayList<Property> output = new ArrayList<>();
@@ -63,6 +76,38 @@ public class PropertyDataModel {
 
         return output;
 
+    }
+
+    public ArrayList<Property> filterProperty(PropertyType propertyType, User owner, Boolean isActive){
+        ArrayList<Property> output = new ArrayList<>();
+        if (isActive == null)
+            propertyData = loadData();
+        else
+            propertyData = getPropertyByActive(isActive);
+
+        for (Property property:propertyData){
+            int addCounter = 0;
+            //check propertType conditions
+            if (propertyType == null)
+                addCounter += 1;
+            else if(property.getPropertyType() == propertyType)
+                addCounter += 1;
+            else
+                continue;
+
+            //check owner conditions
+            if (owner == null)
+                addCounter+=1;
+            else if(owner.getId().equals(property.getOwner().getId()))
+                addCounter+=1;
+            else
+                continue;
+
+            //if both condition met
+            if (addCounter == 2)
+                output.add(property);
+        }
+        return output;
     }
 
     public void deleteProperty(String propertyId){

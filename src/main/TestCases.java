@@ -33,7 +33,9 @@ public class TestCases extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         populateData();
+        testFilterProperties();
     }
+
 
     private void startTest(){
 //        registerUsers();
@@ -71,14 +73,26 @@ public class TestCases extends Application {
     private void registerPendingUsers(){
 
         //goes to pending list
-        User owner1 = new UserBuilder("Winson1", "Loo1", "owner1", "abc1@abc.com", "abc123", "69, Taman Nice, 69420").ownerDetails("owner1").buildUser(UserType.OWNER);
-        User owner2 = new UserBuilder("Winson2", "Loo2", "owner2", "abc2@abc.com", "abc123", "69, Taman Bad, 69420").ownerDetails("owner2").buildUser(UserType.OWNER);
-        User regular1 = new UserBuilder("Winson1", "Loo1", "regular1", "abc1@abc.com", "abc123", "69, Taman Nice, 69420").regularDetails("regular1").buildUser(UserType.REGULAR);
-        User admin1 = new UserBuilder("Winson2", "Loo2", "admin1", "abc2@abc.com", "abc123", "69, Taman Nice, 69420").adminDetails("admin1").buildUser(UserType.ADMIN);
-        User agent1 = new UserBuilder("Winson3", "Loo3", "agent1", "abc3@abc.com", "abc123", "69, Taman Nice, 69420").agentDetails("agent1").buildUser(UserType.AGENT);
-        User regular2 = new UserBuilder("Winson4", "Loo4", "regular2", "abc4@abc.com", "abc123", "69, Taman Nice, 69420").regularDetails("regular2").buildUser(UserType.REGULAR);
+        User owner1 = new UserBuilder("Ali", "Tan", "ali0101", "ali@abc.com", "abc123", "19-01, Jln Padi Emas 3/1, Taman Abc, Johor Bahru")
+                .ownerDetails("owner1")
+                .buildUser(UserType.OWNER);
+        User owner2 = new UserBuilder("Ee", "Ming", "ee0101", "ee@abc.com", "abc123", " Lorong Kota Permail 11, Taman kota Permai,")
+                .ownerDetails("owner2")
+                .buildUser(UserType.OWNER);
+        User regular1 = new UserBuilder("Abu", "Lim", "abu0202", "abu@abc.com", "abc123", "No. 11 Jln Puah Jaya Taman Setapak Indah Jaya")
+                .regularDetails("regular1")
+                .buildUser(UserType.REGULAR);
+        User admin1 = new UserBuilder("Aqel", "Kumar", "aqel0101", "abc2@abc.com", "abc123", "Jalan Permas 10, Bandar Baru Permas Jaya")
+                .adminDetails("admin1")
+                .buildUser(UserType.ADMIN);
+        User agent1 = new UserBuilder("Johny ", "Shallow", "shallow123", "johny@abc.com", "abc123", "273B Kampar Road")
+                .agentDetails("agent1")
+                .buildUser(UserType.AGENT);
+        User regular2 = new UserBuilder("Michael", "Nickson", "michael4321", "bilebile@abc.com", "abc123", "2 Jln Siu Nam, Johor Bahru")
+                .regularDetails("regular2")
+                .buildUser(UserType.REGULAR);
 
-       try{
+        try{
             userDataModel.registerUser(owner1);
             userDataModel.registerUser(regular1);
             userDataModel.registerUser(admin1);
@@ -91,13 +105,27 @@ public class TestCases extends Application {
     }
 
     private void registerActualUsers() throws IllegalAccessException {
-        User admin0101 = new UserBuilder("Admin0101", "Loo", "admin0101", "admin0101@abc.com", "abc123", "69, Taman Good, 69420").adminDetails("admin2").buildUser(UserType.ADMIN);
-        User owner3 = new UserBuilder("Winson3", "Loo1", "owner3", "abc1@abc.com", "abc123", "69, Taman Nice, 69420").ownerDetails("owner3").buildUser(UserType.OWNER);
-        User owner4 = new UserBuilder("Winson4", "Loo2", "owner4", "abc2@abc.com", "abc123", "69, Taman Bad, 69420").ownerDetails("owner4").buildUser(UserType.OWNER);
-        User regular3 = new UserBuilder("Winson3", "Loo1", "regular3", "abcd1@abc.com", "abc123", "69, Taman Ok, 69420").regularDetails("regular3").buildUser(UserType.REGULAR);
-        User admin2 = new UserBuilder("WinsonAdmin2", "Loo2", "admin2", "abce2@abc.com", "abc123", "69, Taman Good, 69420").adminDetails("admin2").buildUser(UserType.ADMIN);
-        User agent3 = new UserBuilder("WinsonAgent07", "Loo3", "agent3", "abcf3@abc.com", "abc123", "69, Taman Excellent, 69420").agentDetails("agent3").buildUser(UserType.AGENT);
-        User regular4 = new UserBuilder("WinsonRegular4", "Loo4", "regular4", "abcg4@abc.com", "abc123", "69, Taman Very Ok, 69420").regularDetails("regular4").buildUser(UserType.REGULAR);
+        User admin0101 = new UserBuilder("Admin0101", "Loo", "admin0101", "admin0101@abc.com", "abc123", "29 Lorong 3/1B Taman Intan Baiduri Kepong")
+                .adminDetails("admin2")
+                .buildUser(UserType.ADMIN);
+        User owner3 = new UserBuilder("Cardi", "C", "owner3", "cardi@abc.com", "abc123", "8 Jln Hulu Batu 7 Hulu Ampang").
+                ownerDetails("owner3")
+                .buildUser(UserType.OWNER);
+        User owner4 = new UserBuilder("Cola", "Sprite", "owner4", "cola@abc.com", "abc123", "36 Tingkat 3 Persiaran 65C Off Jalan Pahang Barat")
+                .ownerDetails("owner4")
+                .buildUser(UserType.OWNER);
+        User regular3 = new UserBuilder("Pepsi", "Milo", "milo1234", "pepsi@abc.com", "abc123", "Jalan Pjs 11/20, Bandar Sunway,")
+                .regularDetails("regular3")
+                .buildUser(UserType.REGULAR);
+        User admin2 = new UserBuilder("Lemon", "Lime", "lime0101", "lemon@abc.com", "abc123", "69, Taman Good, 69420")
+                .adminDetails("admin2")
+                .buildUser(UserType.ADMIN);
+        User agent3 = new UserBuilder("Jamie", "Bonds", "agent007", "agent007@abc.com", "abc123", "19-01, Jln Padi Emas 3/1, Bahru")
+                .agentDetails("agent3")
+                .buildUser(UserType.AGENT);
+        User regular4 = new UserBuilder("Elon", "Must", "mustelon", "abcg4@abc.com", "abc123", "11, Taman Very Ok, 14000 Pulau Pinang")
+                .regularDetails("regular4")
+                .buildUser(UserType.REGULAR);
 
         userDataModel.adminCreateUser(admin0101, admin0101);
         userDataModel.adminCreateUser(admin0101, owner3);
@@ -109,61 +137,10 @@ public class TestCases extends Application {
     }
 
     private void registerProperties(){
-        User ownerUser1 = userDataModel.loginUser("owner3", "abc123");
-        User ownerUser2 = userDataModel.loginUser("owner4", "abc123");
-
-        Property property1 = new PropertyBuilder(ownerUser1, PropertyType.CONDO, "Happy house", "Taman 69")
-                .address(new Address("69, Lorong Six Nine", "Taman 69", "Cyberjaya", "Selangor", 14000, "Malaysia"))
-                .isActive(true)
-                .description("A nice house with a cheap rental beside the greatest uni MMU")
-                .roomInfo("1 master room and 2 bed room with 1 kitchen and 1 living room")
-                .facilityTypes(new ArrayList<>(Arrays.asList(FacilityType.AIRCOND, FacilityType.SWIMMING_POOL, FacilityType.FRIDGE, FacilityType.WIFI)))
-                .buildProperty();
-
-        Property property2 = new PropertyBuilder(ownerUser1, PropertyType.BUNGALOW, "Sad house", "Taman 420")
-                .address(new Address("420, Lorong Weed", "Taman 420", "Cyberjaya", "Selangor", 14000, "Malaysia"))
-                .isActive(true)
-                .description("A bad house with a cheap rental beside the greatest uni MMU")
-                .roomInfo("1 master room and 2 bed room with 1 kitchen and 1 living room")
-                .facilityTypes(new ArrayList<>(Arrays.asList(FacilityType.AIRCOND)))
-                .buildProperty();
-
-        Property property3 = new PropertyBuilder(ownerUser1, PropertyType.BUNGALOW, "Average house", "Taman 789")
-                .address(new Address("420, Lorong Weed", "Taman 420", "Cyberjaya", "Selangor", 14000, "Malaysia"))
-                .isActive(true)
-                .description("A bad house with a cheap rental beside the greatest uni MMU")
-                .roomInfo("1 master room and 2 bed room with 1 kitchen and 1 living room")
-                .facilityTypes(new ArrayList<>(Arrays.asList(FacilityType.AIRCOND, FacilityType.SWIMMING_POOL, FacilityType.WIFI)))
-                .buildProperty();
-        Property property4 = new PropertyBuilder(ownerUser1, PropertyType.BUNGALOW, "Haunted house", "Taman 456")
-                .address(new Address("420, Lorong Weed", "Taman 420", "Cyberjaya", "Selangor", 14000, "Malaysia"))
-                .isActive(true)
-                .description("A bad house with a cheap rental beside the greatest uni MMU")
-                .roomInfo("1 master room and 2 bed room with 1 kitchen and 1 living room")
-                .facilityTypes(new ArrayList<>(Arrays.asList(FacilityType.SWIMMING_POOL, FacilityType.TV, FacilityType.AIRCOND)))
-                .buildProperty();
-
-        Property property5 = new PropertyBuilder(ownerUser2, PropertyType.BUNGALOW, "Temple", "Taman 123")
-                .address(new Address("420, Lorong Weed", "Taman 420", "Cyberjaya", "Selangor", 14000, "Malaysia"))
-                .isActive(true)
-                .description("A bad house with a cheap rental beside the greatest uni MMU")
-                .roomInfo("1 master room and 2 bed room with 1 kitchen and 1 living room")
-                .facilityTypes(new ArrayList<>(Arrays.asList(FacilityType.AIRCOND, FacilityType.TV, FacilityType.WATER_HEATER, FacilityType.FRIDGE, FacilityType.SWIMMING_POOL)))
-                .buildProperty();
-
-        Property property6 = new PropertyBuilder(ownerUser2, PropertyType.DOUBLE_STORY, "Temple", "Taman 123")
-                .address(new Address("666, lorong DN", "Taman Malay", "Cyberjaya", "Selangor", 14000, "Malaysia"))
-                .isActive(false)
-                .roomInfo("6 bathrooms, no bed")
-                .facilityTypes(new ArrayList<>(Arrays.asList(FacilityType.AIRCOND, FacilityType.TV, FacilityType.WATER_HEATER, FacilityType.SWIMMING_POOL)))
-                .buildProperty();
-
-        propertyDataModel.addProperty((Owner) ownerUser1, property1);
-        propertyDataModel.addProperty((Owner) ownerUser1, property2);
-        propertyDataModel.addProperty((Owner) ownerUser1, property3);
-        propertyDataModel.addProperty((Owner) ownerUser1, property4);
-        propertyDataModel.addProperty((Owner) ownerUser2, property5);
-        propertyDataModel.addProperty((Owner) ownerUser2, property6);
+        propertyData = new TestProperties().getTestProperties();
+        for (Property property:propertyData){
+            propertyDataModel.addProperty((Owner) property.getOwner(), property);
+        }
     }
 
 
@@ -178,8 +155,10 @@ public class TestCases extends Application {
             for (User user:pendingUsers){
                 userDataModel.approveUser(currentUser, user);
             }
-        } catch (Exception e){
-            e.printStackTrace();
+        } catch (IllegalArgumentException e){
+            System.out.println("The user do not exists!");
+        } catch (IllegalAccessException e){
+            System.out.println("You must be admin to approve users!");
         }
     }
 
@@ -190,13 +169,14 @@ public class TestCases extends Application {
     }
 
     private void addComments(){
-        User adminUser = userDataModel.loginUser("admin0101", "abc123");
+        User adminUser1 = userDataModel.loginUser("admin0101", "abc123");
+        User adminUser2 = userDataModel.loginUser("lime0101", "abc123");
         Property firstProperty = propertyDataModel.getPropertiesData().get(0);
         try {
-            propertyDataModel.addComment(adminUser, firstProperty, "This unit is shit af man dont rent it");
-            propertyDataModel.addComment(adminUser, firstProperty, "This unit is good someone hacked my account, dont trust above comment");
+            propertyDataModel.addComment(adminUser1, firstProperty, "A very interesting unit");
+            propertyDataModel.addComment(adminUser2, firstProperty, "Looks cosy!");
         } catch (IllegalAccessException e){
-            e.printStackTrace();
+            System.out.println("You must be admin to add comments!");
         }
     }
 
@@ -206,7 +186,7 @@ public class TestCases extends Application {
         try {
             propertyDataModel.setPropertyActive(adminUser, firstProperty, false);
         } catch (IllegalAccessException e) {
-            e.printStackTrace();
+            System.out.println("You are not authorized to add comments!");
         }
 
     }
@@ -214,6 +194,13 @@ public class TestCases extends Application {
     private void searchByFacility(){
         propertyData = propertyDataModel.getPropertyByFacilityType(new ArrayList<>(Arrays.asList(FacilityType.WATER_HEATER)));
         System.out.println(propertyData);
+    }
+
+    private void testFilterProperties(){
+        propertyData = propertyDataModel.filterProperty(PropertyType.BUNGALOW, userDataModel.getUserByUsername("owner3"), null);
+        for(Property property:propertyData){
+            System.out.println(property.getName());
+        }
     }
 
 }

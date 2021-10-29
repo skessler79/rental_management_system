@@ -220,9 +220,20 @@ public class UserDataModel {
         return loadData(userType, false);
     }
 
-    //public method to get user data
-    public User getUserById(String id){
+    //public method to get user data by username
+    public User getUserByUsername(String username){
         userData = getUserData();
+        for (User user:userData){
+            if (user.getUsername().equals(username)){
+                return user;
+            }
+        }
+        return null;
+    }
+
+    //public method to get user data by id
+    public User getUserById(String id, boolean isPending){
+        userData = isPending?getPendingUserData():getUserData();
         for (User user:userData){
             if (user.getId().equals(id)){
                 return user;
