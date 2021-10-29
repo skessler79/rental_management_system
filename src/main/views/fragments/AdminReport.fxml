@@ -32,19 +32,22 @@
          <children>
             <TableView fx:id="ar_table" prefHeight="429.0" prefWidth="1010.0" AnchorPane.bottomAnchor="102.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <columns>
-                <TableColumn fx:id="ar_col_propertyID" prefWidth="250.0" style="-fx-text-background-color: #000000;" text="Property Id" />
-                <TableColumn fx:id="ar_col_propertyType" prefWidth="115.0" text="Property Type" />
-                  <TableColumn fx:id="ar_col_ownerName" prefWidth="150.0" text="Owner Username" />
-                  <TableColumn fx:id="ar_col_isActive" minWidth="0.0" prefWidth="90.0" text="Is Active" />
-                  <TableColumn fx:id="ar_col_facilityTypes" prefWidth="300.0" text="Facility Types" />
-                  <TableColumn fx:id="ar_col_comments" prefWidth="102.800048828125" text="Comments" />
+                <TableColumn fx:id="ar_col_propertyID" prefWidth="174.40000915527344" style="-fx-text-background-color: #000000;" text="Property Id" />
+                <TableColumn fx:id="ar_col_propertyType" prefWidth="113.5999755859375" text="Property Type" />
+                  <TableColumn fx:id="ar_col_project" prefWidth="150.0" text="Property Project" />
+                  <TableColumn fx:id="ar_col_ownerName" prefWidth="128.79998779296875" text="Owner Username" />
+                  <TableColumn fx:id="ar_col_isActive" minWidth="0.0" prefWidth="93.5999755859375" text="Is Active" />
+                  <TableColumn fx:id="ar_col_facilityTypes" prefWidth="242.0" text="Facility Types" />
+                  <TableColumn fx:id="ar_col_comments" prefWidth="106.4000244140625" text="Comments" />
               </columns>
             </TableView>
-            <GridPane layoutY="429.0" prefHeight="104.0" prefWidth="570.0" style="-fx-background-color: #b0c5f6;">
+            <GridPane layoutY="429.0" prefHeight="104.0" prefWidth="1010.0" style="-fx-background-color: #b0c5f6;">
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="497.79998779296875" minWidth="10.0" prefWidth="149.19996337890626" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="775.4000244140625" minWidth="10.0" prefWidth="322.0000366210937" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="775.4000244140625" minWidth="10.0" prefWidth="101.80001220703122" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="497.79998779296875" minWidth="10.0" prefWidth="150.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="775.4000244140625" minWidth="10.0" prefWidth="220.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="775.4000244140625" minWidth="10.0" prefWidth="150.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="775.4000244140625" minWidth="10.0" prefWidth="220.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="775.4000244140625" minWidth="10.0" prefWidth="124.79997558593755" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -88,7 +91,7 @@
                         <Insets left="5.0" />
                      </GridPane.margin>
                   </Label>
-                  <JFXTextField fx:id="ar_textField" alignment="CENTER" focusColor="#ffffff00" prefHeight="34.0" prefWidth="274.0" style="-fx-background-color: white;" unFocusColor="#ffffff00" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                  <JFXTextField fx:id="ar_textField_user" alignment="CENTER" focusColor="#ffffff00" prefHeight="34.0" prefWidth="307.0" style="-fx-background-color: white;" unFocusColor="#ffffff00" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="1.5" top="2.0" />
                      </GridPane.margin></JFXTextField>
@@ -100,29 +103,13 @@
                            </HBox.margin></ChoiceBox>
                      </children>
                   </HBox>
-                  <JFXButton fx:id="ar_btn_filter" alignment="CENTER" prefHeight="26.0" prefWidth="79.0" style="-fx-background-color: #0071C2; -fx-text-fill: white;" text="Filter" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                  <JFXButton fx:id="ar_btn_clear" alignment="CENTER" prefHeight="26.0" prefWidth="79.0" style="-fx-background-color: #0071C2; -fx-text-fill: white;" text="Clear" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-               </children>
-            </GridPane>
-            <GridPane layoutX="568.0" layoutY="429.0" prefHeight="104.0" prefWidth="442.0" style="-fx-background-color: #b0c5f6;">
-              <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="216.199951171875" minWidth="10.0" prefWidth="87.4" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="229.80000000000004" minWidth="10.0" prefWidth="174.20004882812498" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="289.5999755859375" minWidth="10.0" prefWidth="186.199951171875" />
-              </columnConstraints>
-              <rowConstraints>
-                  <RowConstraints maxHeight="60.8" minHeight="10.0" prefHeight="53.59998779296875" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="60.8" minHeight="10.0" prefHeight="53.59998779296875" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="49.60001220703124" minHeight="0.0" prefHeight="49.60001220703124" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <JFXButton fx:id="ar_btn_del" prefHeight="26.0" prefWidth="79.0" style="-fx-background-color: red; -fx-text-fill: white;" text="Delete" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <JFXButton fx:id="ar_btn_filter" alignment="CENTER" prefHeight="26.0" prefWidth="79.0" style="-fx-background-color: #0071C2; -fx-text-fill: white;" text="Filter" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <JFXButton fx:id="ar_btn_clear" alignment="CENTER" prefHeight="26.0" prefWidth="79.0" style="-fx-background-color: #0071C2; -fx-text-fill: white;" text="Clear" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <JFXButton fx:id="ar_btn_del" prefHeight="26.0" prefWidth="79.0" style="-fx-background-color: red; -fx-text-fill: white;" text="Delete" GridPane.columnIndex="3" GridPane.rowIndex="2">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font></JFXButton>
-                  <JFXButton fx:id="ar_btn_facilities" prefHeight="26.0" prefWidth="79.0" style="-fx-background-color: #0071C2; -fx-text-fill: white;" text="Facilities" GridPane.columnIndex="2" />
-                  <JFXButton fx:id="ar_btn_project" prefHeight="26.0" prefWidth="79.0" style="-fx-background-color: #0071C2; -fx-text-fill: white;" text="Projects" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Label prefHeight="26.0" prefWidth="145.0" style="-fx-text-fill: black;" text="View Facility List :" GridPane.columnIndex="1">
+                  <Label prefHeight="26.0" prefWidth="145.0" style="-fx-text-fill: black;" text="Facility Type        :" GridPane.columnIndex="2">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -133,7 +120,7 @@
                         <Insets left="5.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label prefHeight="27.0" prefWidth="165.0" style="-fx-text-fill: black;" text="View Project List :" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Label prefHeight="27.0" prefWidth="165.0" style="-fx-text-fill: black;" text="Project                 :" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -144,7 +131,7 @@
                         <Insets left="5.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label prefHeight="26.0" prefWidth="145.0" style="-fx-text-fill: black;" text="Delete Property  :" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <Label prefHeight="26.0" prefWidth="145.0" style="-fx-text-fill: black;" text="Delete Property  :" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -155,6 +142,14 @@
                         <Insets left="5.0" />
                      </GridPane.margin>
                   </Label>
+                  <JFXTextField fx:id="ar_textField_project" alignment="CENTER" focusColor="#ffffff00" prefHeight="34.0" prefWidth="307.0" style="-fx-background-color: white;" unFocusColor="#ffffff00" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="1.5" top="2.0" />
+                     </GridPane.margin></JFXTextField>
+                  <ChoiceBox fx:id="ar_choiceBox_facility" prefHeight="34.0" prefWidth="320.0" GridPane.columnIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="2.0" top="2.0" />
+                     </GridPane.margin></ChoiceBox>
                </children>
             </GridPane>
          </children>
