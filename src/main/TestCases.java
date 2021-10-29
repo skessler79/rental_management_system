@@ -122,6 +122,12 @@ public class TestCases extends Application {
                 //agent
                 new UserBuilder("Jamie", "Bonds", "agent007", "agent007@abc.com", "abc123", "19-01, Jln Padi Emas 3/1, Bahru")
                         .agentDetails("agent3")
+                        .buildUser(UserType.AGENT),
+                new UserBuilder("Keanu", "River", "river123", "dog4life@abc.com", "abc123", "19-01, Jln Padi Silver 4/5")
+                        .agentDetails("agent3")
+                        .buildUser(UserType.AGENT),
+                new UserBuilder("Jeff", "Buffet", "agent007", "agent007@abc.com", "abc123", "19-01, Jln Padi Emas 3/1, Bahru")
+                        .agentDetails("agent3")
                         .buildUser(UserType.AGENT)
 
         ));
