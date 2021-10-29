@@ -1,59 +1,13 @@
 [
   {
-    "adminDetails": "admin1",
-    "id": "0e1b65f3-61cc-4874-af0a-c613b109c579",
-    "userType": "ADMIN",
-    "firstName": "Aqel",
-    "lastName": "Kumar",
-    "username": "aqel0101",
-    "email": "abc2@abc.com",
+    "agentDetails": "agent3",
+    "id": "2b64ac5b-88e7-40d3-a358-d4b7a8ae610c",
+    "userType": "AGENT",
+    "firstName": "Jamie",
+    "lastName": "Bonds",
+    "username": "agent007",
+    "email": "agent007@abc.com",
     "password": "abc123",
-    "address": "Jalan Permas 10, Bandar Baru Permas Jaya"
-  },
-  {
-    "ownerDetails": "owner1",
-    "propertyList": [],
-    "id": "5e7b038b-6a23-4d21-a3e8-0988004aeb23",
-    "userType": "OWNER",
-    "firstName": "Ali",
-    "lastName": "Tan",
-    "username": "ali0101",
-    "email": "ali@abc.com",
-    "password": "abc123",
-    "address": "19-01, Jln Padi Emas 3/1, Taman Abc, Johor Bahru"
-  },
-  {
-    "ownerDetails": "owner2",
-    "propertyList": [],
-    "id": "11623634-68e7-4364-9178-f4ff3aaacef8",
-    "userType": "OWNER",
-    "firstName": "Ee",
-    "lastName": "Ming",
-    "username": "ee0101",
-    "email": "ee@abc.com",
-    "password": "abc123",
-    "address": " Lorong Kota Permail 11, Taman kota Permai,"
-  },
-  {
-    "regularDetails": "regular1",
-    "id": "6e082c53-f166-40cf-9d6d-181d27409d51",
-    "userType": "REGULAR",
-    "firstName": "Abu",
-    "lastName": "Lim",
-    "username": "abu0202",
-    "email": "abu@abc.com",
-    "password": "abc123",
-    "address": "No. 11 Jln Puah Jaya Taman Setapak Indah Jaya"
-  },
-  {
-    "regularDetails": "regular2",
-    "id": "a6099f62-235b-4992-85a2-fedccf339082",
-    "userType": "REGULAR",
-    "firstName": "Michael",
-    "lastName": "Nickson",
-    "username": "michael4321",
-    "email": "bilebile@abc.com",
-    "password": "abc123",
-    "address": "2 Jln Siu Nam, Johor Bahru"
+    "address": "19-01, Jln Padi Emas 3/1, Bahru"
   }
 ]

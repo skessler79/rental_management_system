@@ -1,7 +1,7 @@
 [
   {
     "adminDetails": "admin2",
-    "id": "fec74481-905b-414f-a81b-cd5fe6d7ac99",
+    "id": "2f3481e4-fa70-4544-8547-89c5cf4c1a19",
     "userType": "ADMIN",
     "firstName": "Admin0101",
     "lastName": "Loo",
@@ -12,7 +12,7 @@
   },
   {
     "adminDetails": "admin2",
-    "id": "28775d73-b80d-473b-8d16-9d7dc71e7d01",
+    "id": "c64dbc03-f7e3-4004-831f-44cce1fac590",
     "userType": "ADMIN",
     "firstName": "Lemon",
     "lastName": "Lime",
@@ -20,16 +20,5 @@
     "email": "lemon@abc.com",
     "password": "abc123",
     "address": "69, Taman Good, 69420"
-  },
-  {
-    "adminDetails": "admin1",
-    "id": "0e1b65f3-61cc-4874-af0a-c613b109c579",
-    "userType": "ADMIN",
-    "firstName": "Aqel",
-    "lastName": "Kumar",
-    "username": "aqel0101",
-    "email": "abc2@abc.com",
-    "password": "abc123",
-    "address": "Jalan Permas 10, Bandar Baru Permas Jaya"
   }
 ]
