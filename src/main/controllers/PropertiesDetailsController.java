@@ -78,7 +78,7 @@ public class PropertiesDetailsController implements Initializable
     private JFXTextField txtAddComment;
 
     @FXML
-    private Button btnAddComment, btnDeleteComment, btnConfirm;
+    private Button btnAddComment, btnDeleteComment, btnConfirm, btnChangeStatus;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
@@ -92,6 +92,12 @@ public class PropertiesDetailsController implements Initializable
             txtAddComment.setVisible(true);
             btnAddComment.setVisible(true);
             btnDeleteComment.setVisible(true);
+        }
+
+        // Change status button
+        if(CurrentSession.currentUser.getUserType() != UserType.REGULAR)
+        {
+            btnChangeStatus.setVisible(true);
         }
     }
 
@@ -167,16 +173,19 @@ public class PropertiesDetailsController implements Initializable
             txtAddComment.clear();
         });
 
-//        btnDeleteComment.setOnAction(actionEvent ->
-//        {
-//            ObservableList<Comment> selectedComments;
-//            selectedComments = listComments.getSelectionModel().getSelectedItems();
-//
-//            for(Comment comment : selectedComments)
-//            {
-//                CurrentSession.
-//            }
-//        });
+        // Change status button
+        btnChangeStatus.setOnAction(actionEvent ->
+        {
+            property.setActive(!property.getIsActive());
+            if(property.getIsActive())
+            {
+                labelStatus.setText("Active");
+            }
+            else
+            {
+                labelStatus.setText("Inactive");
+            }
+        });
     }
 
     private void setComments(Property property)

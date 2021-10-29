@@ -1,12 +1,29 @@
 [
   {
-    "ownerDetails": "owner3",
+    "ownerDetails": "owner2",
     "propertyList": [
-      "d5b80f55-41b7-4877-a7c7-981f870c5280",
-      "117234c0-f50f-446d-ae77-e7476869ebfb",
-      "ff1aaafb-d41a-4420-9f3d-313b01cb53f3",
-      "85dd4611-4624-4d3d-b7da-c0005c32fa43",
-      "a7d369de-0798-4d5f-aed2-eb51b35c3217"
+      "570cdf42-92d6-4ba4-9616-9e9fe5330195",
+      "64b6ab4d-5197-42c0-85d3-63141271b950"
+    ],
+    "id": "dc74cd46-b5e6-46d3-ac93-0d86ae85d15e",
+    "userType": "OWNER",
+    "firstName": "Winson2",
+    "lastName": "Loo2",
+    "username": "owner2",
+    "email": "abc2@abc.com",
+    "password": "abc123",
+    "address": "69, Taman Bad, 69420"
+  },
+  {
+    "ownerDetails": "owner1",
+    "propertyList": [
+      "727c9cbf-012d-43b3-a94f-be2daebba991",
+      "e57eb34b-efb6-4699-be47-2f0f97cdb2fe",
+      "f2732edb-d133-41d6-9d55-2cb7d42f9e8a",
+      "048b91b6-5d69-485b-abc5-264b2f708497",
+      "91fd94e9-6e9b-45fc-99c5-c6820fd50570",
+      "00ae53c2-f592-4039-b464-11f426fc8787",
+      "fae1bed2-a293-4938-8185-53c717d2dd99"
     ],
     "id": "6ac618d2-77f3-450c-a5f8-23cff5097897",
     "userType": "OWNER",
@@ -16,20 +33,5 @@
     "email": "abc1@abc.com",
     "password": "abc123",
     "address": "69, Taman Nice, 69420"
-  },
-  {
-    "ownerDetails": "owner4",
-    "propertyList": [
-      "837cab01-7786-4b0d-a5e9-8545690b9665",
-      "c5a9208c-32bc-4e77-a57c-dd520f3074c7"
-    ],
-    "id": "3c73cbbf-4f1c-45ee-a4cf-7ef2233ea068",
-    "userType": "OWNER",
-    "firstName": "Winson4",
-    "lastName": "Loo2",
-    "username": "owner4",
-    "email": "abc2@abc.com",
-    "password": "abc123",
-    "address": "69, Taman Bad, 69420"
   }
 ]

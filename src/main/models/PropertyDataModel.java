@@ -40,6 +40,19 @@ public class PropertyDataModel {
         return loadData();
     }
 
+    //get property based on projects
+    public ArrayList<Property> getPropertyByProject(String project){
+        ArrayList<Property> output = new ArrayList<>();
+        propertyData = loadData();
+        for (Property property:propertyData){
+            if (property.getProject().toLowerCase().contains(project.toLowerCase())){
+                output.add(property);
+            }
+        }
+
+        return  output;
+    }
+
     //register property with input of current user object and property object
     public ArrayList<Property> getPropertyByFacilityType(ArrayList<FacilityType> targetFacilityTypes) {
         ArrayList<Property> output = new ArrayList<>();
