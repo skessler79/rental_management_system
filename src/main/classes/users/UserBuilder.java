@@ -34,24 +34,16 @@ public class UserBuilder {
     public User buildUser(UserType userType) {
         switch (userType){
             case ADMIN:
-                if (adminDetails == null){
-                    return null;
-                }
+
                 return new Admin(id,firstName,lastName,username,email,password,address, adminDetails);
             case OWNER:
-                if (ownerDetails == null){
-                    return null;
-                }
+
                 return new Owner(id,firstName,lastName,username,email,password,address, ownerDetails, propertyList);
             case AGENT:
-                if (agentDetails == null){
-                    return null;
-                }
+
                 return new Agent(id,firstName,lastName,username,email,password,address, agentDetails);
             case REGULAR:
-                if (regularDetails == null){
-                    return null;
-                }
+
                 return new Regular(id,firstName,lastName,username,email,password,address, regularDetails);
         }
 
