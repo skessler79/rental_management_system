@@ -1,8 +1,8 @@
 [
   {
-    "propertyId": "fa7ce13e-6808-424f-9d2c-cf0d4ba07341",
+    "propertyId": "6d3bca47-8a26-47df-8b00-6d75a5e2c0fd",
     "owner": {
-      "id": "9e004e3d-f15c-4911-99a3-cac546d63888",
+      "id": "a626e444-5e99-4cb7-9aab-861ed15c2002",
       "userType": "OWNER",
       "firstName": "Winson3",
       "lastName": "Loo1",
@@ -27,7 +27,7 @@
     "project": "Taman 69",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T15:52:56.483+0800",
+    "createdAt": "2021-10-29T15:59:57.346+0800",
     "facilityTypes": [
       "AIRCOND",
       "SWIMMING_POOL",
@@ -42,9 +42,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "091bb392-4535-4891-b660-f860b8d0cda6",
+    "propertyId": "7d5b3910-8ffc-4c95-830b-e7f38f21ed2f",
     "owner": {
-      "id": "9e004e3d-f15c-4911-99a3-cac546d63888",
+      "id": "a626e444-5e99-4cb7-9aab-861ed15c2002",
       "userType": "OWNER",
       "firstName": "Winson3",
       "lastName": "Loo1",
@@ -69,7 +69,7 @@
     "project": "Taman 420",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T15:52:56.488+0800",
+    "createdAt": "2021-10-29T15:59:57.348+0800",
     "facilityTypes": [
       "AIRCOND"
     ],
@@ -81,9 +81,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "342f0b07-9253-461e-8246-428f259d3c67",
+    "propertyId": "4ee7b52d-8c95-4a87-9cef-1965c513b421",
     "owner": {
-      "id": "9e004e3d-f15c-4911-99a3-cac546d63888",
+      "id": "a626e444-5e99-4cb7-9aab-861ed15c2002",
       "userType": "OWNER",
       "firstName": "Winson3",
       "lastName": "Loo1",
@@ -108,7 +108,7 @@
     "project": "Taman 789",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T15:52:56.488+0800",
+    "createdAt": "2021-10-29T15:59:57.348+0800",
     "facilityTypes": [
       "AIRCOND",
       "SWIMMING_POOL",
@@ -122,9 +122,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "90c51248-3ebe-4b67-bc98-6159d6015264",
+    "propertyId": "e33f464d-84db-42c4-8d88-de863a1f02f5",
     "owner": {
-      "id": "9e004e3d-f15c-4911-99a3-cac546d63888",
+      "id": "a626e444-5e99-4cb7-9aab-861ed15c2002",
       "userType": "OWNER",
       "firstName": "Winson3",
       "lastName": "Loo1",
@@ -149,7 +149,7 @@
     "project": "Taman 456",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T15:52:56.492+0800",
+    "createdAt": "2021-10-29T15:59:57.348+0800",
     "facilityTypes": [
       "SWIMMING_POOL",
       "TV",
@@ -163,9 +163,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "f22ef525-6f44-4b7a-9cc6-e9e9d79fdb18",
+    "propertyId": "38342b23-1d26-41c9-a6d3-a46175045322",
     "owner": {
-      "id": "0791bb26-9460-48f7-97f9-30c534b6efeb",
+      "id": "872532cd-5da2-4082-8cc2-02386b180b19",
       "userType": "OWNER",
       "firstName": "Winson4",
       "lastName": "Loo2",
@@ -190,7 +190,7 @@
     "project": "Taman 123",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T15:52:56.492+0800",
+    "createdAt": "2021-10-29T15:59:57.348+0800",
     "facilityTypes": [
       "AIRCOND",
       "TV",
@@ -206,14 +206,14 @@
     "commentCount": 0
   },
   {
-    "propertyId": "2e725c9b-8c69-4684-9e4e-cc4bd9bc52ac",
+    "propertyId": "77a5bb50-5062-4e37-b924-b6d4b202759f",
     "owner": {
       "ownerDetails": "owner4",
       "propertyList": [
-        "f22ef525-6f44-4b7a-9cc6-e9e9d79fdb18",
-        "2e725c9b-8c69-4684-9e4e-cc4bd9bc52ac"
+        "38342b23-1d26-41c9-a6d3-a46175045322",
+        "77a5bb50-5062-4e37-b924-b6d4b202759f"
       ],
-      "id": "0791bb26-9460-48f7-97f9-30c534b6efeb",
+      "id": "872532cd-5da2-4082-8cc2-02386b180b19",
       "userType": "OWNER",
       "firstName": "Winson4",
       "lastName": "Loo2",
@@ -238,7 +238,7 @@
     "project": "Taman 123",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T15:52:56.492+0800",
+    "createdAt": "2021-10-29T15:59:57.348+0800",
     "facilityTypes": [
       "AIRCOND",
       "TV",

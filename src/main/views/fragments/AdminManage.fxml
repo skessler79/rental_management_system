@@ -13,13 +13,24 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="681.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controllers.fragments.AdminManageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="681.0" prefWidth="1150.0" style="-fx-background-color: #DDDDDD;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controllers.fragments.AdminManageController">
    <children>
-      <AnchorPane layoutX="39.0" layoutY="20.0" prefHeight="636.0" prefWidth="1091.0" style="-fx-background-color: transparent;">
+      <ImageView fitHeight="166.0" fitWidth="1150.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../../../../resources/images/fragment_topback.png" />
+         </image>
+      </ImageView>
+      <Label prefHeight="51.0" prefWidth="244.0" text="User Management" textFill="WHITE" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="50.0">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="23.0" layoutY="13.0" prefHeight="234.0" prefWidth="603.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="100.0">
          <children>
-            <StackPane layoutX="109.0" layoutY="102.0" prefHeight="145.0" prefWidth="340.0" style="-fx-background-color: #F0FFFF;">
+            <StackPane layoutX="68.0" layoutY="84.0" prefHeight="145.0" prefWidth="340.0" style="-fx-background-color: #F0FFFF;">
                <effect>
                   <DropShadow />
                </effect>
@@ -45,7 +56,7 @@
                   </AnchorPane>
                </children>
             </StackPane>
-            <StackPane layoutX="144.0" layoutY="56.0" prefHeight="114.0" prefWidth="123.0" style="-fx-background-color: #F1B24A;">
+            <StackPane layoutX="103.0" layoutY="38.0" prefHeight="114.0" prefWidth="123.0" style="-fx-background-color: #F1B24A;">
                <children>
                   <ImageView fitHeight="102.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -57,7 +68,7 @@
                   <DropShadow />
                </effect>
             </StackPane>
-            <StackPane layoutX="106.0" layoutY="375.0" prefHeight="144.0" prefWidth="350.0" style="-fx-background-color: #F0FFFF;">
+            <StackPane layoutX="63.0" layoutY="326.0" prefHeight="144.0" prefWidth="350.0" style="-fx-background-color: #F0FFFF;">
                <effect>
                   <DropShadow />
                </effect>
@@ -83,7 +94,7 @@
                   </AnchorPane>
                </children>
             </StackPane>
-            <StackPane layoutX="146.0" layoutY="335.0" prefHeight="114.0" prefWidth="125.0" style="-fx-background-color: #4D774E;">
+            <StackPane layoutX="103.0" layoutY="279.0" prefHeight="114.0" prefWidth="125.0" style="-fx-background-color: #4D774E;">
                <children>
                   <ImageView fitHeight="106.0" fitWidth="106.0" layoutX="105.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -95,9 +106,9 @@
                   <DropShadow />
                </effect>
             </StackPane>
-            <AnchorPane fx:id="anchorpane_total_user" layoutX="561.0" layoutY="14.0" prefHeight="589.0" prefWidth="492.0" style="-fx-background-color: white;">
+            <AnchorPane fx:id="anchorPane_total_user" layoutX="492.0" layoutY="12.0" prefHeight="511.0" prefWidth="492.0" style="-fx-background-color: white;">
                <children>
-                  <BorderPane layoutX="-1.0" layoutY="-1.0" prefHeight="590.0" prefWidth="491.0" style="-fx-background-color: #F0FFFF;">
+                  <BorderPane layoutX="-1.0" layoutY="-1.0" prefHeight="511.0" prefWidth="493.0" style="-fx-background-color: #F0FFFF;">
                      <center>
                         <TableView fx:id="tableview_total_user" editable="true" prefHeight="493.0" prefWidth="470.0" BorderPane.alignment="CENTER">
                           <columns>
@@ -105,6 +116,9 @@
                             <TableColumn fx:id="col_total_user_username" prefWidth="132.0" text="Username" />
                             <TableColumn fx:id="col_total_user_email" prefWidth="194.0" text="Email" />
                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
                         </TableView>
                      </center>
                      <top>
@@ -115,20 +129,20 @@
                         </Label>
                      </top>
                      <bottom>
-                        <HBox alignment="CENTER" prefHeight="60.0" prefWidth="491.0" BorderPane.alignment="CENTER">
+                        <VBox alignment="CENTER" prefHeight="101.0" prefWidth="491.0" spacing="5.0" BorderPane.alignment="CENTER">
                            <children>
-                              <JFXButton fx:id="btn_add_user" alignment="CENTER" prefHeight="44.0" prefWidth="196.0" style="-fx-background-color: #14A76C;" text="Add User">
+                              <JFXButton fx:id="btn_remove_user" alignment="CENTER" prefHeight="44.0" prefWidth="196.0" style="-fx-background-color: #C7493A;" text="Remove User">
                                  <cursor>
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
                               </JFXButton>
-                              <JFXButton fx:id="btn_remove_user" alignment="CENTER" prefHeight="44.0" prefWidth="196.0" style="-fx-background-color: #C7493A;" text="Remove">
+                              <JFXButton fx:id="btn_add_user" alignment="CENTER" prefHeight="44.0" prefWidth="196.0" style="-fx-background-color: rgb(13,163,214);" text="Add New User">
                                  <cursor>
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
                               </JFXButton>
                            </children>
-                        </HBox>
+                        </VBox>
                      </bottom>
                   </BorderPane>
                </children>
@@ -136,11 +150,11 @@
                   <DropShadow />
                </effect>
             </AnchorPane>
-            <AnchorPane fx:id="anchorpane_pending_user" layoutX="561.0" layoutY="14.0" prefHeight="589.0" prefWidth="492.0" style="-fx-background-color: white;">
+            <AnchorPane fx:id="anchorPane_pending_user" layoutX="492.0" layoutY="13.0" prefHeight="470.0" prefWidth="490.0" style="-fx-background-color: white;">
                <children>
-                  <BorderPane layoutX="1.0" prefHeight="590.0" prefWidth="490.0" style="-fx-background-color: #F0FFFF;">
+                  <BorderPane layoutX="-2.0" layoutY="-4.0" prefHeight="511.0" prefWidth="493.0" style="-fx-background-color: #F0FFFF;">
                      <bottom>
-                        <HBox alignment="CENTER" depthTest="DISABLE" prefHeight="56.0" prefWidth="437.0" BorderPane.alignment="CENTER">
+                        <HBox alignment="CENTER" depthTest="DISABLE" prefHeight="56.0" prefWidth="437.0" spacing="20.0" BorderPane.alignment="CENTER">
                            <children>
                               <JFXButton fx:id="btn_reject" alignment="CENTER" prefHeight="32.0" prefWidth="188.0" style="-fx-background-color: #C7493A;" text="Reject">
                                  <cursor>
@@ -166,10 +180,11 @@
                         </Label>
                      </top>
                      <center>
-                        <TableView fx:id="tableview_pending_user" prefHeight="493.0" prefWidth="470.0" BorderPane.alignment="CENTER">
+                        <TableView fx:id="tableview_pending_user" editable="true" prefHeight="403.0" prefWidth="478.0" BorderPane.alignment="CENTER">
                           <columns>
-                            <TableColumn fx:id="col_pending_user_username" prefWidth="75.0" text="Username" />
-                            <TableColumn fx:id="col_pending_user_email" prefWidth="75.0" text="Email" />
+                              <TableColumn fx:id="col_pending_user_id" prefWidth="114.0" text="Pending UserID" />
+                            <TableColumn fx:id="col_pending_user_username" prefWidth="70.0" text="Username" />
+                            <TableColumn fx:id="col_pending_user_email" minWidth="0.0" prefWidth="41.0" text="Email" />
                           </columns>
                            <columnResizePolicy>
                               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -180,6 +195,9 @@
                </children>
             </AnchorPane>
          </children>
+         <effect>
+            <DropShadow />
+         </effect>
       </AnchorPane>
    </children>
 </AnchorPane>
