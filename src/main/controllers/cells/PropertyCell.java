@@ -12,15 +12,11 @@ import java.io.IOException;
 
 public class PropertyCell extends ListCell<Property>
 {
-    private HBox content;
-    private Text name;
-    private Text price;
-
     private PropertyListItemController propertyListItemController;
     private AnchorPane propertyListItem;
     private FXMLLoader loader;
 
-    public PropertyCell()
+    public PropertyCell(boolean editableDetails)
     {
         super();
         loader = new FXMLLoader(getClass().getResource("../../views/fragments/PropertiesListItem.fxml"));
@@ -32,6 +28,7 @@ public class PropertyCell extends ListCell<Property>
             e.printStackTrace();
         }
         propertyListItemController = loader.getController();
+        propertyListItemController.setEditableDetails(editableDetails);
     }
 
     @Override

@@ -25,7 +25,6 @@ import java.util.ResourceBundle;
 
 public class PropertiesDetailsController implements Initializable
 {
-
     @FXML
     private Label labelId;
 
@@ -95,7 +94,7 @@ public class PropertiesDetailsController implements Initializable
         }
 
         // Change status button
-        if(CurrentSession.currentUser.getUserType() != UserType.REGULAR)
+        if(CurrentSession.currentUser.getUserType() == UserType.ADMIN)
         {
             btnChangeStatus.setVisible(true);
         }

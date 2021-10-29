@@ -21,6 +21,8 @@ import main.controllers.cells.PropertyCell;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.ResourceBundle;
 
 public class OwnerManageController extends FragmentController implements Initializable
@@ -39,6 +41,7 @@ public class OwnerManageController extends FragmentController implements Initial
     private Stage window;
     private AnchorPane anchorAddProperties;
     private AddPropertyController addPropertyController;
+    private ArrayList<Property> propertyArrayList;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
@@ -76,7 +79,9 @@ public class OwnerManageController extends FragmentController implements Initial
     {
         // Get list of all properties belonging to current user
         ObservableList<Property> data = FXCollections.observableArrayList();
-        data.addAll(CurrentSession.propertyDataModel.getPropertyByOwner(CurrentSession.currentUser));
+        propertyArrayList = CurrentSession.propertyDataModel.getPropertyByOwner(CurrentSession.currentUser);
+        Collections.sort(propertyArrayList);
+        data.addAll(propertyArrayList);
 
         // Create dynamic ListView of fragments
         listView = new ListView<>(data);
@@ -87,7 +92,7 @@ public class OwnerManageController extends FragmentController implements Initial
             @Override
             public ListCell<Property> call(ListView<Property> propertyListView)
             {
-                return new PropertyCell();
+                return new PropertyCell(true);
             }
         });
         anchorPropertyList.getChildren().clear();

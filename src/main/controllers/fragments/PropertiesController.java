@@ -48,6 +48,7 @@ public class PropertiesController extends FragmentController implements Initiali
     AnchorPane anchorPropertyList;
 
     private ArrayList<FacilityType> facilityTypes;
+    private ArrayList<Property> propertyArrayList;
     private ListView<Property> listView;
 
     @Override
@@ -73,7 +74,9 @@ public class PropertiesController extends FragmentController implements Initiali
 
         // Get list of all active properties
         ObservableList<Property> data = FXCollections.observableArrayList();
-        data.addAll(CurrentSession.propertyDataModel.getPropertyByActive(true));
+        propertyArrayList = CurrentSession.propertyDataModel.getPropertyByActive(true);
+        Collections.sort(propertyArrayList);
+        data.addAll(propertyArrayList);
         displayList(data);
     }
 
@@ -88,7 +91,7 @@ public class PropertiesController extends FragmentController implements Initiali
             @Override
             public ListCell<Property> call(ListView<Property> propertyListView)
             {
-                return new PropertyCell();
+                return new PropertyCell(false);
             }
         });
 

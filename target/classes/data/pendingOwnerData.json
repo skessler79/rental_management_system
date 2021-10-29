@@ -2,7 +2,7 @@
   {
     "ownerDetails": "owner1",
     "propertyList": [],
-    "id": "37d3767d-9763-4c38-a676-8c6c75ea2db1",
+    "id": "35b07bed-c2ad-40a3-8809-c5f2fb89066a",
     "userType": "OWNER",
     "firstName": "Ali",
     "lastName": "Tan",
@@ -14,7 +14,7 @@
   {
     "ownerDetails": "owner2",
     "propertyList": [],
-    "id": "191a9879-c34a-4230-81f1-811e51aed9f5",
+    "id": "85d3ed81-4b8b-4b88-bf58-16e9656f114d",
     "userType": "OWNER",
     "firstName": "Ee",
     "lastName": "Ming",
@@ -24,3 +24,4 @@
     "address": " Lorong Kota Permail 11, Taman kota Permai,"
   }
 ]
+
