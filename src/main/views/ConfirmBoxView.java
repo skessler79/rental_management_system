@@ -30,6 +30,8 @@ public class ConfirmBoxView
         Button yesButton = new Button("Yes");
         Button noButton = new Button("No");
 
+
+
         yesButton.setOnAction(actionEvent ->
         {
             answer = true;
@@ -40,6 +42,14 @@ public class ConfirmBoxView
         {
             answer = false;
             window.close();
+        });
+
+        window.setOnCloseRequest(actionEvent ->
+        {
+            answer = false;
+            actionEvent.consume();
+            window.close();
+
         });
 
         VBox layout = new VBox(10);
