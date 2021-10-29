@@ -1,8 +1,8 @@
 [
   {
-    "propertyId": "350de175-a13a-4248-bda0-f8cacc8eca32",
+    "propertyId": "e97314b2-fed2-4978-b24b-95957a2084e6",
     "owner": {
-      "id": "3b411435-34c2-43bb-8375-dcfeb3670396",
+      "id": "3a32b5b5-7268-4535-bf1f-5bbc56b6cf99",
       "userType": "OWNER",
       "firstName": "Cardi",
       "lastName": "C",
@@ -27,7 +27,7 @@
     "project": "Taman 69",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T20:03:02.303+0800",
+    "createdAt": "2021-10-29T20:17:07.856+0800",
     "facilityTypes": [
       "AIRCOND",
       "SWIMMING_POOL",
@@ -42,9 +42,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "c4b1f43f-e953-4415-bbbb-c0a938e97d8f",
+    "propertyId": "f0e1697e-e29c-4060-bae6-8893b0c3a2e3",
     "owner": {
-      "id": "3b411435-34c2-43bb-8375-dcfeb3670396",
+      "id": "3a32b5b5-7268-4535-bf1f-5bbc56b6cf99",
       "userType": "OWNER",
       "firstName": "Cardi",
       "lastName": "C",
@@ -69,7 +69,7 @@
     "project": "Taman 420",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T20:03:02.304+0800",
+    "createdAt": "2021-10-29T20:17:07.859+0800",
     "facilityTypes": [
       "AIRCOND"
     ],
@@ -81,9 +81,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "2493b6b9-bd83-46dc-a673-4b5a0448edf6",
+    "propertyId": "7f4e486a-614d-4162-a6b0-df4e7858f881",
     "owner": {
-      "id": "3b411435-34c2-43bb-8375-dcfeb3670396",
+      "id": "3a32b5b5-7268-4535-bf1f-5bbc56b6cf99",
       "userType": "OWNER",
       "firstName": "Cardi",
       "lastName": "C",
@@ -108,7 +108,7 @@
     "project": "Taman 789",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T20:03:02.304+0800",
+    "createdAt": "2021-10-29T20:17:07.860+0800",
     "facilityTypes": [
       "AIRCOND",
       "SWIMMING_POOL",
@@ -122,9 +122,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "b93a5f13-f43b-4833-90a8-cef2efe9e53d",
+    "propertyId": "e59f7e40-e63c-4167-a4dc-33a185572ae7",
     "owner": {
-      "id": "3b411435-34c2-43bb-8375-dcfeb3670396",
+      "id": "3a32b5b5-7268-4535-bf1f-5bbc56b6cf99",
       "userType": "OWNER",
       "firstName": "Cardi",
       "lastName": "C",
@@ -149,7 +149,7 @@
     "project": "Taman 789",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T20:03:02.304+0800",
+    "createdAt": "2021-10-29T20:17:07.860+0800",
     "facilityTypes": [
       "AIRCOND",
       "SWIMMING_POOL",
@@ -163,9 +163,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "ce0a4a5d-871b-4187-892d-2c1970f8eb51",
+    "propertyId": "0f988518-fe25-4b0f-a19a-67f1fdbd1410",
     "owner": {
-      "id": "3b411435-34c2-43bb-8375-dcfeb3670396",
+      "id": "3a32b5b5-7268-4535-bf1f-5bbc56b6cf99",
       "userType": "OWNER",
       "firstName": "Cardi",
       "lastName": "C",
@@ -190,7 +190,7 @@
     "project": "Taman 456",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T20:03:02.304+0800",
+    "createdAt": "2021-10-29T20:17:07.862+0800",
     "facilityTypes": [
       "SWIMMING_POOL",
       "TV",
@@ -204,9 +204,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "fe86ab8a-9a43-4671-9816-84ebaea7b704",
+    "propertyId": "f5c5b3b5-b0ad-4aa6-8dfe-7705594b5988",
     "owner": {
-      "id": "781e1347-a8f9-4ca1-90d2-50fcfacf437f",
+      "id": "242b2277-eb2b-46a2-9d4b-3d3ded828bb8",
       "userType": "OWNER",
       "firstName": "Cola",
       "lastName": "Sprite",
@@ -231,7 +231,7 @@
     "project": "Taman 123",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T20:03:02.304+0800",
+    "createdAt": "2021-10-29T20:17:07.862+0800",
     "facilityTypes": [
       "AIRCOND",
       "TV",
@@ -247,14 +247,14 @@
     "commentCount": 0
   },
   {
-    "propertyId": "a245e8a8-78b8-4cfc-8b88-ff49f6d83813",
+    "propertyId": "50f137ee-5b25-4775-919c-a1da7ac25d90",
     "owner": {
       "ownerDetails": "owner4",
       "propertyList": [
-        "fe86ab8a-9a43-4671-9816-84ebaea7b704",
-        "a245e8a8-78b8-4cfc-8b88-ff49f6d83813"
+        "f5c5b3b5-b0ad-4aa6-8dfe-7705594b5988",
+        "50f137ee-5b25-4775-919c-a1da7ac25d90"
       ],
-      "id": "781e1347-a8f9-4ca1-90d2-50fcfacf437f",
+      "id": "242b2277-eb2b-46a2-9d4b-3d3ded828bb8",
       "userType": "OWNER",
       "firstName": "Cola",
       "lastName": "Sprite",
@@ -279,7 +279,7 @@
     "project": "Taman 123",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T20:03:02.304+0800",
+    "createdAt": "2021-10-29T20:17:07.862+0800",
     "facilityTypes": [
       "AIRCOND",
       "TV",
