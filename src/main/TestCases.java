@@ -30,15 +30,22 @@ public class TestCases extends Application {
     private ArrayList<User> userData;
     private ArrayList<Property> propertyData;
 
-    public void startTest(){
-        registerUsers();
-        loginUser();
-        approveUsers();
-        registerProperties();
-        getPropertiesByOwner();
-        addComments();
-        changeStatus();
-        searchByFacility();
+    @Override
+    public void start(Stage stage) throws Exception {
+        populateData();
+        testFilterProperties();
+    }
+
+
+    private void startTest(){
+//        registerUsers();
+//        loginUser();
+//        approveUsers();
+//        registerProperties();
+//        getPropertiesByOwner();
+//        addComments();
+//        changeStatus();
+//        searchByFacility();
     }
 
     private void populateData() throws IOException, IllegalAccessException {
@@ -73,7 +80,7 @@ public class TestCases extends Application {
         User agent1 = new UserBuilder("Winson3", "Loo3", "agent1", "abc3@abc.com", "abc123", "69, Taman Nice, 69420").agentDetails("agent1").buildUser(UserType.AGENT);
         User regular2 = new UserBuilder("Winson4", "Loo4", "regular2", "abc4@abc.com", "abc123", "69, Taman Nice, 69420").regularDetails("regular2").buildUser(UserType.REGULAR);
 
-       try{
+        try{
             userDataModel.registerUser(owner1);
             userDataModel.registerUser(regular1);
             userDataModel.registerUser(admin1);
