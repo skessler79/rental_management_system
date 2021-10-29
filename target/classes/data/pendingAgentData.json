@@ -1,13 +1,13 @@
 [
   {
     "agentDetails": "agent1",
-    "id": "9308883d-643d-4c18-8ea6-85c8be3ea9d2",
+    "id": "0aa20cf3-c033-4f12-8734-9f9b2e92262d",
     "userType": "AGENT",
-    "firstName": "Winson3",
-    "lastName": "Loo3",
-    "username": "agent1",
-    "email": "abc3@abc.com",
+    "firstName": "Johny ",
+    "lastName": "Shallow",
+    "username": "shallow123",
+    "email": "johny@abc.com",
     "password": "abc123",
-    "address": "69, Taman Nice, 69420"
+    "address": "273B Kampar Road"
   }
 ]

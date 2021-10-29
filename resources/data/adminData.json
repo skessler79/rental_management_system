@@ -1,24 +1,79 @@
 [
   {
-    "adminDetails": "admin2",
-    "id": "b8984646-c48c-4284-b296-711103a70a46",
+    "adminDetails": "admin1",
+    "id": "03cdb34e-c065-485c-9831-c2c55cef03d7",
     "userType": "ADMIN",
-    "firstName": "Admin0101",
-    "lastName": "Loo",
-    "username": "admin0101",
-    "email": "admin0101@abc.com",
+    "firstName": "Aqel",
+    "lastName": "Kumar",
+    "username": "aqel0101",
+    "email": "abc2@abc.com",
     "password": "abc123",
-    "address": "69, Taman Good, 69420"
+    "address": "Jalan Permas 10, Bandar Baru Permas Jaya"
   },
   {
-    "adminDetails": "admin2",
-    "id": "67f928c9-afe8-41cf-8b88-e5686a1ef8ef",
-    "userType": "ADMIN",
-    "firstName": "WinsonAdmin2",
-    "lastName": "Loo2",
-    "username": "admin2",
-    "email": "abce2@abc.com",
+    "adminDetails": null,
+    "id": "47f4bbd0-68dd-4352-abc7-4739d35c2420",
+    "userType": "OWNER",
+    "firstName": "Ali",
+    "lastName": "Tan",
+    "username": "ali0101",
+    "email": "ali@abc.com",
     "password": "abc123",
-    "address": "69, Taman Good, 69420"
+    "address": "19-01, Jln Padi Emas 3/1, Taman Abc, Johor Bahru"
+  },
+  {
+    "adminDetails": null,
+    "id": "8d646b95-b742-4c33-a219-25097bd87218",
+    "userType": "OWNER",
+    "firstName": "Ee",
+    "lastName": "Ming",
+    "username": "ee0101",
+    "email": "ee@abc.com",
+    "password": "abc123",
+    "address": " Lorong Kota Permail 11, Taman kota Permai,"
+  },
+  {
+    "adminDetails": null,
+    "id": "b9f5aff6-bdaa-4e3f-84c5-0a59692ba6ba",
+    "userType": "AGENT",
+    "firstName": "Johny ",
+    "lastName": "Shallow",
+    "username": "shallow123",
+    "email": "johny@abc.com",
+    "password": "abc123",
+    "address": "273B Kampar Road"
+  },
+  {
+    "adminDetails": null,
+    "id": "d4bf6543-c550-44b6-98fc-449278dbc5e3",
+    "userType": "REGULAR",
+    "firstName": "Abu",
+    "lastName": "Lim",
+    "username": "abu0202",
+    "email": "abu@abc.com",
+    "password": "abc123",
+    "address": "No. 11 Jln Puah Jaya Taman Setapak Indah Jaya"
+  },
+  {
+    "adminDetails": null,
+    "id": "308f25f4-5d33-4c78-9c2d-8d1db857250f",
+    "userType": "REGULAR",
+    "firstName": "Michael",
+    "lastName": "Nickson",
+    "username": "michael4321",
+    "email": "bilebile@abc.com",
+    "password": "abc123",
+    "address": "2 Jln Siu Nam, Johor Bahru"
+  },
+  {
+    "adminDetails": "admin1",
+    "id": "03cdb34e-c065-485c-9831-c2c55cef03d7",
+    "userType": "ADMIN",
+    "firstName": "Aqel",
+    "lastName": "Kumar",
+    "username": "aqel0101",
+    "email": "abc2@abc.com",
+    "password": "abc123",
+    "address": "Jalan Permas 10, Bandar Baru Permas Jaya"
   }
 ]

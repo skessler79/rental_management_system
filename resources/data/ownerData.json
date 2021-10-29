@@ -2,34 +2,34 @@
   {
     "ownerDetails": "owner3",
     "propertyList": [
-      "30ff3c76-2443-4e57-9475-f8afd05112b3",
-      "f3ab2ba9-3dd3-42f5-ae0d-a3687e0ec2c5",
-      "392bcd43-6c3f-42fc-974b-a2b52c02fab1",
-      "73118747-daeb-42a5-a990-995cf86ef3dd",
-      "b3ec910c-417e-44f3-9bc8-d876d5becf49"
+      "350de175-a13a-4248-bda0-f8cacc8eca32",
+      "c4b1f43f-e953-4415-bbbb-c0a938e97d8f",
+      "2493b6b9-bd83-46dc-a673-4b5a0448edf6",
+      "b93a5f13-f43b-4833-90a8-cef2efe9e53d",
+      "ce0a4a5d-871b-4187-892d-2c1970f8eb51"
     ],
-    "id": "0302d8ef-d545-4e6d-8d70-1996d594f206",
+    "id": "3b411435-34c2-43bb-8375-dcfeb3670396",
     "userType": "OWNER",
-    "firstName": "Winson3",
-    "lastName": "Loo1",
+    "firstName": "Cardi",
+    "lastName": "C",
     "username": "owner3",
-    "email": "abc1@abc.com",
+    "email": "cardi@abc.com",
     "password": "abc123",
-    "address": "69, Taman Nice, 69420"
+    "address": "8 Jln Hulu Batu 7 Hulu Ampang"
   },
   {
     "ownerDetails": "owner4",
     "propertyList": [
-      "cdbc9d4c-40f4-40e0-8c63-0679fcefe1fa",
-      "07786557-22b4-458a-8155-640010d69a53"
+      "fe86ab8a-9a43-4671-9816-84ebaea7b704",
+      "a245e8a8-78b8-4cfc-8b88-ff49f6d83813"
     ],
-    "id": "093bc1e4-7579-4f22-a1dc-6eea3af06274",
+    "id": "781e1347-a8f9-4ca1-90d2-50fcfacf437f",
     "userType": "OWNER",
-    "firstName": "Winson4",
-    "lastName": "Loo2",
+    "firstName": "Cola",
+    "lastName": "Sprite",
     "username": "owner4",
-    "email": "abc2@abc.com",
+    "email": "cola@abc.com",
     "password": "abc123",
-    "address": "69, Taman Bad, 69420"
+    "address": "36 Tingkat 3 Persiaran 65C Off Jalan Pahang Barat"
   }
 ]
