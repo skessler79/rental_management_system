@@ -1,24 +1,24 @@
 [
   {
     "regularDetails": "regular3",
-    "id": "770ae64a-1bab-4dc3-8d74-70dba796dec2",
+    "id": "ec32977e-f33b-4f4b-bfe8-0052a80879bd",
     "userType": "REGULAR",
-    "firstName": "Winson3",
-    "lastName": "Loo1",
-    "username": "regular3",
-    "email": "abcd1@abc.com",
+    "firstName": "Pepsi",
+    "lastName": "Milo",
+    "username": "milo1234",
+    "email": "pepsi@abc.com",
     "password": "abc123",
-    "address": "69, Taman Ok, 69420"
+    "address": "Jalan Pjs 11/20, Bandar Sunway,"
   },
   {
     "regularDetails": "regular4",
-    "id": "9a7a144f-ceda-44e9-9f91-38b76c0d7906",
+    "id": "d632ed12-4a99-4d54-a895-ed09260272d3",
     "userType": "REGULAR",
-    "firstName": "WinsonRegular4",
-    "lastName": "Loo4",
-    "username": "regular4",
+    "firstName": "Elon",
+    "lastName": "Must",
+    "username": "mustelon",
     "email": "abcg4@abc.com",
     "password": "abc123",
-    "address": "69, Taman Very Ok, 69420"
+    "address": "11, Taman Very Ok, 14000 Pulau Pinang"
   }
 ]

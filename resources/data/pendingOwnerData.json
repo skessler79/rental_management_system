@@ -2,25 +2,25 @@
   {
     "ownerDetails": "owner1",
     "propertyList": [],
-    "id": "8cf3e1ed-5626-43b2-a745-afc46fb1afc4",
+    "id": "bb68de31-5028-406c-9901-7eabb90107de",
     "userType": "OWNER",
-    "firstName": "Winson1",
-    "lastName": "Loo1",
-    "username": "owner1",
-    "email": "abc1@abc.com",
+    "firstName": "Ali",
+    "lastName": "Tan",
+    "username": "ali0101",
+    "email": "ali@abc.com",
     "password": "abc123",
-    "address": "69, Taman Nice, 69420"
+    "address": "19-01, Jln Padi Emas 3/1, Taman Abc, Johor Bahru"
   },
   {
     "ownerDetails": "owner2",
     "propertyList": [],
-    "id": "96781754-b485-4ee6-bc01-a889007dfd3d",
+    "id": "38b3357f-1d6c-4497-9026-307ff26c64ce",
     "userType": "OWNER",
-    "firstName": "Winson2",
-    "lastName": "Loo2",
-    "username": "owner2",
-    "email": "abc2@abc.com",
+    "firstName": "Ee",
+    "lastName": "Ming",
+    "username": "ee0101",
+    "email": "ee@abc.com",
     "password": "abc123",
-    "address": "69, Taman Bad, 69420"
+    "address": " Lorong Kota Permail 11, Taman kota Permai,"
   }
 ]

@@ -2,34 +2,46 @@
   {
     "ownerDetails": "owner3",
     "propertyList": [
-      "30ff3c76-2443-4e57-9475-f8afd05112b3",
-      "f3ab2ba9-3dd3-42f5-ae0d-a3687e0ec2c5",
-      "392bcd43-6c3f-42fc-974b-a2b52c02fab1",
-      "73118747-daeb-42a5-a990-995cf86ef3dd",
-      "b3ec910c-417e-44f3-9bc8-d876d5becf49"
+      "4a7cbd94-25cc-4948-96c8-b5dc6d34b5f2",
+      "e47a7661-4f0b-4e23-8ed0-fb8202943e98",
+      "ef31f483-85c6-4b57-9eb4-e1331ea53e8d",
+      "420d6f35-6988-4769-898e-abb7d8ff2781",
+      "fda094e7-2ba7-4345-ab46-3068d4f2b436"
     ],
-    "id": "0302d8ef-d545-4e6d-8d70-1996d594f206",
+    "id": "43bc5ffa-d60b-47cc-8e83-d9c7529c9160",
     "userType": "OWNER",
-    "firstName": "Winson3",
-    "lastName": "Loo1",
+    "firstName": "Cardi",
+    "lastName": "C",
     "username": "owner3",
-    "email": "abc1@abc.com",
+    "email": "cardi@abc.com",
     "password": "abc123",
-    "address": "69, Taman Nice, 69420"
+    "address": "8 Jln Hulu Batu 7 Hulu Ampang"
   },
   {
     "ownerDetails": "owner4",
     "propertyList": [
-      "cdbc9d4c-40f4-40e0-8c63-0679fcefe1fa",
-      "07786557-22b4-458a-8155-640010d69a53"
+      "997e1c0d-b305-4556-bd8c-4517e115081c",
+      "e3ef86ba-ddea-4830-ad03-d64cd9822525"
     ],
-    "id": "093bc1e4-7579-4f22-a1dc-6eea3af06274",
+    "id": "9f81082b-7feb-484e-aa67-3a2a6f82adc0",
     "userType": "OWNER",
-    "firstName": "Winson4",
-    "lastName": "Loo2",
+    "firstName": "Cola",
+    "lastName": "Sprite",
     "username": "owner4",
-    "email": "abc2@abc.com",
+    "email": "cola@abc.com",
     "password": "abc123",
-    "address": "69, Taman Bad, 69420"
+    "address": "36 Tingkat 3 Persiaran 65C Off Jalan Pahang Barat"
+  },
+  {
+    "ownerDetails": "owner1",
+    "propertyList": [],
+    "id": "89b7e900-73b2-4da7-bfcb-5fb39940184e",
+    "userType": "OWNER",
+    "firstName": "Ali",
+    "lastName": "Tan",
+    "username": "ali0101",
+    "email": "ali@abc.com",
+    "password": "abc123",
+    "address": "19-01, Jln Padi Emas 3/1, Taman Abc, Johor Bahru"
   }
 ]

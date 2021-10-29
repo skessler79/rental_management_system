@@ -1,15 +1,15 @@
 [
   {
-    "propertyId": "30ff3c76-2443-4e57-9475-f8afd05112b3",
+    "propertyId": "4a7cbd94-25cc-4948-96c8-b5dc6d34b5f2",
     "owner": {
-      "id": "0302d8ef-d545-4e6d-8d70-1996d594f206",
+      "id": "43bc5ffa-d60b-47cc-8e83-d9c7529c9160",
       "userType": "OWNER",
-      "firstName": "Winson3",
-      "lastName": "Loo1",
+      "firstName": "Cardi",
+      "lastName": "C",
       "username": "owner3",
-      "email": "abc1@abc.com",
+      "email": "cardi@abc.com",
       "password": "abc123",
-      "address": "69, Taman Nice, 69420"
+      "address": "8 Jln Hulu Batu 7 Hulu Ampang"
     },
     "agent": null,
     "propertyType": "CONDO",
@@ -27,7 +27,7 @@
     "project": "Taman 69",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T19:52:33.741+0800",
+    "createdAt": "2021-10-29T20:34:51.509+0800",
     "facilityTypes": [
       "AIRCOND",
       "SWIMMING_POOL",
@@ -42,16 +42,16 @@
     "commentCount": 0
   },
   {
-    "propertyId": "f3ab2ba9-3dd3-42f5-ae0d-a3687e0ec2c5",
+    "propertyId": "e47a7661-4f0b-4e23-8ed0-fb8202943e98",
     "owner": {
-      "id": "0302d8ef-d545-4e6d-8d70-1996d594f206",
+      "id": "43bc5ffa-d60b-47cc-8e83-d9c7529c9160",
       "userType": "OWNER",
-      "firstName": "Winson3",
-      "lastName": "Loo1",
+      "firstName": "Cardi",
+      "lastName": "C",
       "username": "owner3",
-      "email": "abc1@abc.com",
+      "email": "cardi@abc.com",
       "password": "abc123",
-      "address": "69, Taman Nice, 69420"
+      "address": "8 Jln Hulu Batu 7 Hulu Ampang"
     },
     "agent": null,
     "propertyType": "BUNGALOW",
@@ -69,7 +69,7 @@
     "project": "Taman 420",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T19:52:33.742+0800",
+    "createdAt": "2021-10-29T20:34:51.511+0800",
     "facilityTypes": [
       "AIRCOND"
     ],
@@ -81,16 +81,16 @@
     "commentCount": 0
   },
   {
-    "propertyId": "392bcd43-6c3f-42fc-974b-a2b52c02fab1",
+    "propertyId": "ef31f483-85c6-4b57-9eb4-e1331ea53e8d",
     "owner": {
-      "id": "0302d8ef-d545-4e6d-8d70-1996d594f206",
+      "id": "43bc5ffa-d60b-47cc-8e83-d9c7529c9160",
       "userType": "OWNER",
-      "firstName": "Winson3",
-      "lastName": "Loo1",
+      "firstName": "Cardi",
+      "lastName": "C",
       "username": "owner3",
-      "email": "abc1@abc.com",
+      "email": "cardi@abc.com",
       "password": "abc123",
-      "address": "69, Taman Nice, 69420"
+      "address": "8 Jln Hulu Batu 7 Hulu Ampang"
     },
     "agent": null,
     "propertyType": "BUNGALOW",
@@ -108,7 +108,7 @@
     "project": "Taman 789",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T19:52:33.742+0800",
+    "createdAt": "2021-10-29T20:34:51.511+0800",
     "facilityTypes": [
       "AIRCOND",
       "SWIMMING_POOL",
@@ -122,16 +122,16 @@
     "commentCount": 0
   },
   {
-    "propertyId": "73118747-daeb-42a5-a990-995cf86ef3dd",
+    "propertyId": "420d6f35-6988-4769-898e-abb7d8ff2781",
     "owner": {
-      "id": "0302d8ef-d545-4e6d-8d70-1996d594f206",
+      "id": "43bc5ffa-d60b-47cc-8e83-d9c7529c9160",
       "userType": "OWNER",
-      "firstName": "Winson3",
-      "lastName": "Loo1",
+      "firstName": "Cardi",
+      "lastName": "C",
       "username": "owner3",
-      "email": "abc1@abc.com",
+      "email": "cardi@abc.com",
       "password": "abc123",
-      "address": "69, Taman Nice, 69420"
+      "address": "8 Jln Hulu Batu 7 Hulu Ampang"
     },
     "agent": null,
     "propertyType": "BUNGALOW",
@@ -149,7 +149,7 @@
     "project": "Taman 789",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T19:52:33.742+0800",
+    "createdAt": "2021-10-29T20:34:51.511+0800",
     "facilityTypes": [
       "AIRCOND",
       "SWIMMING_POOL",
@@ -163,16 +163,16 @@
     "commentCount": 0
   },
   {
-    "propertyId": "b3ec910c-417e-44f3-9bc8-d876d5becf49",
+    "propertyId": "fda094e7-2ba7-4345-ab46-3068d4f2b436",
     "owner": {
-      "id": "0302d8ef-d545-4e6d-8d70-1996d594f206",
+      "id": "43bc5ffa-d60b-47cc-8e83-d9c7529c9160",
       "userType": "OWNER",
-      "firstName": "Winson3",
-      "lastName": "Loo1",
+      "firstName": "Cardi",
+      "lastName": "C",
       "username": "owner3",
-      "email": "abc1@abc.com",
+      "email": "cardi@abc.com",
       "password": "abc123",
-      "address": "69, Taman Nice, 69420"
+      "address": "8 Jln Hulu Batu 7 Hulu Ampang"
     },
     "agent": null,
     "propertyType": "BUNGALOW",
@@ -190,7 +190,7 @@
     "project": "Taman 456",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T19:52:33.742+0800",
+    "createdAt": "2021-10-29T20:34:51.511+0800",
     "facilityTypes": [
       "SWIMMING_POOL",
       "TV",
@@ -204,16 +204,16 @@
     "commentCount": 0
   },
   {
-    "propertyId": "cdbc9d4c-40f4-40e0-8c63-0679fcefe1fa",
+    "propertyId": "997e1c0d-b305-4556-bd8c-4517e115081c",
     "owner": {
-      "id": "093bc1e4-7579-4f22-a1dc-6eea3af06274",
+      "id": "9f81082b-7feb-484e-aa67-3a2a6f82adc0",
       "userType": "OWNER",
-      "firstName": "Winson4",
-      "lastName": "Loo2",
+      "firstName": "Cola",
+      "lastName": "Sprite",
       "username": "owner4",
-      "email": "abc2@abc.com",
+      "email": "cola@abc.com",
       "password": "abc123",
-      "address": "69, Taman Bad, 69420"
+      "address": "36 Tingkat 3 Persiaran 65C Off Jalan Pahang Barat"
     },
     "agent": null,
     "propertyType": "BUNGALOW",
@@ -231,7 +231,7 @@
     "project": "Taman 123",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T19:52:33.742+0800",
+    "createdAt": "2021-10-29T20:34:51.511+0800",
     "facilityTypes": [
       "AIRCOND",
       "TV",
@@ -247,21 +247,21 @@
     "commentCount": 0
   },
   {
-    "propertyId": "07786557-22b4-458a-8155-640010d69a53",
+    "propertyId": "e3ef86ba-ddea-4830-ad03-d64cd9822525",
     "owner": {
       "ownerDetails": "owner4",
       "propertyList": [
-        "cdbc9d4c-40f4-40e0-8c63-0679fcefe1fa",
-        "07786557-22b4-458a-8155-640010d69a53"
+        "997e1c0d-b305-4556-bd8c-4517e115081c",
+        "e3ef86ba-ddea-4830-ad03-d64cd9822525"
       ],
-      "id": "093bc1e4-7579-4f22-a1dc-6eea3af06274",
+      "id": "9f81082b-7feb-484e-aa67-3a2a6f82adc0",
       "userType": "OWNER",
-      "firstName": "Winson4",
-      "lastName": "Loo2",
+      "firstName": "Cola",
+      "lastName": "Sprite",
       "username": "owner4",
-      "email": "abc2@abc.com",
+      "email": "cola@abc.com",
       "password": "abc123",
-      "address": "69, Taman Bad, 69420"
+      "address": "36 Tingkat 3 Persiaran 65C Off Jalan Pahang Barat"
     },
     "agent": null,
     "propertyType": "DOUBLE_STORY",
@@ -279,7 +279,7 @@
     "project": "Taman 123",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T19:52:33.742+0800",
+    "createdAt": "2021-10-29T20:34:51.511+0800",
     "facilityTypes": [
       "AIRCOND",
       "TV",

@@ -1,23 +1,23 @@
 [
   {
     "adminDetails": "admin2",
-    "id": "b8984646-c48c-4284-b296-711103a70a46",
+    "id": "a2d8880d-1d63-4557-9a94-0d8d1f638292",
     "userType": "ADMIN",
     "firstName": "Admin0101",
     "lastName": "Loo",
     "username": "admin0101",
     "email": "admin0101@abc.com",
     "password": "abc123",
-    "address": "69, Taman Good, 69420"
+    "address": "29 Lorong 3/1B Taman Intan Baiduri Kepong"
   },
   {
     "adminDetails": "admin2",
-    "id": "67f928c9-afe8-41cf-8b88-e5686a1ef8ef",
+    "id": "f577a0c3-d60f-487a-a82c-9da44f728af4",
     "userType": "ADMIN",
-    "firstName": "WinsonAdmin2",
-    "lastName": "Loo2",
-    "username": "admin2",
-    "email": "abce2@abc.com",
+    "firstName": "Lemon",
+    "lastName": "Lime",
+    "username": "lime0101",
+    "email": "lemon@abc.com",
     "password": "abc123",
     "address": "69, Taman Good, 69420"
   }

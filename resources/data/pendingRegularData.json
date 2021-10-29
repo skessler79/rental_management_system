@@ -1,24 +1,24 @@
 [
   {
     "regularDetails": "regular1",
-    "id": "48efebe0-e75a-4bf8-a6d2-589b4c41ff5f",
+    "id": "b50852c9-a2aa-454a-8f36-1fe70249807e",
     "userType": "REGULAR",
-    "firstName": "Winson1",
-    "lastName": "Loo1",
-    "username": "regular1",
-    "email": "abc1@abc.com",
+    "firstName": "Abu",
+    "lastName": "Lim",
+    "username": "abu0202",
+    "email": "abu@abc.com",
     "password": "abc123",
-    "address": "69, Taman Nice, 69420"
+    "address": "No. 11 Jln Puah Jaya Taman Setapak Indah Jaya"
   },
   {
     "regularDetails": "regular2",
-    "id": "8f8b0fd5-fd5c-42cf-b97a-ca39223b9a97",
+    "id": "57c937bf-cb9a-4be8-9d08-daf6acb82df2",
     "userType": "REGULAR",
-    "firstName": "Winson4",
-    "lastName": "Loo4",
-    "username": "regular2",
-    "email": "abc4@abc.com",
+    "firstName": "Michael",
+    "lastName": "Nickson",
+    "username": "michael4321",
+    "email": "bilebile@abc.com",
     "password": "abc123",
-    "address": "69, Taman Nice, 69420"
+    "address": "2 Jln Siu Nam, Johor Bahru"
   }
 ]

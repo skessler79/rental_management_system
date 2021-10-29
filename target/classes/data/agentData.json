@@ -1,13 +1,13 @@
 [
   {
     "agentDetails": "agent3",
-    "id": "eb03c385-1924-49cb-a688-5c50f314f640",
+    "id": "2b64ac5b-88e7-40d3-a358-d4b7a8ae610c",
     "userType": "AGENT",
-    "firstName": "WinsonAgent07",
-    "lastName": "Loo3",
-    "username": "agent3",
-    "email": "abcf3@abc.com",
+    "firstName": "Jamie",
+    "lastName": "Bonds",
+    "username": "agent007",
+    "email": "agent007@abc.com",
     "password": "abc123",
-    "address": "69, Taman Excellent, 69420"
+    "address": "19-01, Jln Padi Emas 3/1, Bahru"
   }
 ]
