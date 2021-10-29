@@ -193,7 +193,7 @@ public class AdminManageController extends FragmentController implements Initial
             System.out.println(pendingId);
 
             try {
-                userDataModel.rejectUser(CurrentSession.currentUser, userDataModel.getUserById(pendingId));
+                userDataModel.rejectUser(CurrentSession.currentUser, userDataModel.getUserById(pendingId, true));
             } catch (IllegalAccessException e) {
                 System.out.println("Admin only!");
             } catch (IllegalArgumentException e) {
@@ -223,8 +223,8 @@ public class AdminManageController extends FragmentController implements Initial
             System.out.println(userID);
 
             try {
-                System.out.println(userDataModel.getUserById(userID));
-                userDataModel.approveUser(CurrentSession.currentUser, userDataModel.getUserById(userID));
+                System.out.println(userDataModel.getUserById(userID, true));
+                userDataModel.approveUser(CurrentSession.currentUser, userDataModel.getUserById(userID, true));
             } catch (IllegalAccessException e) {
                 e.printStackTrace();
             }
@@ -255,7 +255,7 @@ public class AdminManageController extends FragmentController implements Initial
 
             System.out.println(userID);
             try {
-                userDataModel.deleteUser(CurrentSession.currentUser, userDataModel.getUserById(userID));
+                userDataModel.deleteUser(CurrentSession.currentUser, userDataModel.getUserById(userID ,false));
             } catch (IllegalAccessException e) {
                 System.out.println("Admin only!");
             } catch (IllegalArgumentException e) {

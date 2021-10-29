@@ -1,24 +1,13 @@
 [
   {
     "regularDetails": "regular1",
-    "id": "48efebe0-e75a-4bf8-a6d2-589b4c41ff5f",
+    "id": "d4bf6543-c550-44b6-98fc-449278dbc5e3",
     "userType": "REGULAR",
-    "firstName": "Winson1",
-    "lastName": "Loo1",
-    "username": "regular1",
-    "email": "abc1@abc.com",
+    "firstName": "Abu",
+    "lastName": "Lim",
+    "username": "abu0202",
+    "email": "abu@abc.com",
     "password": "abc123",
-    "address": "69, Taman Nice, 69420"
-  },
-  {
-    "regularDetails": "regular2",
-    "id": "8f8b0fd5-fd5c-42cf-b97a-ca39223b9a97",
-    "userType": "REGULAR",
-    "firstName": "Winson4",
-    "lastName": "Loo4",
-    "username": "regular2",
-    "email": "abc4@abc.com",
-    "password": "abc123",
-    "address": "69, Taman Nice, 69420"
+    "address": "No. 11 Jln Puah Jaya Taman Setapak Indah Jaya"
   }
 ]
