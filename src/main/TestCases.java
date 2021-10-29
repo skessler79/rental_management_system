@@ -105,35 +105,42 @@ public class TestCases extends Application {
     }
 
     private void registerActualUsers() throws IllegalAccessException {
+        //superAdmin
         User admin0101 = new UserBuilder("Admin0101", "Loo", "admin0101", "admin0101@abc.com", "abc123", "29 Lorong 3/1B Taman Intan Baiduri Kepong")
-                .adminDetails("admin2")
+                .adminDetails("admin0101")
                 .buildUser(UserType.ADMIN);
-        User owner3 = new UserBuilder("Cardi", "C", "owner3", "cardi@abc.com", "abc123", "8 Jln Hulu Batu 7 Hulu Ampang").
-                ownerDetails("owner3")
-                .buildUser(UserType.OWNER);
-        User owner4 = new UserBuilder("Cola", "Sprite", "owner4", "cola@abc.com", "abc123", "36 Tingkat 3 Persiaran 65C Off Jalan Pahang Barat")
-                .ownerDetails("owner4")
-                .buildUser(UserType.OWNER);
-        User regular3 = new UserBuilder("Pepsi", "Milo", "milo1234", "pepsi@abc.com", "abc123", "Jalan Pjs 11/20, Bandar Sunway,")
-                .regularDetails("regular3")
-                .buildUser(UserType.REGULAR);
-        User admin2 = new UserBuilder("Lemon", "Lime", "lime0101", "lemon@abc.com", "abc123", "69, Taman Good, 69420")
-                .adminDetails("admin2")
-                .buildUser(UserType.ADMIN);
-        User agent3 = new UserBuilder("Jamie", "Bonds", "agent007", "agent007@abc.com", "abc123", "19-01, Jln Padi Emas 3/1, Bahru")
-                .agentDetails("agent3")
-                .buildUser(UserType.AGENT);
-        User regular4 = new UserBuilder("Elon", "Must", "mustelon", "abcg4@abc.com", "abc123", "11, Taman Very Ok, 14000 Pulau Pinang")
-                .regularDetails("regular4")
-                .buildUser(UserType.REGULAR);
 
-        userDataModel.adminCreateUser(admin0101, admin0101);
-        userDataModel.adminCreateUser(admin0101, owner3);
-        userDataModel.adminCreateUser(admin0101, owner4);
-        userDataModel.adminCreateUser(admin0101, regular3);
-        userDataModel.adminCreateUser(admin0101, admin2);
-        userDataModel.adminCreateUser(admin0101, agent3);
-        userDataModel.adminCreateUser(admin0101, regular4);
+        userData = new ArrayList<>(Arrays.asList(
+                //admin
+                admin0101,
+                new UserBuilder("Lemon", "Lime", "lime0101", "lemon@abc.com", "abc123", "69, Taman Good, 69420")
+                        .adminDetails("admin2")
+                        .buildUser(UserType.ADMIN),
+                //owner
+                new UserBuilder("Cardi", "C", "owner3", "cardi@abc.com", "abc123", "8 Jln Hulu Batu 7 Hulu Ampang").
+                        ownerDetails("owner3")
+                        .buildUser(UserType.OWNER),
+                new UserBuilder("Cola", "Sprite", "owner4", "cola@abc.com", "abc123", "36 Tingkat 3 Persiaran 65C Off Jalan Pahang Barat")
+                        .ownerDetails("owner4")
+                        .buildUser(UserType.OWNER),
+                //regular user
+                new UserBuilder("Pepsi", "Milo", "milo1234", "pepsi@abc.com", "abc123", "Jalan Pjs 11/20, Bandar Sunway,")
+                        .regularDetails("regular3")
+                        .buildUser(UserType.REGULAR),
+                new UserBuilder("Elon", "Must", "mustelon", "abcg4@abc.com", "abc123", "11, Taman Very Ok, 14000 Pulau Pinang")
+                        .regularDetails("regular4")
+                        .buildUser(UserType.REGULAR),
+                //agent
+                new UserBuilder("Jamie", "Bonds", "agent007", "agent007@abc.com", "abc123", "19-01, Jln Padi Emas 3/1, Bahru")
+                        .agentDetails("agent3")
+                        .buildUser(UserType.AGENT)
+
+        ));
+
+        for(User user:userData){
+
+            userDataModel.adminCreateUser(admin0101, user);
+        }
     }
 
     private void registerProperties(){
