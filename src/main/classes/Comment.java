@@ -52,7 +52,7 @@ public class Comment {
     @Override
     public String toString()
     {
-        String posterName = CurrentSession.userDataModel.getUserById(getPosterId()).getUsername();
+        String posterName = CurrentSession.userDataModel.getUserById(getPosterId(), false).getUsername();
 
         return "(" + posterName + ") : " + getDetails();
     }

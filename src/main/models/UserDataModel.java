@@ -232,8 +232,8 @@ public class UserDataModel {
     }
 
     //public method to get user data by id
-    public User getUserById(String id){
-        userData = getUserData();
+    public User getUserById(String id, boolean isPending){
+        userData = isPending?getPendingUserData():getUserData();
         for (User user:userData){
             if (user.getId().equals(id)){
                 return user;
