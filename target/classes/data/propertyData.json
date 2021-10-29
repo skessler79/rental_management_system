@@ -130,47 +130,5 @@
     "bathRoomCount": -1,
     "comment": [],
     "commentCount": 0
-  },
-  {
-    "propertyId": "64b6ab4d-5197-42c0-85d3-63141271b950",
-    "owner": {
-      "id": "dc74cd46-b5e6-46d3-ac93-0d86ae85d15e",
-      "userType": "OWNER",
-      "firstName": "Winson2",
-      "lastName": "Loo2",
-      "username": "owner2",
-      "email": "abc2@abc.com",
-      "password": "abc123",
-      "address": "69, Taman Bad, 69420"
-    },
-    "agent": null,
-    "propertyType": "DOUBLE_STORY",
-    "name": "Temple",
-    "address": {
-      "roadName": "666, lorong DN",
-      "project": "Taman Malay",
-      "state": "Selangor",
-      "country": "Malaysia",
-      "city": "Cyberjaya",
-      "postcode": 14000
-    },
-    "size": null,
-    "description": null,
-    "project": "Taman 123",
-    "rentalFee": -1.0,
-    "rentalRate": -1.0,
-    "createdAt": "2021-10-29T00:38:24.930+0800",
-    "facilityTypes": [
-      "AIRCOND",
-      "TV",
-      "WATER_HEATER",
-      "SWIMMING_POOL"
-    ],
-    "isActive": false,
-    "tenant": [],
-    "roomInfo": "6 bathrooms, no bed",
-    "bathRoomCount": -1,
-    "comment": [],
-    "commentCount": 0
   }
 ]

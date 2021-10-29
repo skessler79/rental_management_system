@@ -1,6 +1,5 @@
 package main.controllers.fragments;
 
-import com.google.gson.JsonParser;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXRadioButton;
 import com.jfoenix.controls.JFXTextField;
@@ -8,6 +7,7 @@ import javafx.beans.binding.BooleanExpression;
 import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.beans.value.ObservableValueBase;
 import javafx.collections.FXCollections;
@@ -24,6 +24,7 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import main.classes.Comment;
+import main.classes.CurrentSession;
 import main.classes.properties.Property;
 import main.classes.users.Owner;
 import main.enums.FacilityType;
@@ -39,7 +40,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.ResourceBundle;
+import java.util.stream.Stream;
 
 public class AdminReportController implements Initializable {
 
@@ -92,15 +96,16 @@ public class AdminReportController implements Initializable {
 
     private PropertyDataModel propertyDataModel;
 
+    ObservableList<Property> properties;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ar_choiceBox.setItems(ar_choiceBox_list);
         ar_choiceBox.setValue(PropertyType.CONDO);
-        getTable();
+        getTable(CurrentSession.propertyDataModel.getPropertiesData());
 
 // view properties according to propertType (choice box), owner (textfield), active/inactive (radio button)
 // display enum values of propertyTypes and facilityTypes
-
         ar_btn_del.setOnAction(e -> deleteButtonClicked());
         ar_btn_show.setOnAction(e -> filter());
     }
@@ -116,47 +121,24 @@ public class AdminReportController implements Initializable {
 
         System.out.println(propertyId);
         propertyDataModel.deleteProperty(propertyId);
-        getTable();
+        getTable(CurrentSession.propertyDataModel.getPropertiesData());
     }
 
     // Pops up new window that displays properties according to user's criteria
     public void filter() {
+//        getTable(CurrentSession.propertyDataModel.getPropertiesData());
 
-
-        TableView <Property> tableView = new TableView();
-//        TableColumn<Property, String> col_propertyID = new TableColumn<>();
-        TableColumn <Property, PropertyType> col_propertyType = new TableColumn<>("PropertyType");
-        col_propertyType.setCellValueFactory(c -> {
-            ObservableValue<PropertyType> propertYType = new
-            // Fxcollection shit google
-            return ar_choiceBox.getValue();
-        });
-        tableView.getColumns().add(col_propertyType);
-
-        System.out.println(ar_choiceBox.getValue());
-
-        Stage stage = new Stage();
-        stage.setTitle("Filtered Properties");
-
-        HBox hBox = new HBox();
-        hBox.getChildren().add(tableView);
-        Scene scene = new Scene(hBox, 250,250);
-        stage.setScene(scene);
-        stage.show();
-//        TableColumn<Property, String> col_ownerName = new TableColumn<>();
-//        TableColumn<Property, Boolean> col_isActive = new TableColumn<>();
-//        TableColumn<Property, Integer> col_comments = new TableColumn<>();
-//        TableColumn<Property, ArrayList<FacilityType>> col_facilityTypes = new TableColumn<>();
-
+       // getTable(CurrentSession.propertyDataModel.getPropertyByOwner());
 
     }
 
 
     // Returns the whole table
-    public void getTable() {
+    public void getTable(ArrayList<Property> propertiesList) {
         ar_table.getItems().clear();
         propertyDataModel = new PropertyDataModel();
-        ObservableList<Property> properties = FXCollections.observableArrayList(propertyDataModel.getPropertiesData());
+        properties = FXCollections.observableArrayList(propertiesList);
+       // properties = FXCollections.observableArrayList(propertyDataModel.getPropertiesData());
 
         ar_table.getColumns().clear();
         ar_col_propertyID.setCellValueFactory(new PropertyValueFactory<Property, String>("propertyId"));
