@@ -78,7 +78,7 @@ public class PropertyDataModel {
 
     }
 
-    public ArrayList<Property> filterProperty(PropertyType propertyType, User owner, Boolean isActive){
+    public ArrayList<Property> filterProperty(PropertyType propertyType, User owner, Boolean isActive, FacilityType facilityType, String project){
         ArrayList<Property> output = new ArrayList<>();
         if (isActive == null)
             propertyData = loadData();
@@ -103,8 +103,24 @@ public class PropertyDataModel {
             else
                 continue;
 
+            //check facilityType conditions
+            if (facilityType == null)
+                addCounter+=1;
+            else if(property.getFacilityTypes().contains(facilityType))
+                addCounter+=1;
+            else
+                continue;
+
+            //check project conditions
+            if (project == null)
+                addCounter+=1;
+            else if(property.getProject().toLowerCase().contains(project.toLowerCase()))
+                addCounter+=1;
+            else
+                continue;
+
             //if both condition met
-            if (addCounter == 2)
+            if (addCounter == 4)
                 output.add(property);
         }
         return output;
