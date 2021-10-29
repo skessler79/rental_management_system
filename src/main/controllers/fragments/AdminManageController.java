@@ -19,6 +19,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import main.classes.CurrentSession;
 import main.classes.properties.Property;
 import main.classes.users.User;
 import main.enums.FacilityType;
@@ -252,10 +253,21 @@ public class AdminManageController extends FragmentController implements Initial
         alluser = tableview_total_user.getItems();
 
         selectedRows = tableview_total_user.getSelectionModel().getSelectedItems();
+        String userID = selectedRows.get(0).getId();
 
         for (User user: selectedRows) {
             alluser.removeAll(selectedRows);
         }
+
+        System.out.println(userID);
+        try {
+            userDataModel.deleteUser(CurrentSession.currentUser, userDataModel.getUserById(userID));
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+
+        loadTableViewTotalUser();
+        setTotalUserNum();
 
         // TODO remove users
     }
