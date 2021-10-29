@@ -26,6 +26,9 @@ import main.enums.FacilityType;
 import main.enums.PropertyType;
 import main.models.PropertyDataModel;
 import main.models.UserDataModel;
+import main.views.AlertBoxView;
+import main.views.ConfirmBoxView;
+
 import java.util.Collections;
 
 
@@ -39,6 +42,7 @@ import java.util.ResourceBundle;
 public class AdminManageController extends FragmentController implements Initializable {
 
     private UserDataModel userDataModel;
+    private AlertBoxView alertBox;
 
 //    ArrayList<User> pendinguserlist, userlist;
 //    ArrayList<String> usernamelist, pendingusernamelist, emaillist,pendingemailist;
@@ -69,9 +73,6 @@ public class AdminManageController extends FragmentController implements Initial
     private JFXButton btn_accept;
 
     @FXML
-    private JFXListView<String> listview_pending_user;
-
-    @FXML
     private TableView<User> tableview_total_user;
 
     @FXML
@@ -84,7 +85,10 @@ public class AdminManageController extends FragmentController implements Initial
     private TableColumn<User, String> col_total_user_userID;
 
     @FXML
-    private JFXButton btn_remove;
+    private JFXButton btn_add_user;
+
+    @FXML
+    private JFXButton btn_remove_user;
 
     @FXML
     private TableView<User> tableview_pending_user;
@@ -115,7 +119,8 @@ public class AdminManageController extends FragmentController implements Initial
         btn_reject.setOnAction(actionEvent -> rejectPendingUser());
         btn_accept.setOnAction(actionEvent -> acceptPendingUser());
 
-        btn_remove.setOnAction(actionEvent -> removeUser());
+        btn_add_user.setOnAction(actionEvent -> addNewUser());
+        btn_remove_user.setOnAction(actionEvent -> removeUser());
 
     }
 
@@ -228,47 +233,84 @@ public class AdminManageController extends FragmentController implements Initial
         alluser = tableview_total_user.getItems();
 
         selectedRows = tableview_total_user.getSelectionModel().getSelectedItems();
+        String pendingusername = selectedRows.get(0).getUsername();
 
-        for (User user: selectedRows) {
-            alluser.removeAll(selectedRows);
+        boolean result = ConfirmBoxView.display("Reject", "Are you sure you want to reject this User?");
+
+        if(result) {
+
+            for (User user: selectedRows) {
+                alluser.removeAll(selectedRows);
+            }
+
+            System.out.println(pendingusername);
+
+            try {
+                userDataModel.rejectUser(CurrentSession.currentUser, userDataModel.getUserById(pendingusername));
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            }
+
+
+            setPendingUserNum();
+            loadTableViewPendingUser();
         }
+
+
 
         // TODO reject pending users
     }
 
     public void acceptPendingUser() {
+
         ObservableList<User> selectedRows, alluser;
         alluser = tableview_total_user.getItems();
-
         selectedRows = tableview_total_user.getSelectionModel().getSelectedItems();
+        //User userRow = selectedRows.get(0).getClass();
 
-        for (User user: selectedRows) {
-            alluser.removeAll(selectedRows);
+        boolean result = ConfirmBoxView.display("Reject", "Are you sure you want to reject this User?");
+
+        if (result) {
+
+            for (User user: selectedRows) {
+                alluser.removeAll(selectedRows);
+            }
         }
+
+
         //TODO accept pending users
+    }
+
+
+    public void addNewUser() {
+
     }
 
     public void removeUser() {
         ObservableList<User> selectedRows, alluser;
         alluser = tableview_total_user.getItems();
-
         selectedRows = tableview_total_user.getSelectionModel().getSelectedItems();
         String userID = selectedRows.get(0).getId();
 
-        for (User user: selectedRows) {
-            alluser.removeAll(selectedRows);
+        boolean result = ConfirmBoxView.display("Delete", "Are you sure you want to delete the User?");
+
+        if (result) {
+
+            for (User user: selectedRows) {
+                alluser.removeAll(selectedRows);
+            }
+
+            System.out.println(userID);
+            try {
+                userDataModel.deleteUser(CurrentSession.currentUser, userDataModel.getUserById(userID));
+            } catch (IllegalAccessException e) {
+                System.out.println("Admin only!");
+            } catch (IllegalArgumentException e) {
+                AlertBoxView.display("Huh?", "You can't delete yourself buddy");
+            };
+
+            loadTableViewTotalUser();
+            setTotalUserNum();
         }
-
-        System.out.println(userID);
-        try {
-            userDataModel.deleteUser(CurrentSession.currentUser, userDataModel.getUserById(userID));
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        }
-
-        loadTableViewTotalUser();
-        setTotalUserNum();
-
-        // TODO remove users
     }
 }

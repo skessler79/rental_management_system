@@ -95,6 +95,47 @@
                   <DropShadow />
                </effect>
             </StackPane>
+            <AnchorPane fx:id="anchorpane_total_user" layoutX="561.0" layoutY="14.0" prefHeight="589.0" prefWidth="492.0" style="-fx-background-color: white;">
+               <children>
+                  <BorderPane layoutX="-1.0" layoutY="-1.0" prefHeight="590.0" prefWidth="491.0" style="-fx-background-color: #F0FFFF;">
+                     <center>
+                        <TableView fx:id="tableview_total_user" editable="true" prefHeight="493.0" prefWidth="470.0" BorderPane.alignment="CENTER">
+                          <columns>
+                              <TableColumn fx:id="col_total_user_userID" prefWidth="108.0" text="User ID" />
+                            <TableColumn fx:id="col_total_user_username" prefWidth="132.0" text="Username" />
+                            <TableColumn fx:id="col_total_user_email" prefWidth="194.0" text="Email" />
+                          </columns>
+                        </TableView>
+                     </center>
+                     <top>
+                        <Label text="Total User" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </top>
+                     <bottom>
+                        <HBox alignment="CENTER" prefHeight="60.0" prefWidth="491.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <JFXButton fx:id="btn_add_user" alignment="CENTER" prefHeight="44.0" prefWidth="196.0" style="-fx-background-color: #14A76C;" text="Add User">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="btn_remove_user" alignment="CENTER" prefHeight="44.0" prefWidth="196.0" style="-fx-background-color: #C7493A;" text="Remove">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </bottom>
+                  </BorderPane>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
             <AnchorPane fx:id="anchorpane_pending_user" layoutX="561.0" layoutY="14.0" prefHeight="589.0" prefWidth="492.0" style="-fx-background-color: white;">
                <children>
                   <BorderPane layoutX="1.0" prefHeight="590.0" prefWidth="490.0" style="-fx-background-color: #F0FFFF;">
@@ -137,38 +178,6 @@
                      </center>
                   </BorderPane>
                </children>
-            </AnchorPane>
-            <AnchorPane fx:id="anchorpane_total_user" layoutX="561.0" layoutY="14.0" prefHeight="589.0" prefWidth="492.0" style="-fx-background-color: white;">
-               <children>
-                  <BorderPane layoutX="-1.0" layoutY="-1.0" prefHeight="590.0" prefWidth="491.0" style="-fx-background-color: #F0FFFF;">
-                     <center>
-                        <TableView fx:id="tableview_total_user" editable="true" prefHeight="493.0" prefWidth="470.0" BorderPane.alignment="CENTER">
-                          <columns>
-                              <TableColumn fx:id="col_total_user_userID" prefWidth="108.0" text="User ID" />
-                            <TableColumn fx:id="col_total_user_username" prefWidth="132.0" text="Username" />
-                            <TableColumn fx:id="col_total_user_email" prefWidth="194.0" text="Email" />
-                          </columns>
-                        </TableView>
-                     </center>
-                     <bottom>
-                        <JFXButton fx:id="btn_remove" alignment="CENTER" prefHeight="44.0" prefWidth="196.0" style="-fx-background-color: #C7493A;" text="Remove" BorderPane.alignment="CENTER">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </JFXButton>
-                     </bottom>
-                     <top>
-                        <Label text="Total User" BorderPane.alignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="20.0" />
-                           </font>
-                        </Label>
-                     </top>
-                  </BorderPane>
-               </children>
-               <effect>
-                  <DropShadow />
-               </effect>
             </AnchorPane>
          </children>
       </AnchorPane>

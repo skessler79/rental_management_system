@@ -1,5 +1,16 @@
 [
   {
+    "adminDetails": "admin0101 details",
+    "id": "a66c4e96-3370-47e3-a757-d7d9417208db",
+    "userType": "ADMIN",
+    "firstName": "admin1",
+    "lastName": "adminlast1",
+    "username": "admin0101",
+    "email": "abc1@abc.com",
+    "password": "abc123",
+    "address": null
+  },
+  {
     "adminDetails": "admin1",
     "id": "bae5b743-dfa6-4a2a-b2ff-560bcde43829",
     "userType": "ADMIN",
