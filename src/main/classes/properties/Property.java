@@ -33,7 +33,7 @@ public class Property implements Comparable<Property>{
     private ArrayList<Comment> comment;
     private int commentCount;
 
-    public Property(String propertyId, User owner, User agent, PropertyType propertyType, String name, Address address, String size, String description, String project, double rentalFee, double rentalRate, Date createdAt, ArrayList<FacilityType> facilityTypes, boolean isActive, ArrayList<Regular> tenant, String roomInfo, int bathRoomCount, ArrayList<Comment> comment, int commentCount) {
+    public Property(String propertyId, User owner, User agent, PropertyType propertyType, String name, Address address, String size, String description, String project, double rentalFee, double rentalRate, Date createdAt, ArrayList<FacilityType> facilityTypes, boolean isActive, ArrayList<Regular> tenant, String roomInfo, int bathRoomCount, ArrayList<Comment> comment, int commentCount)  {
         this.propertyId = propertyId;
         this.owner = owner;
         this.agent = agent;

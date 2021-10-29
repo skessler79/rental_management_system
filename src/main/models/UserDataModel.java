@@ -141,7 +141,7 @@ public class UserDataModel {
             throw new IllegalAccessException("Only admin can call this!");
         pendingData = loadData(targetUser.getUserType(), true);
         pendingData.removeIf(user -> user.getId().equals(targetUser.getId()));
-        inputData(targetUser.getUserType(),userData,false);
+        inputData(targetUser.getUserType(),pendingData,true);
     }
 
     //edit user based on given user object
