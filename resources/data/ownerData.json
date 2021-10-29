@@ -2,12 +2,13 @@
   {
     "ownerDetails": "owner3",
     "propertyList": [
-      "fa7ce13e-6808-424f-9d2c-cf0d4ba07341",
-      "091bb392-4535-4891-b660-f860b8d0cda6",
-      "342f0b07-9253-461e-8246-428f259d3c67",
-      "90c51248-3ebe-4b67-bc98-6159d6015264"
+      "747250e8-9b78-496e-88a8-6e3b1b48fd66",
+      "d2ff6970-6451-4fdc-8785-51798a808b1b",
+      "4b67f35a-7e3a-4233-b98b-4875f30ffd93",
+      "baede29c-2e61-4998-a6cc-1fdc91900b0b",
+      "58ac8512-8056-4df4-ac31-3b10b1b564ec"
     ],
-    "id": "9e004e3d-f15c-4911-99a3-cac546d63888",
+    "id": "62635d92-55ba-4977-aaca-88ca8dbb67ba",
     "userType": "OWNER",
     "firstName": "Winson3",
     "lastName": "Loo1",
@@ -19,10 +20,10 @@
   {
     "ownerDetails": "owner4",
     "propertyList": [
-      "f22ef525-6f44-4b7a-9cc6-e9e9d79fdb18",
-      "2e725c9b-8c69-4684-9e4e-cc4bd9bc52ac"
+      "eae4a118-f4b7-409f-878e-cc95c7a22605",
+      "bc68782f-bac2-4236-b989-7b14af9b7ac4"
     ],
-    "id": "0791bb26-9460-48f7-97f9-30c534b6efeb",
+    "id": "ecf07d2d-df95-4726-8ac1-48c6f151ae02",
     "userType": "OWNER",
     "firstName": "Winson4",
     "lastName": "Loo2",
