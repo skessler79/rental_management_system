@@ -2,13 +2,13 @@
   {
     "ownerDetails": "owner3",
     "propertyList": [
-      "4a7cbd94-25cc-4948-96c8-b5dc6d34b5f2",
-      "e47a7661-4f0b-4e23-8ed0-fb8202943e98",
-      "ef31f483-85c6-4b57-9eb4-e1331ea53e8d",
-      "420d6f35-6988-4769-898e-abb7d8ff2781",
-      "fda094e7-2ba7-4345-ab46-3068d4f2b436"
+      "4d7d0dff-2822-47fb-94b9-9c9a2970ba6d",
+      "8344181a-248d-4f92-a032-8d7603c6c1c1",
+      "049ee8e1-157a-41af-bdcf-ee56f3564745",
+      "4ffb64d4-c6db-47e5-9655-39a4612ff25a",
+      "6f2e5134-4011-4bd3-b566-2c8bd6ebc5e9"
     ],
-    "id": "43bc5ffa-d60b-47cc-8e83-d9c7529c9160",
+    "id": "b9817ec3-a092-4f8c-806e-27e9f3d33242",
     "userType": "OWNER",
     "firstName": "Cardi",
     "lastName": "C",
@@ -20,10 +20,10 @@
   {
     "ownerDetails": "owner4",
     "propertyList": [
-      "997e1c0d-b305-4556-bd8c-4517e115081c",
-      "e3ef86ba-ddea-4830-ad03-d64cd9822525"
+      "1485816d-b567-4d49-a955-b9b33c505468",
+      "4f63ef81-5164-46a3-bbe8-fd8ac16e8c39"
     ],
-    "id": "9f81082b-7feb-484e-aa67-3a2a6f82adc0",
+    "id": "1d373ebc-cec0-46c4-805d-890361f67e61",
     "userType": "OWNER",
     "firstName": "Cola",
     "lastName": "Sprite",
@@ -31,17 +31,5 @@
     "email": "cola@abc.com",
     "password": "abc123",
     "address": "36 Tingkat 3 Persiaran 65C Off Jalan Pahang Barat"
-  },
-  {
-    "ownerDetails": "owner1",
-    "propertyList": [],
-    "id": "89b7e900-73b2-4da7-bfcb-5fb39940184e",
-    "userType": "OWNER",
-    "firstName": "Ali",
-    "lastName": "Tan",
-    "username": "ali0101",
-    "email": "ali@abc.com",
-    "password": "abc123",
-    "address": "19-01, Jln Padi Emas 3/1, Taman Abc, Johor Bahru"
   }
 ]

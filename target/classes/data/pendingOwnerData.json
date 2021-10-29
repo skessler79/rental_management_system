@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "ownerDetails": "owner1",
+    "propertyList": [],
+    "id": "bb68de31-5028-406c-9901-7eabb90107de",
+    "userType": "OWNER",
+    "firstName": "Ali",
+    "lastName": "Tan",
+    "username": "ali0101",
+    "email": "ali@abc.com",
+    "password": "abc123",
+    "address": "19-01, Jln Padi Emas 3/1, Taman Abc, Johor Bahru"
+  },
+  {
+    "ownerDetails": "owner2",
+    "propertyList": [],
+    "id": "38b3357f-1d6c-4497-9026-307ff26c64ce",
+    "userType": "OWNER",
+    "firstName": "Ee",
+    "lastName": "Ming",
+    "username": "ee0101",
+    "email": "ee@abc.com",
+    "password": "abc123",
+    "address": " Lorong Kota Permail 11, Taman kota Permai,"
+  }
+]

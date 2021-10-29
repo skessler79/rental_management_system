@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "agentDetails": "agent1",
+    "id": "822390d9-128a-49fb-8d25-bcc758f750f1",
+    "userType": "AGENT",
+    "firstName": "Johny ",
+    "lastName": "Shallow",
+    "username": "shallow123",
+    "email": "johny@abc.com",
+    "password": "abc123",
+    "address": "273B Kampar Road"
+  }
+]
