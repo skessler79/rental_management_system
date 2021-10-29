@@ -157,7 +157,7 @@ public class TestCases extends Application {
             }
         } catch (IllegalArgumentException e){
             System.out.println("The user do not exists!");
-        } catch (IllegalAccessException){
+        } catch (IllegalAccessException e){
             System.out.println("You must be admin to approve users!");
         }
     }
@@ -186,7 +186,7 @@ public class TestCases extends Application {
         try {
             propertyDataModel.setPropertyActive(adminUser, firstProperty, false);
         } catch (IllegalAccessException e) {
-            System.out.println("You are not authorized to add comments!")
+            System.out.println("You are not authorized to add comments!");
         }
 
     }
