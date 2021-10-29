@@ -1,8 +1,8 @@
 [
   {
-    "propertyId": "fa7ce13e-6808-424f-9d2c-cf0d4ba07341",
+    "propertyId": "d5b80f55-41b7-4877-a7c7-981f870c5280",
     "owner": {
-      "id": "9e004e3d-f15c-4911-99a3-cac546d63888",
+      "id": "6ac618d2-77f3-450c-a5f8-23cff5097897",
       "userType": "OWNER",
       "firstName": "Winson3",
       "lastName": "Loo1",
@@ -27,7 +27,7 @@
     "project": "Taman 69",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T15:52:56.483+0800",
+    "createdAt": "2021-10-29T17:34:25.634+0800",
     "facilityTypes": [
       "AIRCOND",
       "SWIMMING_POOL",
@@ -42,9 +42,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "091bb392-4535-4891-b660-f860b8d0cda6",
+    "propertyId": "117234c0-f50f-446d-ae77-e7476869ebfb",
     "owner": {
-      "id": "9e004e3d-f15c-4911-99a3-cac546d63888",
+      "id": "6ac618d2-77f3-450c-a5f8-23cff5097897",
       "userType": "OWNER",
       "firstName": "Winson3",
       "lastName": "Loo1",
@@ -69,7 +69,7 @@
     "project": "Taman 420",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T15:52:56.488+0800",
+    "createdAt": "2021-10-29T17:34:25.635+0800",
     "facilityTypes": [
       "AIRCOND"
     ],
@@ -81,9 +81,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "342f0b07-9253-461e-8246-428f259d3c67",
+    "propertyId": "ff1aaafb-d41a-4420-9f3d-313b01cb53f3",
     "owner": {
-      "id": "9e004e3d-f15c-4911-99a3-cac546d63888",
+      "id": "6ac618d2-77f3-450c-a5f8-23cff5097897",
       "userType": "OWNER",
       "firstName": "Winson3",
       "lastName": "Loo1",
@@ -108,7 +108,7 @@
     "project": "Taman 789",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T15:52:56.488+0800",
+    "createdAt": "2021-10-29T17:34:25.635+0800",
     "facilityTypes": [
       "AIRCOND",
       "SWIMMING_POOL",
@@ -122,9 +122,50 @@
     "commentCount": 0
   },
   {
-    "propertyId": "90c51248-3ebe-4b67-bc98-6159d6015264",
+    "propertyId": "85dd4611-4624-4d3d-b7da-c0005c32fa43",
     "owner": {
-      "id": "9e004e3d-f15c-4911-99a3-cac546d63888",
+      "id": "6ac618d2-77f3-450c-a5f8-23cff5097897",
+      "userType": "OWNER",
+      "firstName": "Winson3",
+      "lastName": "Loo1",
+      "username": "owner3",
+      "email": "abc1@abc.com",
+      "password": "abc123",
+      "address": "69, Taman Nice, 69420"
+    },
+    "agent": null,
+    "propertyType": "BUNGALOW",
+    "name": "Average house",
+    "address": {
+      "roadName": "420, Lorong Weed",
+      "project": "Taman 420",
+      "state": "Selangor",
+      "country": "Malaysia",
+      "city": "Cyberjaya",
+      "postcode": 14000
+    },
+    "size": null,
+    "description": "A bad house with a cheap rental beside the greatest uni MMU",
+    "project": "Taman 789",
+    "rentalFee": -1.0,
+    "rentalRate": -1.0,
+    "createdAt": "2021-10-29T17:34:25.635+0800",
+    "facilityTypes": [
+      "AIRCOND",
+      "SWIMMING_POOL",
+      "WIFI"
+    ],
+    "isActive": true,
+    "tenant": [],
+    "roomInfo": "1 master room and 2 bed room with 1 kitchen and 1 living room",
+    "bathRoomCount": -1,
+    "comment": [],
+    "commentCount": 0
+  },
+  {
+    "propertyId": "a7d369de-0798-4d5f-aed2-eb51b35c3217",
+    "owner": {
+      "id": "6ac618d2-77f3-450c-a5f8-23cff5097897",
       "userType": "OWNER",
       "firstName": "Winson3",
       "lastName": "Loo1",
@@ -149,7 +190,7 @@
     "project": "Taman 456",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T15:52:56.492+0800",
+    "createdAt": "2021-10-29T17:34:25.635+0800",
     "facilityTypes": [
       "SWIMMING_POOL",
       "TV",
@@ -163,9 +204,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "f22ef525-6f44-4b7a-9cc6-e9e9d79fdb18",
+    "propertyId": "837cab01-7786-4b0d-a5e9-8545690b9665",
     "owner": {
-      "id": "0791bb26-9460-48f7-97f9-30c534b6efeb",
+      "id": "3c73cbbf-4f1c-45ee-a4cf-7ef2233ea068",
       "userType": "OWNER",
       "firstName": "Winson4",
       "lastName": "Loo2",
@@ -176,7 +217,7 @@
     },
     "agent": null,
     "propertyType": "BUNGALOW",
-    "name": "Temple",
+    "name": "Temple1",
     "address": {
       "roadName": "420, Lorong Weed",
       "project": "Taman 420",
@@ -190,7 +231,7 @@
     "project": "Taman 123",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T15:52:56.492+0800",
+    "createdAt": "2021-10-29T17:34:25.635+0800",
     "facilityTypes": [
       "AIRCOND",
       "TV",
@@ -206,14 +247,14 @@
     "commentCount": 0
   },
   {
-    "propertyId": "2e725c9b-8c69-4684-9e4e-cc4bd9bc52ac",
+    "propertyId": "c5a9208c-32bc-4e77-a57c-dd520f3074c7",
     "owner": {
       "ownerDetails": "owner4",
       "propertyList": [
-        "f22ef525-6f44-4b7a-9cc6-e9e9d79fdb18",
-        "2e725c9b-8c69-4684-9e4e-cc4bd9bc52ac"
+        "837cab01-7786-4b0d-a5e9-8545690b9665",
+        "c5a9208c-32bc-4e77-a57c-dd520f3074c7"
       ],
-      "id": "0791bb26-9460-48f7-97f9-30c534b6efeb",
+      "id": "3c73cbbf-4f1c-45ee-a4cf-7ef2233ea068",
       "userType": "OWNER",
       "firstName": "Winson4",
       "lastName": "Loo2",
@@ -224,7 +265,7 @@
     },
     "agent": null,
     "propertyType": "DOUBLE_STORY",
-    "name": "Temple",
+    "name": "Temple2",
     "address": {
       "roadName": "666, lorong DN",
       "project": "Taman Malay",
@@ -238,7 +279,7 @@
     "project": "Taman 123",
     "rentalFee": -1.0,
     "rentalRate": -1.0,
-    "createdAt": "2021-10-29T15:52:56.492+0800",
+    "createdAt": "2021-10-29T17:34:25.635+0800",
     "facilityTypes": [
       "AIRCOND",
       "TV",
