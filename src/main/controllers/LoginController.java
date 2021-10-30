@@ -42,32 +42,16 @@ public class LoginController implements Initializable
     {
         String username = txt_username_signin.getText();
         String password = pwd_signin.getText();
-        User user = null;
-
-        System.out.println(username);
-        System.out.println(password);
+        User user;
 
         try{
             user = loginModel.login(username, password);
+            main.startApp(user);
         } catch (IllegalArgumentException e){
-            //TODO: handle error with proper error ui
-            AlertBoxView.display("Login Error", "Please fill up both username and password!");
-        }
-
-        if(user == null)
-        {
             AlertBoxView.display("Login Error", "Your login credentials are incorrect!");
-        }
-        else
+        } catch (Exception e)
         {
-            try
-            {
-                main.startApp(user);
-            }
-            catch(Exception e)
-            {
-                e.printStackTrace();
-            }
+            e.printStackTrace();
         }
     }
 
