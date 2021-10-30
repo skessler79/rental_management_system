@@ -94,7 +94,55 @@ public class PropertyDataModel {
         return false;
     }
 
-    //public method for admin report to filter all the property by requirements
+    public ArrayList<Property> filterProperty(PropertyType propertyType,  ArrayList<FacilityType> facilityTypes, String project, String name){
+        ArrayList<Property> output = new ArrayList<>();
+
+        propertyData = getPropertyByActive(true);
+
+        for (Property property:propertyData){
+            int addCounter = 0;
+
+            //check propertType conditions
+            if (propertyType == null)
+                addCounter += 1;
+            else if(property.getPropertyType() == propertyType)
+                addCounter += 1;
+            else
+                continue;
+
+            //check facilityType conditions
+            if (facilityTypes == null)
+                addCounter+=1;
+            else if(checkFilter(property, facilityTypes))
+                addCounter+=1;
+            else
+                continue;
+
+            //check project conditions
+            if (project == null || project == "")
+                addCounter+=1;
+            else if(property.getProject().toLowerCase().contains(project.toLowerCase()))
+                addCounter+=1;
+            else
+                continue;
+
+            //check for name conditions
+            if (name == null || name == "")
+                addCounter+=1;
+            else if(property.getName().toLowerCase().contains(name.toLowerCase()))
+                addCounter+=1;
+            else
+                continue;
+
+            //if both condition met
+            if (addCounter == 4)
+                output.add(property);
+        }
+        return output;
+    }
+
+
+    //Overloaded function of above property with additional owner object and doesnt have property name
     public ArrayList<Property> filterProperty(PropertyType propertyType, User owner, Boolean isActive, ArrayList<FacilityType> facilityTypes, String project){
         ArrayList<Property> output = new ArrayList<>();
         if (isActive == null)
@@ -129,7 +177,7 @@ public class PropertyDataModel {
                 continue;
 
             //check project conditions
-            if (project == null)
+            if (project == null || project == "")
                 addCounter+=1;
             else if(property.getProject().toLowerCase().contains(project.toLowerCase()))
                 addCounter+=1;
@@ -240,6 +288,8 @@ public class PropertyDataModel {
 
     public void removeProperty(Property targetProperty) throws IllegalArgumentException{
         propertyData = loadData();
+        User agent = targetProperty.getAgent();
+        User owner = targetProperty.getOwner();
         boolean exist = false;
         for (Property property:propertyData){
             if (property.getPropertyId().equals(targetProperty.getPropertyId())){

@@ -1,7 +1,7 @@
 [
   {
-    "regularDetails": null,
-    "id": "7988f1da-d2b3-4b0c-b4e5-8af02edecf28",
+    "tenantPropertyId": null,
+    "id": "d2a10b8f-3926-42f0-9d8e-afdfc9c3e9d8",
     "userType": "REGULAR",
     "firstName": "Pepsi",
     "lastName": "Milo",
@@ -11,8 +11,8 @@
     "address": "Jalan Pjs 11/20, Bandar Sunway,"
   },
   {
-    "regularDetails": null,
-    "id": "8265dfac-5b09-44e8-a899-e1a83091291a",
+    "tenantPropertyId": null,
+    "id": "0b5f6cf9-79d4-4adb-82fe-d89d22188744",
     "userType": "REGULAR",
     "firstName": "Elon",
     "lastName": "Must",
@@ -22,8 +22,8 @@
     "address": "11, Taman Very Ok, 14000 Pulau Pinang"
   },
   {
-    "regularDetails": null,
-    "id": "a8a839c0-fc1a-4ef9-bdf4-e84feaec626c",
+    "tenantPropertyId": null,
+    "id": "bd686f76-069f-4570-97e8-00ea735303a9",
     "userType": "REGULAR",
     "firstName": "Adam",
     "lastName": "Tan",
@@ -33,8 +33,8 @@
     "address": "11 Jalan Juru, Bukit Mertajam,"
   },
   {
-    "regularDetails": null,
-    "id": "0407ccce-70ea-4676-981f-1f06eeba7eb8",
+    "tenantPropertyId": null,
+    "id": "a21de3c6-3469-453d-ba1e-729f15719287",
     "userType": "REGULAR",
     "firstName": "Mark",
     "lastName": "Kepen",
@@ -44,8 +44,8 @@
     "address": "55, Taman Very Very Ok, 14000 Pulau Pinang"
   },
   {
-    "regularDetails": null,
-    "id": "1fe7cec0-f254-4b02-96bc-e005e4f4d883",
+    "tenantPropertyId": null,
+    "id": "36b89c6f-b5f8-4d9e-922c-bee499fd8280",
     "userType": "REGULAR",
     "firstName": "Peter",
     "lastName": "Spark",

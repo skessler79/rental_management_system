@@ -1,7 +1,7 @@
 [
   {
-    "regularDetails": null,
-    "id": "2074c662-759b-4cda-8999-9f59708ca3be",
+    "tenantPropertyId": null,
+    "id": "17a63edb-c211-4dd0-ac6e-15169b6db16c",
     "userType": "REGULAR",
     "firstName": "Abu",
     "lastName": "Lim",
@@ -11,8 +11,8 @@
     "address": "No. 11 Jln Puah Jaya Taman Setapak Indah Jaya"
   },
   {
-    "regularDetails": null,
-    "id": "45f071a3-f36b-429a-95ac-504784d0aa26",
+    "tenantPropertyId": null,
+    "id": "b5f62b88-8d7f-45cd-b572-0dbc0d7efe52",
     "userType": "REGULAR",
     "firstName": "Michael",
     "lastName": "Nickson",
