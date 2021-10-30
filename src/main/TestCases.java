@@ -55,7 +55,7 @@ public class TestCases extends Application {
         File folder = new File(path);
         File[] listOfFiles = folder.listFiles();
         for (File file : listOfFiles) {
-            if (file.isFile()) {
+            if (file.isFile() && !file.getName().equals(".gitignore")) {
                 FileWriter fwOb = new FileWriter(path + "/" + file.getName(), false);
                 PrintWriter pwOb = new PrintWriter(fwOb, false);
                 pwOb.flush();

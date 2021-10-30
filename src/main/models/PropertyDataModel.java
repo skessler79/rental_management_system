@@ -7,6 +7,7 @@ import com.google.gson.stream.JsonReader;
 import main.classes.Comment;
 import main.classes.properties.Property;
 import main.classes.users.Admin;
+import main.classes.users.Agent;
 import main.classes.users.Owner;
 import main.classes.users.User;
 import main.enums.FacilityType;
@@ -191,18 +192,6 @@ public class PropertyDataModel {
         return output;
     }
 
-    public void deleteProperty(String propertyId){
-        propertyData = loadData();
-        for (Property property:propertyData){
-            if (property.getPropertyId().equals(propertyId)){
-                propertyData.remove(property);
-                break;
-            }
-        }
-
-        inputData(propertyData);
-    }
-
     //register property with input of current user object and property object
     public void addComment(User currentUser, Property targetProperty, String comment) throws IllegalAccessException{
         if (currentUser.getUserType() != UserType.ADMIN){
@@ -263,8 +252,13 @@ public class PropertyDataModel {
         propertyData = loadData();
         propertyData.add(property);
         currentUser.addPropertyList(property);
-        inputData(propertyData);
+        if (property.getAgent() != null){
+            Agent agentUser = (Agent) property.getAgent();
+            agentUser.addPropertyList(property);
+            userDataModel.editProperty(agentUser);
+        }
         userDataModel.editProperty(currentUser);
+        inputData(propertyData);
     }
 
     public void editProperty(Property targetProperty) throws IllegalArgumentException{
@@ -288,12 +282,16 @@ public class PropertyDataModel {
 
     public void removeProperty(Property targetProperty) throws IllegalArgumentException{
         propertyData = loadData();
-        User agent = targetProperty.getAgent();
+        User agent = targetProperty.getAgent() != null? targetProperty.getAgent() : null;
         User owner = targetProperty.getOwner();
         boolean exist = false;
         for (Property property:propertyData){
             if (property.getPropertyId().equals(targetProperty.getPropertyId())){
                 propertyData.remove(property);
+                userDataModel.userRemoveSelfPropertyListing(owner, targetProperty.getPropertyId());
+                if (agent != null){
+                    userDataModel.userRemoveSelfPropertyListing(agent, targetProperty.getPropertyId());
+                }
                 exist = true;
                 break;
             }
