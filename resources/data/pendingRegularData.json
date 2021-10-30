@@ -1,7 +1,7 @@
 [
   {
     "regularDetails": null,
-    "id": "3d047037-0dcb-4129-993d-457f69573a53",
+    "id": "86ab3cf4-2141-4035-875a-9e8c9ad76e51",
     "userType": "REGULAR",
     "firstName": "Abu",
     "lastName": "Lim",
@@ -12,7 +12,7 @@
   },
   {
     "regularDetails": null,
-    "id": "0cf72c3e-ad2b-4638-b08a-4e1a591268e6",
+    "id": "3ed06df2-0d29-4b3d-8019-c5255bc94f27",
     "userType": "REGULAR",
     "firstName": "Michael",
     "lastName": "Nickson",
@@ -20,16 +20,5 @@
     "email": "bilebile@abc.com",
     "password": "abc123",
     "address": "2 Jln Siu Nam, Johor Bahru"
-  },
-  {
-    "regularDetails": null,
-    "id": "de2258dd-81cf-408b-aacf-648377b5d31e",
-    "userType": "REGULAR",
-    "firstName": null,
-    "lastName": null,
-    "username": "rqwe",
-    "email": "qerw",
-    "password": "rweq",
-    "address": null
   }
 ]
