@@ -91,7 +91,7 @@
                         <Insets left="5.0" />
                      </GridPane.margin>
                   </Label>
-                  <JFXTextField fx:id="ar_textField_user" alignment="CENTER" focusColor="#ffffff00" prefHeight="34.0" prefWidth="307.0" style="-fx-background-color: white;" unFocusColor="#ffffff00" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                  <JFXTextField fx:id="ar_textField_user" alignment="TOP_LEFT" focusColor="#ffffff00" prefHeight="34.0" prefWidth="307.0" style="-fx-background-color: white;" unFocusColor="#ffffff00" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="1.5" top="2.0" />
                      </GridPane.margin></JFXTextField>
@@ -142,7 +142,7 @@
                         <Insets left="5.0" />
                      </GridPane.margin>
                   </Label>
-                  <JFXTextField fx:id="ar_textField_project" alignment="CENTER" focusColor="#ffffff00" prefHeight="34.0" prefWidth="307.0" style="-fx-background-color: white;" unFocusColor="#ffffff00" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                  <JFXTextField fx:id="ar_textField_project" alignment="TOP_LEFT" focusColor="#ffffff00" prefHeight="34.0" prefWidth="307.0" style="-fx-background-color: white;" unFocusColor="#ffffff00" GridPane.columnIndex="3" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="1.5" top="2.0" />
                      </GridPane.margin></JFXTextField>

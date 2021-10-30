@@ -87,44 +87,51 @@ public class AdminReportController implements Initializable {
         // Button for filtering by propertyType, owner username, active/inactive
         ar_btn_filter.setOnAction(e -> {
             ArrayList<Property> list;
+            ArrayList<FacilityType> facilityTypes = new ArrayList<>();
+            facilityTypes.add(ar_choiceBox_facility.getValue());
 
             if (ar_textField_user.getText().trim().isEmpty()) {
+
                 if(ar_textField_project.getText().trim().isEmpty()) {
                     list = CurrentSession.propertyDataModel.filterProperty(
                             ar_choiceBox_property.getValue(),
                             null,
                             ar_choiceBox_activity.getValue(),
-                            CurrentSession.propertyDataModel.getPropertyByFacilityType(ar_choiceBox_facility.getValue()),
+                            facilityTypes,
                             null);
+                    getTable(list);
                 }
                 else {
                     list = CurrentSession.propertyDataModel.filterProperty(
                             ar_choiceBox_property.getValue(),
                             null,
                             ar_choiceBox_activity.getValue(),
-                            CurrentSession.propertyDataModel.getPropertyByFacilityType(ar_choiceBox_facility.getValue()),
+                            facilityTypes,
                             ar_textField_project.getText().trim());
+                    getTable(list);
                 }
-                getTable(list);
             }
             else {
-                if(ar_textField_project.getText().trim().isEmpty()) {
+
+                if (ar_textField_project.getText().trim().isEmpty()) {
                     list = CurrentSession.propertyDataModel.filterProperty(
                             ar_choiceBox_property.getValue(),
                             CurrentSession.userDataModel.getUserByUsername(ar_textField_user.getText().trim()),
                             ar_choiceBox_activity.getValue(),
-                            CurrentSession.propertyDataModel.getPropertyByFacilityType(ar_choiceBox_facility.getValue()),
+                            facilityTypes,
                             null);
+                    getTable(list);
                 }
                 else {
+
                     list = CurrentSession.propertyDataModel.filterProperty(
                             ar_choiceBox_property.getValue(),
                             CurrentSession.userDataModel.getUserByUsername(ar_textField_user.getText().trim()),
                             ar_choiceBox_activity.getValue(),
-                            CurrentSession.propertyDataModel.getPropertyByFacilityType(ar_choiceBox_facility.getValue()),
+                            facilityTypes,
                             ar_textField_project.getText().trim());
+                    getTable(list);
                 }
-                getTable(list);
             }
         });
 
