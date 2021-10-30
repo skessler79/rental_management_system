@@ -254,7 +254,7 @@
                         </GridPane>
                         <HBox layoutX="30.0" layoutY="342.0" prefHeight="71.0" prefWidth="738.0">
                            <children>
-                              <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #1A33D5;" text="Update" textFill="WHITE">
+                              <Button fx:id="btn_update" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #1A33D5;" text="Update" textFill="WHITE">
                                  <HBox.margin>
                                     <Insets top="10.0" />
                                  </HBox.margin>
@@ -262,7 +262,7 @@
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
                               </Button>
-                              <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #DDDDDD;" text="Cancel">
+                              <Button fx:id="btn_cancel" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #DDDDDD;" text="Cancel">
                                  <HBox.margin>
                                     <Insets left="20.0" top="10.0" />
                                  </HBox.margin>
