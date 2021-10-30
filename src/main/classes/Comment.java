@@ -4,6 +4,7 @@ import main.models.UserDataModel;
 
 import java.util.Date;
 
+//this class is used provide more detailed comments
 public class Comment {
     private String commentId;
     private String posterId;

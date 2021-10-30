@@ -1,4 +1,4 @@
-package main;
+package main.TestData;
 
 import main.classes.Address;
 import main.classes.properties.Property;

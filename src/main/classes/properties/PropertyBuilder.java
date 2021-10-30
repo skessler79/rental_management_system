@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.UUID;
 
-// This class is used for builder design pattern (reference to https://stackoverflow.com/questions/222214/managing-constructors-with-many-parameters-in-java/222295#222295)
+// This class is used for builder design pattern (for Property class)
 public class PropertyBuilder {
 
     //required fields

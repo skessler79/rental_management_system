@@ -1,5 +1,6 @@
 package main.classes;
 
+//this class is to provide a more standardize way to input for address (used in property only)
 public class Address {
     private String roadName;
     private String project;
