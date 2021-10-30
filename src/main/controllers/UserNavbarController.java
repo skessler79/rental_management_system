@@ -200,8 +200,6 @@ public class UserNavbarController implements Initializable
     protected void setNewFragment() throws IOException
     {
         fragmentPane = loader.load();
-        fragmentController = loader.getController();
-        fragmentController.setDetails(model.getUser());
         contentPane.getChildren().setAll(fragmentPane);
     }
 }

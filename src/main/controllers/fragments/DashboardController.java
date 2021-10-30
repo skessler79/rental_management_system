@@ -2,10 +2,18 @@ package main.controllers.fragments;
 
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import main.classes.CurrentSession;
 import main.classes.users.User;
+import main.views.AlertBoxView;
+import main.views.ConfirmBoxView;
 
-public class DashboardController extends FragmentController
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class DashboardController extends FragmentController implements Initializable
 {
     @FXML
     private Label txt_usertype;
@@ -25,35 +33,49 @@ public class DashboardController extends FragmentController
     @FXML
     private JFXTextField txt_address;
 
-    // Setters
-    public void setTxt_usertype(String usertype)
-    {
-        this.txt_usertype.setText(usertype);
-    }
+    @FXML
+    private Button btn_update, btn_cancel;
 
-    public void setTxt_username(String username)
-    {
-        this.txt_username.setText(username);
-    }
+    private String username, email, firstname, lastname, address;
 
-    public void setTxt_email(String email)
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle)
     {
-        this.txt_email.setText(email);
-    }
+        setDetails(CurrentSession.currentUser);
 
-    public void setTxt_firstname(String firstname)
-    {
-        this.txt_firstname.setText(firstname);
-    }
+        btn_update.setOnAction(actionEvent ->
+        {
+            boolean confirm = ConfirmBoxView.display("Edit Profile", "Are you sure you want to edit your profile?");
 
-    public void setTxt_lastname(String lastname)
-    {
-        this.txt_lastname.setText(lastname);
-    }
+            if(confirm)
+            {
+                username = txt_username.getText();
+                email = txt_email.getText();
+                firstname = txt_firstname.getText();
+                lastname = txt_lastname.getText();
+                address = txt_address.getText();
 
-    public void setTxt_address(String address)
-    {
-        this.txt_address.setText(address);
+                if(username.isEmpty() || email.isEmpty())
+                {
+                    AlertBoxView.display("Edit Error", "The username and email field cannot be empty!");
+                }
+                else
+                {
+                    CurrentSession.currentUser.setUsername(username);
+                    CurrentSession.currentUser.setEmail(email);
+                    CurrentSession.currentUser.setFirstName(firstname);
+                    CurrentSession.currentUser.setLastName(lastname);
+                    CurrentSession.currentUser.setAddress(address);
+
+                    CurrentSession.userDataModel.editUserProfile(CurrentSession.currentUser);
+                }
+            }
+        });
+
+        btn_cancel.setOnAction(actionEvent ->
+        {
+            setDetails(CurrentSession.currentUser);
+        });
     }
 
     @Override
