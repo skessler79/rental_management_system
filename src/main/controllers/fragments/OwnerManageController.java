@@ -18,17 +18,19 @@ import main.classes.CurrentSession;
 import main.classes.properties.Property;
 import main.controllers.AddPropertyController;
 import main.controllers.cells.PropertyCell;
+import main.enums.UserType;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class OwnerManageController extends FragmentController implements Initializable
 {
     @FXML
-    private Label txt_usertype;
+    private Label txt_usertype, labelTitle;
 
     @FXML
     private AnchorPane anchorFragment, anchorPropertyList;
@@ -47,6 +49,10 @@ public class OwnerManageController extends FragmentController implements Initial
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
         txt_usertype.setText(CurrentSession.currentUser.getUserType().toString());
+
+        labelTitle.setText(CurrentSession.currentUser.getUserType().toString().substring(0, 1) +
+                           CurrentSession.currentUser.getUserType().toString().substring(1).toLowerCase() +
+                           " Manage");
 
         displayList();
         btnYourProperties.setOnAction(actionEvent -> displayList());
@@ -79,7 +85,16 @@ public class OwnerManageController extends FragmentController implements Initial
     {
         // Get list of all properties belonging to current user
         ObservableList<Property> data = FXCollections.observableArrayList();
-        propertyArrayList = CurrentSession.propertyDataModel.getPropertyByOwner(CurrentSession.currentUser);
+
+        if(CurrentSession.currentUser.getUserType() == UserType.OWNER)
+        {
+            propertyArrayList = CurrentSession.propertyDataModel.getPropertyByOwner(CurrentSession.currentUser);
+        }
+        else
+        {
+            propertyArrayList = CurrentSession.propertyDataModel.getPropertyByAgent(CurrentSession.currentUser);
+        }
+
         Collections.sort(propertyArrayList);
         data.addAll(propertyArrayList);
 
