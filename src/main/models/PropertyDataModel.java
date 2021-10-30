@@ -5,11 +5,9 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 import main.classes.Comment;
+import main.classes.CurrentSession;
 import main.classes.properties.Property;
-import main.classes.users.Admin;
-import main.classes.users.Agent;
-import main.classes.users.Owner;
-import main.classes.users.User;
+import main.classes.users.*;
 import main.enums.FacilityType;
 import main.enums.PropertyType;
 import main.enums.UserType;
@@ -280,6 +278,14 @@ public class PropertyDataModel {
         inputData(propertyData);
     }
 
+    public void addTenant(User tenant, Property property){
+        property.addTenant(tenant);
+        Regular tenantRegular = (Regular) tenant;
+        tenantRegular.setTenantPropertyId(property.getPropertyId());
+        editProperty(property);
+        CurrentSession.userDataModel.editUserProfile(tenantRegular);
+    }
+
     public void removeProperty(Property targetProperty) throws IllegalArgumentException{
         propertyData = loadData();
         User agent = targetProperty.getAgent() != null? targetProperty.getAgent() : null;
@@ -317,7 +323,7 @@ public class PropertyDataModel {
     public Property getPropertyById(String id){
         propertyData = loadData();
         for(Property property : propertyData) {
-            if (property.getPropertyId() != null && property.getPropertyId().equals(id)){
+            if (property.getPropertyId().equals(id)){
                 return property;
             }
         }

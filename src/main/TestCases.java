@@ -36,6 +36,7 @@ public class TestCases extends Application {
 //        testFilterProperties();
 //        testEditProfile();
 //        testGetUserByUserType();
+//        testAddTenant();
 
     }
 
@@ -215,6 +216,12 @@ public class TestCases extends Application {
     }
 
     //=========below functions are used to simulate and test functionalities of the models
+
+    private void testAddTenant(){
+        User tenant = userDataModel.loginUser("milo1234", "abc123");
+        Property property = propertyDataModel.getPropertyById("4d0215fa-f6b0-4c26-a709-4adada62a927");
+        propertyDataModel.addTenant(tenant, property);
+    }
 
     private void testLoginUser(){
         currentUser = userDataModel.loginUser("admin0101", "abc123");
