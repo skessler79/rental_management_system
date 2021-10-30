@@ -18,7 +18,8 @@
             <Image url="@../../../../resources/images/fragment_topback.png" />
          </image>
       </ImageView>
-      <Label text="Owner Manage" textFill="WHITE" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="50.0">
+      <Label text="Owner
+      Manage" textFill="WHITE" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="50.0">
          <font>
             <Font name="System Bold" size="26.0" />
          </font>
