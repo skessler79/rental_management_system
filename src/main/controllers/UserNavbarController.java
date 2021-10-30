@@ -20,9 +20,7 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 import main.App;
 import main.classes.users.User;
-import main.controllers.fragments.DashboardController;
 import main.controllers.fragments.FragmentController;
-import main.models.UserNavbarModel;
 import main.views.ConfirmBoxView;
 
 import java.io.IOException;
@@ -47,14 +45,9 @@ public class UserNavbarController implements Initializable
     private FXMLLoader loader;
     private FragmentController fragmentController;
 
-    // Model
-    private UserNavbarModel model;
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-        model = new UserNavbarModel();
-
         try
         {
             loader = new FXMLLoader(getClass().getResource("../views/fragments/Dashboard.fxml"));
@@ -109,7 +102,6 @@ public class UserNavbarController implements Initializable
 
     public void setUser(User user)
     {
-        model.setUser(user);
         fragmentController.setDetails(user);
     }
 
