@@ -15,7 +15,7 @@
    <children>
       <ImageView fitHeight="166.0" fitWidth="1150.0" layoutX="154.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
-            <Image url="@../../../../resources/images/fragment_topback.png" />
+            <Image url="images/fragment_topback.png" />
          </image>
       </ImageView>
       <Label fx:id="labelTitle" text="Owner Manage" textFill="WHITE" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="50.0">
@@ -31,7 +31,7 @@
                      <children>
                         <ImageView fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../resources/images/profile_circle.png" />
+                              <Image url="images/profile_circle.png" />
                            </image>
                            <VBox.margin>
                               <Insets top="5.0" />

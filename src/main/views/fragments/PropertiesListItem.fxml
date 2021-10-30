@@ -11,7 +11,7 @@
    <children>
       <ImageView fx:id="imageProperty" fitHeight="140.0" fitWidth="140.0" layoutX="22.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="18.0" AnchorPane.topAnchor="18.0">
          <image>
-            <Image url="@../../../../resources/images/properties/house4.jpg" />
+            <Image url="images/properties/house4.jpg" />
          </image>
       </ImageView>
       <HBox layoutX="190.0" layoutY="20.0" prefHeight="145.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="176.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="20.0">

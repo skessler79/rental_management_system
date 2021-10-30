@@ -12,7 +12,7 @@
    <children>
       <ImageView fitHeight="166.0" fitWidth="1150.0" layoutX="154.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
-            <Image url="@../../../../resources/images/fragment_topback.png" />
+            <Image url="images/fragment_topback.png" />
          </image>
       </ImageView>
       <Label text="Properties" textFill="WHITE" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="50.0">
@@ -62,7 +62,7 @@
                                     </TextField>
                                     <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER_LEFT">
                                        <image>
-                                          <Image url="@../../../../resources/icons/properties/properties_search.png" />
+                                          <Image url="icons/properties/properties_search.png" />
                                        </image>
                                        <StackPane.margin>
                                           <Insets left="5.0" />
@@ -87,7 +87,7 @@
                                     </TextField>
                                     <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER_LEFT">
                                        <image>
-                                          <Image url="@../../../../resources/icons/properties/properties_location.png" />
+                                          <Image url="icons/properties/properties_location.png" />
                                        </image>
                                        <StackPane.margin>
                                           <Insets left="5.0" />
@@ -112,7 +112,7 @@
                                     </ComboBox>
                                     <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER_LEFT">
                                        <image>
-                                          <Image url="@../../../../resources/icons/properties/properties_type.png" />
+                                          <Image url="icons/properties/properties_type.png" />
                                        </image>
                                        <StackPane.margin>
                                           <Insets left="5.0" />
