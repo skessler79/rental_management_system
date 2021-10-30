@@ -11,7 +11,7 @@
    <children>
       <ImageView fitHeight="166.0" fitWidth="1150.0" layoutX="154.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
-            <Image url="@../../../../resources/images/fragment_topback.png" />
+            <Image url="images/fragment_topback.png" />
          </image>
       </ImageView>
       <Label text="Settings" textFill="WHITE" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="50.0">
@@ -27,7 +27,7 @@
                      <children>
                         <ImageView fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../resources/images/profile_circle.png" />
+                              <Image url="images/profile_circle.png" />
                            </image>
                            <VBox.margin>
                               <Insets top="5.0" />
@@ -123,7 +123,7 @@
                                  <children>
                                     <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../../../../resources/icons/profile/profile_name.png" />
+                                          <Image url="icons/profile/profile_name.png" />
                                        </image>
                                     </ImageView>
                                     <JFXTextField fx:id="txtUsername" editable="false" focusTraversable="false" opacity="0.65" prefHeight="34.0" prefWidth="300.0" text="xX_Aq3L_n0_r3TreaTz_Xx">
@@ -143,7 +143,7 @@
                                  <children>
                                     <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../../../../resources/icons/profile/profile_email.png" />
+                                          <Image url="icons/profile/profile_email.png" />
                                        </image>
                                     </ImageView>
                                     <JFXTextField fx:id="txtEmail" editable="false" focusTraversable="false" opacity="0.65" prefHeight="34.0" prefWidth="300.0" text="scholar@tm.com">
@@ -187,7 +187,7 @@
                                  <children>
                                     <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../../../../resources/icons/profile/profile_name1.png" />
+                                          <Image url="icons/profile/profile_name1.png" />
                                        </image>
                                     </ImageView>
                                     <JFXTextField fx:id="txtFirstname" prefHeight="34.0" prefWidth="300.0" text="Aqel">
@@ -207,7 +207,7 @@
                                  <children>
                                     <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../../../../resources/icons/profile/profile_name1.png" />
+                                          <Image url="icons/profile/profile_name1.png" />
                                        </image>
                                     </ImageView>
                                     <JFXTextField fx:id="txtLastname" prefHeight="34.0" prefWidth="300.0" text="Bin">
@@ -235,7 +235,7 @@
                                  <children>
                                     <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../../../../resources/icons/profile/profile_address.png" />
+                                          <Image url="icons/profile/profile_address.png" />
                                        </image>
                                     </ImageView>
                                     <JFXTextField fx:id="txtAddress" prefHeight="34.0" prefWidth="684.0" text="TM Office">

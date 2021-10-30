@@ -402,7 +402,7 @@ public class PropertyDataModel {
         propertyData = loadData();
         ArrayList<Property> output = new ArrayList<>();
         for(Property property : propertyData) {
-            if (property.getAgent().getId() != null && property.getAgent().getId().equals(id)){
+            if (property.getAgent() != null && property.getAgent().getId().equals(id)){
                 output.add(property);
             }
         }

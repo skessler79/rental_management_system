@@ -11,10 +11,12 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import main.classes.CurrentSession;
+import main.classes.properties.Property;
 import main.classes.users.Regular;
 import main.classes.users.User;
 import main.controllers.PropertiesDetailsController;
 import main.enums.UserType;
+import main.views.AlertBoxView;
 import main.views.ConfirmBoxView;
 
 import java.io.IOException;
@@ -49,6 +51,7 @@ public class DashboardController extends FragmentController implements Initializ
     private AnchorPane anchorPropertyDetails;
     private PropertiesDetailsController propertiesDetailsController;
     private Stage window;
+    private Property myProperty;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
@@ -94,23 +97,31 @@ public class DashboardController extends FragmentController implements Initializ
 
             btnMyProperty.setOnAction(actionEvent ->
             {
-                loader = new FXMLLoader(getClass().getResource("../../views/PropertiesDetails.fxml"));
-                try
+                myProperty = CurrentSession.propertyDataModel.getPropertyById(((Regular)CurrentSession.currentUser).getTenantPropertyId());
+                if(myProperty == null)
                 {
-                    anchorPropertyDetails = loader.load();
-                } catch (IOException e)
-                {
-                    e.printStackTrace();
+                    AlertBoxView.display("No property", "You are not currently occupying a property");
                 }
-                propertiesDetailsController = loader.getController();
+                else
+                {
+                    loader = new FXMLLoader(getClass().getResource("../../views/PropertiesDetails.fxml"));
+                    try
+                    {
+                        anchorPropertyDetails = loader.load();
+                    } catch (IOException e)
+                    {
+                        e.printStackTrace();
+                    }
+                    propertiesDetailsController = loader.getController();
 
-                propertiesDetailsController.setDetails(
-                        CurrentSession.propertyDataModel.getPropertyById(((Regular)CurrentSession.currentUser).getTenantPropertyId()),
-                        window);
+                    propertiesDetailsController.setDetails(
+                            myProperty,
+                            window);
 
-                Scene scene = new Scene(anchorPropertyDetails);
-                window.setScene(scene);
-                window.showAndWait();
+                    Scene scene = new Scene(anchorPropertyDetails);
+                    window.setScene(scene);
+                    window.showAndWait();
+                }
             });
         }
     }
