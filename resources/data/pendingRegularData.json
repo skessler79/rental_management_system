@@ -20,5 +20,16 @@
     "email": "bilebile@abc.com",
     "password": "abc123",
     "address": "2 Jln Siu Nam, Johor Bahru"
+  },
+  {
+    "regularDetails": null,
+    "id": "de2258dd-81cf-408b-aacf-648377b5d31e",
+    "userType": "REGULAR",
+    "firstName": null,
+    "lastName": null,
+    "username": "rqwe",
+    "email": "qerw",
+    "password": "rweq",
+    "address": null
   }
 ]

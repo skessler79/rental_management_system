@@ -1,32 +1,19 @@
 package main.controllers.fragments;
 
 import com.jfoenix.controls.JFXCheckBox;
-import com.jfoenix.controls.JFXListView;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
-import javafx.scene.text.Text;
 import javafx.util.Callback;
 import main.classes.CurrentSession;
 import main.classes.properties.Property;
 import main.controllers.cells.PropertyCell;
 import main.enums.FacilityType;
 import main.enums.PropertyType;
-import main.models.PropertyDataModel;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -36,7 +23,10 @@ import java.util.stream.Stream;
 public class PropertiesController extends FragmentController implements Initializable
 {
     @FXML
-    ComboBox combo_state;
+    TextField txtPropertyName, txtProjectName;
+
+    @FXML
+    ComboBox comboType;
 
     @FXML
     JFXCheckBox checkPool, checkWifi, checkTv, checkFridge, checkAircond, checkHeater;
@@ -56,7 +46,10 @@ public class PropertiesController extends FragmentController implements Initiali
     {
         facilityTypes = new ArrayList<>();
 
-        btnSearch.setOnAction(actionEvent -> handleFacilities());
+        btnSearch.setOnAction(actionEvent ->
+        {
+            handleSearch();
+        });
 
         // Properly capitalize PropertyType enum and changes underscore to space
         List<String> propertyTypeList = Stream.of(PropertyType.values()).map(PropertyType::name).collect(Collectors.toList());
@@ -68,9 +61,9 @@ public class PropertiesController extends FragmentController implements Initiali
         }
 
         // Setting house type selection
-        combo_state.getItems().add("Any");
-        combo_state.getItems().addAll(propertyTypeList);
-        combo_state.setValue("Any");
+        comboType.getItems().add("Any");
+        comboType.getItems().addAll(propertyTypeList);
+        comboType.setValue("Any");
 
         // Get list of all active properties
         ObservableList<Property> data = FXCollections.observableArrayList();
@@ -98,7 +91,7 @@ public class PropertiesController extends FragmentController implements Initiali
         anchorPropertyList.getChildren().add(listView);
     }
 
-    private void handleFacilities()
+    private void handleSearch()
     {
         facilityTypes.clear();
 
@@ -133,7 +126,12 @@ public class PropertiesController extends FragmentController implements Initiali
         }
 
         ObservableList<Property> data = FXCollections.observableArrayList();
-        data.addAll(CurrentSession.propertyDataModel.getPropertyByFacilityType(facilityTypes));
+        propertyArrayList = CurrentSession.propertyDataModel.getPropertyByFacilityType(facilityTypes);
+        Collections.sort(propertyArrayList);
+        data.addAll(propertyArrayList);
         displayList(data);
+
+        System.out.println("property name");
+//        System.out.println(txtPropertyName.getText().);
     }
 }
