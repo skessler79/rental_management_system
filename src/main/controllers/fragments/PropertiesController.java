@@ -40,6 +40,8 @@ public class PropertiesController extends FragmentController implements Initiali
     private ArrayList<FacilityType> facilityTypes;
     private ArrayList<Property> propertyArrayList;
     private ListView<Property> listView;
+    private String propertyName, projectName, propertyTypeStr;
+    private PropertyType propertyType;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
@@ -93,8 +95,37 @@ public class PropertiesController extends FragmentController implements Initiali
 
     private void handleSearch()
     {
-        facilityTypes.clear();
+        // Property Name
+        propertyName = txtPropertyName.getText();
 
+        // Project Name
+        projectName = txtProjectName.getText();
+
+        // Property Type
+        propertyTypeStr = (String) comboType.getValue();
+        if(propertyTypeStr.equals("Condo"))
+        {
+            propertyType = PropertyType.CONDO;
+        }
+        else if(propertyTypeStr.equals("Townhouse"))
+        {
+            propertyType = PropertyType.TOWNHOUSE;
+        }
+        else if(propertyTypeStr.equals("Single story"))
+        {
+            propertyType = PropertyType.SINGLE_STORY;
+        }
+        else if(propertyTypeStr.equals("Double story"))
+        {
+            propertyType = PropertyType.DOUBLE_STORY;
+        }
+        else if(propertyTypeStr.equals("Bungalow"))
+        {
+            propertyType = PropertyType.BUNGALOW;
+        }
+
+        // Facilities
+        facilityTypes.clear();
         if(checkPool.isSelected())
         {
             facilityTypes.add(FacilityType.SWIMMING_POOL);
@@ -126,12 +157,9 @@ public class PropertiesController extends FragmentController implements Initiali
         }
 
         ObservableList<Property> data = FXCollections.observableArrayList();
-        propertyArrayList = CurrentSession.propertyDataModel.getPropertyByFacilityType(facilityTypes);
+        propertyArrayList = CurrentSession.propertyDataModel.filterProperty(propertyType, facilityTypes, projectName, propertyName);
         Collections.sort(propertyArrayList);
         data.addAll(propertyArrayList);
         displayList(data);
-
-        System.out.println("property name");
-//        System.out.println(txtPropertyName.getText().);
     }
 }
