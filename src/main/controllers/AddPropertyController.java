@@ -15,7 +15,6 @@ import main.classes.users.Owner;
 import main.enums.FacilityType;
 import main.enums.PropertyType;
 import main.views.AlertBoxView;
-import main.views.ConfirmBoxView;
 
 import java.net.URL;
 import java.util.ArrayList;

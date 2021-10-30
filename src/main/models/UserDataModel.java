@@ -1,19 +1,17 @@
 package main.models;
 
 //json dependencies libraries
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
-import main.classes.properties.Property;
-
-//classes and enums
 import main.classes.CurrentSession;
 import main.classes.RuntimeTypeAdapterFactory;
+import main.classes.properties.Property;
 import main.classes.users.*;
 import main.enums.UserType;
 
-//java libraries
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;

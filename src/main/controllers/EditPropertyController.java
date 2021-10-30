@@ -11,8 +11,6 @@ import javafx.stage.Stage;
 import main.classes.Address;
 import main.classes.CurrentSession;
 import main.classes.properties.Property;
-import main.classes.properties.PropertyBuilder;
-import main.classes.users.Owner;
 import main.enums.FacilityType;
 import main.enums.PropertyType;
 import main.views.AlertBoxView;

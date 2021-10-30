@@ -15,7 +15,6 @@ import main.classes.users.Regular;
 import main.classes.users.User;
 import main.controllers.PropertiesDetailsController;
 import main.enums.UserType;
-import main.views.AlertBoxView;
 import main.views.ConfirmBoxView;
 
 import java.io.IOException;

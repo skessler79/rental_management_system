@@ -1,7 +1,5 @@
 package main.classes;
 
-import main.models.UserDataModel;
-
 import java.util.Date;
 
 //this class is used provide more detailed comments
