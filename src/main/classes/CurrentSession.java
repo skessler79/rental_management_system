@@ -1,5 +1,6 @@
 package main.classes;
 
+import javafx.stage.Stage;
 import main.classes.users.User;
 import main.models.PropertyDataModel;
 import main.models.UserDataModel;
