@@ -8,6 +8,7 @@ import java.util.InvalidPropertiesFormatException;
 import java.util.UUID;
 
 public class UserBuilder {
+    //users
     private String id = UUID.randomUUID().toString();
     private String firstName = null;
     private String lastName = null;
@@ -15,12 +16,10 @@ public class UserBuilder {
     private String email = null;
     private String password = null;
     private String address = null;
-    private String adminDetails = null;
-    private String ownerDetails = null;
-    private String agentDetails = null;
-    private String regularDetails = null;
-    // owner
+    // owner & agent
     private ArrayList<String> propertyList = new ArrayList<>();
+    //regular
+    private String tenantPropertyId = null;
 
     public UserBuilder(String username, String email, String password) {
         this.username = username;
@@ -33,16 +32,16 @@ public class UserBuilder {
         switch (userType){
             case ADMIN:
 
-                return new Admin(id,firstName,lastName,username,email,password,address, adminDetails);
+                return new Admin(id,firstName,lastName,username,email,password,address);
             case OWNER:
 
-                return new Owner(id,firstName,lastName,username,email,password,address, ownerDetails, propertyList);
+                return new Owner(id,firstName,lastName,username,email,password,address,  propertyList);
             case AGENT:
 
-                return new Agent(id,firstName,lastName,username,email,password,address, agentDetails);
+                return new Agent(id,firstName,lastName,username,email,password,address, propertyList);
             case REGULAR:
 
-                return new Regular(id,firstName,lastName,username,email,password,address, regularDetails);
+                return new Regular(id,firstName,lastName,username,email,password,address, tenantPropertyId);
         }
 
         return null;

@@ -35,6 +35,7 @@ public class TestCases extends Application {
         populateData();
 //        testFilterProperties();
 //        testEditProfile();
+//        testGetUserByUserType();
 
     }
 
@@ -233,10 +234,16 @@ public class TestCases extends Application {
         }
     }
 
-
     private void testGetPropertiesByOwner(){
         User ownerUser = userDataModel.loginUser("owner1", "abc123");
         System.out.println(propertyDataModel.getPropertyByOwner(ownerUser));
+    }
+
+    private void testGetUserByUserType(){
+        ArrayList<User> userData = userDataModel.getUserDataByType(UserType.OWNER);
+        for(User user:userData){
+            System.out.println(user);
+        }
     }
 
     private void testAddComments(){

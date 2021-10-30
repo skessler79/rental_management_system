@@ -5,6 +5,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
+import main.classes.properties.Property;
 import org.json.simple.parser.JSONParser;
 
 //classes and enums
@@ -99,6 +100,17 @@ public class UserDataModel {
         return data;
     }
 
+    public void ownerRemoveSelfPropertyListing(User targetOwner, String propertyId){
+        userData = loadData(UserType.OWNER, false);
+
+        for(User owner:userData){
+            if(owner.getId().equals(targetOwner.getId())){
+                ((Owner)targetOwner).getPropertyList().removeIf(id -> id.equals(propertyId) );
+            }
+        }
+
+    }
+
     //allow to user to update their details
     public void editUserProfile(User currentUser){
         userData = loadData(currentUser.getUserType(), false);
@@ -137,9 +149,17 @@ public class UserDataModel {
             throw new IllegalArgumentException("You cannot delete yourself!");
         userData = loadData(targetUser.getUserType(),false);
         userData.removeIf(user -> user.getId().equals(targetUser.getId()));
+
+        //remove property whos the owner owns
+        ArrayList<Property> propertyData = CurrentSession.propertyDataModel.getPropertyByOwner(targetUser);
+        for (Property property:propertyData){
+            CurrentSession.propertyDataModel.removeProperty(property);
+        }
+
         inputData(targetUser.getUserType(),userData,false);
     }
 
+    //allow admin to reject user in the pending list
     public void rejectUser(User currentUser, User targetUser) throws IllegalAccessException{
         if (currentUser.getUserType() != UserType.ADMIN)
             throw new IllegalAccessException("Only admin can call this!");
@@ -148,7 +168,7 @@ public class UserDataModel {
         inputData(targetUser.getUserType(),pendingData,true);
     }
 
-    //edit user based on given user object
+    //after owner registered a property, this function will add in the id of the property to propertyList in owner class
     public void editProperty(User targetUser) throws IllegalArgumentException{
         userData = loadData(targetUser.getUserType(), false);
         boolean exist = false;
