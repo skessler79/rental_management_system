@@ -2,17 +2,17 @@
   {
     "ownerDetails": null,
     "propertyList": [
-      "d354a26e-3d31-4fe7-a432-648e0152eb51",
-      "e17c0471-f345-49e1-a613-f86faf2d3b43",
-      "5f8ce0a1-8d28-4ae6-9e1a-3868a73fad4e",
-      "e13b4587-7f99-47f6-be44-0a3b53df5d6a",
-      "3ab517e3-1d3b-4aac-b6c5-8dd75af8213e",
-      "c90b921e-9160-4a98-b6bd-6c0fc67fb740",
-      "ea1af06d-e07f-41f3-8bd4-96cfd94322a7",
-      "950bcad9-961e-4380-8784-68c2ad5d9ce3",
-      "561fa36c-136d-4979-a940-6a28108a8687"
+      "fdcc0d61-3e13-48bd-a950-78564009b192",
+      "7f6085f0-7469-478c-93bc-f7aa0de8b343",
+      "1e1ca296-01a8-4685-ab51-139ae1fb387b",
+      "4060b08e-0d65-4b30-ac80-8dfeb6b540bd",
+      "bc739bf3-19c4-4e4a-acd4-8a8b2d132647",
+      "730670e3-216a-4567-a2be-ef239847999d",
+      "549aaa03-d989-45c6-8f1e-de33f1419b60",
+      "feec9f1a-911a-4d57-ba84-b06a9e5a9721",
+      "acc55fc5-affa-4253-8ed4-20dedca1711a"
     ],
-    "id": "76a43235-17ab-478f-88d2-c98797b68888",
+    "id": "0c72b1d7-55fc-4c69-866e-6a5d2d11da9b",
     "userType": "OWNER",
     "firstName": "Cardi",
     "lastName": "C",
@@ -24,13 +24,13 @@
   {
     "ownerDetails": null,
     "propertyList": [
-      "c234e05e-9529-4f5c-8962-33f88fb2c0b0",
-      "bc325d58-99c7-45ab-8ab0-d31d209debf9",
-      "24854aed-c164-423f-90d2-1e6ba1bcb366",
-      "757f43e6-ad23-4806-9bf1-0e97fea10dea",
-      "501698eb-0f5f-4136-9517-36f900ea7ed7"
+      "547bbd17-1387-481f-bf3f-122e03bfa0f5",
+      "64b344bb-ef0a-4a05-b621-2610552ba0f7",
+      "b8d41f29-0beb-4b51-885b-117b4a406afb",
+      "7463a97b-ae1a-4134-967b-36938c49e257",
+      "28c38aca-1b5c-4b00-ac81-63f822f786ec"
     ],
-    "id": "2ee745e9-078c-455b-b591-1c798cc46e19",
+    "id": "90596228-1ede-4269-8312-b3347dfe39a7",
     "userType": "OWNER",
     "firstName": "Cola",
     "lastName": "Sprite",
@@ -42,16 +42,16 @@
   {
     "ownerDetails": null,
     "propertyList": [
-      "2daeab8f-254c-4ef0-887d-8a6259ca0928",
-      "ddce75fb-c0fc-421f-b1c6-248ed880e7b3",
-      "a9bf4229-dd7c-4c48-bef3-ad5834543f0b",
-      "e48b154f-de23-40cd-a6ee-177642cea7b9",
-      "b603bb69-f1c4-46f8-9d17-18364bd420f3",
-      "59844a80-7331-4444-866d-c2723c7d50c0",
-      "e21460c9-eac4-4648-a731-48e38f9fb220",
-      "8a128f2e-6a17-4c70-84ba-abb16e9f75fc"
+      "86d5790e-b511-4210-ac85-aaea5ead66e4",
+      "388c2be4-2704-4633-91ce-04281300019f",
+      "10f81312-3294-4068-a1b8-59edd6336ede",
+      "fe273680-b452-486e-8f5c-eac1deda6300",
+      "5f9d9968-92d2-464c-8d6e-6720297b068b",
+      "b99e6db3-13dc-47fa-a6ba-a67af6e702d6",
+      "d09f84a8-f216-42a7-9ff2-cad0c3258ba2",
+      "70558fe9-b700-4372-bf06-45af383d72a4"
     ],
-    "id": "3bcd5d24-250a-4fea-bc3e-b3c53f6e13dd",
+    "id": "77c23191-e9d2-4110-9b96-45c7819a67f4",
     "userType": "OWNER",
     "firstName": "Nafis",
     "lastName": "Affendi",
@@ -63,16 +63,16 @@
   {
     "ownerDetails": null,
     "propertyList": [
-      "eea991c9-18d8-4d92-aeb3-0d09bdeaac29",
-      "e05fd269-e735-4f6f-b930-4b277502974f",
-      "775e2053-2530-4090-adfa-e71f4c02568d",
-      "fd0ffd27-8362-498a-9dbf-ffff127e4b9f",
-      "97ce04fb-ac60-4259-942f-3e136080fcb4",
-      "354fb90d-4ebd-4b59-a12e-d86d5bdf50c6",
-      "2b0800ce-e371-458f-800c-50b66305e203",
-      "7b253170-5857-4b76-a156-dc24310d1001"
+      "878c5768-6754-435c-add2-75dfbf64e00d",
+      "c329c4ce-e8df-44d6-813d-f5ea5e705ec4",
+      "d4e0c4bb-c7bd-4022-900e-4922a3283f29",
+      "9ba96e16-52a0-4c8b-af26-99c1cb18d7f5",
+      "825ba11f-b985-44c6-aac1-61b435d260ac",
+      "2261d911-34d7-4f98-bbda-eb8ad1d3c2f9",
+      "1cebb96b-fbec-4a9a-ab41-e0474312bcaa",
+      "4725c05c-72d1-4adb-94ab-a901bbd69f36"
     ],
-    "id": "f34ccaa6-8685-42a3-bb6f-8e06b17decbe",
+    "id": "49fce62b-a569-4a55-b7c0-fd09042816a0",
     "userType": "OWNER",
     "firstName": "Selwyn",
     "lastName": "Ping",
