@@ -166,20 +166,6 @@ public class UserNavbarController implements Initializable
     }
 
     @FXML
-    private void handleOpenProjects(ActionEvent event) throws IOException
-    {
-        loader = new FXMLLoader(getClass().getResource("../views/fragments/Projects.fxml"));
-        setNewFragment();
-    }
-
-    @FXML
-    private void handleOpenSearch(ActionEvent event) throws IOException
-    {
-        loader = new FXMLLoader(getClass().getResource("../views/fragments/Search.fxml"));
-        setNewFragment();
-    }
-
-    @FXML
     private void handleOpenSettings(ActionEvent event) throws IOException
     {
         loader = new FXMLLoader(getClass().getResource("../views/fragments/Settings.fxml"));
