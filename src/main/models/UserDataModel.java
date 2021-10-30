@@ -1,50 +1,41 @@
 package main.models;
 
+//json dependencies libraries
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
-import main.classes.CurrentSession;
-import main.classes.RuntimeTypeAdapterFactory;
-import main.classes.properties.Property;
-import main.classes.users.*;
-import main.enums.UserType;
 import org.json.simple.parser.JSONParser;
 
+//classes and enums
+import main.classes.CurrentSession;
+import main.classes.RuntimeTypeAdapterFactory;
+import main.classes.users.*;
+import main.enums.UserType;
+
+//java libraries
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class UserDataModel {
 
-    private JsonReader reader;
-    private FileWriter fileWriter;
-    private FileReader fileReader;
     private ArrayList<User> data;
-    private final JSONParser parser = new JSONParser();
     private Gson gson;
 
     private ArrayList<User> userData;
     private ArrayList<User> pendingData;
-    private ArrayList<User> adminData;
-    private ArrayList<User> ownerData;
-    private ArrayList<User> agentData;
-    private ArrayList<User> regularData;
 
-    private final Type USER_LIST_TYPE = new TypeToken<ArrayList<User>>(){}.getType();
-
-    //used for deserialization of User
+    //used for deserialization of User derived from RuntimeTypeAdapterFactory.java
     RuntimeTypeAdapterFactory<User> adapter = RuntimeTypeAdapterFactory.of(User.class, "userType")
             .registerSubtype(Admin.class, UserType.ADMIN.name())
             .registerSubtype(Owner.class, UserType.OWNER.name())
             .registerSubtype(Agent.class, UserType.AGENT.name())
-            .registerSubtype(Regular.class, UserType.REGULAR.name())
-            .registerSubtype(Pending.class, UserType.PENDING.name());
+            .registerSubtype(Regular.class, UserType.REGULAR.name());
 
-    //get TypeToken
+    //get TypeToken based on userType
     @SuppressWarnings("DuplicateBranchesInSwitch")
     private Type getTypeToken(UserType userType){
         switch (userType){
@@ -60,9 +51,9 @@ public class UserDataModel {
         return null;
     }
 
-    //private method to get path
-    private String getPath(UserType loadDataType , boolean isPending){
-        switch (loadDataType){
+    //private method to get path of the json files
+    private String getPath(UserType userType , boolean isPending){
+        switch (userType){
             case ADMIN:
                 return isPending?"resources/data/pendingAdminData.json":"resources/data/adminData.json";
             case OWNER:
@@ -76,11 +67,11 @@ public class UserDataModel {
         return null;
     }
 
-    //takes in UserType and arraylist of objects and store them as json file accordingly
-    private void inputData(UserType loadDataType, ArrayList<User> inputData, boolean isPending) {
+    //takes in UserType and arraylist of objects and store them into json file according to userType
+    private void inputData(UserType userType, ArrayList<User> inputData, boolean isPending) {
         try {
             gson = new GsonBuilder().setPrettyPrinting().serializeNulls().registerTypeAdapterFactory(adapter).serializeSpecialFloatingPointValues().create();
-            fileWriter = new FileWriter(getPath(loadDataType, isPending));
+            FileWriter fileWriter = new FileWriter(getPath(userType, isPending));
             gson.toJson(inputData, fileWriter);
             fileWriter.close();
         } catch (IOException e) {
@@ -89,12 +80,12 @@ public class UserDataModel {
     }
 
     //load from json file based on provided UserType
-    private ArrayList<User> loadData(UserType loadDataType, boolean isPending){
+    private ArrayList<User> loadData(UserType userType, boolean isPending){
         try {
-            fileReader = new FileReader(getPath(loadDataType, isPending));
-            reader = new JsonReader(fileReader);
+            FileReader fileReader = new FileReader(getPath(userType, isPending));
+            JsonReader reader = new JsonReader(fileReader);
             gson = new GsonBuilder().registerTypeAdapterFactory(adapter).create();
-            data = gson.fromJson(reader, getTypeToken(loadDataType));
+            data = gson.fromJson(reader, getTypeToken(userType));
             fileReader.close();
 
 

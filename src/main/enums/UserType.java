@@ -4,7 +4,5 @@ public enum UserType {
     ADMIN,
     OWNER,
     AGENT,
-    REGULAR,
-    PENDING,
-    USER
+    REGULAR
 }
