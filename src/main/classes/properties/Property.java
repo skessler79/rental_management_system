@@ -4,7 +4,6 @@ import main.classes.Address;
 import main.classes.Comment;
 import main.classes.users.Agent;
 import main.classes.users.Owner;
-import main.classes.users.Regular;
 import main.classes.users.User;
 import main.enums.FacilityType;
 import main.enums.PropertyType;

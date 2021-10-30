@@ -12,7 +12,6 @@ import main.classes.CurrentSession;
 import main.classes.users.User;
 import main.classes.users.UserBuilder;
 import main.enums.UserType;
-import main.models.LoginModel;
 import main.views.AlertBoxView;
 import main.views.ConfirmBoxView;
 
@@ -33,10 +32,10 @@ public class LoginController implements Initializable
     @FXML
     private JFXPasswordField pwd_signin, pwd_signup;
 
-    private LoginModel loginModel;
     private App main;
     private String username_signup, email_signup, password_signup;
 
+    // Login button onAction
     @FXML
     public void login(ActionEvent actionEvent)
     {
@@ -45,7 +44,7 @@ public class LoginController implements Initializable
         User user;
 
         try{
-            user = loginModel.login(username, password);
+            user = CurrentSession.userDataModel.loginUser(username, password);
             main.startApp(user);
         } catch (IllegalArgumentException e){
             AlertBoxView.display("Login Error", "Your login credentials are incorrect!");
@@ -82,8 +81,6 @@ public class LoginController implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-        loginModel = new LoginModel();
-        System.out.println("Initialize");
         btn_submit_signin.setDefaultButton(true);
 
         btn_submit_signup.setOnAction(actionEvent ->
@@ -95,10 +92,12 @@ public class LoginController implements Initializable
             // Input validation
             if(username_signup.isEmpty() || email_signup.isEmpty() || password_signup.isEmpty())
             {
+                // Registration problem
                 AlertBoxView.display("Registration Error", "You must fill in all fields when registering!");
             }
             else
             {
+                // Form properly filled
                 User newUser = new UserBuilder(username_signup, email_signup, password_signup)
                         .buildUser(UserType.REGULAR);
 

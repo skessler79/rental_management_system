@@ -1,6 +1,5 @@
 package main;
 
-import com.google.gson.Gson;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -9,15 +8,10 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import main.classes.users.User;
-import main.controllers.*;
-
-import org.json.simple.parser.JSONParser;
-
-import main.enums.UserType;
-
+import main.controllers.LoginController;
+import main.controllers.UserNavbarController;
 
 import java.io.IOException;
-import java.util.UUID;
 
 public class App extends Application
 {
@@ -52,7 +46,6 @@ public class App extends Application
 
     public void startApp(User user) throws Exception
     {
-        System.out.println("Log in as: " + user);
         // Closing login stage due to different StageStyle
         window.hide();
 

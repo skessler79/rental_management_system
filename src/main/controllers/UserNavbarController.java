@@ -7,22 +7,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Pos;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
 import javafx.util.Duration;
 import main.App;
 import main.classes.users.User;
-import main.controllers.fragments.DashboardController;
 import main.controllers.fragments.FragmentController;
-import main.models.UserNavbarModel;
 import main.views.ConfirmBoxView;
 
 import java.io.IOException;
@@ -47,14 +36,10 @@ public class UserNavbarController implements Initializable
     private FXMLLoader loader;
     private FragmentController fragmentController;
 
-    // Model
-    private UserNavbarModel model;
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-        model = new UserNavbarModel();
-
+        // First fragment is dashboard
         try
         {
             loader = new FXMLLoader(getClass().getResource("../views/fragments/Dashboard.fxml"));
@@ -68,7 +53,7 @@ public class UserNavbarController implements Initializable
 
         pane1.setVisible(false);
 
-        // Setting up animations
+        // Setting up sidebar animations
         FadeTransition fadeTransition = new FadeTransition(Duration.seconds(0.5), pane1);
         fadeTransition.setFromValue(1);
         fadeTransition.setToValue(0);
@@ -109,7 +94,6 @@ public class UserNavbarController implements Initializable
 
     public void setUser(User user)
     {
-        model.setUser(user);
         fragmentController.setDetails(user);
     }
 

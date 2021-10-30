@@ -15,7 +15,6 @@ import main.classes.users.Owner;
 import main.enums.FacilityType;
 import main.enums.PropertyType;
 import main.views.AlertBoxView;
-import main.views.ConfirmBoxView;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -109,8 +108,6 @@ public class AddPropertyController implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-        // TODO : Handle Form
-
         // Grouping Type
         ToggleGroup typeGroup = new ToggleGroup();
 

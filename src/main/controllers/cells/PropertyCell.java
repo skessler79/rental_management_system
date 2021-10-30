@@ -3,8 +3,6 @@ package main.controllers.cells;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ListCell;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.text.Text;
 import main.classes.properties.Property;
 import main.controllers.fragments.PropertyListItemController;
 

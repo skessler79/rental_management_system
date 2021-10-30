@@ -16,20 +16,14 @@
 
 package main.classes;
 
-import java.io.IOException;
-import java.util.LinkedHashMap;
-import java.util.Map;
-
-import com.google.gson.Gson;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.JsonPrimitive;
-import com.google.gson.TypeAdapter;
-import com.google.gson.TypeAdapterFactory;
+import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+
+import java.io.IOException;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 //this class is used to let gson automatically create correct user objects when fetching from json files
 //taken from https://github.com/google/gson/blob/master/extras/src/main/java/com/google/gson/typeadapters/RuntimeTypeAdapterFactory.java

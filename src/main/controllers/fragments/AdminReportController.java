@@ -8,7 +8,9 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.*;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import main.classes.CurrentSession;
 import main.classes.properties.Property;
@@ -16,8 +18,10 @@ import main.enums.FacilityType;
 import main.enums.PropertyType;
 import main.models.PropertyDataModel;
 import main.views.ConfirmBoxView;
+
 import java.net.URL;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.ResourceBundle;
 
 public class AdminReportController implements Initializable {
 
