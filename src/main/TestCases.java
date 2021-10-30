@@ -32,11 +32,11 @@ public class TestCases extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        populateData();
+//        populateData();
 //        testFilterProperties();
 //        testEditProfile();
 //        testGetUserByUserType();
-//        testAddTenant();
+        testAddTenant();
 
     }
 
@@ -219,7 +219,7 @@ public class TestCases extends Application {
 
     private void testAddTenant(){
         User tenant = userDataModel.loginUser("milo1234", "abc123");
-        Property property = propertyDataModel.getPropertyById("4d0215fa-f6b0-4c26-a709-4adada62a927");
+        Property property = propertyDataModel.getPropertyById("42efcbde-b789-476b-84ad-c72351296c21");
         propertyDataModel.addTenant(tenant, property);
     }
 
