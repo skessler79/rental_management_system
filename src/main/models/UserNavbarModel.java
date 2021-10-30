@@ -2,6 +2,8 @@ package main.models;
 
 import main.classes.users.User;
 
+// TODO : Remove this class
+
 public class UserNavbarModel
 {
     protected User user;
