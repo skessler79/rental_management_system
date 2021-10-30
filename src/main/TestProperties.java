@@ -476,6 +476,107 @@ public class TestProperties {
                         .roomInfo("4 bedrooms 5 bathrooms")
                         .bathRoomCount(5)
                         .facilityTypes(new ArrayList<>(Arrays.asList(FacilityType.WATER_HEATER, FacilityType.FRIDGE, FacilityType.WIFI, FacilityType.AIRCOND, FacilityType.TV, FacilityType.SWIMMING_POOL)))
+                        .buildProperty(),
+                new PropertyBuilder(ownerUser4, PropertyType.TOWNHOUSE, "Cyberia SmartHomes", "Cyberia SmartHomes")
+                        .address(new Address("Persiaran Multimedia", "Cyberia SmartHomes", "Cyberjaya", "Selangor", 63000, "Malaysia"))
+                        .isActive(true)
+                        .rentalFee(1500)
+                        .size("1689 sqft")
+                        .rentalRate(0.89)
+                        .agent(agent3)
+                        .description("FOR RENT : Duplex condo\n" +
+                                "~ Located at Jalan Cyberia 5 (https://goo.gl/maps/2fwVS7TPTghAtNY19)\n" +
+                                "~ 1689 SF\n" +
+                                "~ 4 bedrooms & 3 bathrooms\n" +
+                                "~ Fully furnished\n" +
+                                "~ Ground floor & Level 1 (no lift)\n" +
+                                "~ 1 cover car park\n" +
+                                "~ Next to Multimedia University MMU\n" +
+                                "~ Ready to move in Now")
+                        .roomInfo("1 master room + 3 bedrooms 3 bathrooms")
+                        .bathRoomCount(3)
+                        .facilityTypes(new ArrayList<>(Arrays.asList(FacilityType.WATER_HEATER, FacilityType.FRIDGE, FacilityType.AIRCOND, FacilityType.TV, FacilityType.SWIMMING_POOL)))
+                        .buildProperty(),
+                new PropertyBuilder(ownerUser3, PropertyType.TOWNHOUSE, "Cyberia SmartHomes", "Cyberia SmartHomes")
+                        .address(new Address("Persiaran Multimedia", "Cyberia SmartHomes", "Cyberjaya", "Selangor", 63000, "Malaysia"))
+                        .isActive(true)
+                        .rentalFee(850)
+                        .size("1000 sqft")
+                        .rentalRate(0.85)
+                        .agent(agent3)
+                        .description("- Block A\n" +
+                                "- Middle floor unit\n" +
+                                "- 3R + 2B\n" +
+                                "\n" +
+                                "- ready to move in with newly painted house !\n" +
+                                "- 1 covered parking available\n" +
+                                "- 24 hour gated and guarded\n" +
+                                "\n" +
+                                "- Partially-furnished unit\n" +
+                                "- type C, 1000 sqft\n" +
+                                "- walking distance to MMU (Multimedia University)\n" +
+                                "\n" +
+                                "Near to :\n" +
+                                "mutiara villa, OSK Pangea, Cyberia Crescent I & II, Cyberia Domain 1,2,3, D'Melor Condominium, GardenView Condominium.")
+                        .roomInfo("1 master room + 3 bedrooms 3 bathrooms")
+                        .bathRoomCount(3)
+                        .facilityTypes(new ArrayList<>(Arrays.asList(FacilityType.WATER_HEATER, FacilityType.FRIDGE, FacilityType.AIRCOND, FacilityType.TV, FacilityType.SWIMMING_POOL)))
+                        .buildProperty(),
+                new PropertyBuilder(ownerUser3, PropertyType.TOWNHOUSE, "Cyberia SmartHomes", "Cyberia SmartHomes")
+                        .address(new Address("Persiaran Multimedia", "Cyberia SmartHomes", "Cyberjaya", "Selangor", 63000, "Malaysia"))
+                        .isActive(true)
+                        .rentalFee(400)
+                        .size("100 sqft")
+                        .rentalRate(4.0)
+                        .agent(agent1)
+                        .description("All Female Unit! Fully Furnished And Affordable Near Mmu Cyberjaya\n" +
+                                "Cyberjaya Cyberia Townvilla 2 - Female Small/Middle/Large Room for Rent\n" +
+                                "\n" +
+                                "Ground floor townhouse unit\n" +
+                                "1 min walking distance to MMU.\n" +
+                                "Shuttle/bus available to Lim Kok Wing, HSBC, IBM, Shell, Shaftbury.\n" +
+                                "2 months deposit + 1/2 month utilities deposit\n" +
+                                "Available Immediately")
+                        .roomInfo("1 room")
+                        .bathRoomCount(1)
+                        .facilityTypes(new ArrayList<>(Arrays.asList(FacilityType.WATER_HEATER, FacilityType.AIRCOND, FacilityType.SWIMMING_POOL)))
+                        .buildProperty(),
+                new PropertyBuilder(ownerUser3, PropertyType.TOWNHOUSE, "Cyberia SmartHomes", "Cyberia SmartHomes")
+                        .address(new Address("Persiaran Multimedia", "Cyberia SmartHomes", "Cyberjaya", "Selangor", 63000, "Malaysia"))
+                        .isActive(true)
+                        .rentalFee(1300)
+                        .size("902 sqft")
+                        .rentalRate(1.44)
+                        .agent(agent1)
+                        .description("Cyberia Smarthome Corner Unit Fully Furnished\n" +
+                                "For Rent\n" +
+                                "\n" +
+                                "RM 1300 per month included maintenance fee\n" +
+                                "\n" +
+                                "3 Bedrooms\n" +
+                                "2 Bathrooms\n" +
+                                "902 sqft\n" +
+                                "Aircond")
+                        .roomInfo("3 bedroomds + 2 bathroom + living room")
+                        .bathRoomCount(2)
+                        .facilityTypes(new ArrayList<>(Arrays.asList(FacilityType.WATER_HEATER, FacilityType.AIRCOND, FacilityType.SWIMMING_POOL, FacilityType.FRIDGE)))
+                        .buildProperty(),
+                new PropertyBuilder(ownerUser3, PropertyType.TOWNHOUSE, "Third Avenue, Cyberjaya", "Third Avenue")
+                        .address(new Address("Jalan Teknokrat 3", "Third Avenue", "Cyberjaya", "Selangor", 63000, "Malaysia"))
+                        .isActive(true)
+                        .rentalFee(2600)
+                        .size("1111 sqft")
+                        .rentalRate(2.34)
+                        .agent(agent1)
+                        .description("More units available with different layout and prices.\n" +
+                                "WhatsApp to find out more! Video tour / virtual tour available for all units.\n" +
+                                "Landlords are welcome to list with our team of condo specialists that provide free tenant screening and photography services!\n" +
+                                "LB======================================================================\n" +
+                                ">>>>Get a limited time offer of RM500 off your rental and 2 free parking slot!\n" +
+                                ">>>>Message 011 123 6789 to find out more.")
+                        .roomInfo("3 bedrooms + 2 bathroom + living room")
+                        .bathRoomCount(2)
+                        .facilityTypes(new ArrayList<>(Arrays.asList(FacilityType.WATER_HEATER, FacilityType.AIRCOND, FacilityType.TV, FacilityType.FRIDGE)))
                         .buildProperty()
 
         ));

@@ -2,17 +2,17 @@
   {
     "ownerDetails": "owner3",
     "propertyList": [
-      "f33c56db-e60a-40d6-9978-79f25db2870f",
-      "cd0ca3de-bbae-451b-b6b5-3e31bbf25e4b",
-      "665c0270-b1b6-449a-92ee-a5147d9227ca",
-      "e2803445-35c6-4ada-9d32-4e483c8f5868",
-      "b02f4482-238b-4e1b-904e-72c97d3afb3f",
-      "d89496eb-f7ee-4ff1-b46c-754418843f53",
-      "921bc4ce-0408-49c1-bd36-b681332609b5",
-      "fa26a076-4f69-4e30-92b4-110a93ea4fda",
-      "05bb4178-b806-48a5-82e0-909e1514b070"
+      "11f494dc-55ad-44da-9b88-e9766d73501b",
+      "e2703389-b552-4090-ac41-8da4d5e9a4ed",
+      "000e2aa8-ed6d-4792-9565-aef1a7723ecb",
+      "78cb0f2f-757e-4c6a-94f2-8af52c7ea6b6",
+      "99108999-bf66-4419-bb4f-b11a07faefd2",
+      "92a6bdf1-3a56-469c-a529-0f39c4c4f93e",
+      "9798f3e3-4b92-4528-ad08-0cc15bd37c58",
+      "ecbeef21-cf84-482e-a382-1077e7a5e45f",
+      "f73943f3-0936-4339-b885-6cff85f197c8"
     ],
-    "id": "4dfe4830-2924-43e5-af66-e7014717f474",
+    "id": "9255c155-6d4b-463a-b483-59836c54a5c6",
     "userType": "OWNER",
     "firstName": "Cardi",
     "lastName": "C",
@@ -24,13 +24,13 @@
   {
     "ownerDetails": "owner4",
     "propertyList": [
-      "4e344a06-dffa-4d4e-a26d-5e4e523a43db",
-      "76024bb6-9c54-419b-b671-2cb0a2e2121a",
-      "8f7b6c80-7f49-46e9-aa17-3a3926a89e2a",
-      "e1058ebb-7871-4369-8a7d-5d97c004e320",
-      "190d018e-4585-45ea-bdb9-87c6f3a82df4"
+      "df26413b-2449-44aa-a98f-3a73a9361417",
+      "bd8731dc-2301-442c-8a4f-bd40442c60fc",
+      "5e14d149-e857-46a1-8315-447ef6b98178",
+      "cfaa1fa5-966b-4e4a-8a54-0eeb43518aab",
+      "15fa1a10-3d7b-40a9-882e-e2ccdbb756fc"
     ],
-    "id": "d660cb3e-a212-49dc-9ce8-65cc2d57cf8b",
+    "id": "e4be7e71-1a11-43ed-ba68-92d0d6973568",
     "userType": "OWNER",
     "firstName": "Cola",
     "lastName": "Sprite",
@@ -40,33 +40,18 @@
     "address": "36 Tingkat 3 Persiaran 65C Off Jalan Pahang Barat"
   },
   {
-    "ownerDetails": "owner3",
-    "propertyList": [
-      "e5f0204b-2b97-481c-917e-3fa35c1bebfb",
-      "3cbcf0a3-1930-4885-a2e0-ce64d538410a",
-      "7edde601-665b-40da-b8e4-5e8b2fade6e1",
-      "ba13a42f-42e6-49d3-807f-aca9e34f3559"
-    ],
-    "id": "f108efcb-d852-4184-ab58-2cfec8ff6fb1",
-    "userType": "OWNER",
-    "firstName": "Selwyn",
-    "lastName": "Ping",
-    "username": "owner5",
-    "email": "selwyn@abc.com",
-    "password": "abc123",
-    "address": "9 Jln Hulu Batu 10 Hulu Ampang"
-  },
-  {
     "ownerDetails": "owner4",
     "propertyList": [
-      "3f3b8d98-ddab-41f2-8a78-cbf18fbcbd74",
-      "a15cddae-8601-46a5-a993-b600c35cd2df",
-      "da79ed71-e70e-49e6-8a4e-2377d4851e13",
-      "71e9bf11-b4bc-45c7-997b-4eb639e77e68",
-      "c6ff314d-582c-453d-b49c-809d84fbdc34",
-      "77e5616b-a077-44c7-bc16-61574e328ba1"
+      "7369c9b8-d451-4ab9-9977-58524daf11db",
+      "ba7a0639-2adf-4f5f-b80c-444867679dca",
+      "e9df04dd-0c0a-48d5-a55e-02f7dd748bae",
+      "a860b87b-967b-40a1-9386-0b2c4e0134e5",
+      "859b20af-e251-453c-a052-5e1458d3d7af",
+      "1fec61e2-6494-4876-8c2d-41221adff75f",
+      "8f0fefc5-33a2-4b0c-a8ca-7842e8f28fe1",
+      "3378c518-d9a3-4aa4-81ce-6a0ec2243f6e"
     ],
-    "id": "9375fc2c-5f52-41dd-b4d7-716f21ddfa6e",
+    "id": "11188fea-3b12-4497-b02b-237952fb367f",
     "userType": "OWNER",
     "firstName": "Nafis",
     "lastName": "Affendi",
@@ -74,5 +59,25 @@
     "email": "affendi@abc.com",
     "password": "abc123",
     "address": "37 Tingkat 4 Persiaran 65C Off Jalan Pahang Barat"
+  },
+  {
+    "ownerDetails": "owner3",
+    "propertyList": [
+      "441f7ab1-efa0-4de9-8a7a-c0628c23ce0f",
+      "27d3ad8d-6055-4e13-9f00-6d516ad331c8",
+      "3aa7c264-4b06-4670-9788-1afcbc55b37d",
+      "62895a0d-26a5-4a1b-80b2-755edac65fc3",
+      "abbccaaa-f986-4b86-ad36-d4467c53bcbc",
+      "7a950680-fc65-4499-ac74-a082b83331f6",
+      "be63abae-4fa4-43cc-ba16-9a292b970698"
+    ],
+    "id": "9bfb350a-bcb2-4a36-9fd2-644d358f2f8f",
+    "userType": "OWNER",
+    "firstName": "Selwyn",
+    "lastName": "Ping",
+    "username": "owner5",
+    "email": "selwyn@abc.com",
+    "password": "abc123",
+    "address": "9 Jln Hulu Batu 10 Hulu Ampang"
   }
 ]
