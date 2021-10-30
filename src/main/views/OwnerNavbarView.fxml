@@ -61,22 +61,6 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </JFXButton>
-                  <JFXButton alignment="BASELINE_LEFT" onAction="#handleOpenProjects" prefHeight="38.0" prefWidth="179.0" text="Projects">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </JFXButton>
-                  <JFXButton alignment="BASELINE_LEFT" onAction="#handleOpenSearch" prefHeight="38.0" prefWidth="179.0" text="Search">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </JFXButton>
                   <JFXButton alignment="BASELINE_LEFT" onAction="#handleOpenOwnerManage" prefHeight="38.0" prefWidth="179.0" text="Manage">
                   <font>
                      <Font size="16.0" />
@@ -129,30 +113,6 @@
                         <ImageView fitHeight="46.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="icons/navbar/navbar_home.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </JFXButton>
-                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="272.0" onAction="#handleOpenProjects">
-                     <graphic>
-                        <ImageView fitHeight="46.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="icons/navbar/navbar_project.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </JFXButton>
-                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="272.0" onAction="#handleOpenSearch">
-                     <graphic>
-                        <ImageView fitHeight="46.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="icons/navbar/navbar_search.png" />
                            </image>
                         </ImageView>
                      </graphic>
