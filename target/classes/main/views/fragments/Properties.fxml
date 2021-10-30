@@ -63,7 +63,7 @@
                               </Label>
                               <StackPane prefHeight="150.0" prefWidth="200.0">
                                  <children>
-                                    <TextField minHeight="35.0" style="-fx-background-color: #FFF;">
+                                    <TextField fx:id="txtPropertyName" minHeight="35.0" style="-fx-background-color: #FFF;">
                                        <padding>
                                           <Insets left="35.0" />
                                        </padding>
@@ -81,21 +81,46 @@
                                     <Insets left="10.0" right="10.0" top="2.0" />
                                  </VBox.margin>
                               </StackPane>
-                              <Label text="Property type">
+                              <Label text="Project Name">
                                  <VBox.margin>
-                                    <Insets left="10.0" top="5.0" />
+                                    <Insets left="10.0" top="10.0" />
                                  </VBox.margin>
                               </Label>
                               <StackPane prefHeight="150.0" prefWidth="200.0">
                                  <children>
-                                    <ComboBox fx:id="combo_state" minHeight="35.0" prefWidth="210.0" style="-fx-background-color: #FFF;">
+                                    <TextField fx:id="txtProjectName" minHeight="35.0" style="-fx-background-color: #FFF;">
+                                       <padding>
+                                          <Insets left="35.0" />
+                                       </padding>
+                                    </TextField>
+                                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER_LEFT">
+                                       <image>
+                                          <Image url="@../../../../resources/icons/properties/properties_location.png" />
+                                       </image>
+                                       <StackPane.margin>
+                                          <Insets left="5.0" />
+                                       </StackPane.margin>
+                                    </ImageView>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" top="2.0" />
+                                 </VBox.margin>
+                              </StackPane>
+                              <Label text="Property type">
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <StackPane prefHeight="150.0" prefWidth="200.0">
+                                 <children>
+                                    <ComboBox fx:id="comboType" minHeight="35.0" prefWidth="210.0" style="-fx-background-color: #FFF;">
                                        <padding>
                                           <Insets left="35.0" />
                                        </padding>
                                     </ComboBox>
                                     <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER_LEFT">
                                        <image>
-                                          <Image url="@../../../../resources/icons/properties/properties_location.png" />
+                                          <Image url="@../../../../resources/icons/properties/properties_type.png" />
                                        </image>
                                        <StackPane.margin>
                                           <Insets left="5.0" />

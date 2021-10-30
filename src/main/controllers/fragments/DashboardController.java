@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import main.classes.CurrentSession;
 import main.classes.users.User;
+import main.enums.UserType;
 import main.views.AlertBoxView;
 import main.views.ConfirmBoxView;
 
@@ -16,25 +17,25 @@ import java.util.ResourceBundle;
 public class DashboardController extends FragmentController implements Initializable
 {
     @FXML
-    private Label txt_usertype;
+    private Label txtUsertype;
 
     @FXML
-    private JFXTextField txt_username;
+    private JFXTextField txtUsername;
 
     @FXML
-    private JFXTextField txt_email;
+    private JFXTextField txtEmail;
 
     @FXML
-    private JFXTextField txt_firstname;
+    private JFXTextField txtFirstname;
 
     @FXML
-    private JFXTextField txt_lastname;
+    private JFXTextField txtLastname;
 
     @FXML
-    private JFXTextField txt_address;
+    private JFXTextField txtAddress;
 
     @FXML
-    private Button btn_update, btn_cancel;
+    private Button btnUpdate, btnCancel, btnMyProperty;
 
     private String username, email, firstname, lastname, address;
 
@@ -43,17 +44,17 @@ public class DashboardController extends FragmentController implements Initializ
     {
         setDetails(CurrentSession.currentUser);
 
-        btn_update.setOnAction(actionEvent ->
+        btnUpdate.setOnAction(actionEvent ->
         {
             boolean confirm = ConfirmBoxView.display("Edit Profile", "Are you sure you want to edit your profile?");
 
             if(confirm)
             {
-                username = txt_username.getText();
-                email = txt_email.getText();
-                firstname = txt_firstname.getText();
-                lastname = txt_lastname.getText();
-                address = txt_address.getText();
+                username = txtUsername.getText();
+                email = txtEmail.getText();
+                firstname = txtFirstname.getText();
+                lastname = txtLastname.getText();
+                address = txtAddress.getText();
 
                 if(username.isEmpty() || email.isEmpty())
                 {
@@ -72,21 +73,26 @@ public class DashboardController extends FragmentController implements Initializ
             }
         });
 
-        btn_cancel.setOnAction(actionEvent ->
+        btnCancel.setOnAction(actionEvent ->
         {
             setDetails(CurrentSession.currentUser);
         });
+
+        if(CurrentSession.currentUser.getUserType() == UserType.REGULAR)
+        {
+            btnMyProperty.setVisible(true);
+        }
     }
 
     @Override
     public void setDetails(User user)
     {
-        this.txt_usertype.setText(user.getUserType().toString());
-        this.txt_username.setText(user.getUsername());
-        this.txt_email.setText(user.getEmail());
-        this.txt_firstname.setText(user.getFirstName());
-        this.txt_lastname.setText(user.getLastName());
-        this.txt_address.setText(user.getAddress());
+        this.txtUsertype.setText(user.getUserType().toString());
+        this.txtUsername.setText(user.getUsername());
+        this.txtEmail.setText(user.getEmail());
+        this.txtFirstname.setText(user.getFirstName());
+        this.txtLastname.setText(user.getLastName());
+        this.txtAddress.setText(user.getAddress());
     }
 }
 
