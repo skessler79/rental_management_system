@@ -46,7 +46,7 @@
                         <Font size="21.0" />
                      </font>
                   </Label>
-                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="158.0" layoutY="302.0">
+                  <JFXButton fx:id="btn_submit_signup" contentDisplay="GRAPHIC_ONLY" layoutX="158.0" layoutY="302.0">
                      <graphic>
                         <ImageView fitHeight="51.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
                            <image>

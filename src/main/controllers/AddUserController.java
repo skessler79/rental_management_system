@@ -113,7 +113,10 @@ public class AddUserController implements Initializable {
             address = txt_address.getText();
             txt_address.clear();
 
-            User newUser = new UserBuilder(first_name, last_name, username, email, password, address)
+            User newUser = new UserBuilder(username, email, password)
+                    .firstName(first_name)
+                    .lastName(last_name)
+                    .address(address)
                     .buildUser(userType);
 
             System.out.println(newUser);

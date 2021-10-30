@@ -8,7 +8,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
 import main.App;
+import main.classes.CurrentSession;
 import main.classes.users.User;
+import main.classes.users.UserBuilder;
+import main.enums.UserType;
 import main.models.LoginModel;
 import main.views.AlertBoxView;
 import main.views.ConfirmBoxView;
@@ -19,7 +22,7 @@ import java.util.ResourceBundle;
 public class LoginController implements Initializable
 {
     @FXML
-    private JFXButton btn_signin, btn_signup, btn_close_signin, btn_close_signup, btn_submit_signin;
+    private JFXButton btn_signin, btn_signup, btn_close_signin, btn_close_signup, btn_submit_signin, btn_submit_signup;
 
     @FXML
     private AnchorPane pn_signin, pn_signup;
@@ -32,6 +35,7 @@ public class LoginController implements Initializable
 
     private LoginModel loginModel;
     private App main;
+    private String username_signup, email_signup, password_signup;
 
     @FXML
     public void login(ActionEvent actionEvent)
@@ -47,7 +51,7 @@ public class LoginController implements Initializable
             user = loginModel.login(username, password);
         } catch (IllegalArgumentException e){
             //TODO: handle error with proper error ui
-            System.out.println("Oops ur credentials are incorrect");
+            AlertBoxView.display("Login Error", "Please fill up both username and password!");
         }
 
         if(user == null)
@@ -97,6 +101,32 @@ public class LoginController implements Initializable
         loginModel = new LoginModel();
         System.out.println("Initialize");
         btn_submit_signin.setDefaultButton(true);
+
+        btn_submit_signup.setOnAction(actionEvent ->
+        {
+            username_signup = txt_username_signup.getText();
+            email_signup = txt_email_signup.getText();
+            password_signup = pwd_signup.getText();
+
+            // Input validation
+            if(username_signup.isEmpty() || email_signup.isEmpty() || password_signup.isEmpty())
+            {
+                AlertBoxView.display("Registration Error", "You must fill in all fields when registering!");
+            }
+            else
+            {
+                User newUser = new UserBuilder(username_signup, email_signup, password_signup)
+                        .buildUser(UserType.REGULAR);
+
+                CurrentSession.userDataModel.registerUser(newUser);
+
+                txt_username_signup.clear();
+                txt_email_signup.clear();
+                pwd_signup.clear();
+
+                AlertBoxView.display("Registration Pending", "Your registration has been sent to the admin for approval!");
+            }
+        });
     }
 
     public void setMain(App app)
