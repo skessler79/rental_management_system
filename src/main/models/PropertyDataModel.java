@@ -82,6 +82,9 @@ public class PropertyDataModel {
     private boolean checkFilter(Property property, ArrayList<FacilityType> facilityTypes){
         int containFlag = 0;
         for (FacilityType facility:facilityTypes){
+            if (facility == null) {
+                return true;
+            }
             if (property.getFacilityTypes().contains(facility)) {
                 containFlag += 1;
             }

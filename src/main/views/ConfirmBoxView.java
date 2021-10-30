@@ -20,7 +20,7 @@ public class ConfirmBoxView
         // Block user actions on previous window
         window.initModality(Modality.APPLICATION_MODAL);
         window.setTitle(title);
-        window.setMinWidth(250);
+        window.setMinWidth(300);
         window.setMinHeight(100);
 
         Label label = new Label();

@@ -48,6 +48,7 @@ public class App extends Application
         scene.setFill(Color.TRANSPARENT);
         window.setScene(scene);
         window.show();
+
     }
 
     public void startApp(User user) throws Exception
