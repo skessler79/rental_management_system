@@ -146,7 +146,14 @@ public class PropertiesDetailsController implements Initializable
         labelOwner.setText(property.getOwner().getId());
         labelTenant.setText(tenantStr);
         labelStatus.setText(statusStr);
-        labelAddress.setText(property.getAddress().toString());
+        try
+        {
+            labelAddress.setText(property.getAddress().toString());
+        }
+        catch(NullPointerException e)
+        {
+            labelAddress.setText("");
+        }
         labelProject.setText(property.getProject());
         labelRentalFee.setText(String.format("RM %.2f", property.getRentalFee()));
         labelRooms.setText(property.getRoomInfo());
