@@ -56,20 +56,13 @@ public class DashboardController extends FragmentController implements Initializ
                 lastname = txtLastname.getText();
                 address = txtAddress.getText();
 
-                if(username.isEmpty() || email.isEmpty())
-                {
-                    AlertBoxView.display("Edit Error", "The username and email field cannot be empty!");
-                }
-                else
-                {
-                    CurrentSession.currentUser.setUsername(username);
-                    CurrentSession.currentUser.setEmail(email);
-                    CurrentSession.currentUser.setFirstName(firstname);
-                    CurrentSession.currentUser.setLastName(lastname);
-                    CurrentSession.currentUser.setAddress(address);
+                CurrentSession.currentUser.setUsername(username);
+                CurrentSession.currentUser.setEmail(email);
+                CurrentSession.currentUser.setFirstName(firstname);
+                CurrentSession.currentUser.setLastName(lastname);
+                CurrentSession.currentUser.setAddress(address);
 
-                    CurrentSession.userDataModel.editUserProfile(CurrentSession.currentUser);
-                }
+                CurrentSession.userDataModel.editUserProfile(CurrentSession.currentUser);
             }
         });
 

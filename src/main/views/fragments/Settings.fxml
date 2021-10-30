@@ -136,7 +136,7 @@
                                           <Image url="@../../../../resources/icons/profile/profile_name.png" />
                                        </image>
                                     </ImageView>
-                                    <JFXTextField fx:id="txtUsername" prefHeight="34.0" prefWidth="300.0" text="xX_Aq3L_n0_r3TreaTz_Xx">
+                                    <JFXTextField fx:id="txtUsername" editable="false" focusTraversable="false" opacity="0.65" prefHeight="34.0" prefWidth="300.0" text="xX_Aq3L_n0_r3TreaTz_Xx">
                                        <font>
                                           <Font size="16.0" />
                                        </font>
@@ -156,7 +156,7 @@
                                           <Image url="@../../../../resources/icons/profile/profile_email.png" />
                                        </image>
                                     </ImageView>
-                                    <JFXTextField fx:id="txtEmail" prefHeight="34.0" prefWidth="300.0" text="scholar@tm.com">
+                                    <JFXTextField fx:id="txtEmail" editable="false" focusTraversable="false" opacity="0.65" prefHeight="34.0" prefWidth="300.0" text="scholar@tm.com">
                                        <font>
                                           <Font size="16.0" />
                                        </font>
