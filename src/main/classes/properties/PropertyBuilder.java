@@ -2,9 +2,6 @@ package main.classes.properties;
 
 import main.classes.Address;
 import main.classes.Comment;
-import main.classes.users.Agent;
-import main.classes.users.Owner;
-import main.classes.users.Regular;
 import main.classes.users.User;
 import main.enums.FacilityType;
 import main.enums.PropertyType;
@@ -30,14 +27,14 @@ public class PropertyBuilder {
     //optional fields
     private User agent = null;
     private Address address = null;
-    private String size = null;
-    private String description = null;
-    private double rentalFee = -1;
-    private double rentalRate = -1;
+    private String size = "";
+    private String description = "";
+    private double rentalFee = 0;
+    private double rentalRate = 0;
     private boolean isActive = false;
     private ArrayList<FacilityType> facilityTypes = new ArrayList<>();
-    private String roomInfo = null;
-    private int bathRoomCount = -1;
+    private String roomInfo = "";
+    private int bathRoomCount = 0;
 
     public PropertyBuilder(User owner, PropertyType propertyType, String name, String project){
         this.owner = owner;

@@ -10,12 +10,12 @@ import java.util.UUID;
 public class UserBuilder {
     //users
     private String id = UUID.randomUUID().toString();
-    private String firstName = null;
-    private String lastName = null;
+    private String firstName = "";
+    private String lastName = "";
     private String username = null;
     private String email = null;
     private String password = null;
-    private String address = null;
+    private String address = "";
     // owner & agent
     private ArrayList<String> propertyList = new ArrayList<>();
     //regular
@@ -25,7 +25,6 @@ public class UserBuilder {
         this.username = username;
         this.email = email;
         this.password = password;
-        this.address = address;
     }
 
     public User buildUser(UserType userType) {
