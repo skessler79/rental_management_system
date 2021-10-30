@@ -1,6 +1,5 @@
 package main.controllers;
 
-
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXRadioButton;
 import com.jfoenix.controls.JFXTextField;
@@ -17,8 +16,8 @@ import main.views.AlertBoxView;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class AddUserController implements Initializable {
-
+public class AddUserController implements Initializable
+{
     @FXML
     private JFXTextField txt_first_name;
 
@@ -52,15 +51,14 @@ public class AddUserController implements Initializable {
     @FXML
     private JFXButton btn_add_user;
 
-    private String username, first_name, last_name, password, email ,address;
-    private UserType  userType;
+    private String username, first_name, last_name, password, email, address;
+    private UserType userType;
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
+    public void initialize(URL url, ResourceBundle resourceBundle)
+    {
         //Grouping type
         ToggleGroup typeGroup = new ToggleGroup();
-
 
         radioType_admin.setToggleGroup(typeGroup);
         radioType_agent.setToggleGroup(typeGroup);
@@ -68,7 +66,8 @@ public class AddUserController implements Initializable {
         radioType_regular.setToggleGroup(typeGroup);
         radioType_admin.setSelected(true);
 
-        btn_add_user.setOnAction(actionEvent -> {
+        btn_add_user.setOnAction(actionEvent ->
+        {
 
             //First Name
             first_name = txt_first_name.getText();
@@ -79,9 +78,10 @@ public class AddUserController implements Initializable {
             txt_last_name.clear();
 
             // Type
-            String typeStr = ((JFXRadioButton)typeGroup.getSelectedToggle()).getText();
+            String typeStr = ((JFXRadioButton) typeGroup.getSelectedToggle()).getText();
 
-            switch (typeStr) {
+            switch (typeStr)
+            {
                 case "Admin":
                     userType = UserType.ADMIN;
                     break;
@@ -121,15 +121,15 @@ public class AddUserController implements Initializable {
 
             System.out.println(newUser);
 
-            try {
-                CurrentSession.userDataModel.adminCreateUser((Admin) CurrentSession.currentUser, newUser);
-            } catch (IllegalAccessException e) {
+            try
+            {
+                CurrentSession.userDataModel.adminCreateUser(CurrentSession.currentUser, newUser);
+            } catch (IllegalAccessException e)
+            {
                 e.printStackTrace();
             }
 
             AlertBoxView.display("Add User", "User successfully added!");
         });
     }
-
-
 }

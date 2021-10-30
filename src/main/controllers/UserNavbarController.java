@@ -39,6 +39,7 @@ public class UserNavbarController implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
+        // First fragment is dashboard
         try
         {
             loader = new FXMLLoader(getClass().getResource("../views/fragments/Dashboard.fxml"));
@@ -52,7 +53,7 @@ public class UserNavbarController implements Initializable
 
         pane1.setVisible(false);
 
-        // Setting up animations
+        // Setting up sidebar animations
         FadeTransition fadeTransition = new FadeTransition(Duration.seconds(0.5), pane1);
         fadeTransition.setFromValue(1);
         fadeTransition.setToValue(0);

@@ -192,6 +192,7 @@ public class PropertiesDetailsController implements Initializable
         });
     }
 
+    // Let admins add comments to properties
     private void setComments(Property property)
     {
         property = CurrentSession.propertyDataModel.getPropertyById(property.getPropertyId());

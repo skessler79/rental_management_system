@@ -35,6 +35,7 @@ public class LoginController implements Initializable
     private App main;
     private String username_signup, email_signup, password_signup;
 
+    // Login button onAction
     @FXML
     public void login(ActionEvent actionEvent)
     {
@@ -80,7 +81,6 @@ public class LoginController implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-        System.out.println("Initialize");
         btn_submit_signin.setDefaultButton(true);
 
         btn_submit_signup.setOnAction(actionEvent ->
@@ -92,10 +92,12 @@ public class LoginController implements Initializable
             // Input validation
             if(username_signup.isEmpty() || email_signup.isEmpty() || password_signup.isEmpty())
             {
+                // Registration problem
                 AlertBoxView.display("Registration Error", "You must fill in all fields when registering!");
             }
             else
             {
+                // Form properly filled
                 User newUser = new UserBuilder(username_signup, email_signup, password_signup)
                         .buildUser(UserType.REGULAR);
 

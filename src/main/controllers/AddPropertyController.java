@@ -108,8 +108,6 @@ public class AddPropertyController implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-        // TODO : Handle Form
-
         // Grouping Type
         ToggleGroup typeGroup = new ToggleGroup();
 
