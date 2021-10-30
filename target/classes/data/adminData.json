@@ -1,18 +1,7 @@
 [
   {
     "adminDetails": null,
-    "id": "c1a7c03f-8494-4c46-90fb-0e043c5b2541",
-    "userType": "ADMIN",
-    "firstName": "Admin0101",
-    "lastName": "Loo",
-    "username": "admin0101",
-    "email": "admin0101@abc.com",
-    "password": "abc123",
-    "address": "29 Lorong 3/1B Taman Intan Baiduri Kepong"
-  },
-  {
-    "adminDetails": null,
-    "id": "2555ef1f-f827-484a-9a2b-93a22bccbe52",
+    "id": "6f0f2bd7-023b-4207-9cc6-5bf6dcb46683",
     "userType": "ADMIN",
     "firstName": "Lemon",
     "lastName": "Lime",
@@ -20,5 +9,16 @@
     "email": "lemon@abc.com",
     "password": "abc123",
     "address": "69, Taman Good, 69420"
+  },
+  {
+    "adminDetails": null,
+    "id": "a5ea7ad1-6dac-4b7d-8866-a864808ebeee",
+    "userType": "ADMIN",
+    "firstName": "Barack",
+    "lastName": "Trump",
+    "username": "admin0101",
+    "email": "admin0101@abc.com",
+    "password": "abc123",
+    "address": "29 Lorong 3/1B Taman Intan Baiduri Kepong"
   }
 ]
