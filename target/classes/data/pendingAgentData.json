@@ -1,9 +1,9 @@
 [
   {
-    "agentDetails": "agent1",
-    "id": "ca1c6d09-2679-4160-a61e-4fe6da91618e",
+    "agentDetails": null,
+    "id": "03aa21d1-3826-4157-b178-4af2d5500e67",
     "userType": "AGENT",
-    "firstName": "Johny ",
+    "firstName": "Johny",
     "lastName": "Shallow",
     "username": "shallow123",
     "email": "johny@abc.com",

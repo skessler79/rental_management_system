@@ -1,18 +1,18 @@
 [
   {
-    "ownerDetails": "owner3",
+    "ownerDetails": null,
     "propertyList": [
-      "a02dd18e-e89e-468d-9fc4-aa944a362745",
-      "d25a789c-5321-4bc2-a6f5-f980f02463ea",
-      "0e185973-8b63-464e-b59d-437a5ddc8b33",
-      "f20d50e0-14c1-4afb-90ed-420003a7618b",
-      "18fa99ee-9ad0-47bd-9feb-481ee42e02f0",
-      "bdd04edc-1ee1-4e3a-a4a7-b962083419de",
-      "d9a082c4-a1cb-4491-9aa8-4dcd1b113bbd",
-      "bc824ea8-14d9-4288-9822-3d4db1a67b54",
-      "e259bb3a-b386-4ce1-acba-4bc8f0783255"
+      "fdcc0d61-3e13-48bd-a950-78564009b192",
+      "7f6085f0-7469-478c-93bc-f7aa0de8b343",
+      "1e1ca296-01a8-4685-ab51-139ae1fb387b",
+      "4060b08e-0d65-4b30-ac80-8dfeb6b540bd",
+      "bc739bf3-19c4-4e4a-acd4-8a8b2d132647",
+      "730670e3-216a-4567-a2be-ef239847999d",
+      "549aaa03-d989-45c6-8f1e-de33f1419b60",
+      "feec9f1a-911a-4d57-ba84-b06a9e5a9721",
+      "acc55fc5-affa-4253-8ed4-20dedca1711a"
     ],
-    "id": "bd45b18c-ef4a-4411-98a5-3b09e7b6b141",
+    "id": "0c72b1d7-55fc-4c69-866e-6a5d2d11da9b",
     "userType": "OWNER",
     "firstName": "Cardi",
     "lastName": "C",
@@ -22,15 +22,15 @@
     "address": "8 Jln Hulu Batu 7 Hulu Ampang"
   },
   {
-    "ownerDetails": "owner4",
+    "ownerDetails": null,
     "propertyList": [
-      "73cec6bc-9003-40ce-a1fb-02b0cee81b63",
-      "e5ca4b28-72bd-4323-a3a5-e921418cb8e7",
-      "cc329e8a-f7a7-4296-ac83-1588997e4115",
-      "8a1f19f0-a3c3-4c7d-93ef-64207780758f",
-      "69186f17-090e-42ff-acad-9e00e71f9cf2"
+      "547bbd17-1387-481f-bf3f-122e03bfa0f5",
+      "64b344bb-ef0a-4a05-b621-2610552ba0f7",
+      "b8d41f29-0beb-4b51-885b-117b4a406afb",
+      "7463a97b-ae1a-4134-967b-36938c49e257",
+      "28c38aca-1b5c-4b00-ac81-63f822f786ec"
     ],
-    "id": "6f62cf6f-0d6a-4da0-98cf-daab2e9acbbd",
+    "id": "90596228-1ede-4269-8312-b3347dfe39a7",
     "userType": "OWNER",
     "firstName": "Cola",
     "lastName": "Sprite",
@@ -40,18 +40,18 @@
     "address": "36 Tingkat 3 Persiaran 65C Off Jalan Pahang Barat"
   },
   {
-    "ownerDetails": "owner4",
+    "ownerDetails": null,
     "propertyList": [
-      "c1b86ee0-6e37-48e5-ac9b-18e8d59b7862",
-      "cb444e63-2d82-40c8-a04d-6e76a8530d1e",
-      "72f91d52-c51e-4040-aa30-47baff5649d2",
-      "69df4a69-5096-4c2f-88b2-3f392305d3d3",
-      "83f45317-39e7-4dbc-b3d4-5e402b42bb44",
-      "a6d6f341-66f7-4ee5-9a49-c26edcdb219e",
-      "15b110dd-0391-4ceb-b4db-08ef0005c58d",
-      "6f26bba7-7547-4f4e-a92a-f37222b47ae0"
+      "86d5790e-b511-4210-ac85-aaea5ead66e4",
+      "388c2be4-2704-4633-91ce-04281300019f",
+      "10f81312-3294-4068-a1b8-59edd6336ede",
+      "fe273680-b452-486e-8f5c-eac1deda6300",
+      "5f9d9968-92d2-464c-8d6e-6720297b068b",
+      "b99e6db3-13dc-47fa-a6ba-a67af6e702d6",
+      "d09f84a8-f216-42a7-9ff2-cad0c3258ba2",
+      "70558fe9-b700-4372-bf06-45af383d72a4"
     ],
-    "id": "886bb252-66a8-4391-915c-92d34193a398",
+    "id": "77c23191-e9d2-4110-9b96-45c7819a67f4",
     "userType": "OWNER",
     "firstName": "Nafis",
     "lastName": "Affendi",
@@ -61,18 +61,18 @@
     "address": "37 Tingkat 4 Persiaran 65C Off Jalan Pahang Barat"
   },
   {
-    "ownerDetails": "owner3",
+    "ownerDetails": null,
     "propertyList": [
-      "1690330b-c0c0-48d8-8e8a-e80504fabec5",
-      "4ff4f5e8-af54-46d2-b288-c6da20c4c7da",
-      "af10cea4-6bc9-4c3a-97d6-e3b5329e10d1",
-      "48dd4ef3-1ca2-411a-90ec-5d3237cc125c",
-      "89f46c1d-e4d9-4bdb-a718-cf540655fc2e",
-      "d954e63f-5458-465d-ba74-54ba102af22d",
-      "2fee40c1-a5de-4df9-afbe-4923cad881e9",
-      "fce5cfca-a861-4028-bfdb-af0f500cc631"
+      "878c5768-6754-435c-add2-75dfbf64e00d",
+      "c329c4ce-e8df-44d6-813d-f5ea5e705ec4",
+      "d4e0c4bb-c7bd-4022-900e-4922a3283f29",
+      "9ba96e16-52a0-4c8b-af26-99c1cb18d7f5",
+      "825ba11f-b985-44c6-aac1-61b435d260ac",
+      "2261d911-34d7-4f98-bbda-eb8ad1d3c2f9",
+      "1cebb96b-fbec-4a9a-ab41-e0474312bcaa",
+      "4725c05c-72d1-4adb-94ab-a901bbd69f36"
     ],
-    "id": "b4a78f28-61e5-491c-bfe1-64a030a199b8",
+    "id": "49fce62b-a569-4a55-b7c0-fd09042816a0",
     "userType": "OWNER",
     "firstName": "Selwyn",
     "lastName": "Ping",

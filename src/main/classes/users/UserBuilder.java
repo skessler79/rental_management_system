@@ -22,9 +22,7 @@ public class UserBuilder {
     // owner
     private ArrayList<String> propertyList = new ArrayList<>();
 
-    public UserBuilder(String firstName, String lastName, String username, String email, String password, String address) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public UserBuilder(String username, String email, String password) {
         this.username = username;
         this.email = email;
         this.password = password;
@@ -55,23 +53,13 @@ public class UserBuilder {
         return this;
     }
 
-    public UserBuilder adminDetails (String adminDetails){
-        this.adminDetails = adminDetails;
+    public UserBuilder firstName (String firstName){
+        this.firstName = firstName;
         return this;
     }
 
-    public UserBuilder ownerDetails (String ownerDetails){
-        this.ownerDetails = ownerDetails;
-        return this;
-    }
-
-    public UserBuilder agentDetails (String agentDetails){
-        this.agentDetails = agentDetails;
-        return this;
-    }
-
-    public UserBuilder regularDetails (String regularDetails){
-        this.regularDetails = regularDetails;
+    public UserBuilder lastName (String lastName){
+        this.lastName = lastName;
         return this;
     }
 }

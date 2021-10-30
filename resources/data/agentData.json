@@ -1,18 +1,7 @@
 [
   {
-    "agentDetails": "agent3",
-    "id": "d3e9708c-a0d1-4613-82ed-2d421f8b9b46",
-    "userType": "AGENT",
-    "firstName": "Jamie",
-    "lastName": "Bonds",
-    "username": "agent007",
-    "email": "agent007@abc.com",
-    "password": "abc123",
-    "address": "19-01, Jln Padi Emas 3/1, Bahru"
-  },
-  {
-    "agentDetails": "agent3",
-    "id": "3c50afca-0b88-4ae3-a1dc-1de4a2f43bd8",
+    "agentDetails": null,
+    "id": "ad46caf7-28f8-466c-ba6d-737b44fc94ca",
     "userType": "AGENT",
     "firstName": "Keanu",
     "lastName": "River",
@@ -22,13 +11,24 @@
     "address": "19-01, Jln Padi Silver 4/5"
   },
   {
-    "agentDetails": "agent3",
-    "id": "af9b8224-c1f1-4e2d-b954-06ff96e65d63",
+    "agentDetails": null,
+    "id": "fdc3fa18-e6d3-4e88-ab61-dd170ee4596d",
     "userType": "AGENT",
     "firstName": "Jeff",
     "lastName": "Buffet",
     "username": "warrenbezos",
     "email": "agent007@abc.com",
+    "password": "abc123",
+    "address": "19-01, Jln Padi Emas 3/1, Bahru"
+  },
+  {
+    "agentDetails": null,
+    "id": "a706cf3d-e2e4-4781-b7ce-9e7e6a22145c",
+    "userType": "AGENT",
+    "firstName": "Jamie",
+    "lastName": "bondny",
+    "username": "agent007",
+    "email": "imagent007@gmail.com",
     "password": "abc123",
     "address": "19-01, Jln Padi Emas 3/1, Bahru"
   }

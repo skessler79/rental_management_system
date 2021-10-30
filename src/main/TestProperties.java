@@ -580,7 +580,7 @@ public class TestProperties {
                         .buildProperty()
 
         ));
-        System.out.println("Total Properties generated - " + propertyObjectData.size());
+
         return propertyObjectData;
     }
 }

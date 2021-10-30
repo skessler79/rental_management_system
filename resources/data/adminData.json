@@ -1,7 +1,7 @@
 [
   {
-    "adminDetails": "admin0101",
-    "id": "0e1f1991-a9f4-4bf0-bff7-7b81ed43bad2",
+    "adminDetails": null,
+    "id": "ca3ec89f-9464-4bb0-a1d2-7337149cf0cd",
     "userType": "ADMIN",
     "firstName": "Admin0101",
     "lastName": "Loo",
@@ -11,8 +11,8 @@
     "address": "29 Lorong 3/1B Taman Intan Baiduri Kepong"
   },
   {
-    "adminDetails": "admin2",
-    "id": "2ed29f8f-2a8d-4592-89f5-0845a2ef3a86",
+    "adminDetails": null,
+    "id": "9c600ca8-4191-49af-9385-84389e770cc9",
     "userType": "ADMIN",
     "firstName": "Lemon",
     "lastName": "Lime",

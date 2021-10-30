@@ -1,8 +1,8 @@
 [
   {
-    "ownerDetails": "owner1",
+    "ownerDetails": null,
     "propertyList": [],
-    "id": "90145ce8-3574-4012-8043-8ce33dfb5690",
+    "id": "a8dea284-ebc0-4f82-9051-16181bb1b3ab",
     "userType": "OWNER",
     "firstName": "Ali",
     "lastName": "Tan",
@@ -12,9 +12,9 @@
     "address": "19-01, Jln Padi Emas 3/1, Taman Abc, Johor Bahru"
   },
   {
-    "ownerDetails": "owner2",
+    "ownerDetails": null,
     "propertyList": [],
-    "id": "b81b7c90-62e2-4132-b753-7ba7df64eeca",
+    "id": "1f313d53-8dc5-4867-973e-f58d7d863cca",
     "userType": "OWNER",
     "firstName": "Ee",
     "lastName": "Ming",

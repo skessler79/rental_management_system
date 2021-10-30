@@ -115,8 +115,7 @@ public class LoginController implements Initializable
             }
             else
             {
-                User newUser = new UserBuilder("", "", username_signup, email_signup, password_signup, "")
-                        .regularDetails(username_signup)
+                User newUser = new UserBuilder(username_signup, email_signup, password_signup)
                         .buildUser(UserType.REGULAR);
 
                 CurrentSession.userDataModel.registerUser(newUser);
