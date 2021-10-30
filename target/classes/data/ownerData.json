@@ -1,0 +1,78 @@
+[
+  {
+    "propertyList": [
+      "700d20e4-a7c2-445f-9efb-d1298064c708",
+      "abafebeb-c5f7-46eb-9434-5a7a7fc00f79",
+      "d8c1ec5e-9f34-4bb0-a7ba-b7bd4f1b59ac",
+      "4be54391-79d0-41e6-a96b-e34319507400",
+      "f3c1445c-f5c6-46f2-aa0d-aacdb7f1c080"
+    ],
+    "id": "d2e6b4f3-43cb-42aa-9541-9022beb2464a",
+    "userType": "OWNER",
+    "firstName": "Cola",
+    "lastName": "Sprite",
+    "username": "owner4",
+    "email": "cola@abc.com",
+    "password": "abc123",
+    "address": "36 Tingkat 3 Persiaran 65C Off Jalan Pahang Barat"
+  },
+  {
+    "propertyList": [
+      "364b7ea0-385d-4062-8e6c-ea4ca4a6346f",
+      "2f10559c-78ca-4d78-9b9f-ee947b6ec1fd",
+      "9913f489-db49-4826-a11f-6de8527ec18e",
+      "3cbd5294-91d0-4a20-8e5f-120750aacb41",
+      "bce20b55-eeae-42a2-b808-cd3e60d98c06",
+      "efaad25f-3fef-498e-8ee5-2a4d59d22183",
+      "3104ddf0-40ba-4f76-acb0-874ca137e09e",
+      "ccb0a789-f9c6-4033-bdff-15224ac9ff43"
+    ],
+    "id": "07cd54e5-b5a8-4e6f-9b85-55d79c7801c2",
+    "userType": "OWNER",
+    "firstName": "Nafis",
+    "lastName": "Affendi",
+    "username": "owner6",
+    "email": "affendi@abc.com",
+    "password": "abc123",
+    "address": "37 Tingkat 4 Persiaran 65C Off Jalan Pahang Barat"
+  },
+  {
+    "propertyList": [
+      "576daeb7-f851-494f-a699-c92cf973bb46",
+      "f5dd2372-c21f-4941-8fee-788e172fbc47",
+      "f8f6446f-e87f-4ae4-aa53-35940acc38be",
+      "1fe85f86-d657-43ed-be40-cc651931c5a8",
+      "009fa686-76c8-442f-803d-3e2ebbd544e5",
+      "02985989-922a-405b-b4e7-7a7b7755324b",
+      "4fac8d09-a649-4989-a1e7-c5951fd7b20f",
+      "2b47b37f-a056-4d6e-9980-fad046638bc5"
+    ],
+    "id": "86abb200-7d9e-43ac-8a6b-f638d53cdb07",
+    "userType": "OWNER",
+    "firstName": "Selwyn",
+    "lastName": "Ping",
+    "username": "owner5",
+    "email": "selwyn@abc.com",
+    "password": "abc123",
+    "address": "9 Jln Hulu Batu 10 Hulu Ampang"
+  },
+  {
+    "propertyList": [
+      "8ec51080-47f1-44df-8f3c-ba9383171bfb",
+      "54c2eef4-fbae-47f7-a231-31e09d8e5c34",
+      "1fdb4d79-9c7d-4862-a511-517edab92ce6",
+      "3ab62e8e-1d7b-4cd4-aff3-231dbd8605bd",
+      "cb91957f-3391-46cb-9734-33750af731fe",
+      "c6da036c-70e8-4c83-ab9f-19745646f2a2",
+      "f9bc6cde-d2ce-4151-869b-6b2ff2aa46f9"
+    ],
+    "id": "9c7653ff-ca4e-446e-a616-f2caf41b06a5",
+    "userType": "OWNER",
+    "firstName": "Cardi",
+    "lastName": "C",
+    "username": "owner3",
+    "email": "cardi@abc.com",
+    "password": "abc123",
+    "address": "8 Jln Hulu Batu 7 Hulu Ampang"
+  }
+]
