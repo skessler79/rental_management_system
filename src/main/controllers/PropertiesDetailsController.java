@@ -194,6 +194,5 @@ public class PropertiesDetailsController implements Initializable
         ObservableList<Comment> commentsObservable = FXCollections.observableArrayList(comments);
         listComments.setItems(commentsObservable);
     }
-
 }
 

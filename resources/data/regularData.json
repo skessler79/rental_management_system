@@ -1,7 +1,7 @@
 [
   {
     "regularDetails": "regular3",
-    "id": "e78ee63e-6784-42c3-807f-f14d79b8f040",
+    "id": "20eaf65b-10a1-4aa3-80db-d920f90a7728",
     "userType": "REGULAR",
     "firstName": "Pepsi",
     "lastName": "Milo",
@@ -12,7 +12,7 @@
   },
   {
     "regularDetails": "regular4",
-    "id": "9398dc7d-cf00-4445-bd9d-61cad2deebbb",
+    "id": "e4df1e5b-7e05-4f3c-bb7e-9f72d9a8e13b",
     "userType": "REGULAR",
     "firstName": "Elon",
     "lastName": "Must",
@@ -23,7 +23,7 @@
   },
   {
     "regularDetails": "regular5",
-    "id": "447ef77b-892f-4f70-9068-16f9b8940afa",
+    "id": "b1cafbde-69b7-47f9-aabc-27d79ec0948f",
     "userType": "REGULAR",
     "firstName": "Adam",
     "lastName": "Tan",
@@ -34,7 +34,7 @@
   },
   {
     "regularDetails": "regular6",
-    "id": "a4b1e4cb-e1c5-4732-9ab5-d9d4bf0d6d14",
+    "id": "39aa8fbb-3776-4573-903b-5e8011d670ab",
     "userType": "REGULAR",
     "firstName": "Mark",
     "lastName": "Kepen",
@@ -45,7 +45,7 @@
   },
   {
     "regularDetails": "regular6",
-    "id": "bf062248-7a48-40c9-97ae-83d0b8ccc062",
+    "id": "99dbf5ce-3d72-44f2-bf1a-da4f0a93816f",
     "userType": "REGULAR",
     "firstName": "Peter",
     "lastName": "Spark",
@@ -53,5 +53,16 @@
     "email": "ironspider@abc.com",
     "password": "abc123",
     "address": "22, Taman Very Very Very Ok, 14000 Pulau Pinang"
+  },
+  {
+    "regularDetails": "fucker",
+    "id": "77fd5f7e-cdd5-4fbe-8cd3-0d599191837e",
+    "userType": "REGULAR",
+    "firstName": "",
+    "lastName": "",
+    "username": "fucker",
+    "email": "fuck@this.shit.com",
+    "password": "shit",
+    "address": ""
   }
 ]

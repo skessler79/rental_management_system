@@ -1,8 +1,8 @@
 [
   {
-    "propertyId": "11f494dc-55ad-44da-9b88-e9766d73501b",
+    "propertyId": "a02dd18e-e89e-468d-9fc4-aa944a362745",
     "owner": {
-      "id": "9255c155-6d4b-463a-b483-59836c54a5c6",
+      "id": "bd45b18c-ef4a-4411-98a5-3b09e7b6b141",
       "userType": "OWNER",
       "firstName": "Cardi",
       "lastName": "C",
@@ -12,7 +12,7 @@
       "address": "8 Jln Hulu Batu 7 Hulu Ampang"
     },
     "agent": {
-      "id": "18c466c9-1bff-42b8-ae01-db49815f8d32",
+      "id": "d3e9708c-a0d1-4613-82ed-2d421f8b9b46",
       "userType": "AGENT",
       "firstName": "Jamie",
       "lastName": "Bonds",
@@ -36,7 +36,7 @@
     "project": "Tamarind Suites",
     "rentalFee": 800.0,
     "rentalRate": 1.99,
-    "createdAt": "2021-10-30T14:07:08.296+0800",
+    "createdAt": "2021-10-30T14:45:58.475+0800",
     "facilityTypes": [
       "AIRCOND",
       "SWIMMING_POOL",
@@ -51,9 +51,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "e2703389-b552-4090-ac41-8da4d5e9a4ed",
+    "propertyId": "d25a789c-5321-4bc2-a6f5-f980f02463ea",
     "owner": {
-      "id": "9255c155-6d4b-463a-b483-59836c54a5c6",
+      "id": "bd45b18c-ef4a-4411-98a5-3b09e7b6b141",
       "userType": "OWNER",
       "firstName": "Cardi",
       "lastName": "C",
@@ -63,7 +63,7 @@
       "address": "8 Jln Hulu Batu 7 Hulu Ampang"
     },
     "agent": {
-      "id": "48934231-6a41-4d78-ab88-7d0953ff0d7e",
+      "id": "3c50afca-0b88-4ae3-a1dc-1de4a2f43bd8",
       "userType": "AGENT",
       "firstName": "Keanu",
       "lastName": "River",
@@ -87,7 +87,7 @@
     "project": "Lakefront Residence",
     "rentalFee": 1650.0,
     "rentalRate": 1.19,
-    "createdAt": "2021-10-30T14:07:08.297+0800",
+    "createdAt": "2021-10-30T14:45:58.476+0800",
     "facilityTypes": [
       "AIRCOND",
       "SWIMMING_POOL",
@@ -103,9 +103,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "000e2aa8-ed6d-4792-9565-aef1a7723ecb",
+    "propertyId": "0e185973-8b63-464e-b59d-437a5ddc8b33",
     "owner": {
-      "id": "9255c155-6d4b-463a-b483-59836c54a5c6",
+      "id": "bd45b18c-ef4a-4411-98a5-3b09e7b6b141",
       "userType": "OWNER",
       "firstName": "Cardi",
       "lastName": "C",
@@ -130,7 +130,7 @@
     "project": "Verdi Eco-Dominiums",
     "rentalFee": 3000.0,
     "rentalRate": 2.08,
-    "createdAt": "2021-10-30T14:07:08.297+0800",
+    "createdAt": "2021-10-30T14:45:58.476+0800",
     "facilityTypes": [
       "AIRCOND",
       "FRIDGE",
@@ -147,9 +147,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "df26413b-2449-44aa-a98f-3a73a9361417",
+    "propertyId": "73cec6bc-9003-40ce-a1fb-02b0cee81b63",
     "owner": {
-      "id": "e4be7e71-1a11-43ed-ba68-92d0d6973568",
+      "id": "6f62cf6f-0d6a-4da0-98cf-daab2e9acbbd",
       "userType": "OWNER",
       "firstName": "Cola",
       "lastName": "Sprite",
@@ -159,7 +159,7 @@
       "address": "36 Tingkat 3 Persiaran 65C Off Jalan Pahang Barat"
     },
     "agent": {
-      "id": "18c466c9-1bff-42b8-ae01-db49815f8d32",
+      "id": "d3e9708c-a0d1-4613-82ed-2d421f8b9b46",
       "userType": "AGENT",
       "firstName": "Jamie",
       "lastName": "Bonds",
@@ -183,7 +183,7 @@
     "project": "Garden Plaza",
     "rentalFee": 1100.0,
     "rentalRate": 2.44,
-    "createdAt": "2021-10-30T14:07:08.297+0800",
+    "createdAt": "2021-10-30T14:45:58.476+0800",
     "facilityTypes": [
       "AIRCOND",
       "TV",
@@ -197,9 +197,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "441f7ab1-efa0-4de9-8a7a-c0628c23ce0f",
+    "propertyId": "1690330b-c0c0-48d8-8e8a-e80504fabec5",
     "owner": {
-      "id": "9bfb350a-bcb2-4a36-9fd2-644d358f2f8f",
+      "id": "b4a78f28-61e5-491c-bfe1-64a030a199b8",
       "userType": "OWNER",
       "firstName": "Selwyn",
       "lastName": "Ping",
@@ -209,7 +209,7 @@
       "address": "9 Jln Hulu Batu 10 Hulu Ampang"
     },
     "agent": {
-      "id": "2d4957ab-a2e1-4557-bb18-4b9dc871bda2",
+      "id": "af9b8224-c1f1-4e2d-b954-06ff96e65d63",
       "userType": "AGENT",
       "firstName": "Jeff",
       "lastName": "Buffet",
@@ -233,7 +233,7 @@
     "project": "Verdi Eco-Dominiums",
     "rentalFee": 1900.0,
     "rentalRate": 1.92,
-    "createdAt": "2021-10-30T14:07:08.297+0800",
+    "createdAt": "2021-10-30T14:45:58.476+0800",
     "facilityTypes": [
       "AIRCOND",
       "TV",
@@ -248,9 +248,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "bd8731dc-2301-442c-8a4f-bd40442c60fc",
+    "propertyId": "e5ca4b28-72bd-4323-a3a5-e921418cb8e7",
     "owner": {
-      "id": "e4be7e71-1a11-43ed-ba68-92d0d6973568",
+      "id": "6f62cf6f-0d6a-4da0-98cf-daab2e9acbbd",
       "userType": "OWNER",
       "firstName": "Cola",
       "lastName": "Sprite",
@@ -260,7 +260,7 @@
       "address": "36 Tingkat 3 Persiaran 65C Off Jalan Pahang Barat"
     },
     "agent": {
-      "id": "18c466c9-1bff-42b8-ae01-db49815f8d32",
+      "id": "d3e9708c-a0d1-4613-82ed-2d421f8b9b46",
       "userType": "AGENT",
       "firstName": "Jamie",
       "lastName": "Bonds",
@@ -284,7 +284,7 @@
     "project": "Kenwingston Square Garden",
     "rentalFee": 1100.0,
     "rentalRate": 1.99,
-    "createdAt": "2021-10-30T14:07:08.297+0800",
+    "createdAt": "2021-10-30T14:45:58.476+0800",
     "facilityTypes": [
       "AIRCOND",
       "TV",
@@ -299,9 +299,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "27d3ad8d-6055-4e13-9f00-6d516ad331c8",
+    "propertyId": "4ff4f5e8-af54-46d2-b288-c6da20c4c7da",
     "owner": {
-      "id": "9bfb350a-bcb2-4a36-9fd2-644d358f2f8f",
+      "id": "b4a78f28-61e5-491c-bfe1-64a030a199b8",
       "userType": "OWNER",
       "firstName": "Selwyn",
       "lastName": "Ping",
@@ -311,7 +311,7 @@
       "address": "9 Jln Hulu Batu 10 Hulu Ampang"
     },
     "agent": {
-      "id": "2d4957ab-a2e1-4557-bb18-4b9dc871bda2",
+      "id": "af9b8224-c1f1-4e2d-b954-06ff96e65d63",
       "userType": "AGENT",
       "firstName": "Jeff",
       "lastName": "Buffet",
@@ -335,7 +335,7 @@
     "project": "Verdi Eco-Dominiums",
     "rentalFee": 950.0,
     "rentalRate": 2.05,
-    "createdAt": "2021-10-30T14:07:08.299+0800",
+    "createdAt": "2021-10-30T14:45:58.476+0800",
     "facilityTypes": [
       "AIRCOND",
       "TV",
@@ -351,9 +351,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "5e14d149-e857-46a1-8315-447ef6b98178",
+    "propertyId": "cc329e8a-f7a7-4296-ac83-1588997e4115",
     "owner": {
-      "id": "e4be7e71-1a11-43ed-ba68-92d0d6973568",
+      "id": "6f62cf6f-0d6a-4da0-98cf-daab2e9acbbd",
       "userType": "OWNER",
       "firstName": "Cola",
       "lastName": "Sprite",
@@ -363,7 +363,7 @@
       "address": "36 Tingkat 3 Persiaran 65C Off Jalan Pahang Barat"
     },
     "agent": {
-      "id": "48934231-6a41-4d78-ab88-7d0953ff0d7e",
+      "id": "3c50afca-0b88-4ae3-a1dc-1de4a2f43bd8",
       "userType": "AGENT",
       "firstName": "Keanu",
       "lastName": "River",
@@ -387,7 +387,7 @@
     "project": "Mutiara Villes",
     "rentalFee": 1600.0,
     "rentalRate": 1.33,
-    "createdAt": "2021-10-30T14:07:08.300+0800",
+    "createdAt": "2021-10-30T14:45:58.476+0800",
     "facilityTypes": [
       "TV",
       "SWIMMING_POOL",
@@ -401,9 +401,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "7369c9b8-d451-4ab9-9977-58524daf11db",
+    "propertyId": "c1b86ee0-6e37-48e5-ac9b-18e8d59b7862",
     "owner": {
-      "id": "11188fea-3b12-4497-b02b-237952fb367f",
+      "id": "886bb252-66a8-4391-915c-92d34193a398",
       "userType": "OWNER",
       "firstName": "Nafis",
       "lastName": "Affendi",
@@ -413,7 +413,7 @@
       "address": "37 Tingkat 4 Persiaran 65C Off Jalan Pahang Barat"
     },
     "agent": {
-      "id": "18c466c9-1bff-42b8-ae01-db49815f8d32",
+      "id": "d3e9708c-a0d1-4613-82ed-2d421f8b9b46",
       "userType": "AGENT",
       "firstName": "Jamie",
       "lastName": "Bonds",
@@ -437,7 +437,7 @@
     "project": "D\u0027 Melor",
     "rentalFee": 2500.0,
     "rentalRate": 1.83,
-    "createdAt": "2021-10-30T14:07:08.300+0800",
+    "createdAt": "2021-10-30T14:45:58.476+0800",
     "facilityTypes": [
       "TV",
       "SWIMMING_POOL",
@@ -452,9 +452,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "ba7a0639-2adf-4f5f-b80c-444867679dca",
+    "propertyId": "cb444e63-2d82-40c8-a04d-6e76a8530d1e",
     "owner": {
-      "id": "11188fea-3b12-4497-b02b-237952fb367f",
+      "id": "886bb252-66a8-4391-915c-92d34193a398",
       "userType": "OWNER",
       "firstName": "Nafis",
       "lastName": "Affendi",
@@ -464,7 +464,7 @@
       "address": "37 Tingkat 4 Persiaran 65C Off Jalan Pahang Barat"
     },
     "agent": {
-      "id": "18c466c9-1bff-42b8-ae01-db49815f8d32",
+      "id": "d3e9708c-a0d1-4613-82ed-2d421f8b9b46",
       "userType": "AGENT",
       "firstName": "Jamie",
       "lastName": "Bonds",
@@ -488,7 +488,7 @@
     "project": "Sawtelle",
     "rentalFee": 1000.0,
     "rentalRate": 1.41,
-    "createdAt": "2021-10-30T14:07:08.300+0800",
+    "createdAt": "2021-10-30T14:45:58.476+0800",
     "facilityTypes": [
       "TV",
       "FRIDGE",
@@ -503,9 +503,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "78cb0f2f-757e-4c6a-94f2-8af52c7ea6b6",
+    "propertyId": "f20d50e0-14c1-4afb-90ed-420003a7618b",
     "owner": {
-      "id": "9255c155-6d4b-463a-b483-59836c54a5c6",
+      "id": "bd45b18c-ef4a-4411-98a5-3b09e7b6b141",
       "userType": "OWNER",
       "firstName": "Cardi",
       "lastName": "C",
@@ -515,7 +515,7 @@
       "address": "8 Jln Hulu Batu 7 Hulu Ampang"
     },
     "agent": {
-      "id": "18c466c9-1bff-42b8-ae01-db49815f8d32",
+      "id": "d3e9708c-a0d1-4613-82ed-2d421f8b9b46",
       "userType": "AGENT",
       "firstName": "Jamie",
       "lastName": "Bonds",
@@ -539,7 +539,7 @@
     "project": "NeoCyber",
     "rentalFee": 1000.0,
     "rentalRate": 222.5,
-    "createdAt": "2021-10-30T14:07:08.300+0800",
+    "createdAt": "2021-10-30T14:45:58.476+0800",
     "facilityTypes": [
       "FRIDGE",
       "WATER_HEATER",
@@ -553,9 +553,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "99108999-bf66-4419-bb4f-b11a07faefd2",
+    "propertyId": "18fa99ee-9ad0-47bd-9feb-481ee42e02f0",
     "owner": {
-      "id": "9255c155-6d4b-463a-b483-59836c54a5c6",
+      "id": "bd45b18c-ef4a-4411-98a5-3b09e7b6b141",
       "userType": "OWNER",
       "firstName": "Cardi",
       "lastName": "C",
@@ -565,7 +565,7 @@
       "address": "8 Jln Hulu Batu 7 Hulu Ampang"
     },
     "agent": {
-      "id": "18c466c9-1bff-42b8-ae01-db49815f8d32",
+      "id": "d3e9708c-a0d1-4613-82ed-2d421f8b9b46",
       "userType": "AGENT",
       "firstName": "Jamie",
       "lastName": "Bonds",
@@ -589,7 +589,7 @@
     "project": "NeoCyber",
     "rentalFee": 700.0,
     "rentalRate": 1.17,
-    "createdAt": "2021-10-30T14:07:08.300+0800",
+    "createdAt": "2021-10-30T14:45:58.476+0800",
     "facilityTypes": [
       "FRIDGE",
       "WATER_HEATER",
@@ -604,9 +604,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "e9df04dd-0c0a-48d5-a55e-02f7dd748bae",
+    "propertyId": "72f91d52-c51e-4040-aa30-47baff5649d2",
     "owner": {
-      "id": "11188fea-3b12-4497-b02b-237952fb367f",
+      "id": "886bb252-66a8-4391-915c-92d34193a398",
       "userType": "OWNER",
       "firstName": "Nafis",
       "lastName": "Affendi",
@@ -616,7 +616,7 @@
       "address": "37 Tingkat 4 Persiaran 65C Off Jalan Pahang Barat"
     },
     "agent": {
-      "id": "2d4957ab-a2e1-4557-bb18-4b9dc871bda2",
+      "id": "af9b8224-c1f1-4e2d-b954-06ff96e65d63",
       "userType": "AGENT",
       "firstName": "Jeff",
       "lastName": "Buffet",
@@ -640,7 +640,7 @@
     "project": "Cyber 11",
     "rentalFee": 900.0,
     "rentalRate": 2.0,
-    "createdAt": "2021-10-30T14:07:08.300+0800",
+    "createdAt": "2021-10-30T14:45:58.476+0800",
     "facilityTypes": [
       "FRIDGE",
       "WATER_HEATER",
@@ -655,9 +655,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "92a6bdf1-3a56-469c-a529-0f39c4c4f93e",
+    "propertyId": "bdd04edc-1ee1-4e3a-a4a7-b962083419de",
     "owner": {
-      "id": "9255c155-6d4b-463a-b483-59836c54a5c6",
+      "id": "bd45b18c-ef4a-4411-98a5-3b09e7b6b141",
       "userType": "OWNER",
       "firstName": "Cardi",
       "lastName": "C",
@@ -667,7 +667,7 @@
       "address": "8 Jln Hulu Batu 7 Hulu Ampang"
     },
     "agent": {
-      "id": "48934231-6a41-4d78-ab88-7d0953ff0d7e",
+      "id": "3c50afca-0b88-4ae3-a1dc-1de4a2f43bd8",
       "userType": "AGENT",
       "firstName": "Keanu",
       "lastName": "River",
@@ -691,7 +691,7 @@
     "project": "OFF Persiaran Ceria",
     "rentalFee": 1450.0,
     "rentalRate": 1.38,
-    "createdAt": "2021-10-30T14:07:08.300+0800",
+    "createdAt": "2021-10-30T14:45:58.476+0800",
     "facilityTypes": [
       "FRIDGE",
       "WATER_HEATER",
@@ -705,9 +705,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "a860b87b-967b-40a1-9386-0b2c4e0134e5",
+    "propertyId": "69df4a69-5096-4c2f-88b2-3f392305d3d3",
     "owner": {
-      "id": "11188fea-3b12-4497-b02b-237952fb367f",
+      "id": "886bb252-66a8-4391-915c-92d34193a398",
       "userType": "OWNER",
       "firstName": "Nafis",
       "lastName": "Affendi",
@@ -732,7 +732,7 @@
     "project": "Cyber 6",
     "rentalFee": 1300.0,
     "rentalRate": 1.53,
-    "createdAt": "2021-10-30T14:07:08.300+0800",
+    "createdAt": "2021-10-30T14:45:58.476+0800",
     "facilityTypes": [
       "TV",
       "WATER_HEATER",
@@ -746,9 +746,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "9798f3e3-4b92-4528-ad08-0cc15bd37c58",
+    "propertyId": "d9a082c4-a1cb-4491-9aa8-4dcd1b113bbd",
     "owner": {
-      "id": "9255c155-6d4b-463a-b483-59836c54a5c6",
+      "id": "bd45b18c-ef4a-4411-98a5-3b09e7b6b141",
       "userType": "OWNER",
       "firstName": "Cardi",
       "lastName": "C",
@@ -758,7 +758,7 @@
       "address": "8 Jln Hulu Batu 7 Hulu Ampang"
     },
     "agent": {
-      "id": "48934231-6a41-4d78-ab88-7d0953ff0d7e",
+      "id": "3c50afca-0b88-4ae3-a1dc-1de4a2f43bd8",
       "userType": "AGENT",
       "firstName": "Keanu",
       "lastName": "River",
@@ -782,7 +782,7 @@
     "project": "Cyberia SmartHomes",
     "rentalFee": 900.0,
     "rentalRate": 0.9,
-    "createdAt": "2021-10-30T14:07:08.300+0800",
+    "createdAt": "2021-10-30T14:45:58.476+0800",
     "facilityTypes": [
       "WATER_HEATER",
       "SWIMMING_POOL",
@@ -796,9 +796,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "ecbeef21-cf84-482e-a382-1077e7a5e45f",
+    "propertyId": "bc824ea8-14d9-4288-9822-3d4db1a67b54",
     "owner": {
-      "id": "9255c155-6d4b-463a-b483-59836c54a5c6",
+      "id": "bd45b18c-ef4a-4411-98a5-3b09e7b6b141",
       "userType": "OWNER",
       "firstName": "Cardi",
       "lastName": "C",
@@ -823,7 +823,7 @@
     "project": "Cyberia SmartHomes",
     "rentalFee": 900.0,
     "rentalRate": 0.9,
-    "createdAt": "2021-10-30T14:07:08.300+0800",
+    "createdAt": "2021-10-30T14:45:58.476+0800",
     "facilityTypes": [
       "WATER_HEATER",
       "SWIMMING_POOL",
@@ -837,9 +837,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "f73943f3-0936-4339-b885-6cff85f197c8",
+    "propertyId": "e259bb3a-b386-4ce1-acba-4bc8f0783255",
     "owner": {
-      "id": "9255c155-6d4b-463a-b483-59836c54a5c6",
+      "id": "bd45b18c-ef4a-4411-98a5-3b09e7b6b141",
       "userType": "OWNER",
       "firstName": "Cardi",
       "lastName": "C",
@@ -849,7 +849,7 @@
       "address": "8 Jln Hulu Batu 7 Hulu Ampang"
     },
     "agent": {
-      "id": "18c466c9-1bff-42b8-ae01-db49815f8d32",
+      "id": "d3e9708c-a0d1-4613-82ed-2d421f8b9b46",
       "userType": "AGENT",
       "firstName": "Jamie",
       "lastName": "Bonds",
@@ -873,7 +873,7 @@
     "project": "Mutiara Ville",
     "rentalFee": 1200.0,
     "rentalRate": 1.2,
-    "createdAt": "2021-10-30T14:07:08.300+0800",
+    "createdAt": "2021-10-30T14:45:58.476+0800",
     "facilityTypes": [
       "WATER_HEATER",
       "SWIMMING_POOL",
@@ -888,9 +888,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "cfaa1fa5-966b-4e4a-8a54-0eeb43518aab",
+    "propertyId": "8a1f19f0-a3c3-4c7d-93ef-64207780758f",
     "owner": {
-      "id": "e4be7e71-1a11-43ed-ba68-92d0d6973568",
+      "id": "6f62cf6f-0d6a-4da0-98cf-daab2e9acbbd",
       "userType": "OWNER",
       "firstName": "Cola",
       "lastName": "Sprite",
@@ -900,7 +900,7 @@
       "address": "36 Tingkat 3 Persiaran 65C Off Jalan Pahang Barat"
     },
     "agent": {
-      "id": "48934231-6a41-4d78-ab88-7d0953ff0d7e",
+      "id": "3c50afca-0b88-4ae3-a1dc-1de4a2f43bd8",
       "userType": "AGENT",
       "firstName": "Keanu",
       "lastName": "River",
@@ -924,7 +924,7 @@
     "project": "Cyber 11",
     "rentalFee": 1600.0,
     "rentalRate": 1.6,
-    "createdAt": "2021-10-30T14:07:08.300+0800",
+    "createdAt": "2021-10-30T14:45:58.476+0800",
     "facilityTypes": [
       "WATER_HEATER",
       "SWIMMING_POOL",
@@ -941,9 +941,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "15fa1a10-3d7b-40a9-882e-e2ccdbb756fc",
+    "propertyId": "69186f17-090e-42ff-acad-9e00e71f9cf2",
     "owner": {
-      "id": "e4be7e71-1a11-43ed-ba68-92d0d6973568",
+      "id": "6f62cf6f-0d6a-4da0-98cf-daab2e9acbbd",
       "userType": "OWNER",
       "firstName": "Cola",
       "lastName": "Sprite",
@@ -953,7 +953,7 @@
       "address": "36 Tingkat 3 Persiaran 65C Off Jalan Pahang Barat"
     },
     "agent": {
-      "id": "48934231-6a41-4d78-ab88-7d0953ff0d7e",
+      "id": "3c50afca-0b88-4ae3-a1dc-1de4a2f43bd8",
       "userType": "AGENT",
       "firstName": "Keanu",
       "lastName": "River",
@@ -977,7 +977,7 @@
     "project": " Off Persiaran APEC",
     "rentalFee": 1000.0,
     "rentalRate": 2.07,
-    "createdAt": "2021-10-30T14:07:08.300+0800",
+    "createdAt": "2021-10-30T14:45:58.476+0800",
     "facilityTypes": [
       "WATER_HEATER",
       "FRIDGE",
@@ -992,9 +992,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "3aa7c264-4b06-4670-9788-1afcbc55b37d",
+    "propertyId": "af10cea4-6bc9-4c3a-97d6-e3b5329e10d1",
     "owner": {
-      "id": "9bfb350a-bcb2-4a36-9fd2-644d358f2f8f",
+      "id": "b4a78f28-61e5-491c-bfe1-64a030a199b8",
       "userType": "OWNER",
       "firstName": "Selwyn",
       "lastName": "Ping",
@@ -1004,7 +1004,7 @@
       "address": "9 Jln Hulu Batu 10 Hulu Ampang"
     },
     "agent": {
-      "id": "48934231-6a41-4d78-ab88-7d0953ff0d7e",
+      "id": "3c50afca-0b88-4ae3-a1dc-1de4a2f43bd8",
       "userType": "AGENT",
       "firstName": "Keanu",
       "lastName": "River",
@@ -1028,7 +1028,7 @@
     "project": " Symphony Hills",
     "rentalFee": 3000.0,
     "rentalRate": 2.14,
-    "createdAt": "2021-10-30T14:07:08.300+0800",
+    "createdAt": "2021-10-30T14:45:58.477+0800",
     "facilityTypes": [
       "WATER_HEATER",
       "FRIDGE",
@@ -1045,9 +1045,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "62895a0d-26a5-4a1b-80b2-755edac65fc3",
+    "propertyId": "48dd4ef3-1ca2-411a-90ec-5d3237cc125c",
     "owner": {
-      "id": "9bfb350a-bcb2-4a36-9fd2-644d358f2f8f",
+      "id": "b4a78f28-61e5-491c-bfe1-64a030a199b8",
       "userType": "OWNER",
       "firstName": "Selwyn",
       "lastName": "Ping",
@@ -1057,7 +1057,7 @@
       "address": "9 Jln Hulu Batu 10 Hulu Ampang"
     },
     "agent": {
-      "id": "48934231-6a41-4d78-ab88-7d0953ff0d7e",
+      "id": "3c50afca-0b88-4ae3-a1dc-1de4a2f43bd8",
       "userType": "AGENT",
       "firstName": "Keanu",
       "lastName": "River",
@@ -1081,7 +1081,7 @@
     "project": " Cybersouth",
     "rentalFee": 1500.0,
     "rentalRate": 1.25,
-    "createdAt": "2021-10-30T14:07:08.300+0800",
+    "createdAt": "2021-10-30T14:45:58.477+0800",
     "facilityTypes": [
       "WATER_HEATER",
       "FRIDGE",
@@ -1097,9 +1097,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "859b20af-e251-453c-a052-5e1458d3d7af",
+    "propertyId": "83f45317-39e7-4dbc-b3d4-5e402b42bb44",
     "owner": {
-      "id": "11188fea-3b12-4497-b02b-237952fb367f",
+      "id": "886bb252-66a8-4391-915c-92d34193a398",
       "userType": "OWNER",
       "firstName": "Nafis",
       "lastName": "Affendi",
@@ -1109,7 +1109,7 @@
       "address": "37 Tingkat 4 Persiaran 65C Off Jalan Pahang Barat"
     },
     "agent": {
-      "id": "2d4957ab-a2e1-4557-bb18-4b9dc871bda2",
+      "id": "af9b8224-c1f1-4e2d-b954-06ff96e65d63",
       "userType": "AGENT",
       "firstName": "Jeff",
       "lastName": "Buffet",
@@ -1133,7 +1133,7 @@
     "project": " Setia Eco Glades",
     "rentalFee": 3500.0,
     "rentalRate": 2.48,
-    "createdAt": "2021-10-30T14:07:08.300+0800",
+    "createdAt": "2021-10-30T14:45:58.477+0800",
     "facilityTypes": [
       "WATER_HEATER",
       "FRIDGE",
@@ -1149,9 +1149,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "1fec61e2-6494-4876-8c2d-41221adff75f",
+    "propertyId": "a6d6f341-66f7-4ee5-9a49-c26edcdb219e",
     "owner": {
-      "id": "11188fea-3b12-4497-b02b-237952fb367f",
+      "id": "886bb252-66a8-4391-915c-92d34193a398",
       "userType": "OWNER",
       "firstName": "Nafis",
       "lastName": "Affendi",
@@ -1161,7 +1161,7 @@
       "address": "37 Tingkat 4 Persiaran 65C Off Jalan Pahang Barat"
     },
     "agent": {
-      "id": "2d4957ab-a2e1-4557-bb18-4b9dc871bda2",
+      "id": "af9b8224-c1f1-4e2d-b954-06ff96e65d63",
       "userType": "AGENT",
       "firstName": "Jeff",
       "lastName": "Buffet",
@@ -1185,7 +1185,7 @@
     "project": " Symphony Hills",
     "rentalFee": 4500.0,
     "rentalRate": 0.86,
-    "createdAt": "2021-10-30T14:07:08.300+0800",
+    "createdAt": "2021-10-30T14:45:58.477+0800",
     "facilityTypes": [
       "WATER_HEATER",
       "FRIDGE",
@@ -1202,9 +1202,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "8f0fefc5-33a2-4b0c-a8ca-7842e8f28fe1",
+    "propertyId": "15b110dd-0391-4ceb-b4db-08ef0005c58d",
     "owner": {
-      "id": "11188fea-3b12-4497-b02b-237952fb367f",
+      "id": "886bb252-66a8-4391-915c-92d34193a398",
       "userType": "OWNER",
       "firstName": "Nafis",
       "lastName": "Affendi",
@@ -1214,7 +1214,7 @@
       "address": "37 Tingkat 4 Persiaran 65C Off Jalan Pahang Barat"
     },
     "agent": {
-      "id": "2d4957ab-a2e1-4557-bb18-4b9dc871bda2",
+      "id": "af9b8224-c1f1-4e2d-b954-06ff96e65d63",
       "userType": "AGENT",
       "firstName": "Jeff",
       "lastName": "Buffet",
@@ -1231,7 +1231,7 @@
     "project": "Laman View",
     "rentalFee": 4000.0,
     "rentalRate": 0.86,
-    "createdAt": "2021-10-30T14:07:08.300+0800",
+    "createdAt": "2021-10-30T14:45:58.477+0800",
     "facilityTypes": [
       "WATER_HEATER",
       "FRIDGE",
@@ -1248,9 +1248,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "3378c518-d9a3-4aa4-81ce-6a0ec2243f6e",
+    "propertyId": "6f26bba7-7547-4f4e-a92a-f37222b47ae0",
     "owner": {
-      "id": "11188fea-3b12-4497-b02b-237952fb367f",
+      "id": "886bb252-66a8-4391-915c-92d34193a398",
       "userType": "OWNER",
       "firstName": "Nafis",
       "lastName": "Affendi",
@@ -1260,7 +1260,7 @@
       "address": "37 Tingkat 4 Persiaran 65C Off Jalan Pahang Barat"
     },
     "agent": {
-      "id": "2d4957ab-a2e1-4557-bb18-4b9dc871bda2",
+      "id": "af9b8224-c1f1-4e2d-b954-06ff96e65d63",
       "userType": "AGENT",
       "firstName": "Jeff",
       "lastName": "Buffet",
@@ -1284,7 +1284,7 @@
     "project": "Cyberia SmartHomes",
     "rentalFee": 1500.0,
     "rentalRate": 0.89,
-    "createdAt": "2021-10-30T14:07:08.301+0800",
+    "createdAt": "2021-10-30T14:45:58.477+0800",
     "facilityTypes": [
       "WATER_HEATER",
       "FRIDGE",
@@ -1300,9 +1300,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "abbccaaa-f986-4b86-ad36-d4467c53bcbc",
+    "propertyId": "89f46c1d-e4d9-4bdb-a718-cf540655fc2e",
     "owner": {
-      "id": "9bfb350a-bcb2-4a36-9fd2-644d358f2f8f",
+      "id": "b4a78f28-61e5-491c-bfe1-64a030a199b8",
       "userType": "OWNER",
       "firstName": "Selwyn",
       "lastName": "Ping",
@@ -1312,7 +1312,7 @@
       "address": "9 Jln Hulu Batu 10 Hulu Ampang"
     },
     "agent": {
-      "id": "2d4957ab-a2e1-4557-bb18-4b9dc871bda2",
+      "id": "af9b8224-c1f1-4e2d-b954-06ff96e65d63",
       "userType": "AGENT",
       "firstName": "Jeff",
       "lastName": "Buffet",
@@ -1336,7 +1336,7 @@
     "project": "Cyberia SmartHomes",
     "rentalFee": 850.0,
     "rentalRate": 0.85,
-    "createdAt": "2021-10-30T14:07:08.301+0800",
+    "createdAt": "2021-10-30T14:45:58.477+0800",
     "facilityTypes": [
       "WATER_HEATER",
       "FRIDGE",
@@ -1352,9 +1352,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "7a950680-fc65-4499-ac74-a082b83331f6",
+    "propertyId": "d954e63f-5458-465d-ba74-54ba102af22d",
     "owner": {
-      "id": "9bfb350a-bcb2-4a36-9fd2-644d358f2f8f",
+      "id": "b4a78f28-61e5-491c-bfe1-64a030a199b8",
       "userType": "OWNER",
       "firstName": "Selwyn",
       "lastName": "Ping",
@@ -1364,7 +1364,7 @@
       "address": "9 Jln Hulu Batu 10 Hulu Ampang"
     },
     "agent": {
-      "id": "18c466c9-1bff-42b8-ae01-db49815f8d32",
+      "id": "d3e9708c-a0d1-4613-82ed-2d421f8b9b46",
       "userType": "AGENT",
       "firstName": "Jamie",
       "lastName": "Bonds",
@@ -1388,7 +1388,7 @@
     "project": "Cyberia SmartHomes",
     "rentalFee": 400.0,
     "rentalRate": 4.0,
-    "createdAt": "2021-10-30T14:07:08.301+0800",
+    "createdAt": "2021-10-30T14:45:58.477+0800",
     "facilityTypes": [
       "WATER_HEATER",
       "AIRCOND",
@@ -1402,19 +1402,9 @@
     "commentCount": 0
   },
   {
-    "propertyId": "be63abae-4fa4-43cc-ba16-9a292b970698",
+    "propertyId": "2fee40c1-a5de-4df9-afbe-4923cad881e9",
     "owner": {
-      "ownerDetails": "owner3",
-      "propertyList": [
-        "441f7ab1-efa0-4de9-8a7a-c0628c23ce0f",
-        "27d3ad8d-6055-4e13-9f00-6d516ad331c8",
-        "3aa7c264-4b06-4670-9788-1afcbc55b37d",
-        "62895a0d-26a5-4a1b-80b2-755edac65fc3",
-        "abbccaaa-f986-4b86-ad36-d4467c53bcbc",
-        "7a950680-fc65-4499-ac74-a082b83331f6",
-        "be63abae-4fa4-43cc-ba16-9a292b970698"
-      ],
-      "id": "9bfb350a-bcb2-4a36-9fd2-644d358f2f8f",
+      "id": "b4a78f28-61e5-491c-bfe1-64a030a199b8",
       "userType": "OWNER",
       "firstName": "Selwyn",
       "lastName": "Ping",
@@ -1424,8 +1414,7 @@
       "address": "9 Jln Hulu Batu 10 Hulu Ampang"
     },
     "agent": {
-      "agentDetails": "agent3",
-      "id": "18c466c9-1bff-42b8-ae01-db49815f8d32",
+      "id": "d3e9708c-a0d1-4613-82ed-2d421f8b9b46",
       "userType": "AGENT",
       "firstName": "Jamie",
       "lastName": "Bonds",
@@ -1449,7 +1438,7 @@
     "project": "Cyberia SmartHomes",
     "rentalFee": 1300.0,
     "rentalRate": 1.44,
-    "createdAt": "2021-10-30T14:07:08.301+0800",
+    "createdAt": "2021-10-30T14:45:58.477+0800",
     "facilityTypes": [
       "WATER_HEATER",
       "AIRCOND",
@@ -1459,6 +1448,69 @@
     "isActive": true,
     "tenant": [],
     "roomInfo": "3 bedroomds + 2 bathroom + living room",
+    "bathRoomCount": 2,
+    "comment": [],
+    "commentCount": 0
+  },
+  {
+    "propertyId": "fce5cfca-a861-4028-bfdb-af0f500cc631",
+    "owner": {
+      "ownerDetails": "owner3",
+      "propertyList": [
+        "1690330b-c0c0-48d8-8e8a-e80504fabec5",
+        "4ff4f5e8-af54-46d2-b288-c6da20c4c7da",
+        "af10cea4-6bc9-4c3a-97d6-e3b5329e10d1",
+        "48dd4ef3-1ca2-411a-90ec-5d3237cc125c",
+        "89f46c1d-e4d9-4bdb-a718-cf540655fc2e",
+        "d954e63f-5458-465d-ba74-54ba102af22d",
+        "2fee40c1-a5de-4df9-afbe-4923cad881e9",
+        "fce5cfca-a861-4028-bfdb-af0f500cc631"
+      ],
+      "id": "b4a78f28-61e5-491c-bfe1-64a030a199b8",
+      "userType": "OWNER",
+      "firstName": "Selwyn",
+      "lastName": "Ping",
+      "username": "owner5",
+      "email": "selwyn@abc.com",
+      "password": "abc123",
+      "address": "9 Jln Hulu Batu 10 Hulu Ampang"
+    },
+    "agent": {
+      "agentDetails": "agent3",
+      "id": "d3e9708c-a0d1-4613-82ed-2d421f8b9b46",
+      "userType": "AGENT",
+      "firstName": "Jamie",
+      "lastName": "Bonds",
+      "username": "agent007",
+      "email": "agent007@abc.com",
+      "password": "abc123",
+      "address": "19-01, Jln Padi Emas 3/1, Bahru"
+    },
+    "propertyType": "TOWNHOUSE",
+    "name": "Third Avenue, Cyberjaya",
+    "address": {
+      "roadName": "Jalan Teknokrat 3",
+      "project": "Third Avenue",
+      "state": "Selangor",
+      "country": "Malaysia",
+      "city": "Cyberjaya",
+      "postcode": 63000
+    },
+    "size": "1111 sqft",
+    "description": "More units available with different layout and prices.\nWhatsApp to find out more! Video tour / virtual tour available for all units.\nLandlords are welcome to list with our team of condo specialists that provide free tenant screening and photography services!\nLB\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\u003e\u003e\u003e\u003eGet a limited time offer of RM500 off your rental and 2 free parking slot!\n\u003e\u003e\u003e\u003eMessage 011 123 6789 to find out more.",
+    "project": "Third Avenue",
+    "rentalFee": 2600.0,
+    "rentalRate": 2.34,
+    "createdAt": "2021-10-30T14:45:58.477+0800",
+    "facilityTypes": [
+      "WATER_HEATER",
+      "AIRCOND",
+      "TV",
+      "FRIDGE"
+    ],
+    "isActive": true,
+    "tenant": [],
+    "roomInfo": "3 bedrooms + 2 bathroom + living room",
     "bathRoomCount": 2,
     "comment": [],
     "commentCount": 0
