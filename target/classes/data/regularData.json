@@ -1,7 +1,7 @@
 [
   {
     "regularDetails": "regular3",
-    "id": "3e16fc1a-ea2a-4214-a37c-23447991b39a",
+    "id": "795e99fa-6d0a-49bd-8739-07d5c5ef7e2a",
     "userType": "REGULAR",
     "firstName": "Pepsi",
     "lastName": "Milo",
@@ -12,7 +12,7 @@
   },
   {
     "regularDetails": "regular4",
-    "id": "6657ca7f-3e01-4cb5-8162-64a2e87f4cf5",
+    "id": "4ab0cec5-c059-490d-8b57-8bd215ba561d",
     "userType": "REGULAR",
     "firstName": "Elon",
     "lastName": "Must",
@@ -23,7 +23,7 @@
   },
   {
     "regularDetails": "regular5",
-    "id": "bdfc3ee1-ed4d-4bc3-ac54-0ccf9af028e9",
+    "id": "2fe08c19-9e4f-4dfe-97f5-83048f54ec36",
     "userType": "REGULAR",
     "firstName": "Adam",
     "lastName": "Tan",
@@ -34,7 +34,7 @@
   },
   {
     "regularDetails": "regular6",
-    "id": "5824e786-ef16-4ca9-a1c0-31c5fd43ed75",
+    "id": "f2ef09b8-9aff-46c4-a677-d2276c71cd45",
     "userType": "REGULAR",
     "firstName": "Mark",
     "lastName": "Kepen",
@@ -45,7 +45,7 @@
   },
   {
     "regularDetails": "regular6",
-    "id": "a3ba39c4-0a00-461b-bc77-0b60921cd868",
+    "id": "0fc40b01-e435-484d-80b7-8d6014f4dfd5",
     "userType": "REGULAR",
     "firstName": "Peter",
     "lastName": "Spark",
