@@ -34,6 +34,8 @@ public class TestCases extends Application {
     public void start(Stage stage) throws Exception {
         populateData();
 //        testFilterProperties();
+//        testEditProfile();
+
     }
 
 
@@ -43,6 +45,7 @@ public class TestCases extends Application {
         registerPendingUsers();
         registerActualUsers();
         registerProperties();
+        System.out.println("\nAll data generated successfully!");
     }
 
     //used to empty all the json files
@@ -106,6 +109,7 @@ public class TestCases extends Application {
             for(User user:userData){
                 userDataModel.registerUser(user);
             }
+            System.out.println("Total pending user generated = " + userData.size());
         }catch (IllegalArgumentException e){
             System.out.println("Username already exists");
         }
@@ -195,9 +199,9 @@ public class TestCases extends Application {
         ));
 
         for(User user:userData){
-
             userDataModel.adminCreateUser(admin0101, user);
         }
+        System.out.println("Total user generated = " + userData.size());
     }
 
     //fetch Arraylist<Property> from TestProperties and register them into propertyData.json
@@ -206,16 +210,17 @@ public class TestCases extends Application {
         for (Property property:propertyData){
             propertyDataModel.addProperty((Owner) property.getOwner(), property);
         }
+        System.out.println("Total properties generated = " + propertyData.size());
     }
 
-    //below functions are used to simulate and test functionalities of the models
+    //=========below functions are used to simulate and test functionalities of the models
 
-    private void loginUser(){
+    private void testLoginUser(){
         currentUser = userDataModel.loginUser("admin0101", "abc123");
         System.out.println(currentUser);
     }
 
-    private void approveUsers(){
+    private void testApproveUsers(){
         pendingUsers = userDataModel.getPendingUserData();
         try{
             for (User user:pendingUsers){
@@ -229,12 +234,12 @@ public class TestCases extends Application {
     }
 
 
-    private void getPropertiesByOwner(){
+    private void testGetPropertiesByOwner(){
         User ownerUser = userDataModel.loginUser("owner1", "abc123");
         System.out.println(propertyDataModel.getPropertyByOwner(ownerUser));
     }
 
-    private void addComments(){
+    private void testAddComments(){
         User adminUser1 = userDataModel.loginUser("admin0101", "abc123");
         User adminUser2 = userDataModel.loginUser("lime0101", "abc123");
         Property firstProperty = propertyDataModel.getPropertiesData().get(0);
@@ -246,7 +251,7 @@ public class TestCases extends Application {
         }
     }
 
-    private void changeStatus(){
+    private void testChangeStatus(){
         User adminUser = userDataModel.loginUser("admin0101", "abc123");
         Property firstProperty = propertyDataModel.getPropertiesData().get(0);
         try {
@@ -257,7 +262,7 @@ public class TestCases extends Application {
 
     }
 
-    private void searchByFacility(){
+    private void testSearchByFacility(){
         propertyData = propertyDataModel.getPropertyByFacilityType(new ArrayList<>(Arrays.asList(FacilityType.WATER_HEATER)));
         System.out.println(propertyData);
     }
@@ -267,6 +272,13 @@ public class TestCases extends Application {
         for(Property property:propertyData){
             System.out.println(property.getFacilityTypes());
         }
+    }
+
+    private void testEditProfile(){
+        User currentUser = userDataModel.loginUser("agent007", "abc123");
+        currentUser.setEmail("imagent007@gmail.com");
+        currentUser.setLastName("bondny");
+        userDataModel.editUserProfile(currentUser);
     }
 
 }

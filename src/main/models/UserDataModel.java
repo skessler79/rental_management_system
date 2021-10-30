@@ -99,6 +99,19 @@ public class UserDataModel {
         return data;
     }
 
+    //allow to user to update their details
+    public void editUserProfile(User currentUser){
+        userData = loadData(currentUser.getUserType(), false);
+        for(User user:userData){
+            if (user.getId().equals(currentUser.getId())){
+                userData.remove(user);
+                userData.add(currentUser);
+                break;
+            }
+        }
+        inputData(currentUser.getUserType(), userData, false);
+    }
+
     //allow admin to create user directly
     public void adminCreateUser(User currentUser, User registerUser) throws IllegalAccessException, IllegalArgumentException{
         if (currentUser.getUserType() != UserType.ADMIN)

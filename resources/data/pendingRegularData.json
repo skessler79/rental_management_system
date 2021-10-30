@@ -1,7 +1,7 @@
 [
   {
-    "regularDetails": "regular1",
-    "id": "2300688f-b068-4c77-bc11-0d6b1db068c1",
+    "regularDetails": null,
+    "id": "2074c662-759b-4cda-8999-9f59708ca3be",
     "userType": "REGULAR",
     "firstName": "Abu",
     "lastName": "Lim",
@@ -11,8 +11,8 @@
     "address": "No. 11 Jln Puah Jaya Taman Setapak Indah Jaya"
   },
   {
-    "regularDetails": "regular2",
-    "id": "086d0adb-5bf0-44c0-be20-588874a1b494",
+    "regularDetails": null,
+    "id": "45f071a3-f36b-429a-95ac-504784d0aa26",
     "userType": "REGULAR",
     "firstName": "Michael",
     "lastName": "Nickson",
