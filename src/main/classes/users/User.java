@@ -2,6 +2,8 @@ package main.classes.users;
 
 import main.enums.UserType;
 
+// super class for Admin, Agent, Owner and Regular
+// contains all the basic information that a user should have
 public class User {
     private String id;
     protected UserType userType;

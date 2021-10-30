@@ -8,8 +8,6 @@ import javafx.scene.Scene;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import main.classes.CurrentSession;
-import main.classes.users.Admin;
 import main.classes.users.User;
 import main.controllers.*;
 

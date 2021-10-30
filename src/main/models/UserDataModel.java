@@ -6,7 +6,6 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 import main.classes.properties.Property;
-import org.json.simple.parser.JSONParser;
 
 //classes and enums
 import main.classes.CurrentSession;
@@ -100,9 +99,10 @@ public class UserDataModel {
         return data;
     }
 
+    // removes propertyId from respective user when a property is removed
     public void userRemoveSelfPropertyListing(User targetUser, String propertyId){
         userData = loadData(targetUser.getUserType(), false);
-        ArrayList<String> userPropertyList = new ArrayList<>();
+        ArrayList<String> userPropertyList;
 
         for(User user:userData){
             if(user.getId().equals(targetUser.getId())){
@@ -126,7 +126,7 @@ public class UserDataModel {
 
     }
 
-    //allow to user to update their details
+    //allow users to update their profile details
     public void editUserProfile(User currentUser){
         userData = loadData(currentUser.getUserType(), false);
         for(User user:userData){
@@ -165,7 +165,7 @@ public class UserDataModel {
         userData = loadData(targetUser.getUserType(),false);
         userData.removeIf(user -> user.getId().equals(targetUser.getId()));
 
-        //remove property whos the owner owns
+        //remove property that the owner owns
         ArrayList<Property> propertyData = CurrentSession.propertyDataModel.getPropertyByOwner(targetUser);
         for (Property property:propertyData){
             CurrentSession.propertyDataModel.removeProperty(property);
@@ -279,11 +279,6 @@ public class UserDataModel {
             }
         }
         return null;
-    }
-
-    //public method to get pending user data by type
-    public ArrayList<User> getPendingUserDataByType(UserType userType){
-        return loadData(userType, true);
     }
 
     //public method to get user data

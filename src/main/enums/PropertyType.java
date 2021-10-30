@@ -1,6 +1,6 @@
 package main.enums;
 
-// Different constant values for PropertyType objects
+//this enum class is to standardize input for property types
 public enum PropertyType {
     CONDO,
     TOWNHOUSE,

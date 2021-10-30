@@ -11,14 +11,11 @@ import main.classes.users.*;
 import main.enums.FacilityType;
 import main.enums.PropertyType;
 import main.enums.UserType;
-import org.json.simple.parser.JSONParser;
 
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.lang.reflect.Type;
-import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.UUID;
@@ -26,14 +23,53 @@ import java.util.UUID;
 public class PropertyDataModel {
     private final String path = "resources/data/propertyData.json";
     private final Type PROPERTY_LIST_TYPE = new TypeToken<ArrayList<Property>>(){}.getType();
-    private JsonReader reader;
     private FileWriter fileWriter;
-    private FileReader fileReader;
-    private final JSONParser parser = new JSONParser();
     private Gson gson;
-    private UserDataModel userDataModel = new UserDataModel();
 
     private ArrayList<Property> propertyData;
+
+
+    //private method to provide a quick way for the model to input data to json file
+    private void inputData(ArrayList<Property> properties){
+        try{
+            gson = new GsonBuilder().setPrettyPrinting().serializeNulls().setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ").serializeSpecialFloatingPointValues().create();
+            fileWriter = new FileWriter(path);
+            gson.toJson(properties, fileWriter);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+
+        } finally {
+
+            try {
+                fileWriter.flush();
+                fileWriter.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    //private method to provide a quick way for the model to load data from json files
+    private ArrayList<Property> loadData(){
+
+        try {
+            FileReader fileReader = new FileReader(path);
+            JsonReader reader = new JsonReader(fileReader);
+            gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ").create();
+            propertyData = gson.fromJson(reader,PROPERTY_LIST_TYPE);
+            fileReader.close();
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if (propertyData == null){
+            return new ArrayList<>();
+        }
+
+        return propertyData;
+    }
 
     public ArrayList<Property> getPropertiesData(){
         return loadData();
@@ -88,11 +124,10 @@ public class PropertyDataModel {
                 containFlag += 1;
             }
         }
-        if (containFlag == facilityTypes.size())
-            return true;
-        return false;
+        return containFlag == facilityTypes.size();
     }
 
+    //allow users to filter property based on parameter
     public ArrayList<Property> filterProperty(PropertyType propertyType,  ArrayList<FacilityType> facilityTypes, String project, String name){
         ArrayList<Property> output = new ArrayList<>();
 
@@ -101,7 +136,7 @@ public class PropertyDataModel {
         for (Property property:propertyData){
             int addCounter = 0;
 
-            //check propertType conditions
+            //check propertyType conditions
             if (propertyType == null)
                 addCounter += 1;
             else if(property.getPropertyType() == propertyType)
@@ -118,7 +153,7 @@ public class PropertyDataModel {
                 continue;
 
             //check project conditions
-            if (project == null || project == "")
+            if (project == null || project.equals(""))
                 addCounter+=1;
             else if(property.getProject().toLowerCase().contains(project.toLowerCase()))
                 addCounter+=1;
@@ -126,7 +161,7 @@ public class PropertyDataModel {
                 continue;
 
             //check for name conditions
-            if (name == null || name == "")
+            if (name == null || name.equals(""))
                 addCounter+=1;
             else if(property.getName().toLowerCase().contains(name.toLowerCase()))
                 addCounter+=1;
@@ -151,7 +186,7 @@ public class PropertyDataModel {
 
         for (Property property:propertyData){
             int addCounter = 0;
-            //check propertType conditions
+            //check propertyType conditions
             if (propertyType == null)
                 addCounter += 1;
             else if(property.getPropertyType() == propertyType)
@@ -176,7 +211,7 @@ public class PropertyDataModel {
                 continue;
 
             //check project conditions
-            if (project == null || project == "")
+            if (project == null || project.equals(""))
                 addCounter+=1;
             else if(property.getProject().toLowerCase().contains(project.toLowerCase()))
                 addCounter+=1;
@@ -230,6 +265,7 @@ public class PropertyDataModel {
         return output;
     }
 
+    //allow owners to toggle their active status on and off
     public void setPropertyActive (User currentUser, Property targetProperty, boolean active) throws IllegalAccessException {
         if (currentUser.getUserType() != UserType.OWNER && currentUser.getUserType() != UserType.AGENT && currentUser.getUserType() != UserType.ADMIN)
             throw new IllegalAccessException("Unauthorized access!");
@@ -253,12 +289,13 @@ public class PropertyDataModel {
         if (property.getAgent() != null){
             Agent agentUser = (Agent) property.getAgent();
             agentUser.addPropertyList(property);
-            userDataModel.editProperty(agentUser);
+            CurrentSession.userDataModel.editProperty(agentUser);
         }
-        userDataModel.editProperty(currentUser);
+        CurrentSession.userDataModel.editProperty(currentUser);
         inputData(propertyData);
     }
 
+    //allow owners to edit their property details
     public void editProperty(Property targetProperty) throws IllegalArgumentException{
         propertyData = loadData();
         boolean exist = false;
@@ -278,6 +315,7 @@ public class PropertyDataModel {
         inputData(propertyData);
     }
 
+    //allow owner or agent to add tenant
     public void addTenant(User tenant, Property property){
         property.addTenant(tenant);
         Regular tenantRegular = (Regular) tenant;
@@ -286,6 +324,7 @@ public class PropertyDataModel {
         CurrentSession.userDataModel.editUserProfile(tenantRegular);
     }
 
+    //allow owners to remove property (this will cause cascade deletion)
     public void removeProperty(Property targetProperty) throws IllegalArgumentException{
         propertyData = loadData();
         User agent = targetProperty.getAgent() != null? targetProperty.getAgent() : null;
@@ -294,9 +333,9 @@ public class PropertyDataModel {
         for (Property property:propertyData){
             if (property.getPropertyId().equals(targetProperty.getPropertyId())){
                 propertyData.remove(property);
-                userDataModel.userRemoveSelfPropertyListing(owner, targetProperty.getPropertyId());
+                CurrentSession.userDataModel.userRemoveSelfPropertyListing(owner, targetProperty.getPropertyId());
                 if (agent != null){
-                    userDataModel.userRemoveSelfPropertyListing(agent, targetProperty.getPropertyId());
+                    CurrentSession.userDataModel.userRemoveSelfPropertyListing(agent, targetProperty.getPropertyId());
                 }
                 exist = true;
                 break;
@@ -309,6 +348,7 @@ public class PropertyDataModel {
         inputData(propertyData);
     }
 
+    //allow users to get property based on name
     public ArrayList<Property> getPropertyByName(String name){
         ArrayList<Property> match = new ArrayList<>();
         propertyData = loadData();
@@ -320,6 +360,7 @@ public class PropertyDataModel {
         return match;
     }
 
+    //allow users to get property based on id
     public Property getPropertyById(String id){
         propertyData = loadData();
         for(Property property : propertyData) {
@@ -330,6 +371,7 @@ public class PropertyDataModel {
         return null;
     }
 
+    //allow users to get property based on owner
     public ArrayList<Property> getPropertyByOwner(User user){
         String id = user.getId();
         propertyData = loadData();
@@ -340,45 +382,5 @@ public class PropertyDataModel {
             }
         }
         return output;
-    }
-
-    private void inputData(ArrayList<Property> properties){
-        try{
-            gson = new GsonBuilder().setPrettyPrinting().serializeNulls().setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ").serializeSpecialFloatingPointValues().create();
-            fileWriter = new FileWriter(path);
-            gson.toJson(properties, fileWriter);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-
-        } finally {
-
-            try {
-                fileWriter.flush();
-                fileWriter.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    private ArrayList<Property> loadData(){
-
-        try {
-            fileReader = new FileReader(path);
-            reader = new JsonReader(fileReader);
-            gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ").create();
-            propertyData = gson.fromJson(reader,PROPERTY_LIST_TYPE);
-            fileReader.close();
-
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        if (propertyData == null){
-            return new ArrayList<>();
-        }
-
-        return propertyData;
     }
 }

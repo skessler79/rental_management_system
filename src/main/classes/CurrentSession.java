@@ -5,6 +5,7 @@ import main.classes.users.User;
 import main.models.PropertyDataModel;
 import main.models.UserDataModel;
 
+//this is a static class based on the singleton design pattern (only 1 instance is need always)
 public class CurrentSession
 {
     public static User currentUser;

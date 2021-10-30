@@ -1,15 +1,15 @@
 package main.classes.users;
 
-import main.classes.properties.Property;
+
 import main.enums.UserType;
 
 import java.util.ArrayList;
-import java.util.InvalidPropertiesFormatException;
 import java.util.UUID;
 
+// This class is designed and modified based on builder design pattern
 public class UserBuilder {
     //users
-    private String id = UUID.randomUUID().toString();
+    private final String id = UUID.randomUUID().toString();
     private String firstName = "";
     private String lastName = "";
     private String username = null;
@@ -17,9 +17,9 @@ public class UserBuilder {
     private String password = null;
     private String address = "";
     // owner & agent
-    private ArrayList<String> propertyList = new ArrayList<>();
-    //regular
-    private String tenantPropertyId = null;
+    private final ArrayList<String> propertyList = new ArrayList<>();
+    // regular
+    private final String tenantPropertyId = null;
 
     public UserBuilder(String username, String email, String password) {
         this.username = username;

@@ -2,15 +2,14 @@ package main;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import main.classes.Address;
+import main.TestData.TestPendingUsers;
+import main.TestData.TestProperties;
+import main.TestData.TestUsers;
 import main.classes.properties.Property;
-import main.classes.properties.PropertyBuilder;
 import main.classes.users.Owner;
 import main.classes.users.User;
 import main.classes.users.UserBuilder;
-import main.controllers.UserController;
 import main.enums.FacilityType;
-import main.enums.PropertyType;
 import main.enums.UserType;
 import main.models.PropertyDataModel;
 import main.models.UserDataModel;
@@ -22,6 +21,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+@SuppressWarnings("SpellCheckingInspection")
 public class TestCases extends Application {
     private PropertyDataModel propertyDataModel = new PropertyDataModel();
     private UserDataModel userDataModel = new UserDataModel();
@@ -30,13 +30,14 @@ public class TestCases extends Application {
     private ArrayList<User> userData;
     private ArrayList<Property> propertyData;
 
+    @SuppressWarnings("CommentedOutCode")
     @Override
     public void start(Stage stage) throws Exception {
-//        populateData();
+        populateData();
 //        testFilterProperties();
 //        testEditProfile();
 //        testGetUserByUserType();
-        testAddTenant();
+//        testAddTenant();
 
     }
 
@@ -69,43 +70,7 @@ public class TestCases extends Application {
     //create dummy users into pending list data
     private void registerPendingUsers(){
 
-        userData = new ArrayList<>(Arrays.asList(
-                //admin
-                new UserBuilder(  "aqel0101", "abc2@abc.com", "abc123")
-                        .firstName("Aqel")
-                        .lastName("Kumar")
-                        .address("Jalan Permas 10, Bandar Baru Permas Jaya")
-                        .buildUser(UserType.ADMIN),
-                //owner
-                new UserBuilder("ali0101", "ali@abc.com", "abc123")
-                        .firstName("Ali")
-                        .lastName("Tan")
-                        .address("19-01, Jln Padi Emas 3/1, Taman Abc, Johor Bahru")
-                        .buildUser(UserType.OWNER),
-                new UserBuilder(  "ee0101", "ee@abc.com", "abc123")
-                        .firstName("Ee")
-                        .lastName("Ming")
-                        .address(" Lorong Kota Permail 11, Taman kota Permai,")
-                        .buildUser(UserType.OWNER),
-                //agent
-                new UserBuilder("shallow123", "johny@abc.com", "abc123")
-                        .firstName("Johny")
-                        .lastName("Shallow")
-                        .address("273B Kampar Road")
-                        .buildUser(UserType.AGENT),
-                //regular
-                new UserBuilder("abu0202", "abu@abc.com", "abc123")
-                        .firstName("Abu")
-                        .lastName("Lim")
-                        .address("No. 11 Jln Puah Jaya Taman Setapak Indah Jaya")
-                        .buildUser(UserType.REGULAR),
-                new UserBuilder("michael4321", "bilebile@abc.com", "abc123")
-                        .firstName("Michael")
-                        .lastName("Nickson")
-                        .address("2 Jln Siu Nam, Johor Bahru")
-                        .buildUser(UserType.REGULAR)
-
-        ));
+        userData = new TestPendingUsers().getTestPendingUsers();
 
         try{
             for(User user:userData){
@@ -125,80 +90,7 @@ public class TestCases extends Application {
                 .lastName("Loo")
                 .address("29 Lorong 3/1B Taman Intan Baiduri Kepong")
                 .buildUser(UserType.ADMIN);
-
-        userData = new ArrayList<>(Arrays.asList(
-                //admin
-                admin0101,
-                new UserBuilder("lime0101", "lemon@abc.com", "abc123")
-                        .firstName("Lemon")
-                        .lastName("Lime")
-                        .address("69, Taman Good, 69420")
-                        .buildUser(UserType.ADMIN),
-                //owner
-                new UserBuilder("owner3", "cardi@abc.com", "abc123")
-                        .firstName("Cardi")
-                        .lastName("C")
-                        .address("8 Jln Hulu Batu 7 Hulu Ampang")
-                        .buildUser(UserType.OWNER),
-                new UserBuilder("owner4", "cola@abc.com", "abc123")
-                        .firstName("Cola")
-                        .lastName("Sprite")
-                        .address("36 Tingkat 3 Persiaran 65C Off Jalan Pahang Barat")
-                        .buildUser(UserType.OWNER),
-                new UserBuilder("owner5", "selwyn@abc.com", "abc123")
-                        .firstName("Selwyn")
-                        .lastName("Ping")
-                        .address("9 Jln Hulu Batu 10 Hulu Ampang")
-                        .buildUser(UserType.OWNER),
-                new UserBuilder("owner6", "affendi@abc.com", "abc123")
-                        .firstName("Nafis")
-                        .lastName("Affendi")
-                        .address("37 Tingkat 4 Persiaran 65C Off Jalan Pahang Barat")
-                        .buildUser(UserType.OWNER),
-                //regular user
-                new UserBuilder("milo1234", "pepsi@abc.com", "abc123")
-                        .firstName("Pepsi")
-                        .lastName("Milo")
-                        .address("Jalan Pjs 11/20, Bandar Sunway,")
-                        .buildUser(UserType.REGULAR),
-                new UserBuilder("mustelon", "abcg4@abc.com", "abc123")
-                        .firstName("Elon")
-                        .lastName("Must")
-                        .address("11, Taman Very Ok, 14000 Pulau Pinang")
-                        .buildUser(UserType.REGULAR),
-                new UserBuilder( "adam0101", "adam@abc.com", "abc123")
-                        .firstName("Adam")
-                        .lastName("Tan")
-                        .address("11 Jalan Juru, Bukit Mertajam,")
-                        .buildUser(UserType.REGULAR),
-                new UserBuilder("markkepen", "mark123@abc.com", "abc123")
-                        .firstName("Mark")
-                        .lastName("Kepen")
-                        .address("55, Taman Very Very Ok, 14000 Pulau Pinang")
-                        .buildUser(UserType.REGULAR),
-                new UserBuilder( "peterspark0101", "ironspider@abc.com", "abc123")
-                        .firstName("Peter")
-                        .lastName("Spark")
-                        .address("22, Taman Very Very Very Ok, 14000 Pulau Pinang")
-                        .buildUser(UserType.REGULAR),
-                //agent
-                new UserBuilder("agent007", "agent007@abc.com", "abc123")
-                        .firstName("Jamie")
-                        .lastName("Bonds")
-                        .address("19-01, Jln Padi Emas 3/1, Bahru")
-                        .buildUser(UserType.AGENT),
-                new UserBuilder("river123", "dog4life@abc.com", "abc123")
-                        .firstName("Keanu")
-                        .lastName("River")
-                        .address("19-01, Jln Padi Silver 4/5")
-                        .buildUser(UserType.AGENT),
-                new UserBuilder("warrenbezos", "agent007@abc.com", "abc123")
-                        .firstName("Jeff")
-                        .lastName("Buffet")
-                        .address("19-01, Jln Padi Emas 3/1, Bahru")
-                        .buildUser(UserType.AGENT)
-
-        ));
+        userData = new TestUsers().getTestUsers(admin0101);
 
         for(User user:userData){
             userDataModel.adminCreateUser(admin0101, user);
