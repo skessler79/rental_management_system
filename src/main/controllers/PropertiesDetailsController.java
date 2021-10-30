@@ -15,6 +15,7 @@ import main.classes.Comment;
 import main.classes.CurrentSession;
 import main.classes.properties.Property;
 import main.classes.users.Regular;
+import main.classes.users.User;
 import main.enums.FacilityType;
 import main.enums.UserType;
 import main.models.PropertyDataModel;
@@ -106,9 +107,9 @@ public class PropertiesDetailsController implements Initializable
         btnConfirm.setOnAction(actionEvent -> window.close());
 
         // Tenants ID
-        ArrayList<Regular> tenants = property.getTenant();
+        ArrayList<User> tenants = property.getTenant();
         String tenantStr = new String();
-        for(Regular tenant : tenants)
+        for(User tenant : tenants)
         {
             tenantStr += ", " + tenant.getId();
         }

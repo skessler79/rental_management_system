@@ -155,7 +155,7 @@ public class AdminReportController implements Initializable {
         ar_table.getItems().remove(propertySelected);
 
         System.out.println(propertyId);
-        propertyDataModel.deleteProperty(propertyId);
+        propertyDataModel.removeProperty(CurrentSession.propertyDataModel.getPropertyById(propertyId));
         getTable(CurrentSession.propertyDataModel.getPropertiesData());
     }
 

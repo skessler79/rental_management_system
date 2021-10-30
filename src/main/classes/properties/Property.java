@@ -27,13 +27,13 @@ public class Property implements Comparable<Property>{
     private Date createdAt;
     private ArrayList<FacilityType> facilityTypes;
     private boolean isActive;
-    private ArrayList<Regular> tenant;
+    private ArrayList<User> tenant;
     private String roomInfo;
     private int bathRoomCount;
     private ArrayList<Comment> comment;
     private int commentCount;
 
-    public Property(String propertyId, User owner, User agent, PropertyType propertyType, String name, Address address, String size, String description, String project, double rentalFee, double rentalRate, Date createdAt, ArrayList<FacilityType> facilityTypes, boolean isActive, ArrayList<Regular> tenant, String roomInfo, int bathRoomCount, ArrayList<Comment> comment, int commentCount)  {
+    public Property(String propertyId, User owner, User agent, PropertyType propertyType, String name, Address address, String size, String description, String project, double rentalFee, double rentalRate, Date createdAt, ArrayList<FacilityType> facilityTypes, boolean isActive, ArrayList<User> tenant, String roomInfo, int bathRoomCount, ArrayList<Comment> comment, int commentCount)  {
         this.propertyId = propertyId;
         this.owner = owner;
         this.agent = agent;
@@ -67,7 +67,7 @@ public class Property implements Comparable<Property>{
         this.comment = comment;
     }
 
-    public void addTenant(Regular regular){
+    public void addTenant(User regular){
         this.tenant.add(regular);
     }
 
@@ -133,7 +133,7 @@ public class Property implements Comparable<Property>{
         return isActive;
     }
 
-    public ArrayList<Regular> getTenant() {
+    public ArrayList<User> getTenant() {
         return tenant;
     }
 
@@ -201,7 +201,7 @@ public class Property implements Comparable<Property>{
         isActive = active;
     }
 
-    public void setTenant(ArrayList<Regular> tenant) {
+    public void setTenant(ArrayList<User> tenant) {
         this.tenant = tenant;
     }
 

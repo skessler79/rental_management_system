@@ -18,6 +18,9 @@ public class Owner extends User{
     }
 
     public ArrayList getPropertyList() { return propertyList; }
+    public void setPropertyList(ArrayList<String> propertyList) {
+        this.propertyList = propertyList;
+    }
 
     @Override
     public String toString() {

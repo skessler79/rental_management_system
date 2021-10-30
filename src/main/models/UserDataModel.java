@@ -100,12 +100,27 @@ public class UserDataModel {
         return data;
     }
 
-    public void ownerRemoveSelfPropertyListing(User targetOwner, String propertyId){
-        userData = loadData(UserType.OWNER, false);
+    public void userRemoveSelfPropertyListing(User targetUser, String propertyId){
+        userData = loadData(targetUser.getUserType(), false);
+        ArrayList<String> userPropertyList = new ArrayList<>();
 
-        for(User owner:userData){
-            if(owner.getId().equals(targetOwner.getId())){
-                ((Owner)targetOwner).getPropertyList().removeIf(id -> id.equals(propertyId) );
+        for(User user:userData){
+            if(user.getId().equals(targetUser.getId())){
+                if (targetUser.getUserType() == UserType.OWNER){
+                    Owner ownerUser = (Owner) user;
+                    userPropertyList = ownerUser.getPropertyList();
+                    userPropertyList.removeIf(id -> id.equals(propertyId) );
+                    ownerUser.setPropertyList(userPropertyList);
+                    CurrentSession.userDataModel.editUserProfile(ownerUser);
+                }
+                else if (targetUser.getUserType() == UserType.AGENT){
+
+                    Agent agentUser = (Agent) user;
+                    userPropertyList = agentUser.getPropertyList();
+                    userPropertyList.removeIf(id -> id.equals(propertyId) );
+                    agentUser.setPropertyList(userPropertyList);
+                    CurrentSession.userDataModel.editUserProfile(agentUser);
+                }
             }
         }
 
@@ -168,7 +183,7 @@ public class UserDataModel {
         inputData(targetUser.getUserType(),pendingData,true);
     }
 
-    //after owner registered a property, this function will add in the id of the property to propertyList in owner class
+    //after owner registered a property, this function will add in the id of the property to propertyList in owner or agent class
     public void editProperty(User targetUser) throws IllegalArgumentException{
         userData = loadData(targetUser.getUserType(), false);
         boolean exist = false;
