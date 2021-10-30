@@ -324,6 +324,15 @@ public class PropertyDataModel {
         CurrentSession.userDataModel.editUserProfile(tenantRegular);
     }
 
+    //allow owner or agent to add tenant
+    public void addAgent(User agent, Property property){
+        Agent agentUser = (Agent) agent;
+        property.setAgent(agentUser);
+        agentUser.addPropertyList(property);
+        editProperty(property);
+        CurrentSession.userDataModel.editUserProfile(agentUser);
+    }
+
     //allow owners to remove property (this will cause cascade deletion)
     public void removeProperty(Property targetProperty) throws IllegalArgumentException{
         propertyData = loadData();
@@ -378,6 +387,19 @@ public class PropertyDataModel {
         ArrayList<Property> output = new ArrayList<>();
         for(Property property : propertyData) {
             if (property.getOwner().getId() != null && property.getOwner().getId().equals(id)){
+                output.add(property);
+            }
+        }
+        return output;
+    }
+
+    //allow users to get property based on agent
+    public ArrayList<Property> getPropertyByAgent(User user){
+        String id = user.getId();
+        propertyData = loadData();
+        ArrayList<Property> output = new ArrayList<>();
+        for(Property property : propertyData) {
+            if (property.getAgent().getId() != null && property.getAgent().getId().equals(id)){
                 output.add(property);
             }
         }

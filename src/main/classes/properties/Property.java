@@ -153,7 +153,7 @@ public class Property implements Comparable<Property>{
         this.owner = owner;
     }
 
-    public void setAgentId(Agent agent) {
+    public void setAgent(Agent agent) {
         this.agent = agent;
     }
 
