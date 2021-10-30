@@ -8,7 +8,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
 import main.App;
-import main.classes.CurrentSession;
 import main.classes.users.User;
 import main.models.LoginModel;
 import main.views.AlertBoxView;
@@ -31,6 +30,7 @@ public class LoginController implements Initializable
     @FXML
     private JFXPasswordField pwd_signin, pwd_signup;
 
+    private LoginModel loginModel;
     private App main;
 
     @FXML
@@ -40,14 +40,21 @@ public class LoginController implements Initializable
         String password = pwd_signin.getText();
         User user = null;
 
-        try{
-            user = CurrentSession.userDataModel.loginUser(username, password);
-        } catch (IllegalArgumentException e){
+        System.out.println(username);
+        System.out.println(password);
 
-            AlertBoxView.display("Login Error", "Your login credentials are incorrect!");
+        try{
+            user = loginModel.login(username, password);
+        } catch (IllegalArgumentException e){
+            //TODO: handle error with proper error ui
+            System.out.println("Oops ur credentials are incorrect");
         }
 
-        if( user != null)
+        if(user == null)
+        {
+            AlertBoxView.display("Login Error", "Your login credentials are incorrect!");
+        }
+        else
         {
             try
             {
@@ -87,6 +94,8 @@ public class LoginController implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
+        loginModel = new LoginModel();
+        System.out.println("Initialize");
         btn_submit_signin.setDefaultButton(true);
     }
 
