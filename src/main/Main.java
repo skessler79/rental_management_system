@@ -13,7 +13,7 @@ import main.controllers.UserNavbarController;
 
 import java.io.IOException;
 
-public class App extends Application
+public class Main extends Application
 {
     Stage window;
     Parent root;

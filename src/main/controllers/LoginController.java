@@ -7,7 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
-import main.App;
+import main.Main;
 import main.classes.CurrentSession;
 import main.classes.users.User;
 import main.classes.users.UserBuilder;
@@ -32,7 +32,7 @@ public class LoginController implements Initializable
     @FXML
     private JFXPasswordField pwd_signin, pwd_signup;
 
-    private App main;
+    private Main main;
     private String username_signup, email_signup, password_signup;
 
     // Login button onAction
@@ -112,8 +112,8 @@ public class LoginController implements Initializable
         });
     }
 
-    public void setMain(App app)
+    public void setMain(Main main)
     {
-        main = app;
+        this.main = main;
     }
 }
