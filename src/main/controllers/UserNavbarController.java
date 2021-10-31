@@ -9,7 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
-import main.App;
+import main.Main;
 import main.classes.users.User;
 import main.controllers.fragments.FragmentController;
 import main.views.ConfirmBoxView;
@@ -32,7 +32,7 @@ public class UserNavbarController implements Initializable
 
     private AnchorPane fragmentPane;
 
-    private App main;
+    private Main main;
     private FXMLLoader loader;
     private FragmentController fragmentController;
 
@@ -87,9 +87,9 @@ public class UserNavbarController implements Initializable
         });
     }
 
-    public void setMain(App app)
+    public void setMain(Main main)
     {
-        main = app;
+        this.main = main;
     }
 
     public void setUser(User user)
