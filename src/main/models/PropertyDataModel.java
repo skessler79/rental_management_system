@@ -244,6 +244,21 @@ public class PropertyDataModel {
         inputData(propertyData);
     }
 
+    //allow user to delete comment based on given property and comment id
+    public void deleteComment(Property targetProperty, Comment comment){
+        propertyData = loadData();
+        for (Property property:propertyData){
+            if (property.getPropertyId().equals(targetProperty.getPropertyId())){
+                propertyData.remove(property);
+                targetProperty.getComment().removeIf(propertyComment-> propertyComment.getCommentId().equals(comment.getCommentId()));
+                propertyData.add(targetProperty);
+                break;
+            }
+        }
+
+        inputData(propertyData);
+    }
+
     //get property based on active or not
     public ArrayList<Property> getPropertyByActive(boolean active){
         propertyData = loadData();
