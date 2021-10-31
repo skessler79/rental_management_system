@@ -178,7 +178,8 @@ public class PropertiesDetailsController implements Initializable
 
         btnDeleteComment.setOnAction(actionEvent ->
         {
-            System.out.println(listComments.getSelectionModel().getSelectedItem());
+            CurrentSession.propertyDataModel.deleteComment(property, (Comment) listComments.getSelectionModel().getSelectedItem());
+            setComments(property);
         });
 
         // Change status button
