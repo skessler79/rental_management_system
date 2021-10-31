@@ -55,6 +55,9 @@ public class EditPropertyController implements Initializable
     private JFXTextField txtAddressPostcode;
 
     @FXML
+    private JFXTextField txtTenant;
+
+    @FXML
     private JFXRadioButton radioTypeCondo;
 
     @FXML
@@ -363,6 +366,9 @@ public class EditPropertyController implements Initializable
         {
             checkFacilityHeater.setSelected(true);
         }
+
+        // Tenant
+        txtTenant.setText(property.getTenant());
     }
 
     public void setWindow(Stage window)
