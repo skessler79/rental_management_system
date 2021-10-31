@@ -126,6 +126,10 @@ public class PropertiesController extends FragmentController implements Initiali
         {
             propertyType = PropertyType.BUNGALOW;
         }
+        else
+        {
+            propertyType = null;
+        }
 
         // Facilities
         facilityTypes.clear();
