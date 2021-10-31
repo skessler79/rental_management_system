@@ -263,7 +263,6 @@ public class EditPropertyController implements Initializable
             property.setBathRoomCount(bathrooms);
             property.setFacilityTypes(facilityTypes);
             CurrentSession.propertyDataModel.addTenant(tenant, property);
-//            property.setTenant(tenant);
 
             CurrentSession.propertyDataModel.editProperty(property);
 
