@@ -235,9 +235,12 @@ public class PropertyDataModel {
         }
         propertyData = loadData();
         for (Property property:propertyData){
+
             if (property.getPropertyId().equals(targetProperty.getPropertyId())){
-                property.addComment(new Comment(UUID.randomUUID().toString(), currentUser.getId(), comment, new Date()));
-                property.setCommentCount(property.getCommentCount()+1);
+                targetProperty.addComment(new Comment(UUID.randomUUID().toString(), currentUser.getId(), comment, new Date()));
+                targetProperty.setCommentCount(targetProperty.getComment().size());
+                propertyData.remove(property);
+                propertyData.add(targetProperty);
                 break;
             }
         }
@@ -247,11 +250,19 @@ public class PropertyDataModel {
     //allow user to delete comment based on given property and comment id
     public void deleteComment(Property targetProperty, Comment comment){
         propertyData = loadData();
+        ArrayList<Comment> comments = targetProperty.getComment();
         for (Property property:propertyData){
             if (property.getPropertyId().equals(targetProperty.getPropertyId())){
-                propertyData.remove(property);
-                targetProperty.getComment().removeIf(propertyComment-> propertyComment.getCommentId().equals(comment.getCommentId()));
-                propertyData.add(targetProperty);
+                for(Comment targetComment:comments){
+                    if(targetComment.getCommentId().equals(comment.getCommentId())){
+                        comments.remove(targetComment);
+                        targetProperty.setComment(comments);
+                        targetProperty.setCommentCount(comments.size());
+                        propertyData.remove(property);
+                        propertyData.add(targetProperty);
+                        break;
+                    }
+                }
                 break;
             }
         }
