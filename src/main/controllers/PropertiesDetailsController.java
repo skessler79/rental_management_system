@@ -104,12 +104,11 @@ public class PropertiesDetailsController implements Initializable
         btnConfirm.setOnAction(actionEvent -> window.close());
 
         // Tenants ID
-        ArrayList<User> tenants = property.getTenant();
+        User tenant = property.getTenant();
         String tenantStr = new String();
-        for(User tenant : tenants)
-        {
-            tenantStr += ", " + tenant.getId();
-        }
+
+        tenantStr = (tenant == null) ? "" : tenant.getId();
+
         if(tenantStr.length() > 0)
         {
             tenantStr = tenantStr.substring(2);
