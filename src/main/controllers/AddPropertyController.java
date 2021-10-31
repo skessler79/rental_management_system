@@ -6,6 +6,7 @@ import com.jfoenix.controls.JFXRadioButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.ToggleGroup;
 import main.classes.Address;
 import main.classes.CurrentSession;
@@ -14,6 +15,7 @@ import main.classes.properties.PropertyBuilder;
 import main.classes.users.Owner;
 import main.enums.FacilityType;
 import main.enums.PropertyType;
+import main.enums.UserType;
 import main.views.AlertBoxView;
 
 import java.net.URL;
@@ -54,6 +56,9 @@ public class AddPropertyController implements Initializable
 
     @FXML
     private JFXTextField txtAddressPostcode;
+
+    @FXML
+    private JFXTextField txtOwner;
 
     @FXML
     private JFXRadioButton radioTypeCondo;
@@ -97,6 +102,9 @@ public class AddPropertyController implements Initializable
     @FXML
     private JFXButton btnSubmit;
 
+    @FXML
+    private Label labelOwner, labelColon;
+
     private String name, description, roomInfo;
     private String addressRoad, addressProject, addressCity, addressState, addressCountry;
     private int addressPostcode, bathrooms;
@@ -126,6 +134,13 @@ public class AddPropertyController implements Initializable
         radioStatusActive.setSelected(true);
 
         facilityTypes = new ArrayList<>();
+
+        if(CurrentSession.currentUser.getUserType() == UserType.AGENT)
+        {
+            labelOwner.setVisible(true);
+            labelColon.setVisible(true);
+            txtOwner.setVisible(true);
+        }
 
         btnSubmit.setOnAction(actionEvent ->
         {
@@ -241,17 +256,33 @@ public class AddPropertyController implements Initializable
             }
 
             // Create new property
-            Property newProperty = new PropertyBuilder(CurrentSession.currentUser, propertyType, name, addressProject)
-                    .address(new Address(addressRoad, addressProject, addressCity, addressState, addressPostcode, addressCountry))
-                    .isActive(isActive)
-                    .rentalFee(rentalFee)
-                    .description(description)
-                    .roomInfo(roomInfo)
-                    .bathRoomCount(bathrooms)
-                    .facilityTypes(facilityTypes)
-                    .buildProperty();
-
-            CurrentSession.propertyDataModel.addProperty((Owner) CurrentSession.currentUser, newProperty);
+            if(CurrentSession.currentUser.getUserType() == UserType.OWNER)
+            {
+                Property newProperty = new PropertyBuilder(CurrentSession.currentUser, propertyType, name, addressProject)
+                        .address(new Address(addressRoad, addressProject, addressCity, addressState, addressPostcode, addressCountry))
+                        .isActive(isActive)
+                        .rentalFee(rentalFee)
+                        .description(description)
+                        .roomInfo(roomInfo)
+                        .bathRoomCount(bathrooms)
+                        .facilityTypes(facilityTypes)
+                        .buildProperty();
+                CurrentSession.propertyDataModel.addProperty((Owner) CurrentSession.currentUser, newProperty);
+            }
+            else
+            {
+                Property newProperty = new PropertyBuilder(CurrentSession.userDataModel.getUserByUsername(txtOwner.getText()), propertyType, name, addressProject)
+                        .address(new Address(addressRoad, addressProject, addressCity, addressState, addressPostcode, addressCountry))
+                        .isActive(isActive)
+                        .rentalFee(rentalFee)
+                        .description(description)
+                        .roomInfo(roomInfo)
+                        .bathRoomCount(bathrooms)
+                        .facilityTypes(facilityTypes)
+                        .buildProperty();
+                CurrentSession.propertyDataModel.addProperty((Owner) CurrentSession.userDataModel.getUserByUsername(txtOwner.getText()), newProperty);
+                txtOwner.clear();
+            }
 
             AlertBoxView.display("Add Property", "Property successfully added!");
         });
