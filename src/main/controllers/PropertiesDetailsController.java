@@ -176,6 +176,11 @@ public class PropertiesDetailsController implements Initializable
             txtAddComment.clear();
         });
 
+//        btnDeleteComment.setOnAction(actionEvent ->
+//        {
+//
+//        });
+
         // Change status button
         btnChangeStatus.setOnAction(actionEvent ->
         {
