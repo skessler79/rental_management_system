@@ -216,11 +216,11 @@ public class Property implements Comparable<Property>{
     public String toString() {
         return "Property{" +
                 "propertyId='" + propertyId + '\'' +
-                ", owner='" + owner + '\'' +
-                ", agent='" + agent + '\'' +
+                ", owner=" + owner +
+                ", agent=" + agent +
                 ", propertyType=" + propertyType +
                 ", name='" + name + '\'' +
-                ", address='" + address + '\'' +
+                ", address=" + address +
                 ", size='" + size + '\'' +
                 ", description='" + description + '\'' +
                 ", project='" + project + '\'' +
@@ -232,6 +232,8 @@ public class Property implements Comparable<Property>{
                 ", tenant=" + tenant +
                 ", roomInfo='" + roomInfo + '\'' +
                 ", bathRoomCount=" + bathRoomCount +
+                ", comment=" + comment +
+                ", commentCount=" + commentCount +
                 '}';
     }
 
