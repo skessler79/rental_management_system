@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 import main.classes.Address;
 import main.classes.CurrentSession;
 import main.classes.properties.Property;
+import main.classes.users.User;
 import main.enums.FacilityType;
 import main.enums.PropertyType;
 import main.views.AlertBoxView;
@@ -108,6 +109,7 @@ public class EditPropertyController implements Initializable
     private double rentalFee;
 
     private Property property;
+    private User tenant;
     private Address address;
     private Stage window;
 
@@ -246,6 +248,9 @@ public class EditPropertyController implements Initializable
                 checkFacilityHeater.setSelected(false);
             }
 
+            // Tenant
+            tenant = CurrentSession.userDataModel.getUserByUsername(txtTenant.getText());
+
             // Edit current property
             property.setName(name);
             property.setPropertyType(propertyType);
@@ -257,6 +262,8 @@ public class EditPropertyController implements Initializable
             property.setRoomInfo(roomInfo);
             property.setBathRoomCount(bathrooms);
             property.setFacilityTypes(facilityTypes);
+            CurrentSession.propertyDataModel.addTenant(tenant, property);
+//            property.setTenant(tenant);
 
             CurrentSession.propertyDataModel.editProperty(property);
 
@@ -368,7 +375,14 @@ public class EditPropertyController implements Initializable
         }
 
         // Tenant
-        txtTenant.setText(property.getTenant());
+        try
+        {
+            txtTenant.setText(property.getTenant().getUsername());
+        }
+        catch (NullPointerException e)
+        {
+            txtTenant.setText("");
+        }
     }
 
     public void setWindow(Stage window)

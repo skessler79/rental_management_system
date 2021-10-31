@@ -20,7 +20,7 @@ public class PropertyBuilder {
     private String name = null;
     private String project = null;
     private Date createdAt = new Date();
-    private ArrayList<User> tenant = new ArrayList<>();
+    private User tenant = null;
     private ArrayList<Comment> comment = new ArrayList<>();
     private int commentCount = 0;
 
