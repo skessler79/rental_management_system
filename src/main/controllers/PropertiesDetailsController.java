@@ -176,10 +176,11 @@ public class PropertiesDetailsController implements Initializable
             txtAddComment.clear();
         });
 
-//        btnDeleteComment.setOnAction(actionEvent ->
-//        {
-//
-//        });
+        btnDeleteComment.setOnAction(actionEvent ->
+        {
+            CurrentSession.propertyDataModel.deleteComment(property, (Comment) listComments.getSelectionModel().getSelectedItem());
+            setComments(property);
+        });
 
         // Change status button
         btnChangeStatus.setOnAction(actionEvent ->
