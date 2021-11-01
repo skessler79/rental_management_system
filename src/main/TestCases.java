@@ -37,7 +37,7 @@ public class TestCases extends Application {
 //        testFilterProperties();
 //        testEditProfile();
 //        testGetUserByUserType();
-//        testAddTenant();
+        testAddTenant();
 
     }
 
@@ -111,7 +111,7 @@ public class TestCases extends Application {
 
     private void testAddTenant(){
         User tenant = userDataModel.loginUser("milo1234", "abc123");
-        Property property = propertyDataModel.getPropertyById("42efcbde-b789-476b-84ad-c72351296c21");
+        Property property = propertyDataModel.getPropertiesData().get(0);
         propertyDataModel.addTenant(tenant, property);
     }
 

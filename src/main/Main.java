@@ -17,7 +17,6 @@ public class Main extends Application
 {
     Stage window;
     Parent root;
-
     double x, y = 0;
 
     public static void main(String[] args)
@@ -41,6 +40,7 @@ public class Main extends Application
         scene.setFill(Color.TRANSPARENT);
         window.setScene(scene);
         window.show();
+
 
     }
 
